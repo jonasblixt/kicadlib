@@ -1,0 +1,11 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP IHLP1212_1u2_4b
+D 1.2µH, ±20%, I=5A, I_sat=4A, DCR=27 mOhm Max, Self resonance: 65MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP LQH2MCN100K02L
+D FIXED IND 10UH 225MA 1.2 OHM SMD
+$ENDCMP
+#
+#End Doc Library

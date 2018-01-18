@@ -1,0 +1,890 @@
+EESchema-DOCLIB  Version 2.0
+#encoding utf-8
+$CMP IHLP1212_470n_0
+D 470nH, ±20%, I=6.7A, I_sat=6.7A, DCR=15 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_1u_1
+D 1µH, ±20%, I=5A, I_sat=4.5A, DCR=24 mOhm Max, Self resonance: 75MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_2u2_2
+D 2.2µH, ±20%, I=3A, I_sat=3.3A, DCR=46 mOhm Max, Self resonance: 55MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_1u5_3
+D 1.5µH, ±20%, I=3.8A, I_sat=4A, DCR=32 mOhm Max, Self resonance: 70MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_1u_4
+D 1µH, ±20%, I=3.9A, I_sat=5.3A, DCR=33 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP3232_1u_5
+D 1µH, ±20%, I=18A, I_sat=24A, DCR=5.78 mOhm Max, Self resonance: 42MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_2u2_6
+D 2.2µH, ±20%, I=10.5A, I_sat=23A, DCR=13.7 mOhm Max, Self resonance: 33MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_2u2_7
+D 2.2µH, ±20%, I=14.5A, I_sat=10.2A, DCR=9.41 mOhm Max, Self resonance: 25MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_10u_8
+D 10µH, ±20%, I=5.4A, I_sat=6.4A, DCR=51.8 mOhm Max, Self resonance: 12MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_4u7_9
+D 4.7µH, ±20%, I=8A, I_sat=8.7A, DCR=22.6 mOhm Max, Self resonance: 17MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_15u_a
+D 15µH, ±20%, I=4.9A, I_sat=3.7A, DCR=65.3 mOhm Max, Self resonance: 10.3MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_33u_b
+D 33µH, ±20%, I=3.2A, I_sat=3.2A, DCR=144 mOhm Max, Self resonance: 6.7MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP2525_1u_c
+D 1µH, ±20%, I=11A, I_sat=22A, DCR=10 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_470n_d
+D 470nH, ±20%, I=17.5A, I_sat=26A, DCR=4.2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_2u2_e
+D 2.2µH, ±20%, I=8A, I_sat=14A, DCR=20 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_820n_f
+D 820nH, ±20%, I=13A, I_sat=24A, DCR=8 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_1u5_10
+D 1.5µH, ±20%, I=9A, I_sat=18A, DCR=15 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_4u7_11
+D 4.7µH, ±20%, I=5.5A, I_sat=10A, DCR=40 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_680n_12
+D 680nH, ±20%, I=15.5A, I_sat=25A, DCR=5.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2020_3u3_13
+D 3.3µH, ±20%, I=5A, I_sat=8.5A, DCR=54.7 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_2u2_14
+D 2.2µH, ±20%, I=6.75A, I_sat=5.5A, DCR=25 mOhm Max, Self resonance: 41MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_5u6_15
+D 5.6µH, ±20%, I=4.25A, I_sat=3.5A, DCR=70.6 mOhm Max, Self resonance: 23MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_10u_16
+D 10µH, ±20%, I=2.3A, I_sat=4A, DCR=199 mOhm Max, Self resonance: 20MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_10u_17
+D 10µH, ±20%, I=2.5A, I_sat=4A, DCR=158 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_1u_18
+D 1µH, ±20%, I=9.2A, I_sat=12A, DCR=13.7 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_470n_19
+D 470nH, ±20%, I=12.5A, I_sat=8A, DCR=7.7 mOhm Max, Self resonance: 83MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_1u_1a
+D 1µH, ±20%, I=10A, I_sat=6.5A, DCR=11 mOhm Max, Self resonance: 66MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_2u2_1b
+D 2.2µH, ±20%, I=5.8A, I_sat=10A, DCR=29.2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_470n_1c
+D 470nH, ±20%, I=11.5A, I_sat=21A, DCR=9.4 mOhm Max, Self resonance: 98MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_1u_1d
+D 1µH, ±20%, I=7A, I_sat=16A, DCR=20 mOhm Max, Self resonance: 62MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_3u3_1e
+D 3.3µH, ±20%, I=5.5A, I_sat=7A, DCR=40.4 mOhm Max, Self resonance: 29MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_4u7_1f
+D 4.7µH, ±20%, I=4.5A, I_sat=5.2A, DCR=60 mOhm Max, Self resonance: 27MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_100n_20
+D 100nH, ±20%, I=17A, I_sat=45A, DCR=3.9 mOhm Max, Self resonance: 239MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_6u8_21
+D 6.8µH, ±20%, I=2.4A, I_sat=4.3A, DCR=150 mOhm Max, Self resonance: 21MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_3u3_22
+D 3.3µH, ±20%, I=4.1A, I_sat=4.7A, DCR=57.8 mOhm Max, Self resonance: 29MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_4u7_23
+D 4.7µH, ±20%, I=3.2A, I_sat=3A, DCR=81.3 mOhm Max, Self resonance: 27MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_1u5_24
+D 1.5µH, ±20%, I=7.5A, I_sat=7A, DCR=18.5 mOhm Max, Self resonance: 39MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_10u_25
+D 10µH, ±20%, I=2.75A, I_sat=2.25A, DCR=131.9 mOhm Max, Self resonance: 17MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_22u_26
+D 22µH, ±20%, I=1.9A, I_sat=1.7A, DCR=270 mOhm Max, Self resonance: 10MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_1u5_27
+D 1.5µH, ±20%, I=7.2A, I_sat=11A, DCR=20.7 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_4u7_28
+D 4.7µH, ±20%, I=3.5A, I_sat=8.2A, DCR=77.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP1616_1u_29
+D 1µH, ±20%, I=4.2A, I_sat=4.5A, DCR=47 mOhm Max, Self resonance: 71MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP1616_1u_2a
+D 1µH, ±20%, I=4A, I_sat=7A, DCR=52.5 mOhm Max, Self resonance: 64MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP1616_2u2_2b
+D 2.2µH, ±20%, I=2.85A, I_sat=6A, DCR=90 mOhm Max, Self resonance: 39MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP2525_10u_2c
+D 10µH, ±20%, I=3A, I_sat=7A, DCR=105 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP4040_10u_2d
+D 10µH, ±20%, I=6.8A, I_sat=12A, DCR=36.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_3u3_2e
+D 3.3µH, ±20%, I=10A, I_sat=18.6A, DCR=14.4 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_10u_2f
+D 10µH, ±20%, I=7.5A, I_sat=7.1A, DCR=30.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_6u8_30
+D 6.8µH, ±20%, I=8A, I_sat=13.5A, DCR=23.3 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP2020_4u7_31
+D 4.7µH, ±20%, I=2.8A, I_sat=5A, DCR=116.6 mOhm Max, Self resonance: 28MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP6767_33u_32
+D 33µH, ±20%, I=6.5A, I_sat=6A, DCR=70.84 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_10u_33
+D 10µH, ±20%, I=16.5A, I_sat=25A, DCR=12 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_47u_34
+D 47µH, ±20%, I=8.7A, I_sat=8.6A, DCR=42.7 mOhm Max, Self resonance: 4.1MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_33u_35
+D 33µH, ±20%, I=10.7A, I_sat=9A, DCR=37 mOhm Max, Self resonance: 4.8MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_10u_36
+D 10µH, ±20%, I=19A, I_sat=17A, DCR=9.33 mOhm Max, Self resonance: 8MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_3u3_37
+D 3.3µH, ±20%, I=35A, I_sat=27A, DCR=2.93 mOhm Max, Self resonance: 16MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_6u8_38
+D 6.8µH, ±20%, I=22.5A, I_sat=18.5A, DCR=6.15 mOhm Max, Self resonance: 10MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_4u7_39
+D 4.7µH, ±20%, I=25A, I_sat=41A, DCR=5.11 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_8u2_3a
+D 8.2µH, ±20%, I=21A, I_sat=18A, DCR=8.1 mOhm Max, Self resonance: 10MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_1u_3b
+D 1µH, ±20%, I=48A, I_sat=73A, DCR=1.38 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_22u_3c
+D 22µH, ±20%, I=12A, I_sat=9.5A, DCR=21 mOhm Max, Self resonance: 4.3MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_100u_3d
+D 100µH, ±20%, I=5A, I_sat=4A, DCR=110 mOhm Max, Self resonance: 2.1MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_1u5_3e
+D 1.5µH, ±20%, I=42A, I_sat=65A, DCR=1.88 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_56u_3f
+D 56µH, ±20%, I=7.2A, I_sat=4.2A, DCR=57.8 mOhm Max, Self resonance: 2.9MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_2u2_40
+D 2.2µH, ±20%, I=35A, I_sat=62A, DCR=2.53 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_6u8_41
+D 6.8µH, ±20%, I=19A, I_sat=32A, DCR=8.83 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_15u_42
+D 15µH, ±20%, I=14A, I_sat=12A, DCR=14.4 mOhm Max, Self resonance: 7.5MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_68u_43
+D 68µH, ±20%, I=6.1A, I_sat=4.5A, DCR=75.7 mOhm Max, Self resonance: 3MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_22u_44
+D 22µH, ±20%, I=11.7A, I_sat=11A, DCR=22.27 mOhm Max, Self resonance: 5.97MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_15u_45
+D 15µH, ±20%, I=12.5A, I_sat=13A, DCR=16.96 mOhm Max, Self resonance: 8.55MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP5050_4u7_46
+D 4.7µH, ±20%, I=12A, I_sat=27A, DCR=15 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_10u_47
+D 10µH, ±20%, I=9A, I_sat=16A, DCR=25.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_3u3_48
+D 3.3µH, ±20%, I=18A, I_sat=35A, DCR=6.8 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_2u2_49
+D 2.2µH, ±20%, I=22A, I_sat=40A, DCR=4.2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_4u7_4a
+D 4.7µH, ±20%, I=13.5A, I_sat=32A, DCR=8.7 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP1212_1u2_4b
+D 1.2µH, ±20%, I=5A, I_sat=4A, DCR=27 mOhm Max, Self resonance: 65MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP3232_820n_4c
+D 820nH, ±20%, I=19.5A, I_sat=15A, DCR=3.88 mOhm Max, Self resonance: 57MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_15u_4d
+D 15µH, ±20%, I=4.3A, I_sat=3.8A, DCR=85.3 mOhm Max, Self resonance: 11MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_330n_4e
+D 330nH, ±20%, I=29.5A, I_sat=36A, DCR=2.14 mOhm Max, Self resonance: 97MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_6u8_4f
+D 6.8µH, ±20%, I=7A, I_sat=6.7A, DCR=33.4 mOhm Max, Self resonance: 13MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP2525_330n_50
+D 330nH, ±20%, I=20A, I_sat=30A, DCR=3.9 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_200n_51
+D 200nH, ±20%, I=24A, I_sat=41A, DCR=3 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2020_2u2_52
+D 2.2µH, ±20%, I=4.2A, I_sat=9.5A, DCR=50.1 mOhm Max, Self resonance: 39MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_680n_53
+D 680nH, ±20%, I=10A, I_sat=15A, DCR=12.4 mOhm Max, Self resonance: 77MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_3u3_54
+D 3.3µH, ±20%, I=3.3A, I_sat=8.5A, DCR=85.5 mOhm Max, Self resonance: 30MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_1u_55
+D 1µH, ±20%, I=7.5A, I_sat=7A, DCR=18.1 mOhm Max, Self resonance: 66MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_470n_56
+D 470nH, ±20%, I=14A, I_sat=9A, DCR=6 mOhm Max, Self resonance: 83MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_470n_57
+D 470nH, ±20%, I=12.2A, I_sat=16A, DCR=7.04 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_680n_58
+D 680nH, ±20%, I=10.2A, I_sat=13.5A, DCR=8.96 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP1616_470n_59
+D 470nH, ±20%, I=5A, I_sat=13A, DCR=22 mOhm Max, Self resonance: 101MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP1616_1u_5a
+D 1µH, ±20%, I=4.5A, I_sat=5A, DCR=27 mOhm Max, Self resonance: 64MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP1616_4u7_5b
+D 4.7µH, ±20%, I=1.7A, I_sat=1.75A, DCR=105 mOhm Max, Self resonance: 29MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP1616_220n_5c
+D 220nH, ±20%, I=13A, I_sat=24A, DCR=8 mOhm Max, Self resonance: 151MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP4040_1u_5d
+D 1µH, ±20%, I=25A, I_sat=20A, DCR=2.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_360n_5e
+D 360nH, ±20%, I=31.5A, I_sat=60A, DCR=1.4 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_1u8_5f
+D 1.8µH, ±20%, I=17A, I_sat=16A, DCR=5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_1u5_60
+D 1.5µH, ±20%, I=15A, I_sat=27.5A, DCR=5.8 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_560n_61
+D 560nH, ±20%, I=27.5A, I_sat=49A, DCR=1.8 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_5u6_62
+D 5.6µH, ±20%, I=8.5A, I_sat=16A, DCR=19.3 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_4u7_63
+D 4.7µH, ±20%, I=9.5A, I_sat=7.6A, DCR=14.2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_4u7_64
+D 4.7µH, ±20%, I=9.5A, I_sat=17A, DCR=16.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP1212_220n_65
+D 220nH, ±20%, I=6.5A, I_sat=7.5A, DCR=11.4 mOhm Max, Self resonance: 245MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP5050_2u2_66
+D 2.2µH, ±20%, I=16A, I_sat=29A, DCR=8 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_1u_67
+D 1µH, ±20%, I=24A, I_sat=40A, DCR=3.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_3u3_68
+D 3.3µH, ±20%, I=12A, I_sat=27A, DCR=12 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_10u_69
+D 10µH, ±20%, I=7A, I_sat=14A, DCR=34 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_6u8_6a
+D 6.8µH, ±20%, I=9A, I_sat=18A, DCR=22 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP6767_15u_6b
+D 15µH, ±20%, I=9A, I_sat=7.5A, DCR=30.58 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_22u_6c
+D 22µH, ±20%, I=7.2A, I_sat=6.2A, DCR=46.97 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_3u3_6d
+D 3.3µH, ±20%, I=28A, I_sat=54A, DCR=3.88 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_5u6_6e
+D 5.6µH, ±20%, I=21A, I_sat=40A, DCR=7.05 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_220n_6f
+D 220nH, ±20%, I=80A, I_sat=129A, DCR=0.75 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_8u2_70
+D 8.2µH, ±20%, I=18A, I_sat=25A, DCR=10.66 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_5u6_71
+D 5.6µH, ±20%, I=28A, I_sat=21A, DCR=4.44 mOhm Max, Self resonance: 11.8MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_2u2_72
+D 2.2µH, ±20%, I=43.5A, I_sat=28A, DCR=1.98 mOhm Max, Self resonance: 19MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_4u7_73
+D 4.7µH, ±20%, I=30A, I_sat=21A, DCR=4.18 mOhm Max, Self resonance: 10.7MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_10u_74
+D 10µH, ±20%, I=16A, I_sat=20A, DCR=10.91 mOhm Max, Self resonance: 7.7MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP5050_2u2_75
+D 2.2µH, ±20%, I=20A, I_sat=32A, DCR=5.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_1u_76
+D 1µH, ±20%, I=29A, I_sat=50A, DCR=2.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_6u8_77
+D 6.8µH, ±20%, I=11A, I_sat=21A, DCR=18.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_470n_78
+D 470nH, ±20%, I=41A, I_sat=63A, DCR=1.2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_10u_79
+D 10µH, ±20%, I=10A, I_sat=15.5A, DCR=17.2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP1212_360n_7a
+D 360nH, ±20%, I=6.3A, I_sat=6.5A, DCR=13.8 mOhm Max, Self resonance: 170MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_680n_7b
+D 680nH, ±20%, I=5.5A, I_sat=5A, DCR=20.4 mOhm Max, Self resonance: 105MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_880n_7c
+D 880nH, ±20%, I=5.5A, I_sat=4.5A, DCR=22 mOhm Max, Self resonance: 85MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP3232_820n_7d
+D 820nH, ±20%, I=19A, I_sat=24.2A, DCR=4.42 mOhm Max, Self resonance: 53MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_4u7_7e
+D 4.7µH, ±20%, I=2.2A, I_sat=4.4A, DCR=168 mOhm Max, Self resonance: 30MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_3u3_7f
+D 3.3µH, ±20%, I=2.8A, I_sat=5A, DCR=103 mOhm Max, Self resonance: 33MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_220n_80
+D 220nH, ±20%, I=15A, I_sat=22A, DCR=5.2 mOhm Max, Self resonance: 145MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_5u6_81
+D 5.6µH, ±20%, I=2.5A, I_sat=4.5A, DCR=122 mOhm Max, Self resonance: 24MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_820n_82
+D 820nH, ±20%, I=9.3A, I_sat=13A, DCR=11.9 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_100n_83
+D 100nH, ±20%, I=21A, I_sat=25A, DCR=2.9 mOhm Max, Self resonance: 266MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_220n_84
+D 220nH, ±20%, I=17A, I_sat=13A, DCR=4.5 mOhm Max, Self resonance: 146MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_5u6_85
+D 5.6µH, ±20%, I=3A, I_sat=2.2A, DCR=92 mOhm Max, Self resonance: 24MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_220n_86
+D 220nH, ±20%, I=15.5A, I_sat=21A, DCR=4.52 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP1616_220n_87
+D 220nH, ±20%, I=8.5A, I_sat=20A, DCR=12 mOhm Max, Self resonance: 183MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP4040_1u_88
+D 1µH, ±20%, I=17.5A, I_sat=36A, DCR=4.1 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_2u_89
+D 2µH, ±20%, I=16A, I_sat=14A, DCR=5.8 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP5050_1u5_8a
+D 1.5µH, ±20%, I=19A, I_sat=35A, DCR=5.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_680n_8b
+D 680nH, ±20%, I=28A, I_sat=49A, DCR=2.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP6767_3u3_8c
+D 3.3µH, ±20%, I=20.5A, I_sat=14A, DCR=7.3 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_4u7_8d
+D 4.7µH, ±20%, I=18A, I_sat=12A, DCR=9.32 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_5u6_8e
+D 5.6µH, ±20%, I=15A, I_sat=11.5A, DCR=12.2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_470n_8f
+D 470nH, ±20%, I=62A, I_sat=123A, DCR=1.03 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_470n_90
+D 470nH, ±20%, I=64.5A, I_sat=62A, DCR=0.87 mOhm Max, Self resonance: 60MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_820n_91
+D 820nH, ±20%, I=56.5A, I_sat=45A, DCR=1.29 mOhm Max, Self resonance: 36MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_1u5_92
+D 1.5µH, ±20%, I=48A, I_sat=31A, DCR=1.62 mOhm Max, Self resonance: 26MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_560n_93
+D 560nH, ±20%, I=56A, I_sat=88A, DCR=1.05 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_1u8_94
+D 1.8µH, ±20%, I=38A, I_sat=65A, DCR=2.1 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_330n_95
+D 330nH, ±20%, I=65A, I_sat=126A, DCR=0.82 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_3u3_96
+D 3.3µH, ±20%, I=32.2A, I_sat=32A, DCR=3.27 mOhm Max, Self resonance: 16.5MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_1u_97
+D 1µH, ±20%, I=53A, I_sat=42A, DCR=1.46 mOhm Max, Self resonance: 35.5MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_2u2_98
+D 2.2µH, ±20%, I=38.5A, I_sat=38A, DCR=2.41 mOhm Max, Self resonance: 19.8MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_4u7_99
+D 4.7µH, ±20%, I=24A, I_sat=26A, DCR=5.23 mOhm Max, Self resonance: 14MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP5050_1u_9a
+D 1µH, ±20%, I=32A, I_sat=49A, DCR=2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP2020_330n_9b
+D 330nH, ±20%, I=13A, I_sat=7.5A, DCR=5.9 mOhm Max, Self resonance: 108MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_100n_9c
+D 100nH, ±20%, I=13.5A, I_sat=35A, DCR=4.6 mOhm Max, Self resonance: 256MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP5050_820n_9d
+D 820nH, ±20%, I=25A, I_sat=44A, DCR=3 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP5050_470n_9e
+D 470nH, ±20%, I=32A, I_sat=55A, DCR=2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP6767_2u2_9f
+D 2.2µH, ±20%, I=26A, I_sat=19A, DCR=5.03 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_1u_a0
+D 1µH, ±20%, I=41A, I_sat=27.5A, DCR=2.05 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_1u5_a1
+D 1.5µH, ±20%, I=31A, I_sat=21A, DCR=3.43 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_1u_a2
+D 1µH, ±20%, I=55.5A, I_sat=32A, DCR=1.27 mOhm Max, Self resonance: 34MHz, -55°C ~ 155°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP5050_8u2_a3
+D 8.2µH, ±20%, I=8.5A, I_sat=16A, DCR=28 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP6767_22u_a4
+D 22µH, ±20%, I=11A, I_sat=23A, DCR=26.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP1212_3u3_a5
+D 3.3µH, ±20%, I=2.7A, I_sat=3.3A, DCR=61 mOhm Max, Self resonance: 45MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP2525_22u_a6
+D 22µH, ±20%, I=2.9A, I_sat=2.5A, DCR=135 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_220n_a7
+D 220nH, ±20%, I=23A, I_sat=40A, DCR=2.8 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_3u3_a8
+D 3.3µH, ±20%, I=5A, I_sat=13A, DCR=51.6 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_4u7_a9
+D 4.7µH, ±20%, I=4.5A, I_sat=10A, DCR=63 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_10u_aa
+D 10µH, ±20%, I=2.5A, I_sat=7A, DCR=129 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP1212_560n_ab
+D 560nH, ±20%, I=5.5A, I_sat=5.5A, DCR=19.4 mOhm Max, Self resonance: 110MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_220n_ac
+D 220nH, ±20%, I=8.5A, I_sat=9A, DCR=11.4 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_330n_ad
+D 330nH, ±20%, I=7.2A, I_sat=8.7A, DCR=14.3 mOhm Max, Self resonance: 175MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP1212_820n_ae
+D 820nH, ±20%, I=4.9A, I_sat=5.5A, DCR=26 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.142 L x 0.118 W (3.60mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP3232_680n_af
+D 680nH, ±20%, I=22.2A, I_sat=14.5A, DCR=3.22 mOhm Max, Self resonance: 62MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_220n_b0
+D 220nH, ±20%, I=30.7A, I_sat=34A, DCR=1.68 mOhm Max, Self resonance: 126MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_1u_b1
+D 1µH, ±20%, I=18.2A, I_sat=12A, DCR=4.63 mOhm Max, Self resonance: 49MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_1u_b2
+D 1µH, ±20%, I=4.4A, I_sat=10.2A, DCR=46.5 mOhm Max, Self resonance: 64MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2525_100n_b3
+D 100nH, ±20%, I=32.5A, I_sat=60A, DCR=1.7 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2020_5u6_b4
+D 5.6µH, ±20%, I=3A, I_sat=4.1A, DCR=108 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_220n_b5
+D 220nH, ±20%, I=21A, I_sat=14.5A, DCR=3.9 mOhm Max, Self resonance: 146MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_330n_b6
+D 330nH, ±20%, I=16.5A, I_sat=9A, DCR=5 mOhm Max, Self resonance: 112MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_330n_b7
+D 330nH, ±20%, I=12A, I_sat=25A, DCR=8.2 mOhm Max, Self resonance: 125MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_100n_b8
+D 100nH, ±20%, I=21A, I_sat=25A, DCR=2.9 mOhm Max, Self resonance: 333MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_10u_b9
+D 10µH, ±20%, I=2.2A, I_sat=2A, DCR=182.8 mOhm Max, Self resonance: 17MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_330n_ba
+D 330nH, ±20%, I=13.7A, I_sat=19A, DCR=5.56 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP4040_2u2_bb
+D 2.2µH, ±20%, I=12A, I_sat=25.6A, DCR=9 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP1616_2u2_bc
+D 2.2µH, ±20%, I=2.75A, I_sat=3A, DCR=83.5 mOhm Max, Self resonance: 49MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP1616_1u_bd
+D 1µH, ±20%, I=3.75A, I_sat=8.5A, DCR=37 mOhm Max, Self resonance: 90MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP1616_2u2_be
+D 2.2µH, ±20%, I=3.25A, I_sat=3.25A, DCR=68 mOhm Max, Self resonance: 40MHz, -55°C ~ 125°C, 0.175 L x 0.160 W (4.45mm x 4.06mm)
+$ENDCMP
+#
+$CMP IHLP2525_6u8_bf
+D 6.8µH, ±20%, I=4.5A, I_sat=8A, DCR=60 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP6767_47u_c0
+D 47µH, ±20%, I=5A, I_sat=4.3A, DCR=108.46 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP6767_10u_c1
+D 10µH, ±20%, I=12A, I_sat=8A, DCR=18.92 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP5050_3u3_c2
+D 3.3µH, ±20%, I=15A, I_sat=32A, DCR=9.2 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP3232_4u7_c3
+D 4.7µH, ±20%, I=7.25A, I_sat=15A, DCR=32 mOhm Max, Self resonance: 20MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_3u3_c4
+D 3.3µH, ±20%, I=10.5A, I_sat=9.7A, DCR=14.9 mOhm Max, Self resonance: 22MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_220n_c5
+D 220nH, ±20%, I=34A, I_sat=22A, DCR=1.35 mOhm Max, Self resonance: 117MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_470n_c6
+D 470nH, ±20%, I=25A, I_sat=14A, DCR=2.38 mOhm Max, Self resonance: 80MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP3232_5u6_c7
+D 5.6µH, ±20%, I=7.4A, I_sat=7.6A, DCR=28.6 mOhm Max, Self resonance: 15MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP4040_470n_c8
+D 470nH, ±20%, I=30A, I_sat=30A, DCR=1.68 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_6u8_c9
+D 6.8µH, ±20%, I=9A, I_sat=7.5A, DCR=19.3 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP4040_22u_ca
+D 22µH, ±20%, I=5A, I_sat=4.5A, DCR=66 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP3232_220n_cb
+D 220nH, ±20%, I=32A, I_sat=43A, DCR=1.71 mOhm Max, Self resonance: 104MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP2525_10u_cc
+D 10µH, ±20%, I=4.5A, I_sat=4.5A, DCR=71.3 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2525_3u3_cd
+D 3.3µH, ±20%, I=8A, I_sat=8A, DCR=20.9 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP4040_190n_ce
+D 190nH, ±20%, I=40A, I_sat=90A, DCR=0.95 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.430 L x 0.405 W (10.92mm x 10.30mm)
+$ENDCMP
+#
+$CMP IHLP2525_1u_cf
+D 1µH, ±20%, I=13A, I_sat=15A, DCR=6.5 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP1212_560n_d0
+D 560nH, ±20%, I=5.1A, I_sat=6.7A, DCR=22 mOhm Max, Self resonance: 135MHz, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP3232_470n_d1
+D 470nH, ±20%, I=25A, I_sat=31.5A, DCR=2.62 mOhm Max, Self resonance: 74MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_2u2_d2
+D 2.2µH, ±20%, I=3.4A, I_sat=6A, DCR=77.3 mOhm Max, Self resonance: 47MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2525_3u3_d3
+D 3.3µH, ±20%, I=6A, I_sat=13.5A, DCR=30 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP2020_100n_d4
+D 100nH, ±20%, I=23A, I_sat=27A, DCR=3.16 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_2u2_d5
+D 2.2µH, ±20%, I=5A, I_sat=5.5A, DCR=37.7 mOhm Max, Self resonance: 41MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#
+$CMP IHLP2525_8u2_d6
+D 8.2µH, ±20%, I=4A, I_sat=7.5A, DCR=68 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.270 L x 0.255 W (6.86mm x 6.47mm)
+$ENDCMP
+#
+$CMP IHLP5050_4u7_d7
+D 4.7µH, ±20%, I=10A, I_sat=24A, DCR=15 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP3232_22u_d8
+D 22µH, ±20%, I=4.3A, I_sat=3.3A, DCR=94.2 mOhm Max, Self resonance: 8.2MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP5050_5u6_d9
+D 5.6µH, ±20%, I=9.5A, I_sat=19A, DCR=19 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.520 L x 0.508 W (13.20mm x 12.90mm)
+$ENDCMP
+#
+$CMP IHLP6767_820n_da
+D 820nH, ±20%, I=50A, I_sat=73A, DCR=1.29 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.675 L x 0.675 W (17.15mm x 17.15mm)
+$ENDCMP
+#
+$CMP IHLP1212_330n_db
+D 330nH, ±20%, I=7.8A, I_sat=7A, DCR=13.8 mOhm Max, Self resonance: -, -55°C ~ 125°C, 0.144 L x 0.118 W (3.65mm x 3.00mm)
+$ENDCMP
+#
+$CMP IHLP3232_330n_dc
+D 330nH, ±20%, I=27.5A, I_sat=16A, DCR=2.15 mOhm Max, Self resonance: 108MHz, -55°C ~ 125°C, 0.340 L x 0.322 W (8.64mm x 8.18mm)
+$ENDCMP
+#
+$CMP IHLP2020_470n_dd
+D 470nH, ±20%, I=6.5A, I_sat=18A, DCR=19.2 mOhm Max, Self resonance: 108MHz, -55°C ~ 125°C, 0.216 L x 0.204 W (5.49mm x 5.18mm)
+$ENDCMP
+#

@@ -1,0 +1,1530 @@
+EESchema-DOCLIB  Version 2.0
+#encoding utf-8
+$CMP PCAP_390u
+D 390µF, ±20%, 6.3V, 22 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_100u
+D 100µF, ±20%, 10V, 35 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.8A
+$ENDCMP
+#
+$CMP PCAP_330u
+D 330µF, ±20%, 6.3V, 23 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.7A
+$ENDCMP
+#
+$CMP PCAP_150u
+D 150µF, ±20%, 10V, 25 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.5A
+$ENDCMP
+#
+$CMP PCAP_150u_2
+D 150µF, ±20%, 10V, 30 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_22u
+D 22µF, ±20%, 35V, 50 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_390u_2
+D 390µF, ±20%, 6.3V, 14 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.95A
+$ENDCMP
+#
+$CMP PCAP_120u
+D 120µF, ±20%, 16V, 24 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.01A
+$ENDCMP
+#
+$CMP PCAP_330u_2
+D 330µF, ±20%, 10V, 23 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.1A
+$ENDCMP
+#
+$CMP PCAP_220u
+D 220µF, ±20%, 16V, 20 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.9A
+$ENDCMP
+#
+$CMP PCAP_220u_2
+D 220µF, ±20%, 16V, 22 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.45A
+$ENDCMP
+#
+$CMP PCAP_330u_3
+D 330µF, ±20%, 16V, 16 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.35A
+$ENDCMP
+#
+$CMP PCAP_1000u
+D 1000µF, ±20%, 6.3V, 18 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.8A
+$ENDCMP
+#
+$CMP PCAP_470u
+D 470µF, ±20%, 16V, 20 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.7A
+$ENDCMP
+#
+$CMP PCAP_1800u
+D 1800µF, ±20%, 6.3V, 14 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.4A
+$ENDCMP
+#
+$CMP PCAP_1500u
+D 1500µF, ±20%, 6.3V, 8 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 6A
+$ENDCMP
+#
+$CMP PCAP_2200u
+D 2200µF, ±20%, 6.3V, 12 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5A
+$ENDCMP
+#
+$CMP PCAP_47u
+D 47µF, ±20%, 50V, 30 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_180u
+D 180µF, ±20%, 25V, 28 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_47u_2
+D 47µF, ±20%, 50V, 29 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.3A
+$ENDCMP
+#
+$CMP PCAP_100u_2
+D 100µF, ±20%, 35V, 29 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_82u
+D 82µF, ±20%, 35V, 27 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3A
+$ENDCMP
+#
+$CMP PCAP_15u
+D 15µF, ±20%, 80V, 39 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.9A
+$ENDCMP
+#
+$CMP PCAP_150u_3
+D 150µF, ±20%, 35V, 28 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_120u_2
+D 120µF, ±20%, 35V, 24 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.7A
+$ENDCMP
+#
+$CMP PCAP_220u_3
+D 220µF, ±20%, 25V, 22 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.8A
+$ENDCMP
+#
+$CMP PCAP_47u_3
+D 47µF, ±20%, 63V, 30 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.3A
+$ENDCMP
+#
+$CMP PCAP_47u_4
+D 47µF, ±20%, 63V, 30 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.5A
+$ENDCMP
+#
+$CMP PCAP_39u
+D 39µF, ±20%, 63V, 29 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.4A
+$ENDCMP
+#
+$CMP PCAP_22u_2
+D 22µF, ±20%, 80V, 38 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_100u_3
+D 100µF, ±20%, 50V, 27 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_180u_2
+D 180µF, ±20%, 35V, 22 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 4.1A
+$ENDCMP
+#
+$CMP PCAP_390u_3
+D 390µF, ±20%, 25V, 21 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 4.2A
+$ENDCMP
+#
+$CMP PCAP_120u_3
+D 120µF, ±20%, 6.3V, 23 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3A
+$ENDCMP
+#
+$CMP PCAP_47u_5
+D 47µF, ±20%, 16V, 55 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 390mA
+$ENDCMP
+#
+$CMP PCAP_100u_4
+D 100µF, ±20%, 6.3V, 25 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.4A
+$ENDCMP
+#
+$CMP PCAP_47u_6
+D 47µF, ±20%, 10V, 26 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_220u_4
+D 220µF, ±20%, 6.3V, 10 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.9A
+$ENDCMP
+#
+$CMP PCAP_120u_4
+D 120µF, ±20%, 10V, 27 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_10u
+D 10µF, ±20%, 35V, 85 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 310mA
+$ENDCMP
+#
+$CMP PCAP_100u_5
+D 100µF, ±20%, 6.3V, 24 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.5A
+$ENDCMP
+#
+$CMP PCAP_120u_5
+D 120µF, ±20%, 16V, 28 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_270u
+D 270µF, ±20%, 10V, 22 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_47u_7
+D 47µF, ±20%, 16V, 40 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.5A
+$ENDCMP
+#
+$CMP PCAP_150u_4
+D 150µF, ±20%, 16V, 25 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.5A
+$ENDCMP
+#
+$CMP PCAP_330u_4
+D 330µF, ±20%, 6.3V, 18 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.2A
+$ENDCMP
+#
+$CMP PCAP_10u_2
+D 10µF, ±20%, 63V, 75 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1A
+$ENDCMP
+#
+$CMP PCAP_560u
+D 560µF, ±20%, 10V, 15 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.8A
+$ENDCMP
+#
+$CMP PCAP_820u
+D 820µF, ±20%, 6.3V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5A
+$ENDCMP
+#
+$CMP PCAP_100u_6
+D 100µF, ±20%, 20V, 42 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.4A
+$ENDCMP
+#
+$CMP PCAP_150u_5
+D 150µF, ±20%, 20V, 20 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.32A
+$ENDCMP
+#
+$CMP PCAP_1000u_2
+D 1000µF, ±20%, 10V, 13 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.8A
+$ENDCMP
+#
+$CMP PCAP_120u_6
+D 120µF, ±20%, 25V, 29 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.9A
+$ENDCMP
+#
+$CMP PCAP_1500u_2
+D 1500µF, ±20%, 10V, 13 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.9A
+$ENDCMP
+#
+$CMP PCAP_82u_2
+D 82µF, ±20%, 35V, 29 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_27u
+D 27µF, ±20%, 63V, 30 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_82u_3
+D 82µF, ±20%, 35V, 24 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_47u_8
+D 47µF, ±20%, 20V, 55 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1A
+$ENDCMP
+#
+$CMP PCAP_100u_7
+D 100µF, ±20%, 16V, 24 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.01A
+$ENDCMP
+#
+$CMP PCAP_10u_3
+D 10µF, ±20%, 100V, 45 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.7A
+$ENDCMP
+#
+$CMP PCAP_270u_2
+D 270µF, ±20%, 25V, 27 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.7A
+$ENDCMP
+#
+$CMP PCAP_330u_5
+D 330µF, ±20%, 20V, 26 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.7A
+$ENDCMP
+#
+$CMP PCAP_12u
+D 12µF, ±20%, 100V, 42 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.9A
+$ENDCMP
+#
+$CMP PCAP_270u_3
+D 270µF, ±20%, 25V, 23 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.7A
+$ENDCMP
+#
+$CMP PCAP_12u_2
+D 12µF, ±20%, 125V, 69 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.4A
+$ENDCMP
+#
+$CMP PCAP_470u_2
+D 470µF, ±20%, 16V, 21 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.9A
+$ENDCMP
+#
+$CMP PCAP_120u_7
+D 120µF, ±20%, 35V, 23 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.8A
+$ENDCMP
+#
+$CMP PCAP_68u
+D 68µF, ±20%, 50V, 29 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_82u_4
+D 82µF, ±20%, 16V, 28 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_33u
+D 33µF, ±20%, 10V, 40 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_56u
+D 56µF, ±20%, 10V, 25 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.5A
+$ENDCMP
+#
+$CMP PCAP_5u60
+D 5.6µF, ±20%, 63V, 105 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 700mA
+$ENDCMP
+#
+$CMP PCAP_33u_2
+D 33µF, ±20%, 16V, 31 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.4A
+$ENDCMP
+#
+$CMP PCAP_68u_2
+D 68µF, ±20%, 16V, 30 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_220u_5
+D 220µF, ±20%, 6.3V, 20 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_18u
+D 18µF, ±20%, 35V, 64 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 900mA
+$ENDCMP
+#
+$CMP PCAP_120u_8
+D 120µF, ±20%, 10V, 23 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3A
+$ENDCMP
+#
+$CMP PCAP_22u_3
+D 22µF, ±20%, 25V, 65 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 360mA
+$ENDCMP
+#
+$CMP PCAP_330u_6
+D 330µF, ±20%, 6.3V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.5A
+$ENDCMP
+#
+$CMP PCAP_470u_3
+D 470µF, ±20%, 4V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.5A
+$ENDCMP
+#
+$CMP PCAP_68u_3
+D 68µF, ±20%, 10V, 28 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.31A
+$ENDCMP
+#
+$CMP PCAP_39u_2
+D 39µF, ±20%, 16V, 35 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.07A
+$ENDCMP
+#
+$CMP PCAP_120u_9
+D 120µF, ±20%, 10V, 25 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.53A
+$ENDCMP
+#
+$CMP PCAP_220u_6
+D 220µF, ±20%, 6.3V, 15 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_68u_4
+D 68µF, ±20%, 16V, 28 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.39A
+$ENDCMP
+#
+$CMP PCAP_100u_8
+D 100µF, ±20%, 6.3V, 22 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_82u_5
+D 82µF, ±20%, 16V, 30 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_12u_3
+D 12µF, ±20%, 50V, 55 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.2A
+$ENDCMP
+#
+$CMP PCAP_330u_7
+D 330µF, ±20%, 2.5V, 10 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.3A
+$ENDCMP
+#
+$CMP PCAP_220u_7
+D 220µF, ±20%, 6.3V, 22 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_82u_6
+D 82µF, ±20%, 16V, 47 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_470u_4
+D 470µF, ±20%, 10V, 16 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.6A
+$ENDCMP
+#
+$CMP PCAP_47u_9
+D 47µF, ±20%, 25V, 45 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.4A
+$ENDCMP
+#
+$CMP PCAP_680u
+D 680µF, ±20%, 6.3V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5A
+$ENDCMP
+#
+$CMP PCAP_27u_2
+D 27µF, ±20%, 35V, 55 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.2A
+$ENDCMP
+#
+$CMP PCAP_56u_2
+D 56µF, ±20%, 25V, 50 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_100u_9
+D 100µF, ±20%, 16V, 36 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.5A
+$ENDCMP
+#
+$CMP PCAP_1500u_3
+D 1500µF, ±20%, 4V, 10 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.5A
+$ENDCMP
+#
+$CMP PCAP_470u_5
+D 470µF, ±20%, 10V, 19 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.8A
+$ENDCMP
+#
+$CMP PCAP_1500u_4
+D 1500µF, ±20%, 6.3V, 12 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.025A
+$ENDCMP
+#
+$CMP PCAP_680u_2
+D 680µF, ±20%, 10V, 13 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.82A
+$ENDCMP
+#
+$CMP PCAP_270u_4
+D 270µF, ±20%, 16V, 25 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.3A
+$ENDCMP
+#
+$CMP PCAP_56u_3
+D 56µF, ±20%, 25V, 28 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.8A
+$ENDCMP
+#
+$CMP PCAP_820u_2
+D 820µF, ±20%, 10V, 15 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.3A
+$ENDCMP
+#
+$CMP PCAP_12u_4
+D 12µF, ±20%, 63V, 70 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.1A
+$ENDCMP
+#
+$CMP PCAP_2200u_2
+D 2200µF, ±20%, 2.5V, 8 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 6A
+$ENDCMP
+#
+$CMP PCAP_1500u_5
+D 1500µF, ±20%, 2.5V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.4A
+$ENDCMP
+#
+$CMP PCAP_1200u
+D 1200µF, ±20%, 4V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.4A
+$ENDCMP
+#
+$CMP PCAP_82u_7
+D 82µF, ±20%, 25V, 47 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.4A
+$ENDCMP
+#
+$CMP PCAP_1500u_6
+D 1500µF, ±20%, 4V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.2A
+$ENDCMP
+#
+$CMP PCAP_1800u_2
+D 1800µF, ±20%, 6.3V, 11 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.2A
+$ENDCMP
+#
+$CMP PCAP_2700u
+D 2700µF, ±20%, 4V, 11 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.3A
+$ENDCMP
+#
+$CMP PCAP_22u_4
+D 22µF, ±20%, 63V, 37 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.7A
+$ENDCMP
+#
+$CMP PCAP_150u_6
+D 150µF, ±20%, 20V, 28 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_120u_10
+D 120µF, ±20%, 25V, 35 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.8A
+$ENDCMP
+#
+$CMP PCAP_820u_3
+D 820µF, ±20%, 16V, 18 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.2A
+$ENDCMP
+#
+$CMP PCAP_27u_3
+D 27µF, ±20%, 63V, 35 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_68u_5
+D 68µF, ±20%, 35V, 37 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.8A
+$ENDCMP
+#
+$CMP PCAP_150u_7
+D 150µF, ±20%, 20V, 33 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.9A
+$ENDCMP
+#
+$CMP PCAP_220u_8
+D 220µF, ±20%, 16V, 27 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_270u_5
+D 270µF, ±20%, 16V, 26 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_220u_9
+D 220µF, ±20%, 20V, 27 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_150u_8
+D 150µF, ±20%, 25V, 23 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_330u_8
+D 330µF, ±20%, 16V, 26 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.4A
+$ENDCMP
+#
+$CMP PCAP_270u_6
+D 270µF, ±20%, 16V, 21 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.8A
+$ENDCMP
+#
+$CMP PCAP_220u_10
+D 220µF, ±20%, 20V, 22 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.7A
+$ENDCMP
+#
+$CMP PCAP_68u_6
+D 68µF, ±20%, 35V, 30 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 740mA
+$ENDCMP
+#
+$CMP PCAP_330u_9
+D 330µF, ±20%, 4V, 20 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_390u_4
+D 390µF, ±20%, 16V, 26 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.04A
+$ENDCMP
+#
+$CMP PCAP_33u_3
+D 33µF, ±20%, 50V, 31 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 630mA
+$ENDCMP
+#
+$CMP PCAP_12u_5
+D 12µF, ±20%, 80V, 41 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.8A
+$ENDCMP
+#
+$CMP PCAP_39u_3
+D 39µF, ±20%, 16V, 30 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_270u_7
+D 270µF, ±20%, 20V, 21 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 4A
+$ENDCMP
+#
+$CMP PCAP_270u_8
+D 270µF, ±20%, 20V, 27 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.02A
+$ENDCMP
+#
+$CMP PCAP_82u_8
+D 82µF, ±20%, 10V, 35 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.7A
+$ENDCMP
+#
+$CMP PCAP_150u_9
+D 150µF, ±20%, 6.3V, 33 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.8A
+$ENDCMP
+#
+$CMP PCAP_220u_11
+D 220µF, ±20%, 4V, 15 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.9A
+$ENDCMP
+#
+$CMP PCAP_180u_3
+D 180µF, ±20%, 6.3V, 17 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3A
+$ENDCMP
+#
+$CMP PCAP_8u20
+D 8.2µF, ±20%, 63V, 56 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.2A
+$ENDCMP
+#
+$CMP PCAP_100u_10
+D 100µF, ±20%, 35V, 29 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 990mA
+$ENDCMP
+#
+$CMP PCAP_10u_4
+D 10µF, ±20%, 50V, 75 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 410mA
+$ENDCMP
+#
+$CMP PCAP_47u_10
+D 47µF, ±20%, 50V, 30 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 970mA
+$ENDCMP
+#
+$CMP PCAP_15u_2
+D 15µF, ±20%, 125V, 48 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_15u_3
+D 15µF, ±20%, 50V, 63 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.1A
+$ENDCMP
+#
+$CMP PCAP_680u_3
+D 680µF, ±20%, 16V, 19 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 4.4A
+$ENDCMP
+#
+$CMP PCAP_6u80
+D 6.8µF, ±20%, 100V, 48 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.5A
+$ENDCMP
+#
+$CMP PCAP_100u_11
+D 100µF, ±20%, 35V, 25 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 2.4A
+$ENDCMP
+#
+$CMP PCAP_390u_5
+D 390µF, ±20%, 2.5V, 10 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.9A
+$ENDCMP
+#
+$CMP PCAP_5u60_2
+D 5.6µF, ±20%, 50V, 105 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 280mA
+$ENDCMP
+#
+$CMP PCAP_120u_11
+D 120µF, ±20%, 6.3V, 24 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.5A
+$ENDCMP
+#
+$CMP PCAP_120u_12
+D 120µF, ±20%, 6.3V, 22 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_56u_4
+D 56µF, ±20%, 16V, 40 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.6A
+$ENDCMP
+#
+$CMP PCAP_180u_4
+D 180µF, ±20%, 6.3V, 33 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.9A
+$ENDCMP
+#
+$CMP PCAP_56u_5
+D 56µF, ±20%, 20V, 48 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_560u_2
+D 560µF, ±20%, 4V, 14 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4A
+$ENDCMP
+#
+$CMP PCAP_270u_9
+D 270µF, ±20%, 10V, 21 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.22A
+$ENDCMP
+#
+$CMP PCAP_820u_4
+D 820µF, ±20%, 6.3V, 10 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.15A
+$ENDCMP
+#
+$CMP PCAP_33u_4
+D 33µF, ±20%, 20V, 60 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 380mA
+$ENDCMP
+#
+$CMP PCAP_270u_10
+D 270µF, ±20%, 16V, 24 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_560u_3
+D 560µF, ±20%, 4V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.5A
+$ENDCMP
+#
+$CMP PCAP_27u_4
+D 27µF, ±20%, 50V, 35 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 760mA
+$ENDCMP
+#
+$CMP PCAP_56u_6
+D 56µF, ±20%, 10V, 27 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_180u_5
+D 180µF, ±20%, 25V, 28 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.01A
+$ENDCMP
+#
+$CMP PCAP_270u_11
+D 270µF, ±20%, 6.3V, 23 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_220u_12
+D 220µF, ±20%, 4V, 32 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_82u_9
+D 82µF, ±20%, 16V, 28 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_18u_2
+D 18µF, ±20%, 35V, 60 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 450mA
+$ENDCMP
+#
+$CMP PCAP_82u_10
+D 82µF, ±20%, 16V, 45 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 530mA
+$ENDCMP
+#
+$CMP PCAP_56u_7
+D 56µF, ±20%, 20V, 50 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 500mA
+$ENDCMP
+#
+$CMP PCAP_68u_7
+D 68µF, ±20%, 20V, 45 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_39u_4
+D 39µF, ±20%, 25V, 55 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 480mA
+$ENDCMP
+#
+$CMP PCAP_270u_12
+D 270µF, ±20%, 20V, 27 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_33u_5
+D 33µF, ±20%, 4V, 200 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 700mA
+$ENDCMP
+#
+$CMP PCAP_22u_5
+D 22µF, ±20%, 6.3V, 200 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 700mA
+$ENDCMP
+#
+$CMP PCAP_10u_5
+D 10µF, ±20%, 10V, 220 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 700mA
+$ENDCMP
+#
+$CMP PCAP_15u_4
+D 15µF, ±20%, 10V, 200 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 700mA
+$ENDCMP
+#
+$CMP PCAP_4u70
+D 4.7µF, ±20%, 10V, 240 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 670mA
+$ENDCMP
+#
+$CMP PCAP_6u80_2
+D 6.8µF, ±20%, 10V, 240 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 670mA
+$ENDCMP
+#
+$CMP PCAP_3u30
+D 3.3µF, ±20%, 16V, 260 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 660mA
+$ENDCMP
+#
+$CMP PCAP_68u_8
+D 68µF, ±20%, 35V, 30 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_180u_6
+D 180µF, ±20%, 2.5V, 21 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.67A
+$ENDCMP
+#
+$CMP PCAP_47u_11
+D 47µF, ±20%, 6.3V, 35 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.6A
+$ENDCMP
+#
+$CMP PCAP_100u_12
+D 100µF, ±20%, 2.5V, 22 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_82u_11
+D 82µF, ±20%, 6.3V, 23 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_220u_13
+D 220µF, ±20%, 4V, 21 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_100u_13
+D 100µF, ±20%, 4V, 22 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_100u_14
+D 100µF, ±20%, 6.3V, 25 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_82u_12
+D 82µF, ±20%, 6.3V, 23 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_220u_14
+D 220µF, ±20%, 2.5V, 20 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_150u_10
+D 150µF, ±20%, 4V, 22 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_150u_11
+D 150µF, ±20%, 4V, 30 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_10u_6
+D 10µF, ±20%, 20V, 120 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 900mA
+$ENDCMP
+#
+$CMP PCAP_22u_6
+D 22µF, ±20%, 16V, 45 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.21A
+$ENDCMP
+#
+$CMP PCAP_22u_7
+D 22µF, ±20%, 20V, 50 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.7A
+$ENDCMP
+#
+$CMP PCAP_220u_15
+D 220µF, ±20%, 6.3V, 22 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.4A
+$ENDCMP
+#
+$CMP PCAP_6u80_3
+D 6.8µF, ±20%, 25V, 80 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.2A
+$ENDCMP
+#
+$CMP PCAP_22u_8
+D 22µF, ±20%, 20V, 50 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.7A
+$ENDCMP
+#
+$CMP PCAP_10u_7
+D 10µF, ±20%, 25V, 60 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.6A
+$ENDCMP
+#
+$CMP PCAP_47u_12
+D 47µF, ±20%, 10V, 26 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_22u_9
+D 22µF, ±20%, 16V, 45 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 1.1A
+$ENDCMP
+#
+$CMP PCAP_68u_9
+D 68µF, ±20%, 10V, 30 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.1A
+$ENDCMP
+#
+$CMP PCAP_33u_6
+D 33µF, ±20%, 10V, 35 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 1.5A
+$ENDCMP
+#
+$CMP PCAP_39u_5
+D 39µF, ±20%, 16V, 35 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_56u_8
+D 56µF, ±20%, 10V, 25 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.5A
+$ENDCMP
+#
+$CMP PCAP_8u20_2
+D 8.2µF, ±20%, 50V, 81 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 800mA
+$ENDCMP
+#
+$CMP PCAP_39u_6
+D 39µF, ±20%, 16V, 31 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.4A
+$ENDCMP
+#
+$CMP PCAP_100u_15
+D 100µF, ±20%, 4V, 22 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.61A
+$ENDCMP
+#
+$CMP PCAP_47u_13
+D 47µF, ±20%, 10V, 28 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.31A
+$ENDCMP
+#
+$CMP PCAP_56u_9
+D 56µF, ±20%, 10V, 28 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.31A
+$ENDCMP
+#
+$CMP PCAP_33u_7
+D 33µF, ±20%, 16V, 35 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.07A
+$ENDCMP
+#
+$CMP PCAP_270u_13
+D 270µF, ±20%, 4V, 15 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_470u_6
+D 470µF, ±20%, 2.5V, 13 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_390u_6
+D 390µF, ±20%, 4V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.47A
+$ENDCMP
+#
+$CMP PCAP_270u_14
+D 270µF, ±20%, 6.3V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.47A
+$ENDCMP
+#
+$CMP PCAP_330u_10
+D 330µF, ±20%, 4V, 10 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.9A
+$ENDCMP
+#
+$CMP PCAP_33u_8
+D 33µF, ±20%, 25V, 60 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 900mA
+$ENDCMP
+#
+$CMP PCAP_56u_10
+D 56µF, ±20%, 16V, 50 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1A
+$ENDCMP
+#
+$CMP PCAP_39u_7
+D 39µF, ±20%, 20V, 45 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_560u_4
+D 560µF, ±20%, 2.5V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.5A
+$ENDCMP
+#
+$CMP PCAP_390u_7
+D 390µF, ±20%, 6.3V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.5A
+$ENDCMP
+#
+$CMP PCAP_100u_16
+D 100µF, ±20%, 16V, 24 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.7A
+$ENDCMP
+#
+$CMP PCAP_470u_7
+D 470µF, ±20%, 4V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.95A
+$ENDCMP
+#
+$CMP PCAP_150u_12
+D 150µF, ±20%, 16V, 22 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.15A
+$ENDCMP
+#
+$CMP PCAP_470u_8
+D 470µF, ±20%, 6.3V, 13 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.95A
+$ENDCMP
+#
+$CMP PCAP_330u_11
+D 330µF, ±20%, 10V, 19 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.39A
+$ENDCMP
+#
+$CMP PCAP_270u_15
+D 270µF, ±20%, 10V, 20 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_390u_8
+D 390µF, ±20%, 4V, 22 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.7A
+$ENDCMP
+#
+$CMP PCAP_330u_12
+D 330µF, ±20%, 2.5V, 30 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_1000u_3
+D 1000µF, ±20%, 2.5V, 12 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.26A
+$ENDCMP
+#
+$CMP PCAP_680u_4
+D 680µF, ±20%, 4V, 13 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.95A
+$ENDCMP
+#
+$CMP PCAP_100u_17
+D 100µF, ±20%, 16V, 30 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.4A
+$ENDCMP
+#
+$CMP PCAP_560u_5
+D 560µF, ±20%, 2.5V, 13 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_47u_14
+D 47µF, ±20%, 25V, 49 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_2200u_3
+D 2200µF, ±20%, 4V, 13 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.6A
+$ENDCMP
+#
+$CMP PCAP_2700u_2
+D 2700µF, ±20%, 2.5V, 12 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.7A
+$ENDCMP
+#
+$CMP PCAP_470u_9
+D 470µF, ±20%, 6.3V, 22 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.1A
+$ENDCMP
+#
+$CMP PCAP_150u_13
+D 150µF, ±20%, 16V, 28 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_820u_5
+D 820µF, ±20%, 2.5V, 12 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.26A
+$ENDCMP
+#
+$CMP PCAP_820u_6
+D 820µF, ±20%, 6.3V, 13 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.5A
+$ENDCMP
+#
+$CMP PCAP_1800u_3
+D 1800µF, ±20%, 4V, 8 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 6A
+$ENDCMP
+#
+$CMP PCAP_1200u_2
+D 1200µF, ±20%, 2.5V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5A
+$ENDCMP
+#
+$CMP PCAP_560u_6
+D 560µF, ±20%, 4V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.2A
+$ENDCMP
+#
+$CMP PCAP_39u_8
+D 39µF, ±20%, 35V, 52 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.4A
+$ENDCMP
+#
+$CMP PCAP_150u_14
+D 150µF, ±20%, 16V, 33 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 830mA
+$ENDCMP
+#
+$CMP PCAP_39u_9
+D 39µF, ±20%, 35V, 35 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 700mA
+$ENDCMP
+#
+$CMP PCAP_33u_9
+D 33µF, ±20%, 50V, 49 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.5A
+$ENDCMP
+#
+$CMP PCAP_10u_8
+D 10µF, ±20%, 80V, 43 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.6A
+$ENDCMP
+#
+$CMP PCAP_27u_5
+D 27µF, ±20%, 63V, 38 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.5A
+$ENDCMP
+#
+$CMP PCAP_150u_15
+D 150µF, ±20%, 25V, 26 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3A
+$ENDCMP
+#
+$CMP PCAP_470u_10
+D 470µF, ±20%, 25V, 15 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 4.1A
+$ENDCMP
+#
+$CMP PCAP_330u_13
+D 330µF, ±20%, 20V, 22 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.8A
+$ENDCMP
+#
+$CMP PCAP_39u_10
+D 39µF, ±20%, 50V, 34 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_33u_10
+D 33µF, ±20%, 63V, 31 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_47u_15
+D 47µF, ±20%, 50V, 37 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_22u_10
+D 22µF, ±20%, 50V, 60 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_560u_7
+D 560µF, ±20%, 10V, 20 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_4700u
+D 4700µF, ±20%, 2.5V, 10 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.6A
+$ENDCMP
+#
+$CMP PCAP_3300u
+D 3300µF, ±20%, 4V, 11 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.4A
+$ENDCMP
+#
+$CMP PCAP_150u_16
+D 150µF, ±20%, 25V, 28 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_220u_16
+D 220µF, ±20%, 16V, 31 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_120u_13
+D 120µF, ±20%, 25V, 29 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 790mA
+$ENDCMP
+#
+$CMP PCAP_330u_14
+D 330µF, ±20%, 4V, 15 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.3A
+$ENDCMP
+#
+$CMP PCAP_56u_11
+D 56µF, ±20%, 50V, 28 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.4A
+$ENDCMP
+#
+$CMP PCAP_470u_11
+D 470µF, ±20%, 16V, 25 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_390u_9
+D 390µF, ±20%, 16V, 20 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 4.1A
+$ENDCMP
+#
+$CMP PCAP_1000u_4
+D 1000µF, ±20%, 4V, 13 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.3A
+$ENDCMP
+#
+$CMP PCAP_120u_14
+D 120µF, ±20%, 20V, 29 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 770mA
+$ENDCMP
+#
+$CMP PCAP_1200u_3
+D 1200µF, ±20%, 4V, 17 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4A
+$ENDCMP
+#
+$CMP PCAP_82u_13
+D 82µF, ±20%, 25V, 30 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 760mA
+$ENDCMP
+#
+$CMP PCAP_22u_11
+D 22µF, ±20%, 50V, 37 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 680mA
+$ENDCMP
+#
+$CMP PCAP_82u_14
+D 82µF, ±20%, 25V, 36 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 800mA
+$ENDCMP
+#
+$CMP PCAP_39u_11
+D 39µF, ±20%, 35V, 41 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 750mA
+$ENDCMP
+#
+$CMP PCAP_150u_17
+D 150µF, ±20%, 20V, 28 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 860mA
+$ENDCMP
+#
+$CMP PCAP_22u_12
+D 22µF, ±20%, 50V, 56 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 730mA
+$ENDCMP
+#
+$CMP PCAP_270u_16
+D 270µF, ±20%, 16V, 27 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 830mA
+$ENDCMP
+#
+$CMP PCAP_180u_7
+D 180µF, ±20%, 20V, 28 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 800mA
+$ENDCMP
+#
+$CMP PCAP_120u_15
+D 120µF, ±20%, 25V, 29 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 850mA
+$ENDCMP
+#
+$CMP PCAP_6u80_4
+D 6.8µF, ±20%, 125V, 93 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.1A
+$ENDCMP
+#
+$CMP PCAP_56u_12
+D 56µF, ±20%, 35V, 33 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 780mA
+$ENDCMP
+#
+$CMP PCAP_180u_8
+D 180µF, ±20%, 20V, 25 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.1A
+$ENDCMP
+#
+$CMP PCAP_8u20_3
+D 8.2µF, ±20%, 125V, 84 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_150u_18
+D 150µF, ±20%, 16V, 28 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 780mA
+$ENDCMP
+#
+$CMP PCAP_150u_19
+D 150µF, ±20%, 16V, 34 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.7A
+$ENDCMP
+#
+$CMP PCAP_100u_18
+D 100µF, ±20%, 16V, 27 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.3A
+$ENDCMP
+#
+$CMP PCAP_47u_16
+D 47µF, ±20%, 20V, 45 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2A
+$ENDCMP
+#
+$CMP PCAP_180u_9
+D 180µF, ±20%, 16V, 25 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_22u_13
+D 22µF, ±20%, 25V, 50 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_56u_13
+D 56µF, ±20%, 20V, 40 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.4A
+$ENDCMP
+#
+$CMP PCAP_470u_12
+D 470µF, ±20%, 6.3V, 16 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.6A
+$ENDCMP
+#
+$CMP PCAP_68u_10
+D 68µF, ±20%, 20V, 40 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_180u_10
+D 180µF, ±20%, 16V, 18 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.89A
+$ENDCMP
+#
+$CMP PCAP_33u_11
+D 33µF, ±20%, 25V, 30 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_68u_11
+D 68µF, ±20%, 20V, 34 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.45A
+$ENDCMP
+#
+$CMP PCAP_180u_11
+D 180µF, ±20%, 16V, 16 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.4A
+$ENDCMP
+#
+$CMP PCAP_470u_13
+D 470µF, ±20%, 10V, 12 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.3A
+$ENDCMP
+#
+$CMP PCAP_1200u_4
+D 1200µF, ±20%, 6.3V, 12 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.025A
+$ENDCMP
+#
+$CMP PCAP_390u_10
+D 390µF, ±20%, 10V, 17 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4A
+$ENDCMP
+#
+$CMP PCAP_220u_17
+D 220µF, ±20%, 16V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.05A
+$ENDCMP
+#
+$CMP PCAP_56u_14
+D 56µF, ±20%, 25V, 35 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.4A
+$ENDCMP
+#
+$CMP PCAP_680u_5
+D 680µF, ±20%, 6.3V, 10 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.5A
+$ENDCMP
+#
+$CMP PCAP_12u_6
+D 12µF, ±20%, 50V, 65 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.1A
+$ENDCMP
+#
+$CMP PCAP_270u_17
+D 270µF, ±20%, 10V, 13 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.5A
+$ENDCMP
+#
+$CMP PCAP_120u_16
+D 120µF, ±20%, 20V, 35 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_470u_14
+D 470µF, ±20%, 6.3V, 12 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.3A
+$ENDCMP
+#
+$CMP PCAP_330u_15
+D 330µF, ±20%, 10V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4A
+$ENDCMP
+#
+$CMP PCAP_1500u_7
+D 1500µF, ±20%, 2.5V, 10 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.22A
+$ENDCMP
+#
+$CMP PCAP_1000u_5
+D 1000µF, ±20%, 4V, 10 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.22A
+$ENDCMP
+#
+$CMP PCAP_1200u_5
+D 1200µF, ±20%, 4V, 10 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.5A
+$ENDCMP
+#
+$CMP PCAP_820u_7
+D 820µF, ±20%, 6.3V, 12 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.77A
+$ENDCMP
+#
+$CMP PCAP_220u_18
+D 220µF, ±20%, 16V, 18 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.89A
+$ENDCMP
+#
+$CMP PCAP_27u_6
+D 27µF, ±20%, 35V, 45 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_100u_19
+D 100µF, ±20%, 20V, 22 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_270u_18
+D 270µF, ±20%, 16V, 16 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.07A
+$ENDCMP
+#
+$CMP PCAP_330u_16
+D 330µF, ±20%, 16V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5A
+$ENDCMP
+#
+$CMP PCAP_820u_8
+D 820µF, ±20%, 6.3V, 10 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.8A
+$ENDCMP
+#
+$CMP PCAP_47u_17
+D 47µF, ±20%, 25V, 30 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3A
+$ENDCMP
+#
+$CMP PCAP_560u_8
+D 560µF, ±20%, 4V, 13 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.52A
+$ENDCMP
+#
+$CMP PCAP_1200u_6
+D 1200µF, ±20%, 4V, 10 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.5A
+$ENDCMP
+#
+$CMP PCAP_1500u_8
+D 1500µF, ±20%, 6.3V, 10 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.5A
+$ENDCMP
+#
+$CMP PCAP_560u_9
+D 560µF, ±20%, 10V, 13 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.23A
+$ENDCMP
+#
+$CMP PCAP_1500u_9
+D 1500µF, ±20%, 2.5V, 12 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.44A
+$ENDCMP
+#
+$CMP PCAP_18u_3
+D 18µF, ±20%, 35V, 60 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.1A
+$ENDCMP
+#
+$CMP PCAP_270u_19
+D 270µF, ±20%, 16V, 27 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_68u_12
+D 68µF, ±20%, 20V, 34 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.45A
+$ENDCMP
+#
+$CMP PCAP_180u_12
+D 180µF, ±20%, 20V, 28 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 2.3A
+$ENDCMP
+#
+$CMP PCAP_100u_20
+D 100µF, ±20%, 16V, 33 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.5A
+$ENDCMP
+#
+$CMP PCAP_56u_15
+D 56µF, ±20%, 25V, 35 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.4A
+$ENDCMP
+#
+$CMP PCAP_12u_7
+D 12µF, ±20%, 50V, 65 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.1A
+$ENDCMP
+#
+$CMP PCAP_120u_17
+D 120µF, ±20%, 25V, 29 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_27u_7
+D 27µF, ±20%, 35V, 45 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_100u_21
+D 100µF, ±20%, 16V, 33 mOhm, 1500 Hrs @ 125°C, -55°C ~ 125°C, 1.5A
+$ENDCMP
+#
+$CMP PCAP_56u_16
+D 56µF, ±20%, 20V, 50 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_82u_15
+D 82µF, ±20%, 16V, 45 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_39u_12
+D 39µF, ±20%, 25V, 55 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.2A
+$ENDCMP
+#
+$CMP PCAP_10u_9
+D 10µF, ±20%, 50V, 75 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1A
+$ENDCMP
+#
+$CMP PCAP_150u_20
+D 150µF, ±20%, 16V, 28 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 2A
+$ENDCMP
+#
+$CMP PCAP_120u_18
+D 120µF, ±20%, 20V, 29 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.9A
+$ENDCMP
+#
+$CMP PCAP_82u_16
+D 82µF, ±20%, 25V, 30 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.9A
+$ENDCMP
+#
+$CMP PCAP_39u_13
+D 39µF, ±20%, 35V, 35 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.8A
+$ENDCMP
+#
+$CMP PCAP_22u_14
+D 22µF, ±20%, 50V, 37 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 1.7A
+$ENDCMP
+#
+$CMP PCAP_680u_6
+D 680µF, ±20%, 2.5V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.5A
+$ENDCMP
+#
+$CMP PCAP_560u_10
+D 560µF, ±20%, 4V, 18 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 3.6A
+$ENDCMP
+#
+$CMP PCAP_1000u_6
+D 1000µF, ±20%, 4V, 9 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5A
+$ENDCMP
+#
+$CMP PCAP_100u_22
+D 100µF, ±20%, 6.3V, 23 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_100u_23
+D 100µF, ±20%, 6.3V, 23 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.8A
+$ENDCMP
+#
+$CMP PCAP_220u_19
+D 220µF, ±20%, 25V, 24 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 2.5A
+$ENDCMP
+#
+$CMP PCAP_330u_17
+D 330µF, ±20%, 6.3V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.47A
+$ENDCMP
+#
+$CMP PCAP_47u_18
+D 47µF, ±20%, 6.3V, 35 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 1.6A
+$ENDCMP
+#
+$CMP PCAP_150u_21
+D 150µF, ±20%, 4V, 25 mOhm, 5000 Hrs @ 105°C, -55°C ~ 105°C, 2.2A
+$ENDCMP
+#
+$CMP PCAP_82u_17
+D 82µF, ±20%, 16V, 24 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.7A
+$ENDCMP
+#
+$CMP PCAP_330u_18
+D 330µF, ±20%, 6.3V, 14 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.95A
+$ENDCMP
+#
+$CMP PCAP_220u_20
+D 220µF, ±20%, 10V, 21 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 3.22A
+$ENDCMP
+#
+$CMP PCAP_180u_13
+D 180µF, ±20%, 10V, 25 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_82u_18
+D 82µF, ±20%, 20V, 40 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_470u_15
+D 470µF, ±20%, 6.3V, 18 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.3A
+$ENDCMP
+#
+$CMP PCAP_1800u_4
+D 1800µF, ±20%, 4V, 9 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.6A
+$ENDCMP
+#
+$CMP PCAP_39u_14
+D 39µF, ±20%, 50V, 45 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 1.3A
+$ENDCMP
+#
+$CMP PCAP_22u_15
+D 22µF, ±20%, 63V, 48 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 1.1A
+$ENDCMP
+#
+$CMP PCAP_68u_13
+D 68µF, ±20%, 35V, 44 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 1.2A
+$ENDCMP
+#
+$CMP PCAP_100u_24
+D 100µF, ±20%, 25V, 41 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 1.2A
+$ENDCMP
+#
+$CMP PCAP_150u_22
+D 150µF, ±20%, 20V, 39 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 1.2A
+$ENDCMP
+#
+$CMP PCAP_680u_7
+D 680µF, ±20%, 16V, 18 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.1A
+$ENDCMP
+#
+$CMP PCAP_220u_21
+D 220µF, ±20%, 16V, 30 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 1.5A
+$ENDCMP
+#
+$CMP PCAP_1500u_10
+D 1500µF, ±20%, 2.5V, 13 mOhm @ 100Hz, 2000 Hrs @ 105°C, -55°C ~ 105°C, 4.7A
+$ENDCMP
+#
+$CMP PCAP_2700u_3
+D 2700µF, ±20%, 6.3V, 12 mOhm, 2000 Hrs @ 105°C, -55°C ~ 105°C, 5.1A
+$ENDCMP
+#
+$CMP PCAP_220u_22
+D 220µF, ±20%, 16V, 27 mOhm, 3000 Hrs @ 125°C, -55°C ~ 125°C, 870mA
+$ENDCMP
+#
+$CMP PCAP_22u_16
+D 22µF, ±20%, 63V, 56 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.4A
+$ENDCMP
+#
+$CMP PCAP_220u_23
+D 220µF, ±20%, 25V, 20 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 3.2A
+$ENDCMP
+#
+$CMP PCAP_470u_16
+D 470µF, ±20%, 16V, 17 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 3.4A
+$ENDCMP
+#
+$CMP PCAP_220u_24
+D 220µF, ±20%, 35V, 21 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 3.3A
+$ENDCMP
+#
+$CMP PCAP_330u_19
+D 330µF, ±20%, 20V, 23 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 2.6A
+$ENDCMP
+#
+$CMP PCAP_330u_20
+D 330µF, ±20%, 25V, 20 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 3.1A
+$ENDCMP
+#
+$CMP PCAP_560u_11
+D 560µF, ±20%, 16V, 16 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 3.8A
+$ENDCMP
+#
+$CMP PCAP_470u_17
+D 470µF, ±20%, 16V, 22 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 2.7A
+$ENDCMP
+#
+$CMP PCAP_560u_12
+D 560µF, ±20%, 20V, 20 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 3.1A
+$ENDCMP
+#
+$CMP PCAP_68u_14
+D 68µF, ±20%, 50V, 29 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 3.4A
+$ENDCMP
+#
+$CMP PCAP_680u_8
+D 680µF, ±20%, 20V, 14 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 4.2A
+$ENDCMP
+#
+$CMP PCAP_56u_17
+D 56µF, ±20%, 35V, 31 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 1.9A
+$ENDCMP
+#
+$CMP PCAP_470u_18
+D 470µF, ±20%, 20V, 20 mOhm, 3000 Hrs @ 105°C, -55°C ~ 105°C, 4.3A
+$ENDCMP
+#
+$CMP PCAP_33u_12
+D 33µF, ±20%, 25V, 75 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 700mA
+$ENDCMP
+#
+$CMP PCAP_47u_19
+D 47µF, ±20%, 63V, 35 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 2.1A
+$ENDCMP
+#
+$CMP PCAP_680u_9
+D 680µF, ±20%, 16V, 19 mOhm, 4000 Hrs @ 125°C, -55°C ~ 125°C, 3.2A
+$ENDCMP
+#
