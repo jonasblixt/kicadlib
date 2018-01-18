@@ -1,0 +1,890 @@
+EESchema-DOCLIB  Version 2.0
+#encoding utf-8
+$CMP NX8045GB-8.000000MHZ
+D f=8MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:200 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-25.000000MHZ
+D f=25MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-12.000000MHZ
+D f=12MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-24.000000MHZ-LN-CD-1
+D f=24MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:70 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-25.000000MHZ-LN-CD-1
+D f=25MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:70 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-12.000000MHZ-LN-CD-1
+D f=12MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-16.000000MHZ-LN-CD-1
+D f=16MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-10.000000MHZ-LN-CD-1
+D f=10MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-20.000000MHZ-LN-CD-1
+D f=20MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:70 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-48.000000MHZ-LN-CD-1
+D f=48MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-30.000000MHZ-LN-CD-1
+D f=30MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-12MHZ-STD-CRG-2
+D f=12MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-16.000M-STD-CRG-1
+D f=16MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-16.000M-STD-CRG-2
+D f=16MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-12MHZ-STD-CRG-1
+D f=12MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-24.000MHZ-STD-CSR-1
+D f=24MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-16.000MHZ-STD-CSR-1
+D f=16MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-12.000MHZ-STD-CSR-1
+D f=12MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-32.000MHZ-STD-CSR-1
+D f=32MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-26.000MHZ-STD-CSR-1
+D f=26MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-20.000MHZ-STD-CSR-1
+D f=20MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-14.31818MHZ-STD-CSR-1
+D f=14.31818MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-27.000MHZ-STD-CSR-1
+D f=27MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-32M-EXS00A-02994
+D f=32MHz, Stability:±15ppm, Tol:±10ppm,Load capacitance:16pF,esr:50 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX8045GB-8.000M-STD-CSJ-1
+D f=8MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:220 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX3225SA-32MHZ-EXS00A-CS02368
+D f=32MHz, Stability:±16ppm, Tol:±10ppm,Load capacitance:9pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2016SA-26MHZ-EXS00A-CS06025
+D f=26MHz, Stability:±20ppm, Tol:-,Load capacitance:8pF,esr:100 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-16MHZ-STD-CSR-6
+D f=16MHz, Stability:±25ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225SA-16MHZ-STD-CSR-3
+D f=16MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-12MHZ-STD-CSR-3
+D f=12MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-12MHZ-STD-CSR-6
+D f=12MHz, Stability:±25ppm, Tol:±15ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225SA-26.000000MHZ-G2
+D f=26MHz, Stability:±11ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-20°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-16.000000MHZ-B3
+D f=16MHz, Stability:±15ppm, Tol:±10ppm,Load capacitance:7.2pF,esr:80 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225SA-26.000000MHZ-B1
+D f=26MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-16.000000MHZ-T1
+D f=16MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:60 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-26.000000MHZ-G3
+D f=26MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:7.36pF,esr:50 Ohm,Temp:-20°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225SA-26.000000MHZ-G4
+D f=26MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-20.000000MHZ-B2
+D f=20MHz, Stability:±15ppm, Tol:±10ppm,Load capacitance:7.2pF,esr:80 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GD-8MHZ-STD-CRA-3
+D f=8MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:500 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX3215SA-32.768K-STD-MUA-8
+D f=32.768kHz, Stability:-, Tol:±20ppm,Load capacitance:12.5pF,esr:70 kOhm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3215SA-32.768K-STD-MUA-14
+D f=32.768kHz, Stability:-, Tol:±20ppm,Load capacitance:6pF,esr:70 kOhm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3215SA-32.768K-STD-MUA-9
+D f=32.768kHz, Stability:-, Tol:±20ppm,Load capacitance:9pF,esr:70 kOhm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3215SA-32.768K-STD-MUS-2
+D f=32.768kHz, Stability:-, Tol:±20ppm,Load capacitance:12.5pF,esr:70 kOhm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX3225SA-16.000M-STD-CRS-2
+D f=16MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX3225SA-20.000M-STD-CRS-2
+D f=20MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX2520SA-16MHZ-STD-CSW-4
+D f=16MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2520SA-16MHZ-STD-CSW-5
+D f=16MHz, Stability:±25ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX5032GA-12.000M-STD-CSU-2
+D f=12MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:150 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX5032GA-8.000M-STD-CSU-1
+D f=8MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:300 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX5032GA-10.000M-STD-CSU-1
+D f=10MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:150 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX5032GA-16.000M-STD-CSU-2
+D f=16MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX2520SA-16.000000MHZ
+D f=16MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:80 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX2520SA-30.000000MHZ
+D f=30MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX2520SA-20.000000MHZ
+D f=20MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:70 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX2520SA-32.000000MHZ
+D f=32MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX2520SA-26.000000MHZ
+D f=26MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:70 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX2520SA-16.000000MHZ-W1
+D f=16MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2520SA-26.000000MHZ-B9
+D f=26MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:100 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX2012SA-32.768K-STD-MUB-1
+D f=32.768kHz, Stability:-, Tol:±20ppm,Load capacitance:12.5pF,esr:80 kOhm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP EXS00A-CS05400
+D f=19.2MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:13pF,esr:60 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX8045GB-18.432000MHZ
+D f=18.432MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-20.000000MHZ
+D f=20MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-10.000000MHZ
+D f=10MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-27.000000MHZ-LN-CD-1
+D f=27MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:70 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-13.560000MHZ-LN-CD-1
+D f=13.56MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-32.000000MHZ-LN-CD-1
+D f=32MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-12MHZ-STD-CSK-4
+D f=12MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GC-16MHZ-STD-CSK-6
+D f=16MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX5032GA-12MHZ-STD-CSK-8
+D f=12MHz, Stability:±50ppm, Tol:±30ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX5032GC-12MHZ-STD-CSK-6
+D f=12MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-24.576MHZ-STD-CSR-1
+D f=24.576MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225GB-16M-STD-CRA-2
+D f=16MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX3225SA-25.000M-STD-CSR-3
+D f=25MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-39.000000MHZ-B4
+D f=39MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX2520SA-26MHZ-STD-CSX-1
+D f=26MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:8pF,esr:60 Ohm,Temp:-20°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225GA-25.000M-STD-CRG-2
+D f=25MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-19.2M-STD-CRG-2
+D f=19.2MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-27M-STD-CRG-2
+D f=27MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-20.000M-STD-CRG-2
+D f=20MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX5032GA-20.000M-STD-CSU-2
+D f=20MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX3225SA-27.12M-STD-CSR-3
+D f=27.12MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-26.000M-STD-CSQ-1
+D f=26MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-20°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-25.000M-STD-CSR-6
+D f=25MHz, Stability:±25ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX1612AA-26MHZSTD-CSI-1
+D f=26MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:8pF,esr:150 Ohm,Temp:-30°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2520SA-24.576000MHZ
+D f=24.576MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:70 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX2016SA-26M-STD-CZS-1
+D f=26MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:60 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2520SA-25.000M-STD-CSW-5
+D f=25MHz, Stability:±25ppm, Tol:±15ppm,Load capacitance:8pF,esr:60 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2016SA-25.000M-STD-CZS-1
+D f=25MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2520SA-48.000000MHZ
+D f=48MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX3225SA-25.000M-STD-CRS-2
+D f=25MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX3225GA-20MHZ-STD-CRA-1
+D f=20MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX2520SG-19.2M-STD-CTX-1
+D f=19.2MHz, Stability:±12ppm, Tol:±10ppm,Load capacitance:7pF,esr:70 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-26.000M-STD-CRG-2
+D f=26MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX8045GB-5MHZ-STD-CSF-3
+D f=5MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:250 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-13.560000MHZ
+D f=13.56MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-12M-STD-CSF-4
+D f=12MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GB-12MHZ-STD-CSK-5
+D f=12MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GB-16MHZ-STD-CSK-5
+D f=16MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-10.000M-STD-CRG-2
+D f=10MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:200 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-30.000M-STD-CRG-2
+D f=30MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-10.000M-STD-CRG-1
+D f=10MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:200 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-14.7456M-STD-CRG-1
+D f=14.7456MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-24.576M-STD-CRG-2
+D f=24.576MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-14.31818M-STD-CRG-2
+D f=14.31818MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-13.56M-STD-CRG-2
+D f=13.56MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-12.288M-STD-CRG-2
+D f=12.288MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-14.7456M-STD-CRG-2
+D f=14.7456MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-16.9344M-STD-CRG-2
+D f=16.9344MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX5032SD-13.56MHZ-STD-CSY-1
+D f=13.56MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:12pF,esr:120 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX3225SA-12.288M-STD-CSR-3
+D f=12.288MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-30.000M-STD-CSR-3
+D f=30MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225GA-12.000M-STD-CRA-1
+D f=12MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:300 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX3225SA-13M-STD-CSR-6
+D f=13MHz, Stability:±25ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GD-10.000M-STD-CRA-3
+D f=10MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:500 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX2016SA-26M-STD-CZS-2
+D f=26MHz, Stability:±25ppm, Tol:±15ppm,Load capacitance:8pF,esr:60 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2520SD-24MHZ-EXS00A-CS06352
+D f=24MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2520SA-44.000000MHZ
+D f=44MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX3225SC-18.08M-STD-CRS-1
+D f=18.08MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX1612SA-32.000MHZ-CHP-CIS-3
+D f=32MHz, Stability:±20ppm, Tol:±10ppm,Load capacitance:6pF,esr:100 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX1612AA-26MHZSTD-CSI-3
+D f=26MHz, Stability:±25ppm, Tol:±20ppm,Load capacitance:8pF,esr:150 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX8045GB-12.288000MHZ
+D f=12.288MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-20.000M-STD-CSR-3
+D f=20MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225GA-20.000M-STD-CRG-1
+D f=20MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-30.000M-STD-CRG-1
+D f=30MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-14.31818M-STD-CRG-1
+D f=14.31818MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-12.288M-STD-CRS-2
+D f=12.288MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX3225SA-13.56M-STD-CSR-3
+D f=13.56MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2016SA-24.9231M-CHP-CZS-9
+D f=24.9231MHz, Stability:±25ppm, Tol:±15ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-40°C ~ 110°C
+$ENDCMP
+#
+$CMP NX3225SC-30.320M-EXS00A-CS03981
+D f=30.32MHz, Stability:±25ppm, Tol:±10ppm,Load capacitance:6pF,esr:100 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX1255GB-3.579545MHZ
+D f=3.579545MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:150 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-40.000000MHZ
+D f=40MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-6MHZ-STD-CSF-3
+D f=6MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:250 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-7.5MHZ-STD-CSF-4
+D f=7.5MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:250 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-14.318180MHZ
+D f=14.31818MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-30.000000MHZ
+D f=30MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-16.934400MHZ
+D f=16.9344MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-24.000000MHZ
+D f=24MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-12.288000MHZ-LN-CD-1
+D f=12.288MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-40.000000MHZ-LN-CD-1
+D f=40MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-16MHZ-STD-CSK-4
+D f=16MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-27.000M-STD-CRG-1
+D f=27MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-40.000MHZ-STD-CSR-1
+D f=40MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225GB-20MHZ-STD-CRA-2
+D f=20MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX3225SA-12.000M-STD-CRS-2
+D f=12MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX1255GB-6.000000MHZ
+D f=6MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX2520SA-24.000000MHZ
+D f=24MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:70 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX2016AB-38.4MHZST4
+D f=38.4MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:8pF,esr:60 Ohm,Temp:-30°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2016AB-38.4MHZSWW
+D f=38.4MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:7pF,esr:60 Ohm,Temp:-30°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2016AB-26MHZSB1
+D f=26MHz, Stability:±15ppm, Tol:±10ppm,Load capacitance:7pF,esr:80 Ohm,Temp:-30°C ~ 75°C
+$ENDCMP
+#
+$CMP NX1612AA-26MHZ-TI2
+D f=26MHz, Stability:±20ppm, Tol:-,Load capacitance:8pF,esr:150 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-25.000M-STD-CRG-1
+D f=25MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-40M-EXS00A-CS03880
+D f=40MHz, Stability:±17ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX5032GA-25.000M-STD-CSK-4
+D f=25MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-26.000M-STD-CSR-3
+D f=26MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX5032GA-30.000M-STD-CSK-4
+D f=30MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-11.0592M-STD-CSK-4
+D f=11.0592MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-12.288M-STD-CSK-4
+D f=12.288MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-8.000M-STD-CSF-4
+D f=8MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:200 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-8.000M-STD-CSF-6
+D f=8MHz, Stability:±50ppm, Tol:±30ppm,Load capacitance:8pF,esr:200 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX8045GB-24.000M-STD-CSF-4
+D f=24MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-27M-STD-CRS-2
+D f=27MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX3225GA-26.000M-STD-CRG-1
+D f=26MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-14.31818M-STD-CSK-4
+D f=14.31818MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-27M-STD-CSK-4
+D f=27MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-20.000M-STD-CSK-4
+D f=20MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-20.000M-STD-CSF-4
+D f=20MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-25.000M-STD-CSF-4
+D f=25MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032SD-13.225625M-STD-CSY-1
+D f=13.225625MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:12pF,esr:120 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX1255GB-8.000000MHZ
+D f=8MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:80 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-16.000000MHZ
+D f=16MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-27.000000MHZ
+D f=27MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-7.3728MHZ-STD-CSF-3
+D f=7.3728MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:250 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-16MHZ-STD-CSK-8
+D f=16MHz, Stability:±50ppm, Tol:±30ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX1255GB-13.560000MHZ
+D f=13.56MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-7.372800MHZ
+D f=7.3728MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-9.84375M-STD-CSU-1
+D f=9.84375MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:220 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX2016AB-26MHZSB2
+D f=26MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:7pF,esr:80 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX2520SA-16MHZ-EXS00A-CS05116
+D f=16MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:12pF,esr:80 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225GA-26MHZ-TI
+D f=26MHz, Stability:±40ppm, Tol:±20ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2520SA-24.000000MHZ-B8
+D f=24MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:100 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225GA-27.12M-STD-CRG-2
+D f=27.12MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225GA-32M-EXS00A-CG02611
+D f=32MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:10pF,esr:50 Ohm,Temp:0°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-16.384000MHZ-LN-CD-1
+D f=16.384MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-10.000M-STD-CSK-3
+D f=10MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-13.56M-STD-CSK-4
+D f=13.56MHz, Stability:±30ppm, Tol:±20ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX8045GB-32.000000MHZ
+D f=32MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX3225SA-22.000MHZ-STD-CSR-1
+D f=22MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX3225SA-44.000MHZ-STD-CSR-1
+D f=44MHz, Stability:±15ppm, Tol:±15ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-10°C ~ 75°C
+$ENDCMP
+#
+$CMP NX5032SA-13.000000MHZ-G1
+D f=13MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:8pF,esr:40 Ohm,Temp:-20°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2520SG-26M-STD-CTX-1
+D f=26MHz, Stability:±12ppm, Tol:±10ppm,Load capacitance:7pF,esr:50 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2520SG-38.4M-STD-CTX-1
+D f=38.4MHz, Stability:±12ppm, Tol:±10ppm,Load capacitance:7pF,esr:50 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX3225SA-40.000M-STD-CRS-2
+D f=40MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:8pF,esr:100 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX1255GB-4.000000MHZ
+D f=4MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-4.194304MHZ
+D f=4.194304MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-4.915200MHZ
+D f=4.9152MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-6.144000MHZ
+D f=6.144MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:120 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-10.000000MHZ
+D f=10MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:80 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-12.000000MHZ
+D f=12MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-12.288000MHZ
+D f=12.288MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-14.318180MHZ
+D f=14.31818MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-18.432000MHZ
+D f=18.432MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-20.000000MHZ
+D f=20MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-24.000000MHZ
+D f=24MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX1255GB-25.000000MHZ
+D f=25MHz, Stability:±50ppm, Tol:±50ppm,Load capacitance:12pF,esr:50 Ohm,Temp:-10°C ~ 70°C
+$ENDCMP
+#
+$CMP NX5032GA-40.000M-STD-CSU-2
+D f=40MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:50 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX5032GA-13.56M-STD-CSU-2
+D f=13.56MHz, Stability:±150ppm, Tol:±50ppm,Load capacitance:8pF,esr:150 Ohm,Temp:-40°C ~ 150°C
+$ENDCMP
+#
+$CMP NX5032SD-9.84375M-STD-CSY-1
+D f=9.84375MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:12pF,esr:150 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX5032SD-20MHZ-STD-CSY-1
+D f=20MHz, Stability:±50ppm, Tol:±15ppm,Load capacitance:12pF,esr:80 Ohm,Temp:-40°C ~ 125°C
+$ENDCMP
+#
+$CMP NX1612AA-40MHZ-EXS00A-CS05020
+D f=40MHz, Stability:±30ppm, Tol:±10ppm,Load capacitance:7pF,esr:80 Ohm,Temp:-20°C ~ 100°C
+$ENDCMP
+#
+$CMP NX2520SA-40.000000MHZ
+D f=40MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-10°C ~ 60°C
+$ENDCMP
+#
+$CMP NX2520SA-40.000000MHZ-W2
+D f=40MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX2520SA-40.000000MHZ-W3
+D f=40MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:50 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX2520SA-26MHZ-EXS00A-CS05497
+D f=26MHz, Stability:±10ppm, Tol:±15ppm,Load capacitance:6pF,esr:60 Ohm,Temp:-40°C ~ 85°C
+$ENDCMP
+#
+$CMP NX4025DA-13.000000MHZ-B6
+D f=13MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:60 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX4025DA-15.360000MHZ-B7
+D f=15.36MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:10pF,esr:60 Ohm,Temp:-20°C ~ 75°C
+$ENDCMP
+#
+$CMP NX4025DA-16.000000MHZ-B5
+D f=16MHz, Stability:±15ppm, Tol:±10ppm,Load capacitance:7.2pF,esr:60 Ohm,Temp:-30°C ~ 85°C
+$ENDCMP
+#
+$CMP NX2016AB-26MHZST1
+D f=26MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-30°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2016AB-32MHZST2
+D f=32MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:8pF,esr:80 Ohm,Temp:-30°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2016AB-36MHZST3
+D f=36MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:8pF,esr:60 Ohm,Temp:-30°C ~ 75°C
+$ENDCMP
+#
+$CMP NX2016AB-38.4MHZSW1
+D f=38.4MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:7pF,esr:60 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX2016AB-40MHZSW2
+D f=40MHz, Stability:±10ppm, Tol:±10ppm,Load capacitance:7pF,esr:60 Ohm,Temp:-20°C ~ 70°C
+$ENDCMP
+#
+$CMP NX2016AB-40MHZSW2W
+D f=40MHz, Stability:±20ppm, Tol:±20ppm,Load capacitance:7pF,esr:60 Ohm,Temp:-30°C ~ 75°C
+$ENDCMP
+#
