@@ -1,3 +1,7 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP SN74AHC1G08
+D Single 2-Input Positive-AND Gate
+$ENDCMP
+#
 #End Doc Library
