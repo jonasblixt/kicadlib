@@ -13,7 +13,7 @@
   (pad 2 smd rect (at -1.6 0.5 90) (size 0.6 0.4) (layers F.Cu F.Paste F.Mask))
   (pad 3 smd rect (at 1.6 0 90) (size 1.6 0.4) (layers F.Cu F.Paste F.Mask))
   (model "../../../../../../Users/Jonas/Documents/KiCad/3D models/wla.01.wrl"
-    (at (xyz -0.01 0 0))
+    (offset (xyz -0.2539999961853027 0 0))
     (scale (xyz 0.393701 0.393701 0.393701))
     (rotate (xyz 0.393701 0 0))
   )

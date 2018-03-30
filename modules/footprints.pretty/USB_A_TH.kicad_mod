@@ -22,7 +22,7 @@
   (pad 6 thru_hole circle (at 10.16086 2.66488 270) (size 2.99974 2.99974) (drill 2.30124) (layers *.Cu *.Mask F.SilkS))
   (pad 5 thru_hole circle (at -3.55514 2.66488 270) (size 2.99974 2.99974) (drill 2.30124) (layers *.Cu *.Mask F.SilkS))
   (model "../../../../../Users/jons/Documents/Projects/Snigel2/3D models/USB_A_TH.wrl"
-    (at (xyz 0.14 -0.23 0.15))
+    (offset (xyz 3.555999946594238 -5.841999912261963 3.809999942779541))
     (scale (xyz 0.393701 0.393701 0.393701))
     (rotate (xyz 0 -180 0))
   )

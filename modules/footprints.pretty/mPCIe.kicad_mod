@@ -75,17 +75,17 @@
   (pad 0 smd rect (at -0.3 -53.05) (size 1.5 1.9) (layers F.Cu F.Paste F.Mask))
   (pad 0 smd rect (at 23.9 -53.05) (size 1.5 1.9) (layers F.Cu F.Paste F.Mask))
   (model "C:/Users/jonas.persson/Desktop/Jonas Documents/KiCad/3D models/K3D_MM60_52B1_G1_V1_JAE_Proprietary.wrl"
-    (at (xyz 0.465 0 0))
+    (offset (xyz 11.81099982261658 0 0))
     (scale (xyz 0.3937 0.3937 0.3937))
     (rotate (xyz 270 0 180))
   )
   (model "K3D-MM60-EZH039-B5-R2 JAE Connector Division Proprietary.wrl"
-    (at (xyz 0.465 2.1 0))
+    (offset (xyz 11.81099982261658 53.33999919891357 0))
     (scale (xyz 0.3937 0.3937 0.3937))
     (rotate (xyz 0 0 0))
   )
   (model mpcie_module.wrl
-    (at (xyz 0.465 1 0.05))
+    (offset (xyz 11.81099982261658 25.39999961853027 1.269999980926514))
     (scale (xyz 0.3937 0.3937 0.3937))
     (rotate (xyz 90 180 180))
   )

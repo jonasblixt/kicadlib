@@ -1,4 +1,4 @@
-(module TO_SOT_Packages_SMD:TSOT-6-MK06A (layer F.Cu) (tedit 54E92ADF)
+(module TSOT-6-MK06A (layer F.Cu) (tedit 54E92ADF)
   (descr "TSOP-6 MK06A housing 6pin")
   (attr smd)
   (fp_text reference REF** (at -0.07112 -3.62966) (layer F.SilkS)

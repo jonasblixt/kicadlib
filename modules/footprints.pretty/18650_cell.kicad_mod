@@ -10,7 +10,7 @@
   (fp_line (start 0 -65) (end 18 -65) (layer F.SilkS) (width 0.15))
   (fp_line (start 0 0) (end 0 -65) (layer F.SilkS) (width 0.15))
   (model "../../../../../Users/jons/Documents/KiCad/3D models/18650_cell.wrl"
-    (at (xyz 0.35 0 0.4))
+    (offset (xyz 8.889999866485596 0 10.15999984741211))
     (scale (xyz 0.3937 0.3937 0.3937))
     (rotate (xyz 0 0 270))
   )

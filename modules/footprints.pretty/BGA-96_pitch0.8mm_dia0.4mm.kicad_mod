@@ -109,7 +109,7 @@
   (pad T8 smd circle (at 2.4 6) (size 0.4 0.4) (layers F.Cu F.Paste F.Mask))
   (pad T9 smd circle (at 3.2 6) (size 0.4 0.4) (layers F.Cu F.Paste F.Mask))
   (model "../../../../../Users/jons/Documents/KiCad/3D models/bga96.wrl"
-    (at (xyz 0 0 -0.005))
+    (offset (xyz 0 0 -0.1269999980926514))
     (scale (xyz 0.393701 0.393701 0.393701))
     (rotate (xyz 0 0 0))
   )

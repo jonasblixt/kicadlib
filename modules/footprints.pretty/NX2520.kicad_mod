@@ -1,4 +1,4 @@
-(module NX2520 (layer F.Cu) (tedit 56E8960C)
+(module NX2520 (layer F.Cu) (tedit 5ABDFB90)
   (fp_text reference REF** (at 0.4 2) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -13,9 +13,9 @@
   (pad 2 smd rect (at 0.85 0.65) (size 1.2 1) (layers F.Cu F.Paste F.Mask))
   (pad 3 smd rect (at 0.85 -0.65) (size 1.2 1) (layers F.Cu F.Paste F.Mask))
   (pad 4 smd rect (at -0.85 -0.65) (size 1.2 1) (layers F.Cu F.Paste F.Mask))
-  (model "/Users/jons/Documents/KiCad/3D Models/User Library-Crystal NDK NX2520SA series.wrl"
+  (model "User Library-Crystal NDK NX2520SA series.step"
     (at (xyz 0 0 0))
-    (scale (xyz 0.393701 0.393701 0.393701))
+    (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
 )

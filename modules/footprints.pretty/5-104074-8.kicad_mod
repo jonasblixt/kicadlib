@@ -26,7 +26,7 @@
   (pad 6 thru_hole oval (at 3.175 0) (size 0.889 1.143) (drill 0.6096) (layers *.Cu *.Mask))
   (pad "" thru_hole circle (at 0 4.064) (size 1.524 1.524) (drill 0.9906) (layers *.Cu *.Mask))
   (model "../../../../../Users/jons/Documents/Projects/Snigel2/3D models/ampmodu_5-104074-8.wrl"
-    (at (xyz 0 -0.415 0.095))
+    (offset (xyz 0 -10.54099984169006 2.412999963760376))
     (scale (xyz 0.393701 0.393701 0.393701))
     (rotate (xyz -90 0 0))
   )

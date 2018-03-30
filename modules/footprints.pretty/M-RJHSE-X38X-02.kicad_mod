@@ -39,7 +39,7 @@
   (pad 25 thru_hole circle (at 16 -3.43) (size 2.2 2.2) (drill 1.62) (layers *.Cu *.Mask))
   (pad 26 thru_hole circle (at -16 -3.43) (size 2.2 2.2) (drill 1.62) (layers *.Cu *.Mask))
   (model "../../../../../Users/jons/Documents/KiCad/3D models/M-RJHSE-X38X-02-REVT1.wrl"
-    (at (xyz -0.095 0.095 0.07000000000000001))
+    (offset (xyz -2.412999963760376 2.412999963760376 1.777999973297119))
     (scale (xyz 0.393701 0.393701 0.393701))
     (rotate (xyz -90 0 0))
   )

@@ -73,7 +73,7 @@
   (pad 29 thru_hole circle (at -0.8 2.2) (size 0.3 0.3) (drill 0.254) (layers *.Cu *.Mask))
   (pad 29 thru_hole circle (at -0.8 0) (size 0.3 0.3) (drill 0.254) (layers *.Cu *.Mask))
   (model "../../../../../Users/jons/Documents/Projects/Snigel2/3D models/tssop28.wrl"
-    (at (xyz 0 0 0.021))
+    (offset (xyz 0 0 0.5333999919891358))
     (scale (xyz 0.393701 0.393701 0.393701))
     (rotate (xyz -90 0 0))
   )

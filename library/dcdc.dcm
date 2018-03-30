@@ -1,3 +1,11 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP FAN53541
+D Switching Voltage Regulators 2.4 MHz 5A Synchronous Buck Reg
+$ENDCMP
+#
+$CMP FAN5355UC00
+D Switching Voltage Regulators 800mA 3MHz Digital Converter
+$ENDCMP
+#
 #End Doc Library

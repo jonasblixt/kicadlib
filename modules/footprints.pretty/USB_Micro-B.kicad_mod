@@ -27,7 +27,7 @@
   (pad 6 thru_hole circle (at -3.5009 1.13746 90) (size 1.55 1.55) (drill 1.15) (layers *.Cu *.Mask F.SilkS))
   (pad 6 thru_hole circle (at 3.4991 1.13746 90) (size 1.55 1.55) (drill 1.15) (layers *.Cu *.Mask F.SilkS))
   (model K3D-DX4R005JJ2-V3_JAE_Proprietary.wrl
-    (at (xyz 0 0.015 0.05))
+    (offset (xyz 0 0.3809999942779541 1.269999980926514))
     (scale (xyz 0.393701 0.393701 0.393701))
     (rotate (xyz -90 0 0))
   )
