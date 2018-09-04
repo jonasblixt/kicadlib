@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP Conn_01x30
-D Generic connector, single row, 01x30
-K connector
-F ~
-$ENDCMP
-#
-#End Doc Library

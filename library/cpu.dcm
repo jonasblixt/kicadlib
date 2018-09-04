@@ -1,9 +1,5 @@
 EESchema-DOCLIB  Version 2.0
 #
-$CMP MCIMX6G2AVM07
-D 32 Bit, Cortex A7, 696 MHz
-$ENDCMP
-#
 $CMP Zynq_7010
 D Xilinx Zynq 7010
 K FPGA

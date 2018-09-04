@@ -1,8 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP Zynq_7010
-D Xilinx Zynq 7010
-K FPGA
-$ENDCMP
-#
-#End Doc Library
