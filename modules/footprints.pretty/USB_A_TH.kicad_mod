@@ -1,4 +1,4 @@
-(module USB_A_TH (layer F.Cu) (tedit 57AAF29E)
+(module USB_A_TH (layer F.Cu) (tedit 5B8E7FBC)
   (descr "USB A connector")
   (tags "USB USB_A")
   (fp_text reference REF** (at 0 -2.35) (layer F.SilkS)
@@ -21,9 +21,9 @@
   (pad 1 thru_hole circle (at 0.00086 -0.00212 270) (size 1.50114 1.50114) (drill 1.00076) (layers *.Cu *.Mask F.SilkS))
   (pad 6 thru_hole circle (at 10.16086 2.66488 270) (size 2.99974 2.99974) (drill 2.30124) (layers *.Cu *.Mask F.SilkS))
   (pad 5 thru_hole circle (at -3.55514 2.66488 270) (size 2.99974 2.99974) (drill 2.30124) (layers *.Cu *.Mask F.SilkS))
-  (model "../../../../../Users/jons/Documents/Projects/Snigel2/3D models/USB_A_TH.wrl"
-    (offset (xyz 3.555999946594238 -5.841999912261963 3.809999942779541))
-    (scale (xyz 0.393701 0.393701 0.393701))
-    (rotate (xyz 0 -180 0))
+  (model ${KISYS3DMOD}/USB_A_TH.step
+    (at (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
   )
 )
