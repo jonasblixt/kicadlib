@@ -26,48 +26,82 @@ import time
 # X ~ 2 0 -200 170 U 40 40 1 1 P
 # ENDDRAW
 # ENDDEF
-ERROR_LIMIT = 100
 
-r_field = re.compile("^F([0-9]{1})\ \"(.+)\"\ ([0-9]+)\ ([0-9]+)\ ([0-9]+)\ " +
-	"([HV]{1})\ ([IV]{1})\ ([CLRTB]{1})\ ([CLRTB]{1})([IN]{1})([BN]{1})" +
-	"\ ?\"?([a-zA-Z0-9\ ]+)?\"?")
+
+FIELD_DESIGNATOR = '0'
+FIELD_NAME       = '1'
+FIELD_FOOTPRINT  = '2'
+FIELD_RES0       = '3'
+FIELD_DESC       = '4'
+FIELD_PN         = '5'
+FIELD_MANUF      = '6'
+FIELD_VALUE      = '7'
+
+
+r_field = re.compile("^F([0-9]{1})\ \"(.+)\"\ ([\-0-9]+)\ ([\-0-9]+)\ ([\-0-9]+)\ " +
+    "([HV]{1})\ ([IV]{1})\ ([CLRTB]{1})\ ([CLRTB]{1})([IN]{1})([BN]{1})" +
+    "\ ?\"?([a-zA-Z0-9\ ]+)?\"?")
 
 def process_component(comp_data):
-	comp_name = comp_data[0].split(' ')[1]
-	fields = {}
-	for l in comp_data:
-		result = r_field.match(l)
-		if result:
-			print (result.group(1))
-	time.sleep(1)
-	return True
+    comp_name = comp_data[0].split(' ')[1]
+    comp_footprint = ''
+    result = True
+    
+    # Process field F0 - F7
+    fields = {}
+    fields['0'] = ''
+    fields['1'] = ''
+    fields['2'] = ''
+    fields['3'] = ''
+    fields['4'] = ''
+    fields['5'] = ''
+    fields['6'] = ''
+    fields['7'] = ''
+    
+
+    for l in comp_data:
+        result = r_field.match(l)
+        if result:
+            fields[result.group(1)] = result.group(2)
+
+            if result.group(1) == FIELD
+
+    if fields[FIELD_DESIGNATOR] == '#PWR':
+        return True
+    
+    if len(fields[FIELD_FOOTPRINT]) == 0:
+        print(fields[FIELD_NAME] + ": No footprint")
+        result = False
+
+    
+    return result
 
 def process_library(fn_lib):
-	f = open(fn_lib, 'r')
-	data = f.readlines()
-	f.close()
+    f = open(fn_lib, 'r')
+    data = f.readlines()
+    f.close()
 
-	component_count = 0
-	error_count = 0
+    component_count = 0
+    error_count = 0
 
-	comp_data = []
-	for l in data:
-		print (l)
-		if l.startswith('DEF '):
-			component_count = component_count + 1
-			comp_data = []
-		comp_data.append(l)
+    comp_data = []
+    for l in data:
+        if l.startswith('DEF '):
+            component_count = component_count + 1
+            comp_data = []
+        comp_data.append(l)
 
-		if l.startswith('ENDDEF'):
-			if not process_component(comp_data):
-				error_count = error_count + 1
-		if error_count > ERROR_LIMIT:
-			print ("Too many errors stopping...")
-			break
+        if l.startswith('ENDDEF'):
+            if process_component(comp_data) == False:
+                error_count = error_count + 1
 
+    return error_count
+    
 if __name__ == "__main__":
-	print ("Library check")
-
-	for fn in glob.glob('./library/*.lib'):
-		print ("Checking "+fn)
-		process_library(fn)
+    print ("Library check")
+    error_count = 0
+    
+    for fn in glob.glob('./library/*.lib'):
+        print ("Checking "+fn)
+        error_count = error_count + process_library(fn)
+    print ("Finished, %i errors"%(error_count))

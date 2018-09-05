@@ -1,4 +1,4 @@
-(module TFM-105-02-S-D-WT (layer F.Cu) (tedit 574C9268)
+(module TFM-105-02-S-D-WT (layer F.Cu) (tedit 5B8FD5E4)
   (fp_text reference REF** (at -4.825 4.8) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -24,9 +24,9 @@
   (pad 10 smd rect (at 2.54 -1.905) (size 0.74 2.55) (layers F.Cu F.Paste F.Mask))
   (pad 12 thru_hole circle (at 5.1 0) (size 1.5 1.5) (drill 0.84) (layers *.Cu *.Mask F.SilkS))
   (pad 11 thru_hole circle (at -5.1 0) (size 1.5 1.5) (drill 0.84) (layers *.Cu *.Mask F.SilkS))
-  (model TFM-105-02-S-D-WT.wrl
+  (model ${KISYS3DMOD}/TFM-105-02-S-D-WT.stp
     (at (xyz 0 0 0))
-    (scale (xyz 0.393701 0.393701 0.393701))
+    (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))
   )
 )
