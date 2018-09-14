@@ -372,7 +372,7 @@ class comp():
         """
 
         field = self.element.get("field", "name", name)
-        if field == "" and libraryToo:
+        if field == "" and libraryToo and self.libpart:
             field = self.libpart.getField(name)
         return field
 
@@ -408,7 +408,10 @@ class comp():
         return self.element.get("tstamp")
 
     def getDescription(self):
-        return self.libpart.getDescription()
+        if self.libpart:
+            return self.libpart.getDescription()
+        else:
+            return ""
 
 
 class netlist():
