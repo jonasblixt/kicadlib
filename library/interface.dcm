@@ -4,4 +4,12 @@ $CMP LAN8710
 D Ethernet ICs MII/RMII 10/100 Eth Ethernet Transceiver
 $ENDCMP
 #
+$CMP TORX1355(V,F)
+D TOSLINK Receiver
+$ENDCMP
+#
+$CMP TOTX1350(V,F)
+D TOSLINK Transmitter
+$ENDCMP
+#
 #End Doc Library

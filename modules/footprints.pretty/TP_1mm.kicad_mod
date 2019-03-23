@@ -1,4 +1,4 @@
-(module TP_1mm (layer F.Cu) (tedit 5814D5EB)
+(module TP_1mm (layer F.Cu) (tedit 5C96129D)
   (solder_mask_margin 0.001)
   (fp_text reference REF** (at 0.127 0) (layer F.SilkS)
     (effects (font (size 0.5 0.5) (thickness 0.125)))
@@ -6,5 +6,5 @@
   (fp_text value TP_1mm (at 1.143 -1.778) (layer F.Fab)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (pad 1 smd circle (at 0 0) (size 1 1) (layers F.Cu F.Paste F.Mask))
+  (pad 1 smd circle (at 0 0) (size 1 1) (layers F.Cu F.Mask))
 )
