@@ -1,4 +1,4 @@
-(module TOSLINK_VERTICAL (layer F.Cu) (tedit 5C946C13)
+(module TOSLINK_VERTICAL (layer F.Cu) (tedit 5D287D1F)
   (fp_text reference REF** (at 0 1.905) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -24,4 +24,9 @@
   (pad 3 thru_hole circle (at -2.54 3.85) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask))
   (pad 4 thru_hole circle (at -6.525 0) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask))
   (pad 5 thru_hole circle (at 6.525 0) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask))
+  (model toslink.step
+    (at (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )
