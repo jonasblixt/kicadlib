@@ -572,8 +572,10 @@ ENDDEF
 DEF PWR_FLAG #FLG? 0 40 Y Y 1 F N
 F0 "#FLG?" 0 150 98 H I C CNN
 F1 "PWR_FLAG" 0 300 50 H V C CNN
-F2 "" 0 0 98 H I C CNN
+F2 "N/A" 0 0 98 H I C CNN
 F3 "" 0 0 98 H I C CNN
+F4 "N/A" 0 0 50 H I C CNN "Manufacturer"
+F5 "N/A" 0 0 50 H I C CNN "Part Number"
 DRAW
 P 5 0 1 0 0 0 -50 50 0 100 50 50 0 0 N
 X ~ 1 0 -100 100 U 50 50 1 1 w
@@ -585,9 +587,11 @@ ENDDEF
 DEF TP TP 0 40 Y Y 1 F N
 F0 "TP" 100 50 60 H V C CNN
 F1 "TP" -100 -50 60 H I C CNN
-F2 "footprints:TP_1mm" 0 0 60 H I C CNN
+F2 "TP_1mm" 0 0 60 H I C CNN
 F3 "" 100 50 60 H V C CNN
 F4 "NM" 150 -50 60 H I C CNN "Mount"
+F5 "N/A" 0 0 50 H I C CNN "Manufacturer"
+F6 "N/A" 0 0 50 H I C CNN "Part Number"
 $FPLIST
  TP_1mm
 $ENDFPLIST
