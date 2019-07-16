@@ -8,6 +8,28 @@ import re
 import time
 import sys
 
+# TODO:
+# - Check that assigned footprint exists in library
+# - Check that footprint is not prepended by "xxxxx:"
+# - Check extra fields
+# - Check pin length
+# - Check text size
+# - Capacitor lib contains > 20k part, remove odd dielectrics
+# - QFN/DFN/BGA Footprint package name should contain, pin-count, pitch and body size
+#       QFN_24_0.5mm_3x2mm
+#       BGA_289_0.8mm_14x14mm
+#       DFN_10_0.4mm_2x2mm
+#   Optional suffixes:
+#       _EP  - Exposed pad
+#       _NS  - Non standard footprint
+#       _<Y> - Number
+# - Other packages: Manfucaturer_"Manufacturer package name"
+# - Move Mount holes etc to "Mech"
+# - Go through old design documents to find errors in components
+# - Add validated flag
+# - Locate unsused footprints
+# - Locate unsued 3D models
+
 # #
 # # C01005_100p_6.3Vdc_CH
 # #
@@ -78,6 +100,8 @@ def process_component(comp_data):
                 has_partnumber = True
                 partnumber_string = result.group(2)
 
+    if fields[FIELD_DESIGNATOR] == '#PWR':
+        return True
 
     if (len(manufacturer_string) == 0) or (not has_manufacturer):
         print (fields[FIELD_NAME] + ": No manufacturer defined")
@@ -87,8 +111,6 @@ def process_component(comp_data):
         print (fields[FIELD_NAME] + ": No partnumber defined")
         result = False
 
-    if fields[FIELD_DESIGNATOR] == '#PWR':
-        return True
 
     if len(fields[FIELD_FOOTPRINT]) == 0:
         print(fields[FIELD_NAME] + ": No footprint")
@@ -124,11 +146,11 @@ if __name__ == "__main__":
     component_count = 0
 
     for fn in glob.glob('./library/*.lib'):
-        print ("Checking "+fn)
+        print (" --- Checking " + fn + " ---")
         errors, components = process_library(fn)
         error_count = error_count + errors
         component_count = component_count + components
-
+        print (" --- Done, %i components ---"%(components))
     print ("Finished, checked %i components, found %i errors"%(component_count,error_count))
 
     sys.exit(error_count)
