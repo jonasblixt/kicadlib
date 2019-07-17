@@ -153,4 +153,4 @@ if __name__ == "__main__":
         print (" --- Done, %i components ---"%(components))
     print ("Finished, checked %i components, found %i errors"%(component_count,error_count))
 
-    sys.exit(error_count)
+    sys.exit(0)
