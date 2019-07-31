@@ -1,6 +1,7 @@
 import re
+import sys
 
-f = open("imx6ul.txt")
+f = open(sys.argv[1])
 pinout_data = f.readlines()
 f.close()
 
@@ -25,12 +26,12 @@ for l in pinout_data:
 	name = m.group(2)
 	subpart = 1
 
-	if "POWER" in l:
-		subpart = 2
-	if "ddr" in l:
-		subpart = 3
-	if "GND" in l:
-		subpart = 2
+#	if "POWER" in l:
+#		subpart = 2
+#	if "ddr" in l:
+#		subpart = 3
+#	if "GND" in l:
+#		subpart = 2
 
 	print ("X %s %s %i %i 200 R 50 50 %i 1 B"%(name,pin,x,y,subpart))
 

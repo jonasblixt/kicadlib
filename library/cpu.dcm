@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP MIMX8MM6DVTLZAA
+D i.MX 8M Mini, Quad core Cortex A53, 1.8 GHz
+$ENDCMP
+#
 $CMP Zynq_7010
 D Xilinx Zynq 7010
 K FPGA
