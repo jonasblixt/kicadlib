@@ -1,14 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-#
-#Status,Characteristic,Shape,"Part number (#:Packing code)","L size","W size","T size","Size code inch (mm)","Temperature   characteristics","Rated   voltage",Capacitance,"Tolerance   of   capacitance",Notes
-#|           0              |                             1                                              | 2 |       3          |     4       |      5      |     6       |      7       |   8      |   9  | 10  |11| 12  
-#"In Production	Recommended","General	Up to 125°C	Super-compact (smaller than 0603)	Reflow soldering",SMD,GRM0222C0J101GA02#,"0.4 ±0.02mm","0.2 ±0.02mm","0.2 ±0.02mm","01005 (0402)","CH (JIS)",6.3Vdc,100pF,±2%,
-#
-#
-
-
+#Part Number,Status,Capacitance(Nominal),Rated Voltage(V),Temperature       Characteristics,Size Code (mm)/(inch),T size(mm Max.),Cap. Tolerance,Type
+#GRM32ER60E337ME05,In Production,330uF,2.5,X5R,3225M/1210,2.8,+/-20%,General Purpose
+#       0         ,     1       , 2   , 3 , 4 ,     5    , 6 , 7    , 8
 import sys
 import re
 import math
@@ -61,15 +56,15 @@ for l in lines[1:]:
 	l_count = l_count + 1
 	data = l.split(",")
 
-	if len(data) < 12:
+	if len(data) < 7:
 		print ("Bogus data on line %i, skipping..."%(l_count))
 	else:
-		footprint = data[7][1:].split(' ')[0]
-		dielectric = data[8][1:].split(' ')[0]
-		pnr = data[3][:-1]
-		voltage = data[9]
-		capacitance = data[10]
-		tolerance = data[11]
+		footprint = data[5].split('/')[1]
+		dielectric = data[4]
+		pnr = data[0]
+		voltage = data[3]+"Vdc"
+		capacitance = data[2]
+		tolerance = data[7]
 
 		#print (footprint, dielectric,pnr)
 		#print (data[3], data[7], data[9], data[10], data[11], data[12])
@@ -78,7 +73,6 @@ for l in lines[1:]:
 
 		# Component name example: C0402_1p2_50V
 		result = r.match(capacitance)
-
 		if result == None:
 			print("ERROR:")
 			print (capacitance)

@@ -1,0 +1,200 @@
+A1             DNU         NC
+A2             DNU         NC
+A3             VSS         GND
+A4             VDD2        POWER
+A5             ZQ0         NC           495.48m      1.32nH       1.05pF
+A8             ZQ1         NC
+A9             VDD2        POWER
+A10            VSS         GND
+A11            DNU         NC
+A12            DNU         NC
+B1             DNU         NC
+B2             DQ0_A       DQ           522.99m      1.06nH       0.90pF
+B3             VDDQ        POWER
+B4             DQ7_A       DQ           565.93m      1.16nH       0.95pF
+B5             VDDQ        POWER
+B8             VDDQ        POWER
+B9             DQ15_A      DQ           647.50m      1.31nH       1.04pF
+B10            VDDQ        POWER
+B11            DQ8_A       DQ           562.75m      1.00nH       0.95pF
+B12            DNU         NC
+C1             VSS         GND
+C2             DQ1_A       DQ           568.82m      1.12nH       0.95pF
+C3             DMI0_A      DQ           518.19m      1.11nH       0.91pF
+C4             DQ6_A       DQ           492.45m      0.97nH       0.89pF
+C5             VSS         GND
+C8             VSS         GND
+C9             DQ14_A      DQ           504.20m      0.98nH       0.91pF
+C10            DMI1_A      DQ           503.90m      0.99nH       0.89pF
+C11            DQ9_A       DQ           530.68m      1.14nH       0.91pF
+C12            VSS         GND
+D1             VDDQ        POWER
+D2             VSS         GND
+D3             DQS0_T_A    DQS          619.72m      1.31nH       1.00pF
+D4             VSS         GND
+D5             VDDQ        POWER
+D8             VDDQ        POWER
+D9             VSS         GND
+D10            DQS1_T_A    DQS          627.49m      1.31nH       1.00pF
+D11            VSS         GND
+D12            VDDQ        POWER
+E1             VSS         GND
+E2             DQ2_A       DQ           662.73m      1.32nH       1.04pF
+E3             DQS0_C_A    DQS          631.10m      1.39nH       1.00pF
+E4             DQ5_A       DQ           590.16m      1.24nH       0.97pF
+E5             VSS         GND
+E8             VSS         GND
+E9             DQ13_A      DQ           586.05m      1.21nH       0.97pF
+E10            DQS1_C_A    DQS          616.76m      1.26nH       1.01pF
+E11            DQ10_A      DQ           688.14m      1.32nH       1.09pF
+E12            VSS         GND
+F1             VDD1        POWER
+F2             DQ3_A       DQ           760.85m      1.55nH       1.13pF
+F3             VDDQ        POWER
+F4             DQ4_A       DQ           715.97m      1.43nH       1.11pF
+F5             VDD2        POWER
+F8             VDD2        POWER
+F9             DQ12_A      DQ           734.90m      1.47nH       1.13pF
+F10            VDDQ        POWER
+F11            DQ11_A      DQ           723.37m      1.46nH       1.14pF
+F12            VDD1        POWER
+G1             VSS         GND
+G2             ODTCA_A     CA_INPUT     1136.70m     2.39nH       1.47pF
+G3             VSS         GND
+G4             VDD1        POWER
+G5             VSS         GND
+G8             VSS         GND
+G9             VDD1        POWER
+G10            VSS         GND
+G11            ZQ2         NC
+G12            VSS         GND
+H1             VDD2        POWER
+H2             CA0_A       CA_INPUT     1186.60m     2.39nH       1.61pF
+H3             CS1_A       NC
+H4             CS0_A       CS_INPUT     1268.40m     2.92nH       1.60pF
+H5             VDD2        POWER
+H8             VDD2        POWER
+H9             CA2_A       CA_INPUT     1076.90m     2.84nH       1.51pF
+H10            CA3_A       CA_INPUT     1150.60m     2.13nH       1.59pF
+H11            CA4_A       CA_INPUT     1250.90m     2.37nH       1.70pF
+H12            VDD2        POWER
+J1             VSS         GND
+J2             CA1_A       CA_INPUT     1252.60m     2.55nH       1.72pF
+J3             VSS         GND
+J4             CKE0_A      CKE_INPUT    1303.80m     2.60nH       1.63pF
+J5             CKE1_A      NC
+J8             CLK_T_A     CLK_INPUT    1120.60m     2.34nH       1.53pF
+J9             CLK_C_A     CLK_INPUT    1142.70m     2.49nH       1.56pF
+J10            VSS         GND
+J11            CA5_A       CA_INPUT     1294.60m     2.72nH       1.72pF
+J12            VSS         GND
+K1             VDD2        POWER
+K2             VSS         GND
+K3             VDD2        POWER
+K4             VSS         GND
+K5             CS2_A       NC
+K8             CKE2_A      NC
+K9             VSS         GND
+K10            VDD2        POWER
+K11            VSS         GND
+K12            VDD2        POWER
+N1             VDD2        POWER
+N2             VSS         GND
+N3             VDD2        POWER
+N4             VSS         GND
+N5             CS2_B       NC
+N8             CKE2_B      NC
+N9             VSS         GND
+N10            VDD2        POWER
+N11            VSS         GND
+N12            VDD2        POWER
+P1             VSS         GND
+P2             CA1_B       CA_INPUT     1215.10m     2.41nH       1.68pF
+P3             VSS         GND
+P4             CKE0_B      CKE_INPUT    1330.00m     2.94nH       1.66pF
+P5             CKE1_B      NC
+P8             CLK_T_B     CLK_INPUT    1093.90m     2.24nH       1.51pF
+P9             CLK_C_B     CLK_INPUT    1111.70m     2.30nH       1.54pF
+P10            VSS         GND
+P11            CA5_B       CA_INPUT     1235.30m     2.39nH       1.68pF
+P12            VSS         GND
+R1             VDD2        POWER
+R2             CA0_B       CA_INPUT     1153.40m     2.36nH       1.59pF
+R3             CS1_B       NC
+R4             CS0_B       CS_INPUT     1057.40m     2.32nH       1.38pF
+R5             VDD2        POWER
+R8             VDD2        POWER
+R9             CA2_B       CA_INPUT     984.60m      2.00nH       1.42pF
+R10            CA3_B       CA_INPUT     1087.30m     2.19nH       1.53pF
+R11            CA4_B       CA_INPUT     1195.30m     2.36nH       1.65pF
+R12            VDD2        POWER
+T1             VSS         GND
+T2             ODTCA_B     CA_INPUT     1142.10m     2.36nH       1.51pF
+T3             VSS         GND
+T4             VDD1        POWER
+T5             VSS         GND
+T8             VSS         GND
+T9             VDD1        POWER
+T10            VSS         GND
+T11            RESET_N     NC           1048.20m     2.19nH       1.43pF
+T12            VSS         GND
+U1             VDD1        POWER
+U2             DQ3_B       DQ           718.67m      1.49nH       1.11pF
+U3             VDDQ        POWER
+U4             DQ4_B       DQ           659.58m      1.43nH       1.06pF
+U5             VDD2        POWER
+U8             VDD2        POWER
+U9             DQ12_B      DQ           690.30m      1.40nH       1.07pF
+U10            VDDQ        POWER
+U11            DQ11_B      DQ           702.95m      1.43nH       1.12pF
+U12            VDD1        POWER
+V1             VSS         GND
+V2             DQ2_B       DQ           620.70m      1.26nH       1.02pF
+V3             DQS0_C_B    DQS          594.41m      1.27nH       0.97pF
+V4             DQ5_B       DQ           583.54m      1.09nH       0.97pF
+V5             VSS         GND
+V8             VSS         GND
+V9             DQ13_B      DQ           564.96m      1.18nH       0.97pF
+V10            DQS1_C_B    DQS          572.84m      1.23nH       0.93pF
+V11            DQ10_B      DQ           608.42m      1.20nH       1.00pF
+V12            VSS         GND
+W1             VDDQ        POWER
+W2             VSS         GND
+W3             DQS0_T_B    DQS          602.94m      1.29nH       0.96pF
+W4             VSS         GND
+W5             VDDQ        POWER
+W8             VDDQ        POWER
+W9             VSS         GND
+W10            DQS1_T_B    DQS          571.90m      1.21nH       0.94pF
+W11            VSS         GND
+W12            VDDQ        POWER
+Y1             VSS         GND
+Y2             DQ1_B       DQ           493.88m      1.01nH       0.90pF
+Y3             DMI0_B      DQ           516.78m      1.14nH       0.90pF
+Y4             DQ6_B       DQ           494.17m      0.99nH       0.88pF
+Y5             VSS         GND
+Y8             VSS         GND
+Y9             DQ14_B      DQ           526.05m      0.98nH       0.91pF
+Y10            DMI1_B      DQ           506.66m      1.10nH       0.88pF
+Y11            DQ9_B       DQ           508.12m      1.00nH       0.88pF
+Y12            VSS         GND
+AA1            DNU         NC
+AA2            DQ0_B       DQ           493.98m      1.01nH       0.89pF
+AA3            VDDQ        POWER
+AA4            DQ7_B       DQ           476.82m      0.98nH       0.84pF
+AA5            VDDQ        POWER
+AA8            VDDQ        POWER
+AA9            DQ15_B      DQ           477.87m      0.98nH       0.86pF
+AA10           VDDQ        POWER
+AA11           DQ8_B       DQ           497.79m      0.93nH       0.86pF
+AA12           DNU         NC
+AB1            DNU         NC
+AB2            DNU         NC
+AB3            VSS         GND
+AB4            VDD2        POWER
+AB5            VSS         GND
+AB8            VSS         GND
+AB9            VDD2        POWER
+AB10           VSS         GND
+AB11           DNU         NC
+AB12           DNU         NC

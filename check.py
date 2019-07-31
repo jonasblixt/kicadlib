@@ -14,7 +14,6 @@ import sys
 # - Check extra fields
 # - Check pin length
 # - Check text size
-# - Capacitor lib contains > 20k part, remove odd dielectrics
 # - QFN/DFN/BGA Footprint package name should contain, pin-count, pitch and body size
 #       QFN_24_0.5mm_3x2mm
 #       BGA_289_0.8mm_14x14mm
