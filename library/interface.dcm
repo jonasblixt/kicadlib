@@ -4,6 +4,14 @@ $CMP LAN8710
 D Ethernet ICs MII/RMII 10/100 Eth Ethernet Transceiver
 $ENDCMP
 #
+$CMP PLR135_T10
+D TOSLINK Receiver
+$ENDCMP
+#
+$CMP PLT133_T10W
+D TOSLINK Transmitter
+$ENDCMP
+#
 $CMP TORX1355(V,F)
 D TOSLINK Receiver
 $ENDCMP

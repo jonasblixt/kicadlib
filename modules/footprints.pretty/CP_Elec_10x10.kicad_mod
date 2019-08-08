@@ -1,4 +1,4 @@
-(module CP_Elec_10x10 (layer F.Cu) (tedit 5C961256)
+(module CP_Elec_10x10 (layer F.Cu) (tedit 5D448D10)
   (descr "SMT capacitor, aluminium electrolytic, 10x10")
   (attr smd)
   (fp_text reference REF** (at 0 6.46) (layer F.SilkS)
@@ -40,6 +40,6 @@
   (model CP_Elec_10x10.step
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 180))
+    (rotate (xyz 0 0 0))
   )
 )
