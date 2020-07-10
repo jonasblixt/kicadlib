@@ -77,7 +77,8 @@ class KicadPCB(model.PCB):
             stop_layer = m.group(6)
             net = int(m.group(7))
 
-            via = model.Via(x, y, dia, drill, start_layer, stop_layer, net)
+            via = model.Via(self, x, y, dia, drill, start_layer,
+                            stop_layer, net)
             self.add_via(net, via)
 
     def process_segment(self, line):
@@ -93,7 +94,7 @@ class KicadPCB(model.PCB):
             net_idx = int(m.group(7))
             #print("s %f,%f -> %f,%f w=%.2f, net=%i %s"%(sx, sy, ex, ey, w,
             #    net_idx, self.nets[net_idx].name))
-            seg = model.Segment(sx, sy, ex, ey, w, layer_str)
+            seg = model.Segment(self, sx, sy, ex, ey, w, layer_str)
             self.add_segment(net_idx, seg)
     def process_net(self, line):
         m = re.match(self.r_net, line)
