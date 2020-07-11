@@ -19,22 +19,27 @@ y = 0
 
 
 for l in pinout_data:
-	m = r.match(l)
-	y = y + 100
+    m = r.match(l)
 
-	pin = m.group(1)
-	name = m.group(2)
-	subpart = 1
+    if not m:
+        # print("Ignoring line '%s'" %(l))
+        continue
 
-#	if "POWER" in l:
-#		subpart = 2
-#	if "ddr" in l:
-#		subpart = 3
-#	if "GND" in l:
-#		subpart = 2
+    y = y + 100
 
-	print ("X %s %s %i %i 200 R 50 50 %i 1 B"%(name,pin,x,y,subpart))
+    pin = m.group(1)
+    name = m.group(2)
+    subpart = 1
 
-	if (y > 1000):
-		x = x + 500
-		y = 0	
+#    if "POWER" in l:
+#        subpart = 2
+#    if "ddr" in l:
+#        subpart = 3
+#    if "GND" in l:
+#        subpart = 2
+
+    print ("X %s %s %i %i 200 R 50 50 %i 1 B"%(name,pin,x,y,subpart))
+
+    if (y > 1000):
+        x = x + 500
+        y = 0
