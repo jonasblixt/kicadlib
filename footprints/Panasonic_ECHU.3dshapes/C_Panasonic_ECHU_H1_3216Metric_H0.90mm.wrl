@@ -1,0 +1,26 @@
+#VRML V2.0 utf8
+# Panasonic ECHU(X) film chip capacitor
+Transform { translation -0.501969 0.000000 0.177165 children [
+  Shape {
+    appearance Appearance { material Material {
+      diffuseColor 0.760 0.770 0.790
+      specularColor 0.20 0.20 0.20
+      shininess 0.30 } }
+    geometry Box { size 0.255906 0.629921 0.354331 }
+  } ] }
+Transform { translation 0.501969 0.000000 0.177165 children [
+  Shape {
+    appearance Appearance { material Material {
+      diffuseColor 0.760 0.770 0.790
+      specularColor 0.20 0.20 0.20
+      shininess 0.30 } }
+    geometry Box { size 0.255906 0.629921 0.354331 }
+  } ] }
+Transform { translation 0.000000 0.000000 0.177165 children [
+  Shape {
+    appearance Appearance { material Material {
+      diffuseColor 0.790 0.720 0.550
+      specularColor 0.20 0.20 0.20
+      shininess 0.30 } }
+    geometry Box { size 0.748031 0.614173 0.338583 }
+  } ] }
