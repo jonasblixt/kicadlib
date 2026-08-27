@@ -1,0 +1,26 @@
+#VRML V2.0 utf8
+# Murata GA3 safety-certified MLCC, 5.7x2.8mm case (custom - no KiCad standard footprint)
+Transform { translation -1.023622 0.000000 0.295276 children [
+  Shape {
+    appearance Appearance { material Material {
+      diffuseColor 0.660 0.660 0.660
+      specularColor 0.20 0.20 0.20
+      shininess 0.30 } }
+    geometry Box { size 0.196850 1.102362 0.590551 }
+  } ] }
+Transform { translation 1.023622 0.000000 0.295276 children [
+  Shape {
+    appearance Appearance { material Material {
+      diffuseColor 0.660 0.660 0.660
+      specularColor 0.20 0.20 0.20
+      shininess 0.30 } }
+    geometry Box { size 0.196850 1.102362 0.590551 }
+  } ] }
+Transform { translation 0.000000 0.000000 0.295276 children [
+  Shape {
+    appearance Appearance { material Material {
+      diffuseColor 0.830 0.740 0.530
+      specularColor 0.20 0.20 0.20
+      shininess 0.30 } }
+    geometry Box { size 1.850394 1.102362 0.590551 }
+  } ] }

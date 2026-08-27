@@ -1,0 +1,77 @@
+{
+    "meta": {
+        "version": 0
+    },
+    "name": "Murata GA3 Safety-Certified MLCC Library",
+    "description": "Murata GA3 Safety-Certified (X1/Y2) MLCC Library",
+    "source": {
+        "type": "odbc",
+        "dsn": "",
+        "username": "",
+        "password": "",
+        "timeout_seconds": 2,
+        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/cap_xy_murata_ga3.db"
+    },
+    "libraries": [
+        {
+            "name": "GA3",
+            "table": "cap_xy_murata_ga3",
+            "key": "id",
+            "symbols": "Symbol",
+            "footprints": "Footprints",
+            "fields": [
+                {
+                    "column": "Capacitance",
+                    "name": "Capacitance",
+                    "visible_on_add": false,
+                    "visible_in_chooser": false,
+                    "show_name": true
+                },
+                {
+                    "column": "Voltage",
+                    "name": "Voltage",
+                    "visible_on_add": true,
+                    "visible_in_chooser": false,
+                    "show_name": false
+                },
+                {
+                    "column": "Dielectric",
+                    "name": "Dielectric",
+                    "visible_on_add": true,
+                    "visible_in_chooser": false,
+                    "show_name": false
+                },
+                {
+                    "column": "Manufacturer",
+                    "name": "Manufacturer",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Part Number",
+                    "name": "Part Number",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Value",
+                    "name": "Value",
+                    "visible_on_add": true,
+                    "visible_in_chooser": true
+                },
+                {
+                    "column": "Safety Rating",
+                    "name": "Safety Rating",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                }
+            ],
+            "properties": {
+                "description": "Description"
+            }
+        }
+    ]
+}
