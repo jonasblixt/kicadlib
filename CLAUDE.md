@@ -53,12 +53,20 @@ datasheet, any interpolation used) in both the footprint's `descr` field
 and the importer script's header comment - a future session re-reading
 either file has no other way to recover why a decision was made.
 
-No CAD library (cadquery, FreeCAD) or network access to fetch pre-built
-3D models is available in a Claude session's sandbox. Custom STEP files
-in this repo are hand-authored using simple CSG `BLOCK` primitives rather
-than full B-rep geometry, and are explicitly unvalidated - flag this to
-Jonas whenever a new one is created, the same way prior custom footprints
-(Vishay VJ 2008, Murata GA3) have been.
+No CAD library (cadquery, FreeCAD, pythonocc) or network access to fetch
+pre-built 3D models is available in a Claude session's sandbox, and PyPI
+is blocked so none can be installed either.
+
+Custom STEP files in this repo MUST use proper B-Rep geometry via
+`scripting/step_brep_box.py`, never hand-written CSG primitives (`BLOCK`,
+`CSG_SOLID`) - CSG is valid STEP syntax but KiCad's STEP importer
+silently fails to load it (bit Murata_GA3's footprint this way). Full
+guidance, the helper's API, and validation steps live in the
+`kicad-db-library-import` skill's `references/step_brep_authoring.md` -
+read that before authoring or changing any `.3dshapes/*.step` file.
+Nothing in this repo's custom STEP files has been visually confirmed in
+an actual CAD viewer (none is available in-session) - always flag that
+to Jonas when delivering a new or changed one.
 
 ## Working in this environment
 
