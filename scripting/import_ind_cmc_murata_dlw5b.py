@@ -50,15 +50,15 @@
 #
 # FOOTPRINT: no official KiCad footprint matches this package (checked
 # Inductor_SMD.pretty's common-mode-choke entries - all smaller EIA
-# cases: Coilcraft 0603USB/0805USB/1812CAN, Wuerth WE-SL2/WE-SL5). The
-# custom footprint (footprints/Murata_DLW5B.pretty/DLW5B_5050.kicad_mod,
-# built by scripting/gen_dlw5b_footprint.py) is a rectangular-pad
-# simplification of Murata's own recommended land pattern, which Jonas
-# supplied directly as a datasheet image after web-fetched Murata/
-# distributor PDFs proved unreliable for this level of mechanical detail
-# - see that generator script's header for the full derivation and the
-# specific simplification made (plain rectangular pads in place of the
-# datasheet's interdigitated notched pads).
+# cases: Coilcraft 0603USB/0805USB/1812CAN, Wuerth WE-SL2/WE-SL5).
+# footprints/Murata_DL.pretty/DLW5B_5050.kicad_mod is Jonas's own
+# imported footprint (custom-shaped pads reproducing Murata's actual
+# notched land pattern, plus a matching Murata_DL.3dshapes/
+# DLW5B_5050.step 3D model) - it replaces this script's original,
+# self-generated rectangular-pad approximation (previously
+# footprints/Murata_DLW5B.pretty/DLW5B_5050.kicad_mod, built by
+# scripting/gen_dlw5b_footprint.py; both the folder and that generator
+# script are gone now that the imported footprint supersedes them).
 #
 # SYMBOL: Device:Filter_EMI_CommonMode (KiCad's stock "EMI 2-inductor
 # common mode filter" symbol) - the closest built-in match for a 4-pin
@@ -73,7 +73,7 @@ import sqlite3
 from pathlib import Path
 
 MANUFACTURER = "Murata"
-FOOTPRINT = "Murata_DLW5B:DLW5B_5050"
+FOOTPRINT = "Murata_DL:DLW5B_5050"
 SYMBOL = "Device:Filter_EMI_CommonMode"
 
 TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
