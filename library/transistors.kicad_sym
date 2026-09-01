@@ -52,7 +52,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "60 V, 300 mA N-channel Trench MOSFET"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -246,7 +246,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -264,7 +264,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -282,7 +282,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 3.2004)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -350,7 +350,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "NPN/PNP general purpose transistor"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -552,7 +552,7 @@
 			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -570,7 +570,7 @@
 			(pin passive line
 				(at -7.62 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -588,7 +588,7 @@
 			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -752,7 +752,7 @@
 			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -770,7 +770,7 @@
 			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -788,7 +788,7 @@
 			(pin passive line
 				(at -7.62 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -856,7 +856,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "NPN/NPN general purpose double transistors"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1058,7 +1058,7 @@
 			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1076,7 +1076,7 @@
 			(pin passive line
 				(at -7.62 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1094,7 +1094,7 @@
 			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1258,7 +1258,7 @@
 			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1276,7 +1276,7 @@
 			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1294,7 +1294,7 @@
 			(pin passive line
 				(at -7.62 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1362,7 +1362,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "P-channel vertical D-MOS logic level FET"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1556,7 +1556,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1574,7 +1574,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1592,7 +1592,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 3.2004)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1639,7 +1639,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SON6_EP"
+		(property "Footprint" "Package_SON:Texas_DQK"
 			(at 13.97 -6.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1880,7 +1880,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 3.2004)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1898,7 +1898,7 @@
 			(pin passive line
 				(at 5.08 5.08 270)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1916,7 +1916,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1934,7 +1934,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1952,7 +1952,7 @@
 			(pin passive line
 				(at 7.62 5.08 270)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1970,7 +1970,7 @@
 			(pin passive line
 				(at 10.16 5.08 270)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1988,7 +1988,7 @@
 			(pin passive line
 				(at 12.7 5.08 270)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2006,7 +2006,7 @@
 			(pin passive line
 				(at 5.08 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2053,7 +2053,7 @@
 				)
 			)
 		)
-		(property "Footprint" "YJE"
+		(property "Footprint" "Misc:Texas_YJE"
 			(at -7.62 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2074,7 +2074,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "12-V, N channel NexFET™ power MOSFET, dual LGA, 5.9 mOhm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2473,7 +2473,7 @@
 			(pin passive line
 				(at -8.89 2.54 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2491,7 +2491,7 @@
 			(pin passive line
 				(at -8.89 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2509,7 +2509,7 @@
 			(pin passive line
 				(at -3.81 -5.08 90)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2527,7 +2527,7 @@
 			(pin passive line
 				(at 3.81 -5.08 90)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2545,7 +2545,7 @@
 			(pin passive line
 				(at 8.89 2.54 180)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2563,7 +2563,7 @@
 			(pin passive line
 				(at 8.89 0 180)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2631,7 +2631,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Digital FET, P-Channel"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2836,7 +2836,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2854,7 +2854,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2872,7 +2872,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 3.2004)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -2940,7 +2940,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "NPN high-voltage transistor"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3098,7 +3098,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3116,7 +3116,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3134,7 +3134,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3181,7 +3181,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PowerPAK_SO8_SOT669"
+		(property "Footprint" "Package_TO_SOT_SMD:LFPAK56"
 			(at 1.27 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3202,7 +3202,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100 V, 2 A PNP high power bipolar transistor"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3384,7 +3384,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3402,7 +3402,7 @@
 			(pin passive line
 				(at 5.08 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3420,7 +3420,7 @@
 			(pin passive line
 				(at 7.62 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3438,7 +3438,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3456,7 +3456,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3524,7 +3524,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "500 mA, 50 V NPN/PNP double resistor-equipped transistor; R1 = 1 kOhm, R2 = 10 kOhm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3910,7 +3910,7 @@
 			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3928,7 +3928,7 @@
 			(pin input line
 				(at -8.89 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -3946,7 +3946,7 @@
 			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4294,7 +4294,7 @@
 			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4312,7 +4312,7 @@
 			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4330,7 +4330,7 @@
 			(pin input line
 				(at -8.89 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4398,7 +4398,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "50 V, 500 mA NPN/NPN double resistor-equipped transistor; R1 = 1 kOhm, R2 = 10 kOhm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4784,7 +4784,7 @@
 			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4802,7 +4802,7 @@
 			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -4820,7 +4820,7 @@
 			(pin passive line
 				(at -8.89 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5168,7 +5168,7 @@
 			(pin passive line
 				(at 0 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5186,7 +5186,7 @@
 			(pin passive line
 				(at -8.89 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5204,7 +5204,7 @@
 			(pin passive line
 				(at 0 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5276,7 +5276,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "50 V, 100 mA NPN/PNP resistor-equipped double transistor; R1 = 4.7 kΩ, R2 = 47 kΩ"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5671,7 +5671,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5689,7 +5689,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5707,7 +5707,7 @@
 			(pin input line
 				(at -6.35 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5739,7 +5739,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5757,7 +5757,7 @@
 			(pin input line
 				(at -6.35 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5775,7 +5775,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -5847,7 +5847,7 @@
 				(justify left)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "50 V, 100 mA NPN/NPN resistor-equipped double transistor; R1= 4.7 kΩ, R2 = 47 kΩ"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6242,7 +6242,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6260,7 +6260,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6278,7 +6278,7 @@
 			(pin input line
 				(at -6.35 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6298,7 +6298,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6316,7 +6316,7 @@
 			(pin input line
 				(at -6.35 0 0)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6334,7 +6334,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6381,7 +6381,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:PowerPAK_SO8"
+		(property "Footprint" "Package_SO:PowerPAK_SO-8L_Single"
 			(at 0 12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6402,7 +6402,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Automotive N-Channel 40 V (D-S) 175 °C MOSFET"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6608,7 +6608,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6626,7 +6626,7 @@
 			(pin passive line
 				(at 5.08 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6644,7 +6644,7 @@
 			(pin passive line
 				(at 7.62 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6662,7 +6662,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6680,7 +6680,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 3.2004)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6748,7 +6748,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "N-Channel 150 V MOSFET"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6967,7 +6967,7 @@
 			(pin passive line
 				(at 2.54 5.08 270)
 				(length 3.2004)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -6985,7 +6985,7 @@
 			(pin passive line
 				(at 5.08 5.08 270)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7003,7 +7003,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7021,7 +7021,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7039,7 +7039,7 @@
 			(pin passive line
 				(at 7.62 5.08 270)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7057,7 +7057,7 @@
 			(pin passive line
 				(at 10.16 5.08 270)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7104,7 +7104,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:PowerPAK-1212-8"
+		(property "Footprint" "Package_SO:Vishay_PowerPAK_1212-8_Single"
 			(at 3.81 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7125,7 +7125,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "P-Channel 20 V (D-S) MOSFET"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7172,7 +7172,7 @@
 		(symbol "SiSS23DN_0_1"
 			(polyline
 				(pts
-					(xy 2.54 2.54) (xy 2.54 3.81) (xy 12.7 3.81)
+					(xy 2.54 2.54) (xy 2.54 3.81) (xy 2.54 3.81)
 				)
 				(stroke
 					(width 0)
@@ -7356,7 +7356,7 @@
 			(pin passive line
 				(at 2.54 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7374,7 +7374,7 @@
 			(pin passive line
 				(at 5.08 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7392,7 +7392,7 @@
 			(pin passive line
 				(at 7.62 -5.08 90)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7410,7 +7410,7 @@
 			(pin passive line
 				(at -2.54 0 0)
 				(length 2.4892)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7428,7 +7428,7 @@
 			(pin input line
 				(at 2.54 6.35 270)
 				(length 2.54)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7436,78 +7436,6 @@
 					)
 				)
 				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 5.08 6.35 270)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 7.62 6.35 270)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 10.16 6.35 270)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "8"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin input line
-				(at 12.7 6.35 270)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "9"
 					(effects
 						(font
 							(size 1.27 1.27)
