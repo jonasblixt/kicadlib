@@ -276,7 +276,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:100LBGA_DQ"
+		(property "Footprint" "Package_BGA:BGA-100_14x18mm_Layout10x17_P1mm"
 			(at 3.81 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1168,7 +1168,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BGA-96_pitch0.8mm_dia0.4mm"
+		(property "Footprint" "Package_BGA:BGA-96_9.0x13.0mm_Layout2x3x16_P0.8mm"
 			(at 0 157.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1189,7 +1189,7 @@
 				)
 			)
 		)
-		(property "Description" "4Gbit DDR3L, 1.35V"
+		(property "Description" "256Mx16 4Gb DDR3 SDRAM"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5484,7 +5484,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:BGA-96_pitch0.8mm_dia0.4mm"
+		(property "Footprint" "Package_BGA:BGA-96_9.0x13.0mm_Layout2x3x16_P0.8mm"
 			(at 21.59 -7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11349,7 +11349,7 @@
 				)
 			)
 		)
-		(property "Footprint" "100LBGA_DQ"
+		(property "Footprint" "Package_BGA:BGA-100_14x18mm_Layout10x17_P1mm"
 			(at 0 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)

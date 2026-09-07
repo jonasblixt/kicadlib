@@ -31,7 +31,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LGA24_3.5_1mm"
+		(property "Footprint" "Package_LGA:LGA-24L_3x3.5mm_P0.43mm"
 			(at 0 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -53,7 +53,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "9-axis iNEMO inertial module (IMU): 3D magnetometer, 3D accelerometer, 3D gyroscope with I2C and SPI"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -564,7 +564,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DFN_QFN:DFN-10_2x2mm_P0.4mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -585,7 +585,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "3-Axis, 10-bit Digital Accelerometer"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
