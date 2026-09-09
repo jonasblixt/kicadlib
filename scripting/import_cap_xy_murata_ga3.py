@@ -22,10 +22,11 @@
 # (5.7mm x 5.0mm) = C_2220_5750Metric. The third case, (5.7mm x 2.8mm,
 # part-number prefix GA352, 8/31 parts), has NO standard KiCad match.
 # Per user decision ("Build a custom footprint"), a custom footprint
-# (footprints/Murata_GA3.pretty/C_Murata_GA3_5.7x2.8.kicad_mod, with a
+# (footprints/Jonas.pretty/C_Murata_GA3_5.7x2.8.kicad_mod, with a
 # matching STEP/WRL 3D model in footprints/Murata_GA3.3dshapes/) was
 # created instead, so this library needs an fp-lib-table entry for the
-# "Murata_GA3" nickname (same pattern as Panasonic_ECHU and Vishay_VJ).
+# "Jonas" nickname (this repo's single consolidated custom-footprint
+# library, formerly split per-vendor as Murata_GA3/Panasonic_ECHU/etc.).
 #
 # NOTE ON THE 5.7x2.8mm FOOTPRINT: Murata's actual datasheet/recommended
 # land pattern for this case could not be retrieved - Digikey, Murata's own
@@ -54,7 +55,7 @@ MANUFACTURER = "Murata"
 footprint_mapping = {
     (4.5, 2.0): ("Capacitor_SMD", "C_1808_4520Metric"),
     (5.7, 5.0): ("Capacitor_SMD", "C_2220_5750Metric"),
-    (5.7, 2.8): ("Murata_GA3", "C_Murata_GA3_5.7x2.8"),
+    (5.7, 2.8): ("Jonas", "C_Murata_GA3_5.7x2.8"),
 }
 
 # Case label used inside the id string, keyed the same way as

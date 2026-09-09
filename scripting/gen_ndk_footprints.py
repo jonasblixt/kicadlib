@@ -41,8 +41,8 @@
 import os
 import shutil
 
-OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/NDK.pretty")
-MODEL_OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/NDK.3dshapes")
+OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/Jonas.pretty")
+MODEL_OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/Jonas.3dshapes")
 os.makedirs(OUT_DIR, exist_ok=True)
 os.makedirs(MODEL_OUT_DIR, exist_ok=True)
 
@@ -184,7 +184,7 @@ def gen_footprint(name, geo):
         lines.append('\t)')
 
     if geo["model"]:
-        lines.append(f'\t(model "${{JONAS_KICADLIB}}/footprints/NDK.3dshapes/{geo["model"]}"')
+        lines.append(f'\t(model "${{JONAS_KICADLIB}}/footprints/Jonas.3dshapes/{geo["model"]}"')
         lines.append('\t\t(offset (xyz 0 0 0))')
         lines.append('\t\t(scale (xyz 1 1 1))')
         lines.append('\t\t(rotate (xyz 0 0 0))')

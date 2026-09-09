@@ -115,13 +115,13 @@ SYMBOL_MAP = {
 # legacy Footprint-property code (family/series) -> (footprint library
 # nickname, footprint name), or None if no footprint is assigned.
 FOOTPRINT_MAP = {
-    "NX1255GB": ("NDK", "NX1255GB"),
-    "NX2520SA": ("NDK", "NX2520SA"),
-    "NX3225SA": ("NDK", "NX3225SA"),
-    "NX3225GA": ("NDK", "NX3225SA"),
-    "NX3225GB": ("NDK", "NX3225SA"),
-    "NX3225GD": ("NDK", "NX3225SA"),
-    "NX3225SC": ("NDK", "NX3225SA"),
+    "NX1255GB": ("Jonas", "NX1255GB"),
+    "NX2520SA": ("Jonas", "NX2520SA"),
+    "NX3225SA": ("Jonas", "NX3225SA"),
+    "NX3225GA": ("Jonas", "NX3225SA"),
+    "NX3225GB": ("Jonas", "NX3225SA"),
+    "NX3225GD": ("Jonas", "NX3225SA"),
+    "NX3225SC": ("Jonas", "NX3225SA"),
     "NX2016AB": ("Crystal", "Crystal_SMD_2016-4Pin_2.0x1.6mm"),
     "NX2016SA": ("Crystal", "Crystal_SMD_2016-4Pin_2.0x1.6mm"),
     "NX5032GA": ("Crystal", "Crystal_SMD_5032-2Pin_5.0x3.2mm"),
@@ -132,7 +132,7 @@ FOOTPRINT_MAP = {
     "NX1612AA": None,
     "NX1612SA": None,
     "NX2012SA": None,
-    "NX3215SA": ("NDK", "NX3215SA"),
+    "NX3215SA": ("Jonas", "NX3215SA"),
     "NX4025DA": None,
     "NX8045GB": None,
 }

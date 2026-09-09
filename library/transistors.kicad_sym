@@ -2053,7 +2053,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Misc:Texas_YJE"
+		(property "Footprint" "Jonas:Texas_YJE"
 			(at -7.62 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)

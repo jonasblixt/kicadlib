@@ -27,13 +27,14 @@
 #     the one extra column with real data. Set KEEP_EMPTY_EXTRA_COLUMNS =
 #     False below to drop the four empty ones.
 #
-# Footprints come from the local Panasonic_ECHU.pretty library (this repo's
-# footprints/ directory), not from KiCad's system libraries: the ECHU(X)
+# Footprints come from the local Jonas.pretty library (this repo's
+# footprints/ directory, consolidated from the former per-vendor
+# Panasonic_ECHU.pretty), not from KiCad's system libraries: the ECHU(X)
 # datasheet specifies its own reflow land patterns, which differ from the
 # generic IPC-derived Capacitor_SMD ones, and several ECHU case codes share
 # one EIA size at different body heights - so the 3D model has to differ even
 # where the land pattern does not. That means this library DOES need an
-# fp-lib-table entry (nickname "Panasonic_ECHU"), unlike the ceramic and
+# fp-lib-table entry (nickname "Jonas"), unlike the ceramic and
 # electrolytic importers. See footprints/README.md.
 #
 # The (L, T, H) body dimensions in the CSV identify the Panasonic case size
@@ -47,7 +48,7 @@ import re
 import sqlite3
 from pathlib import Path
 
-FOOTPRINT_LIB_NICKNAME = "Panasonic_ECHU"
+FOOTPRINT_LIB_NICKNAME = "Jonas"
 MANUFACTURER = "Panasonic"
 DIELECTRIC = "PPS"
 

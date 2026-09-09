@@ -51,10 +51,12 @@
 # FOOTPRINT: no official KiCad footprint matches this package (checked
 # Inductor_SMD.pretty's common-mode-choke entries - all smaller EIA
 # cases: Coilcraft 0603USB/0805USB/1812CAN, Wuerth WE-SL2/WE-SL5).
-# footprints/Murata_DL.pretty/DLW5B_5050.kicad_mod is Jonas's own
-# imported footprint (custom-shaped pads reproducing Murata's actual
-# notched land pattern, plus a matching Murata_DL.3dshapes/
-# DLW5B_5050.step 3D model) - it replaces this script's original,
+# footprints/Jonas.pretty/DLW5B_5050.kicad_mod (formerly
+# Murata_DL.pretty/, consolidated into the single Jonas.pretty
+# custom-footprint library) is Jonas's own imported footprint
+# (custom-shaped pads reproducing Murata's actual notched land pattern,
+# plus a matching Murata_DL.3dshapes/DLW5B_5050.step 3D model) - it
+# replaces this script's original,
 # self-generated rectangular-pad approximation (previously
 # footprints/Murata_DLW5B.pretty/DLW5B_5050.kicad_mod, built by
 # scripting/gen_dlw5b_footprint.py; both the folder and that generator
@@ -73,7 +75,7 @@ import sqlite3
 from pathlib import Path
 
 MANUFACTURER = "Murata"
-FOOTPRINT = "Murata_DL:DLW5B_5050"
+FOOTPRINT = "Jonas:DLW5B_5050"
 SYMBOL = "Device:Filter_EMI_CommonMode"
 
 TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")

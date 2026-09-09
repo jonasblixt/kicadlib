@@ -84,19 +84,22 @@ from pathlib import Path
 MANUFACTURER = "Vishay"
 
 # (case, series) -> "LibraryNickname:FootprintName" - all built by
-# scripting/gen_ihlp_footprints.py into footprints/Vishay_IHLP.pretty/.
+# scripting/gen_ihlp_footprints.py, originally into
+# footprints/Vishay_IHLP.pretty/, later consolidated into the single
+# footprints/Jonas.pretty/ custom-footprint library (fp-lib-table
+# nickname "Jonas").
 FOOTPRINT_MAP = {
-    ("1212", "AB"): "Vishay_IHLP:IHLP1212AB",
-    ("1212", "AE"): "Vishay_IHLP:IHLP1212AE",
-    ("1212", "BZ"): "Vishay_IHLP:IHLP1212BZ",
-    ("1616", "AB"): "Vishay_IHLP:IHLP1616AB",
-    ("1616", "BZ"): "Vishay_IHLP:IHLP1616BZ",
-    ("2020", "AB"): "Vishay_IHLP:IHLP2020AB",
-    ("2020", "BZ"): "Vishay_IHLP:IHLP2020BZ",
-    ("2020", "CZ"): "Vishay_IHLP:IHLP2020CZ",
-    ("2525", "BD"): "Vishay_IHLP:IHLP2525BD",
-    ("2525", "CZ"): "Vishay_IHLP:IHLP2525CZ",
-    ("2525", "EZ"): "Vishay_IHLP:IHLP2525EZ",
+    ("1212", "AB"): "Jonas:IHLP1212AB",
+    ("1212", "AE"): "Jonas:IHLP1212AE",
+    ("1212", "BZ"): "Jonas:IHLP1212BZ",
+    ("1616", "AB"): "Jonas:IHLP1616AB",
+    ("1616", "BZ"): "Jonas:IHLP1616BZ",
+    ("2020", "AB"): "Jonas:IHLP2020AB",
+    ("2020", "BZ"): "Jonas:IHLP2020BZ",
+    ("2020", "CZ"): "Jonas:IHLP2020CZ",
+    ("2525", "BD"): "Jonas:IHLP2525BD",
+    ("2525", "CZ"): "Jonas:IHLP2525CZ",
+    ("2525", "EZ"): "Jonas:IHLP2525EZ",
 }
 
 TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")

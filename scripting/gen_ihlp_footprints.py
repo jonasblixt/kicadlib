@@ -90,7 +90,7 @@ CASES = {
     },
 }
 
-OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/Vishay_IHLP.pretty")
+OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/Jonas.pretty")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 
@@ -229,7 +229,7 @@ def gen_footprint(case, series, step_file, geo):
     # convention used by the repo's other custom footprints (Murata_GA3,
     # Panasonic_ECHU) - keeps the 3D model bundled with the footprint
     # library instead of depending on modules/packages3d + ${KISYS3DMOD}.
-    lines.append(f'\t(model "${{JONAS_KICADLIB}}/footprints/Vishay_IHLP.3dshapes/{step_file}"')
+    lines.append(f'\t(model "${{JONAS_KICADLIB}}/footprints/Jonas.3dshapes/{step_file}"')
     lines.append(f'\t\t(offset (xyz {ox} {oy} {oz}))')
     lines.append(f'\t\t(scale (xyz {sx_} {sy_} {sz_}))')
     lines.append(f'\t\t(rotate (xyz {rx} {ry} {rz}))')
