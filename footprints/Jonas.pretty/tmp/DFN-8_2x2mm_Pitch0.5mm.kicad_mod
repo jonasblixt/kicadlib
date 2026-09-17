@@ -1,0 +1,224 @@
+(footprint "DFN-8_2x2mm_Pitch0.5mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "DFN8 2x2, 0.5P; No exposed pad - Ref http://pdfserv.maximintegrated.com/land_patterns/90-0349.PDF")
+	(tags "DFN 0.5")
+	(property "Reference" "REF**"
+		(at -0.175 0.025 90)
+		(layer "F.SilkS")
+		(uuid "5ea5f35b-d533-4e63-82ea-b4b7163cdfb5")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+			)
+		)
+	)
+	(property "Value" "MIC23150-55YMT"
+		(at 0 2.075 0)
+		(layer "F.Fab")
+		(uuid "f535e084-92f5-42e0-b0fe-e7a516d9f155")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "164bbe39-f9fe-47a8-93f7-36c709de52a9")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "db08b0e2-3315-40ca-a2ba-b8f42aaa5392")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.25 -1.15)
+		(end 0.65 -1.15)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "81a1f710-60ab-42e0-9c75-df8fa55cdb8f")
+	)
+	(fp_line
+		(start -0.65 1.15)
+		(end 0.65 1.15)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b4082cd0-6567-4564-a880-3b2778831dc8")
+	)
+	(fp_line
+		(start -1.65 -1.35)
+		(end -1.65 1.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d9dde883-694b-4bb8-a0f1-bb425d46312f")
+	)
+	(fp_line
+		(start -1.65 -1.35)
+		(end 1.65 -1.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "aad258f6-943b-4471-a1f9-4902c6eebd9e")
+	)
+	(fp_line
+		(start -1.65 1.35)
+		(end 1.65 1.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "426e93fb-2cda-48ef-9dc8-a333ed6b06eb")
+	)
+	(fp_line
+		(start 1.65 -1.35)
+		(end 1.65 1.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "21b14b6e-f1e7-43f0-87e1-13381b1a55cd")
+	)
+	(fp_line
+		(start -1 0)
+		(end 0 -1)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7d10c390-ddde-4ffa-b369-3655f02b0244")
+	)
+	(fp_line
+		(start -1 1)
+		(end -1 0)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b9f87dc8-b1f6-4515-b60b-b9cac166e2b0")
+	)
+	(fp_line
+		(start 0 -1)
+		(end 1 -1)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b05693d9-2ccb-4229-8aa7-e3b881368a5e")
+	)
+	(fp_line
+		(start 1 -1)
+		(end 1 1)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "969bf62a-353f-4f6e-a663-03d8e33e385b")
+	)
+	(fp_line
+		(start 1 1)
+		(end -1 1)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "da3a820a-e0f9-4a44-a3f6-5b46c4a030ac")
+	)
+	(pad "1" smd rect
+		(at -0.95 -0.75)
+		(size 0.85 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4deb4c0c-fe71-4a90-b3d1-e99b2acf6da6")
+	)
+	(pad "2" smd rect
+		(at -0.95 -0.25)
+		(size 0.85 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d790ff94-fde8-400f-83d6-272cc2d389f8")
+	)
+	(pad "3" smd rect
+		(at -0.95 0.25)
+		(size 0.85 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0266a89e-d1cd-4567-9393-16b6b5e86da6")
+	)
+	(pad "4" smd rect
+		(at -0.95 0.75)
+		(size 0.85 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b359e8d1-abfa-4014-8665-214fba26af88")
+	)
+	(pad "5" smd rect
+		(at 0.95 0.75)
+		(size 0.85 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1fd5874f-c202-418d-814f-c58960f485cd")
+	)
+	(pad "6" smd rect
+		(at 0.95 0.25)
+		(size 0.85 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c32094c3-c1ca-4625-9f5f-dcfa93e0dda7")
+	)
+	(pad "7" smd rect
+		(at 0.95 -0.25)
+		(size 0.85 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0b463687-d0d9-4085-82e6-23153ac13574")
+	)
+	(pad "8" smd rect
+		(at 0.95 -0.75)
+		(size 0.85 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e8abdb14-661a-46dd-971a-8a97569d521c")
+	)
+	(embedded_fonts no)
+	(model "${KISYS3DMOD}/DFN-8_2x2mm_Pitch0.5mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

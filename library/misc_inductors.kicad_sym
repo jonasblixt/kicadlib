@@ -805,7 +805,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:POE60F"
+		(property "Footprint" "Jonas:Coilcraft_POE60F"
 			(at 20.32 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1261,7 +1261,7 @@
 			(pin passive line
 				(at -5.08 24.13 0)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1279,7 +1279,7 @@
 			(pin passive line
 				(at -5.08 21.59 0)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1297,7 +1297,7 @@
 			(pin passive line
 				(at -5.08 1.27 0)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1315,7 +1315,7 @@
 			(pin passive line
 				(at 19.05 11.43 180)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1333,7 +1333,7 @@
 			(pin passive line
 				(at 19.05 13.97 180)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1351,7 +1351,7 @@
 			(pin passive line
 				(at 19.05 21.59 180)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1369,7 +1369,7 @@
 			(pin passive line
 				(at 19.05 24.13 180)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1387,7 +1387,7 @@
 			(pin passive line
 				(at -5.08 8.89 0)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1405,7 +1405,7 @@
 			(pin passive line
 				(at -5.08 13.97 0)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1423,7 +1423,7 @@
 			(pin passive line
 				(at -5.08 11.43 0)
 				(length 5.08)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)

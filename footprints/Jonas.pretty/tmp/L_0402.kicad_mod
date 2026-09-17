@@ -1,0 +1,191 @@
+(footprint "L_0402"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Resistor SMD 0402, reflow soldering, Vishay (see dcrcw.pdf)")
+	(tags "resistor 0402")
+	(property "Reference" "REF**"
+		(at 0 -0.025 0)
+		(layer "F.SilkS")
+		(uuid "3bf35338-1aff-47b6-be45-a7100ec61c98")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+			)
+		)
+	)
+	(property "Value" "LQG15HN_2n7"
+		(at 0 1.8 0)
+		(layer "F.Fab")
+		(uuid "eeb324d5-97de-4519-b706-53ae4d77fec2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "88b08526-bf4d-403a-be23-7f6901a55e28")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify mirror)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "B.Fab")
+		(hide yes)
+		(uuid "15473c68-b2cb-4859-824e-7765d1150aa1")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify mirror)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 0.25 -0.53)
+		(end -0.25 -0.53)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "65bb5497-527a-41be-a5e2-c7c17461e9f2")
+	)
+	(fp_line
+		(start -0.25 0.53)
+		(end 0.25 0.53)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f67abf02-60e1-4c76-b6ea-a38b06f41c00")
+	)
+	(fp_line
+		(start 0.95 -0.65)
+		(end 0.95 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f0850154-a416-45e8-b720-a9eed0628996")
+	)
+	(fp_line
+		(start -0.95 0.65)
+		(end 0.95 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4680d639-2998-46e9-b40d-5c86439e6563")
+	)
+	(fp_line
+		(start -0.95 -0.65)
+		(end 0.95 -0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "cdeaf1a3-3b5d-403a-be08-e1647464ba80")
+	)
+	(fp_line
+		(start -0.95 -0.65)
+		(end -0.95 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d9ac6c52-cdf7-4f68-913a-c08a3ec45ad2")
+	)
+	(fp_line
+		(start 0.5 0.25)
+		(end -0.5 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c73af326-a4a5-4cb7-b3bf-8c87e7d5dc55")
+	)
+	(fp_line
+		(start 0.5 -0.25)
+		(end 0.5 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1a0487e2-e06e-4aaa-a9da-616719a47cf7")
+	)
+	(fp_line
+		(start -0.5 0.25)
+		(end -0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "180811bb-34c7-4e1c-aa9f-cf495d202690")
+	)
+	(fp_line
+		(start -0.5 -0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "55f55b63-2e1b-4877-9fb9-e65493b3e995")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "12e25f71-fb4d-4192-ad2c-049d0dade703")
+		(effects
+			(font
+				(size 0.2 0.2)
+				(thickness 0.03)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.45 0 180)
+		(size 0.4 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ee58658a-bb59-4428-8df1-887b11ace585")
+	)
+	(pad "2" smd rect
+		(at 0.45 0 180)
+		(size 0.4 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "91839375-36ee-4055-a2e0-3463150d8da1")
+	)
+	(embedded_fonts no)
+	(model "L_0402.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

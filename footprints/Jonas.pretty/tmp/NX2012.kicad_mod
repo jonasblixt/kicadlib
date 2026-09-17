@@ -1,0 +1,116 @@
+(footprint "NX2012"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -0.05 -0.015 180)
+		(layer "F.SilkS")
+		(uuid "82881a58-d2fa-49d7-8814-5497c581c814")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+			)
+		)
+	)
+	(property "Value" "NX2012SA-32.768K-STD-MUB-1"
+		(at 1.4 -1.6 0)
+		(layer "F.Fab")
+		(uuid "1584e542-4101-473c-b5e6-4bc8dafc6f1c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "72148094-98c4-4396-b025-0e9b5c0a737d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f28f5667-0b02-4deb-b035-a4e058d7e1df")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.3 -0.7)
+		(end 1.3 -0.7)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a034c498-89ab-4c1f-90c4-39fa4255a0c0")
+	)
+	(fp_line
+		(start -1.3 0.7)
+		(end -1.3 -0.7)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d7998feb-b93e-4e4d-bcd2-51e3dff37746")
+	)
+	(fp_line
+		(start 1.3 -0.7)
+		(end 1.3 0.7)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b367950e-dfec-4f94-a09d-5745eef4bb79")
+	)
+	(fp_line
+		(start 1.3 0.7)
+		(end -1.3 0.7)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2bf5defd-cdd0-47ed-83f7-0961550a3bee")
+	)
+	(pad "1" smd rect
+		(at -0.75 0)
+		(size 1 1.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d2e20588-6e61-48a9-97f7-d0cdaf967def")
+	)
+	(pad "3" smd rect
+		(at 0.75 0)
+		(size 1 1.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c2abefe3-1f10-4d68-8dcf-4774c285460e")
+	)
+	(embedded_fonts no)
+	(model "${KISYS3DMOD}/User Library-NDK_NX3215SA.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
