@@ -1,0 +1,229 @@
+(footprint "T_Wurth_WE-PPTI-1308"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Push-Pull Transformers, body 9.45x8.5x5.5mm, https://www.we-online.com/en/components/products/WE-PPTI#/articles/WE-PPTI-1308")
+	(tags "SMT")
+	(property "Reference" "REF**"
+		(at 0 -5.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "bbd813fd-4a2a-4fe7-ad8f-8d717e79fa4e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "T_Wurth_WE-PPTI-1308"
+		(at 0 5.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b39fd888-7066-4eac-bdb9-f4cbcc56dd82")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "176140cc-3155-4c52-91cf-50585bd39b61")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ed0f4b57-1439-4b0f-b0ab-0908ba492b3d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -6.97 -3.15)
+		(end -6.97 -1.93)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "32bd097a-d417-4598-b0e7-38094534a787")
+	)
+	(fp_line
+		(start -4.835 -4.36)
+		(end -4.835 -3.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "322b0cbd-b72a-4e94-ac42-89b01dc42df6")
+	)
+	(fp_line
+		(start -4.835 -4.36)
+		(end 4.835 -4.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2940dcbe-a8a9-4d50-823d-bc2186288e7b")
+	)
+	(fp_line
+		(start -4.835 4.36)
+		(end -4.835 3.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ce6b56ba-8244-448a-90d9-861f23c9c2fc")
+	)
+	(fp_line
+		(start -4.835 4.36)
+		(end 4.835 4.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b0e46eba-1771-4bed-8249-d0e4eddf0891")
+	)
+	(fp_line
+		(start 4.835 -4.36)
+		(end 4.835 -3.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1c426968-450f-43de-9a4c-ed54e13bcea4")
+	)
+	(fp_line
+		(start 4.835 4.36)
+		(end 4.835 3.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "19da57c1-4591-4fe4-be39-90ea532f12b9")
+	)
+	(fp_rect
+		(start -6.885 -4.5)
+		(end 6.885 4.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "6837556b-7c0e-4fb1-8a2f-abb999c0b703")
+	)
+	(fp_line
+		(start -4.725 -3.15)
+		(end -5.457 -2.54)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0a6c4902-0e02-4c30-911b-252b9a0ded81")
+	)
+	(fp_line
+		(start -4.725 -1.93)
+		(end -5.457 -2.54)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fc4a3fce-0048-4168-99ea-787284403ae3")
+	)
+	(fp_rect
+		(start -4.725 -4.25)
+		(end 4.725 4.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "c7d20581-ad68-4176-ad95-52d7614b2153")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9a1b7207-2109-4a78-bce6-601f150c91dd")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -5.725 -2.54)
+		(size 1.82 1.22)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "13e010ef-6f47-476c-9fc0-ba711fbc4e9a")
+	)
+	(pad "2" smd rect
+		(at -5.725 0)
+		(size 1.82 1.22)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "25d46963-103c-4046-82fc-09f1bdab1612")
+	)
+	(pad "3" smd rect
+		(at -5.725 2.54)
+		(size 1.82 1.22)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a35f6b5e-14be-4ba1-9e98-441bb7d4681e")
+	)
+	(pad "4" smd rect
+		(at 5.725 2.54)
+		(size 1.82 1.22)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f78440b4-997a-4695-87a7-b6a1d98f3ae3")
+	)
+	(pad "5" smd rect
+		(at 5.725 0)
+		(size 1.82 1.22)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "949b3764-5f36-4765-8569-8b1cbe7624e3")
+	)
+	(pad "6" smd rect
+		(at 5.725 -2.54)
+		(size 1.82 1.22)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "56230391-6a32-466d-9bcb-31291c918049")
+	)
+	(embedded_fonts no)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/T_Wurth_WE-PPTI-1308.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

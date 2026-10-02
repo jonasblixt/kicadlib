@@ -1591,7 +1591,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "LP3470IM5X-3.08_NOPB"
+	(symbol "LP3470A308DBVR"
 		(pin_names
 			(offset 1.016)
 		)
@@ -1610,7 +1610,7 @@
 				)
 			)
 		)
-		(property "Value" "LP3470IM5X-3.08_NOPB"
+		(property "Value" "LP3470A308DBVR"
 			(at 8.89 -1.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1642,7 +1642,7 @@
 			)
 		)
 		(property "Description" "LP3470 Voltage Supervisor With Programmable Delay and 1% Reset Threshold"
-			(at 0 0 0)
+			(at 0.508 -9.398 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -1663,7 +1663,7 @@
 				)
 			)
 		)
-		(property "Part Number" "LP3470IM5X-3.08/NOPB"
+		(property "Part Number" "LP3470A308DBVR"
 			(at 0 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1674,7 +1674,7 @@
 				)
 			)
 		)
-		(symbol "LP3470IM5X-3.08_NOPB_0_1"
+		(symbol "LP3470A308DBVR_0_1"
 			(rectangle
 				(start 0 7.62)
 				(end 16.51 0)
@@ -1687,7 +1687,7 @@
 				)
 			)
 		)
-		(symbol "LP3470IM5X-3.08_NOPB_1_1"
+		(symbol "LP3470A308DBVR_1_1"
 			(pin input line
 				(at 21.59 3.81 180)
 				(length 5.08)
@@ -4771,6 +4771,235 @@
 		)
 		(embedded_fonts no)
 	)
+	(symbol "TLVH431AQDBVR"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -14.732 8.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLVH431AQDBVR"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at -42.672 -7.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1% low-voltage wide-operating current adjustable precision shunt regulator"
+			(at -22.098 -12.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TI"
+			(at -42.164 4.318 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "TLVH431AQDBVR"
+			(at -35.814 2.286 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "TLVH431AQDBVR_0_1"
+			(polyline
+				(pts
+					(xy -1.27 1.27) (xy -1.27 -1.27) (xy -1.778 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 -1.27) (xy 0 -0.635)
+				)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+				)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "TLVH431AQDBVR_1_0"
+			(pin no_connect line
+				(at 3.81 0 180)
+				(length 2.54)
+				(hide yes)
+				(name "1"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 3.81 0 180)
+				(length 2.54)
+				(hide yes)
+				(name "2"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+			)
+		)
+		(symbol "TLVH431AQDBVR_1_1"
+			(pin passive line
+				(at -3.81 0 0)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 0 -3.81 90)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 3.81 0 180)
+				(length 2.54)
+				(name ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
 	(symbol "TP"
 		(pin_names
 			(offset 1.016)
@@ -4801,7 +5030,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TP_1mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4894,7 +5123,7 @@
 			(pin passive line
 				(at 0 0 90)
 				(length 2.3114)
-				(name "~"
+				(name ""
 					(effects
 						(font
 							(size 1.27 1.27)

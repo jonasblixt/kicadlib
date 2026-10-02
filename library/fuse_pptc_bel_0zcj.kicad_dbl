@@ -1,0 +1,92 @@
+{
+    "meta": {
+        "version": 0
+    },
+    "name": "Bel Fuse 0ZCJ PPTC Resettable Fuses",
+    "description": "Bel Fuse 0ZCJ-series 1206 PPTC resettable fuse library (value = trip current)",
+    "source": {
+        "type": "odbc",
+        "dsn": "",
+        "username": "",
+        "password": "",
+        "timeout_seconds": 2,
+        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/fuse_pptc_bel_0zcj.db"
+    },
+    "libraries": [
+        {
+            "name": "0ZCJ",
+            "table": "fuse_pptc_bel_0zcj",
+            "key": "id",
+            "symbols": "Symbol",
+            "footprints": "Footprints",
+            "fields": [
+                {
+                    "column": "Hold Current",
+                    "name": "Hold Current",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Trip Current",
+                    "name": "Trip Current",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Max Current",
+                    "name": "Max Current",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Max Voltage",
+                    "name": "Max Voltage",
+                    "visible_on_add": true,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                },
+                {
+                    "column": "Resistance Initial",
+                    "name": "Resistance Initial",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Resistance Post Trip",
+                    "name": "Resistance Post Trip",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Manufacturer",
+                    "name": "Manufacturer",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Part Number",
+                    "name": "Part Number",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Value",
+                    "name": "Value",
+                    "visible_on_add": true,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                }
+            ],
+            "properties": {
+                "description": "Description"
+            }
+        }
+    ]
+}
