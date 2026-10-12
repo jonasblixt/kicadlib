@@ -1,0 +1,85 @@
+{
+    "meta": {
+        "version": 0
+    },
+    "name": "Littelfuse SMAJ/SMBJ/SMCJ TVS Diodes",
+    "description": "Littelfuse SMAJ/SMBJ/SMCJ-series TVS protection diode library (uni- and bi-directional, KiCad standard DO-214 footprints)",
+    "source": {
+        "type": "odbc",
+        "dsn": "",
+        "username": "",
+        "password": "",
+        "timeout_seconds": 2,
+        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/diode_tvs_littlefuse.db"
+    },
+    "libraries": [
+        {
+            "name": "TVS",
+            "table": "diode_tvs_littlefuse",
+            "key": "id",
+            "symbols": "Symbol",
+            "footprints": "Footprints",
+            "fields": [
+                {
+                    "column": "Breakdown Voltage",
+                    "name": "Breakdown Voltage",
+                    "visible_on_add": true,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                },
+                {
+                    "column": "Standoff Voltage",
+                    "name": "Standoff Voltage",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Power Rating",
+                    "name": "Power Rating",
+                    "visible_on_add": true,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                },
+                {
+                    "column": "Type",
+                    "name": "Type",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                },
+                {
+                    "column": "Agency Approvals",
+                    "name": "Agency Approvals",
+                    "visible_on_add": false,
+                    "visible_in_chooser": false,
+                    "show_name": true
+                },
+                {
+                    "column": "Manufacturer",
+                    "name": "Manufacturer",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Part Number",
+                    "name": "Part Number",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Value",
+                    "name": "Value",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                }
+            ],
+            "properties": {
+                "description": "Description"
+            }
+        }
+    ]
+}

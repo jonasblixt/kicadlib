@@ -1,0 +1,99 @@
+{
+    "meta": {
+        "version": 0
+    },
+    "name": "Murata DLW5B Chip Common-Mode Chokes",
+    "description": "Murata DLW5B-series 5050/2020-size chip common-mode choke library (4-terminal, custom footprint)",
+    "source": {
+        "type": "odbc",
+        "dsn": "",
+        "username": "",
+        "password": "",
+        "timeout_seconds": 2,
+        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/ind_cmc_murata_dlw5b.db"
+    },
+    "libraries": [
+        {
+            "name": "DLW5B",
+            "table": "ind_cmc_murata_dlw5b",
+            "key": "id",
+            "symbols": "Symbol",
+            "footprints": "Footprints",
+            "fields": [
+                {
+                    "column": "Impedance @100MHz",
+                    "name": "Impedance @100MHz",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Impedance @10MHz",
+                    "name": "Impedance @10MHz",
+                    "visible_on_add": false,
+                    "visible_in_chooser": false,
+                    "show_name": true
+                },
+                {
+                    "column": "Rated Current",
+                    "name": "Rated Current",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "DCR",
+                    "name": "DCR",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Rated Voltage",
+                    "name": "Rated Voltage",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Max Op Temp",
+                    "name": "Max Op Temp",
+                    "visible_on_add": false,
+                    "visible_in_chooser": false,
+                    "show_name": true
+                },
+                {
+                    "column": "Series",
+                    "name": "Series",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Manufacturer",
+                    "name": "Manufacturer",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Part Number",
+                    "name": "Part Number",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Value",
+                    "name": "Value",
+                    "visible_on_add": true,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                }
+            ],
+            "properties": {
+                "description": "Description"
+            }
+        }
+    ]
+}
