@@ -1,0 +1,128 @@
+(footprint "NX2520"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.1 0.125 0)
+		(layer "F.SilkS")
+		(uuid "c3009248-b978-4cc4-b69f-4d8c1cc17117")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+			)
+		)
+	)
+	(property "Value" "NX2520SA-32.000000MHZ"
+		(at 1.1 -1.9 0)
+		(layer "F.Fab")
+		(uuid "87353740-2d8b-4475-bfa3-94be495ee002")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "286886fb-9833-4601-a4f5-dda125f07e06")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5f9806bf-1eee-4ac4-ac2e-ee8ba29dd92d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.5 -1.2)
+		(end 1.5 -1.2)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "777c4a82-3b0f-4b6c-af58-c0a9bd46b59a")
+	)
+	(fp_line
+		(start -1.5 1.2)
+		(end -1.5 -1.2)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "da690d79-c920-4c7b-95b5-781681212c0d")
+	)
+	(fp_line
+		(start 1.5 -1.2)
+		(end 1.5 1.2)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "09dcd3b9-0457-43df-b9a6-4874c7e48bda")
+	)
+	(fp_line
+		(start 1.5 1.2)
+		(end -1.5 1.2)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ee83b425-ac63-476b-8744-e442687f5928")
+	)
+	(pad "1" smd rect
+		(at -0.85 0.65)
+		(size 1.2 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "522d8e72-7670-4baa-9a05-a6c05a114894")
+	)
+	(pad "2" smd rect
+		(at 0.85 0.65)
+		(size 1.2 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "980b1a8a-d292-46e1-b544-12212157186f")
+	)
+	(pad "3" smd rect
+		(at 0.85 -0.65)
+		(size 1.2 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6cd504e7-687b-437c-adc0-2113a9c003e9")
+	)
+	(pad "4" smd rect
+		(at -0.85 -0.65)
+		(size 1.2 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "20f68f8c-ea91-47eb-be49-ead49e523cb2")
+	)
+	(embedded_fonts no)
+	(model "User Library-Crystal NDK NX2520SA series.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

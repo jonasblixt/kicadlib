@@ -1,0 +1,77 @@
+{
+    "meta": {
+        "version": 0
+    },
+    "name": "Panasonic ERJ-T14 Anti-Pulse High Power Chip Resistors",
+    "description": "Panasonic ERJ-T14 Anti-Pulse High Power Thick Film Chip Resistor Library",
+    "source": {
+        "type": "odbc",
+        "dsn": "",
+        "username": "",
+        "password": "",
+        "timeout_seconds": 2,
+        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/res_pulse_panasonic_erj14t.db"
+    },
+    "libraries": [
+        {
+            "name": "ERJ-T14",
+            "table": "res_pulse_panasonic_erj14t",
+            "key": "id",
+            "symbols": "Symbol",
+            "footprints": "Footprints",
+            "fields": [
+                {
+                    "column": "Resistance",
+                    "name": "Resistance",
+                    "visible_on_add": false,
+                    "visible_in_chooser": false,
+                    "show_name": true
+                },
+                {
+                    "column": "Power",
+                    "name": "Power",
+                    "visible_on_add": true,
+                    "visible_in_chooser": false,
+                    "show_name": false
+                },
+                {
+                    "column": "Tolerance",
+                    "name": "Tolerance",
+                    "visible_on_add": true,
+                    "visible_in_chooser": false,
+                    "show_name": false
+                },
+                {
+                    "column": "TCR",
+                    "name": "T.C.R",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Manufacturer",
+                    "name": "Manufacturer",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Part Number",
+                    "name": "Part Number",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Value",
+                    "name": "Value",
+                    "visible_on_add": true,
+                    "visible_in_chooser": true
+                }
+            ],
+            "properties": {
+                "description": "Description"
+            }
+        }
+    ]
+}
