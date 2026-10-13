@@ -2996,7 +2996,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BGA-90-0.8mm"
+		(property "Footprint" "Package_BGA:BGA-90_8.0x13.0mm_Layout2x3x15_P0.8mm"
 			(at 0 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7312,7 +7312,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BGA-200_12x22_10.0x14.5mm"
+		(property "Footprint" "Package_BGA:BGA-200_10x14.5mm_Layout12x22_P0.8x0.65mm"
 			(at 19.05 -11.43 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12494,7 +12494,7 @@
 				)
 			)
 		)
-		(property "Footprint" "VFBGA63"
+		(property "Footprint" "Package_BGA:BGA-63_9x11mm_Layout10x12_P0.8mm"
 			(at 0 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13240,7 +13240,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm"
 			(at 0 11.43 0)
 			(show_name no)
 			(do_not_autoplace no)
