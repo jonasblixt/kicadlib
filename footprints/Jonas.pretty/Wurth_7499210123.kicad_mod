@@ -6,13 +6,13 @@
 	(descr "Wurth WE-RJ45LAN 7499210123 RJ45 jack with integrated magnetics and LEDs, THT, 15.9x21.6mm body")
 	(tags "RJ45 Ethernet jack magnetics Wurth 7499210123")
 	(property "Reference" "REF**"
-		(at 0 4.826 0)
+		(at 0.064 -8.6 0)
 		(layer "F.SilkS")
 		(uuid "cdf6c1b2-82f9-416e-a7a2-d35aacfa4492")
 		(effects
 			(font
-				(size 0.5 0.5)
-				(thickness 0.125)
+				(size 1 1)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -51,46 +51,6 @@
 	)
 	(attr through_hole)
 	(duplicate_pad_numbers_are_jumpers no)
-	(fp_line
-		(start -7.874 -7.493)
-		(end 8.001 -7.493)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "899dc5ca-12c1-4497-a383-720354bc1e26")
-	)
-	(fp_line
-		(start -7.874 14.097)
-		(end -7.874 -7.493)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "2ecd91d7-8cff-4f29-ba96-dcdf0c29c93a")
-	)
-	(fp_line
-		(start 8.001 -7.493)
-		(end 8.001 14.097)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "104165cf-ca5f-4f4a-97e6-6736eba326a9")
-	)
-	(fp_line
-		(start 8.001 14.097)
-		(end -7.874 14.097)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "fa1fa537-bcab-40fb-ba05-b475a312a949")
-	)
 	(fp_rect
 		(start -9.3 -8.5)
 		(end 9.3 15)
@@ -134,6 +94,76 @@
 				(thickness 0.15)
 			)
 		)
+	)
+	(fp_line
+		(start -7.874 -7.493)
+		(end 8.001 -7.493)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ac59c076-819a-4e9a-91df-94ae98fcf82b")
+	)
+	(fp_line
+		(start 8.001 -7.493)
+		(end 8.001 2.995)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3a62c128-19f6-4a5d-b0c0-41a5ee9fc472")
+	)
+	(fp_line
+		(start 8.001 6.145)
+		(end 8.001 14.097)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d37b11f5-17e3-4e4c-a4d2-3a7b483f4356")
+	)
+	(fp_line
+		(start -7.874 14.097)
+		(end 8.001 14.097)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "97ba1f16-fc19-462b-a90c-4d8b719655a2")
+	)
+	(fp_line
+		(start -7.874 -7.493)
+		(end -7.874 2.995)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2f61f4f2-7c0b-42b3-adde-d2f63e19a9ac")
+	)
+	(fp_line
+		(start -7.874 6.145)
+		(end -7.874 11.015)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a84fa7fa-8dbd-4e7b-84a9-eb81dc384ca7")
+	)
+	(fp_line
+		(start -7.874 13.365)
+		(end -7.874 14.097)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8ca81bf2-10d7-4219-b39b-c2ee42ee3e08")
 	)
 	(pad "" np_thru_hole circle
 		(at -5.715 7.62)
