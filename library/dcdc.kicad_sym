@@ -5173,7 +5173,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DFN-8_2x2mm_Pitch0.5mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-8_2x2mm_P0.5mm"
 			(at 0 -5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5428,7 +5428,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DFN-8_2x2mm_Pitch0.5mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-8_2x2mm_P0.5mm"
 			(at 11.43 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
