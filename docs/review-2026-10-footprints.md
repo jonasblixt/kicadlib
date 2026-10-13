@@ -424,13 +424,19 @@ footprints only have the cosmetic issues below.
       no datasheet URLs were added (none were on hand to check). The empty
       `Datasheet` property is left as is: KiCad's stock footprints keep it
       empty too and put the link in `descr`.
-- [ ] **F4.5** No 3D model: `NX1255GB`, `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`,
-      `Texas_YJE`.
+- [x] **F4.5** No 3D model: `NX1255GB`, `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`,
+      `Texas_YJE`. Done in `1acc16e`: envelope B-Rep models from the new
+      `scripting/gen_package_models.py` (data sheet dimensions cited in its
+      header), checked in KiCad renders. The first QFN-20 model put 5
+      terminals per side; the Si3402 has 4 on the left/right and 6 on the
+      top/bottom, as the footprint already had. Fixed before committing.
 - [ ] **F4.6** Pads: `SAMTEC_FTSH-105-01-L-DV-007-K` numbers pads
       `01`…`10` (its symbol matches, but nothing else in the repo uses
       leading zeros; stock Samtec/pin-header footprints use `1`…`10`).
-- [ ] **F4.7** Unused: `NX5032GA` (NDK 5032 rows use stock
+- [x] **F4.7** Unused: `NX5032GA` (NDK 5032 rows use stock
       `Crystal_SMD_5032-*`), `T_Wurth_WE-RJ45LAN_7499210001A` (also A3.4).
+      Both deleted (`c8d3ce9` with `NX5032GA.step`, `aafe5a6`); neither is
+      on poetato's board.
 - [ ] **F4.8** (optional) Names are mixed — `T_Wurth_*` vs `Wurth_*`,
       `SAMTEC_*`, `TI_*` vs `Texas_*`, IPC-style (`FUSC3216X85N`,
       `SOIC254P680X230-4N`, `Vishay_SOIC254P1016X440-4N`), bare series

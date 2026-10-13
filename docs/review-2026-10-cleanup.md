@@ -253,9 +253,11 @@ of them on migration.
       `connectors/DuraClick_560020`, `connectors/GBC08SGSN-M89`,
       `connectors/SF7W008S1AE900`, `cpu/Zynq_7010`, `dcdc/TLV62084DSG`,
       `diode_misc/D_TVS_Uni`, `logic/NLSV4T3144-D`, `power/PT65503`.
-- [ ] **A3.4** Unused footprints in `Jonas.pretty`: `NX5032GA`,
+- [x] **A3.4** Unused footprints in `Jonas.pretty`: `NX5032GA`,
       `T_Wurth_WE-RJ45LAN_7499210001A`, `Wurth_7499210123` (the last is
-      explained by A3.2). Wire them to a symbol or delete.
+      explained by A3.2). Wire them to a symbol or delete. Done:
+      `Wurth_7499210123` wired (A3.2, `248baee`), the other two deleted
+      (`c8d3ce9`, `aafe5a6`).
 - [ ] **A3.5** Footprints referencing missing models:
       `T_Wurth_WE-RJ45LAN_7499210001A.step`,
       `tssop-38_4.4x9.7mm_p0.5mm.step`.
