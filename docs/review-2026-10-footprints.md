@@ -288,9 +288,9 @@ out). "Twin" = pads identical within 0.1 mm.
 
 | Symbol | MPN | Now | Proposed | Note |
 |---|---|---|---|---|
-| `connectors/RPi_GPIO` | N/A | `40p_header_2.54` | `Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical` | socket (HAT) or PinHeader_2x20 (Pi side) |
+| `connectors/RPi_GPIO` | N/A | `40p_header_2.54` | `Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical` | socket (HAT) or PinHeader_2x20 (Pi side) - **Jonas: HAT, socket** - `8952e3d` |
 | `logic/SN74AVC4T774` | SN74AVC4T774RGYR | `Texas_S-PVQFN-N16_EP2.7x2.7mm` | `Package_DFN_QFN:Texas_RGY_R-PVQFN-N16_EP2.05x2.55mm` | MPN RGY / filter RSV / fp RSA |
-| `power/1-1825027-1` | 1-1825027-1 | `Jonas:1-1825027-1` | `Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS` | geometry within 0.04 mm |
+| `power/1-1825027-1` | 1-1825027-1 | `Jonas:1-1825027-1` | `Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS` | geometry within 0.04 mm - **Jonas: stock** - `7d14550` |
 
 #### J - Already in Jonas.pretty - fix the link only (2)
 
@@ -612,7 +612,7 @@ Config and docs:
     - `misc_inductors/PT61018PEL`: symbol labels RX/TX from the other side
       than Bourns' schematic (TD/RD); pairing and polarity are right.
 - [ ] **F7.3** `Jonas.pretty` QA fixes (F4) and 3D cleanup (F5.1–F5.3).
-- [ ] **F7.4** Migrations (M), in batches by symbol library, each with a
+- [x] **F7.4** Migrations (M), in batches by symbol library, each with a
       render contact sheet. **Inventory 2026-10-13** (Jonas: Q7 = Vendor_Part
       names; Q8 = reuse models from the repo, its history and the old
       projects first, generate the rest; every generated footprint/model
@@ -766,8 +766,10 @@ listed here for a manual check in KiCad. Tick when reviewed.
    modem)? Deleting them shrinks M and N.
 2. F1.6 — which SN74AVC4T774 package do you actually use?
 3. `connectors/RPi_GPIO` — socket (HAT side) or header (Pi side)?
+   **Answered: Pi HAT, so the socket (`8952e3d`).**
 4. `power/1-1825027-1` — stock `SW_Tactile_SPST_Angled_PTS645Vx31-2LFS`
    (pads identical within 0.04 mm, C&K 3D model) or keep a TE-named copy?
+   **Answered: stock (`7d14550`).**
 5. Stock twins with another vendor's name (`LP5562` → `Maxim_WLP-12…`,
    `FAN5355UC00` → `Texas_DSBGA-12…`, `2450BM15B0002` →
    `Balun_Johanson_0896BM15A0001`): fine to use as-is, or would you rather
