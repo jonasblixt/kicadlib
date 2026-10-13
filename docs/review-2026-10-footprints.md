@@ -79,11 +79,14 @@ commit per action; the hash is on each ticked line.
 - [x] **F1.5** `logic/SN74AHC1G08`: MPN is `…DCK` (SC-70-5), footprint is
       SOT-23-5 (and `ki_fp_filters` already says SC70). → `SOT-353_SC-70-5`.
       — `ff5e918`
-- [ ] **F1.6** `logic/SN74AVC4T774`: three different packages — MPN
+- [x] **F1.6** `logic/SN74AVC4T774`: three different packages — MPN
       `…RGYR` (VQFN 3.5×4, 0.5 mm), `ki_fp_filters` `RSV`, footprint RSA
-      (4×4, 0.65 mm). → decide; for RGY:
-      `Texas_RGY_R-PVQFN-N16_EP2.05x2.55mm`. Waiting on Jonas (open
-      question 2). Its EP (pad 17, F1.11) is handled together with this.
+      (4×4, 0.65 mm). Jonas: the part is RGYR. The symbol was numbered for
+      **RSV** (A1 = 1 … DIR2 = 16); per TI SCES693I Table 4-1, RGY = PW
+      numbering (DIR1 = 1, DIR2 = 2, A1 = 3 … VCCA = 16), so every pin moved
+      by +2. Footprint `Texas_RGY_R-PVQFN-N16_EP2.05x2.55mm`, filter
+      `Texas*RGY*PVQFN*`. TI only requires the thermal pad to be soldered,
+      so pad 17 gets no pin. — `94fe08f`
 - [ ] **F1.7** `connectors/MX34R36HF4T`: 36-pin symbol borrows the 20-pad
       `34826-8200` footprint (pins 21–36 have no pads). → new footprint.
 - [x] **F1.8** `connectors/Header_2.54mm_10p` (Würth 61201021621): old
@@ -130,14 +133,12 @@ commit per action; the hash is on each ticked line.
       map during migration.
 - [ ] **F1.15** `memory/IS46DR16640B`: fp filter says `BGA84`, footprint is
       a 90-site BGA, so pads sit at depopulated sites. → check the ball map.
-- [ ] **F1.16** (new, found in batch 1) `memory/MX25L12835F`: MPN
+- [x] **F1.16** (new, found in batch 1) `memory/MX25L12835F`: MPN
       `MX25L12835FZ2I-10G` is the **8-WSON 8×6 mm** package (Macronix
-      ordering code `Z2`; `ZN` is 6×5 mm), but the footprint is 6×5 mm. →
-      Jonas: is the part Z2I (then
-      `Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm`; the Macronix EP is
-      4.7×4.6, so the 3.4×4.3 land is inside it, while the other stock 8×6
-      footprint's 6×4.8 EP would overhang) or ZNI (then fix the MPN and use
-      a 6×5 WSON)? No project under `work/jonas/Projects` uses it.
+      ordering code `Z2`; `ZN` is 6×5 mm), but the footprint was 6×5 mm.
+      Jonas confirmed Z2I. → `Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm`
+      (pad rows at ±3.75 mm match the outline; the 3.4×4.3 EP land is
+      inside the package's 4.7×4.6 pad). — `8cb4f26`
 - [ ] **F1.17** (new) `connectors/Wurth_7499210123`: footprint pads 7 and
       8 (through-hole) have no symbol pin. Check the Würth datasheet
       whether they are NC; add NC pins or wire them.
@@ -192,7 +193,7 @@ Proposed tooling to commit (the audit scripts used for this doc):
 Every symbol with a broken or empty Footprint field (power flags left
 out). "Twin" = pads identical within 0.1 mm.
 
-#### FIX - Current footprint is wrong for the part - stock fixes it (7)
+#### FIX - Current footprint is wrong for the part - stock fixes it (7) — done, see F1
 
 | Symbol | MPN | Now | Proposed | Note |
 |---|---|---|---|---|
@@ -204,7 +205,7 @@ out). "Twin" = pads identical within 0.1 mm.
 | `dcdc/MIC23150-SYMT` | MIC23150-SYMT | `DFN-8_2x2mm_Pitch0.5mm` | `Package_DFN_QFN:DFN-8_2x2mm_P0.5mm` | twin; part has no ePad (F1.10, corrected) |
 | `logic/SN74AHC1G08` | SN74AHC1G08DCK | `TO_SOT_Packages_SMD:SOT-23-5` | `Package_TO_SOT_SMD:SOT-353_SC-70-5` | DCK part on SOT-23-5 |
 
-#### S - Stock twin - pads identical to the old footprint within 0.1 mm (no change vs. today) (29)
+#### S - Stock twin - pads identical to the old footprint within 0.1 mm (no change vs. today) (29) — done, see F7.2
 
 | Symbol | MPN | Now | Proposed | Note |
 |---|---|---|---|---|
@@ -409,8 +410,8 @@ out). "Twin" = pads identical within 0.1 mm.
 - [ ] **F5.1** Orphans: ~~the 15 `.wrl` files~~ (removed, A1.5) and the
       untracked `614105150721 (rev1).stp`. The stock footprint
       `USB_Micro-B_Wuerth_614105150721_Vertical` references a model that is
-      missing from this KiCad install (see F5.4), which is probably why it
-      was downloaded.
+      not shipped by KiCad at all (see F5.4), which is probably why it was
+      downloaded.
 - [ ] **F5.2** Missing / dead: `T_Wurth_WE-RJ45LAN_7499210001A.step`
       (`${WE_3DMODEL_DIR}` isn't defined); `T_Wurth_WE-RJ45LAN_7499511440`
       has a second, dead `${WE_3DMODEL_DIR}` model entry next to the good one.
@@ -419,10 +420,22 @@ out). "Twin" = pads identical within 0.1 mm.
       `VO618A-3X017T.step`, `0ZCJ0005FF2E.step`, …) and extensions mix
       `.STEP`/`.step`/`.stp`. Proposal: `<footprint>.step`, shared only where
       the body really is identical (`IHLP1212.step` for the three 1212s).
-- [ ] **F5.4** KiCad install: only 7,514 of 14,838 stock footprints have
-      their model file on this machine; 17 stock footprints the repo already
-      uses render without a body. Repair/complete the KiCad 3D-model install
-      before working around anything in the repo.
+- [ ] **F5.4** ~~KiCad install is only half populated~~. **Corrected
+      2026-10-13:** the install is complete (re-run of the installer
+      changed nothing: 7,251 STEP files, 3.2 GB). Of the 13,881 distinct
+      model paths stock footprints reference, 6,748 simply do not exist
+      upstream either (`kicad-packages3D` master: 20 of 20 sampled missing
+      ones return 404; a present one returns 200). So stock footprints
+      without a body are a KiCad library gap, not an install problem.
+      Affected here: 22 stock footprints already in use (e.g. HVSON-8,
+      QFN-32 5x5 EP3.1, LQFP-100-1EP, D_PowerDI-5, Micro-Fit 43045-0412,
+      USB_Micro-B_Wuerth_614105150721) and 26 stock targets in F3 (most
+      BGAs/CSPs, several DFN/QFN, the Molex/RJ45/USB connectors,
+      `ublox_MAX`, PT61017PEL). Options, to decide with Jonas: (a) accept
+      no body; (b) per board, add a vendor STEP in the PCB editor where
+      enclosure fit matters; (c) a separate overlay of generated/vendor
+      models for these exact paths. Do not copy stock footprints into
+      `Jonas.pretty` just to get a body.
 - [ ] **F5.5** Migrated footprints (M): 11 of 31 have a usable STEP in
       `modules/packages3d` (Molex 78171-5006, ADAU1467 LFCSP-88, FAKRA,
       Everlight PLR135 (also used by PLT133), Amphenol RJE72, Samtec
@@ -480,11 +493,22 @@ Config and docs:
 
 - [ ] **F7.1** F1 bug fixes (symbols only, plus the FIX remaps). Batch 1
       done 2026-10-13 (`4912daf`..`248baee`): F1.1–F1.5, F1.8–F1.11 and
-      the two J link fixes; broken footprint links 113 → 104. Left:
-      F1.6 and F1.16 (need Jonas), F1.7 (new footprint), F1.12–F1.15
-      (during migration), F1.17.
+      the two J link fixes; broken footprint links 113 → 104. F1.16 and
+      F1.6 followed (`8cb4f26`, `94fe08f`). Left: F1.7 (new footprint),
+      F1.12–F1.15 (during migration), F1.17.
 - [ ] **F7.2** Stock remaps: S, then S+sym, then S\* (datasheet check per
       row) — one commit per symbol library.
+  - [x] S (29 symbols), 2026-10-13: `610e64f` LEDs, `a01f7bb` adcdac,
+    `9f9fd69` comm, `ecfa484` connectors, `71f40a7` cpu, `f0b4b4b` dcdc,
+    `8c76f07` diode_misc, `c29f513` memory, `1e05f0f` misc_inductors,
+    `cd1c28f` power. Re-verified before applying: pads within 0.1 mm of
+    the old footprint and no symbol pin without a pad. Three needed a
+    closer look: LTC3528 is a twin once the EP is compared as one pad,
+    but loses the old footprint's two thermal vias; 78171-0003's tabs are
+    `MP` instead of `0` (no pin uses them); LTC4267's DHC16 was compared
+    from history. Broken links 104 → 73.
+  - [ ] S+sym (4), needs open question 6.
+  - [ ] S\* (31), datasheet check per row.
 - [ ] **F7.3** `Jonas.pretty` QA fixes (F4) and 3D cleanup (F5.1–F5.3).
 - [ ] **F7.4** Migrations (M), in batches by symbol library, each with a
       render contact sheet.
