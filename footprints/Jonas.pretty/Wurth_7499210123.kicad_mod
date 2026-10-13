@@ -90,10 +90,10 @@
 		(uuid "fa1fa537-bcab-40fb-ba05-b475a312a949")
 	)
 	(fp_rect
-		(start -8.5 -8.5)
-		(end 8.5 15)
+		(start -9.3 -8.5)
+		(end 9.3 15)
 		(stroke
-			(width 0.1)
+			(width 0.05)
 			(type default)
 		)
 		(fill no)
