@@ -18627,7 +18627,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin passive line
 				(at 35.56 15.24 180)
 				(length 5.08)
 				(name "VDD_SYS"
