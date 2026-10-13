@@ -31,7 +31,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT-353_SC-70-5"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 0 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -280,7 +280,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT-363_SC-70-6"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
 			(at 1.27 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -917,7 +917,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT-353_SC-70-5"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 0 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1380,7 +1380,7 @@
 				)
 			)
 		)
-		(property "Footprint" "VSSOP-8_2.3x2mm_P0.5mm"
+		(property "Footprint" "Package_SO:VSSOP-8_2.3x2mm_P0.5mm"
 			(at 0 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1625,7 +1625,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TO_SOT_Packages_SMD:SC-70-6"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
 			(at 19.05 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2257,7 +2257,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TO_SOT_Packages_SMD:SC-70-6"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
 			(at 20.32 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2865,7 +2865,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOT-353_SC-70-5"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-353_SC-70-5"
 			(at 0 16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
