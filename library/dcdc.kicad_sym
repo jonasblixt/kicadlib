@@ -3479,7 +3479,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Housings_DFN_QFN:DFN-10-1EP_3x3mm_Pitch0.5mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-10-1EP_3x3mm_P0.5mm_EP1.65x2.38mm"
 			(at 20.32 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4051,7 +4051,7 @@
 				)
 			)
 		)
-		(property "Footprint" "QFN_20_0.5mm_3x4mm_EP"
+		(property "Footprint" "Package_DFN_QFN:QFN-20-1EP_3x4mm_P0.5mm_EP1.65x2.65mm"
 			(at -2.54 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7464,7 +7464,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8225,7 +8225,7 @@
 				)
 			)
 		)
-		(property "Footprint" "R-PWSON-N12"
+		(property "Footprint" "Package_SON:WSON-12-1EP_3x2mm_P0.5mm_EP1x2.65"
 			(at 1.27 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
