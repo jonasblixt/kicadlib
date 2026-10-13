@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "Eaton KW series supercapacitor (KW-5R5C684/105), radial, 21.5mm diameter, 9.5mm high, 5.0mm lead pitch")
+	(tags "supercapacitor EDLC Eaton KW radial")
 	(property "Reference" "REF**"
 		(at 0 -0.5 0)
 		(unlocked yes)
@@ -88,6 +90,17 @@
 				(thickness 0.15)
 			)
 		)
+	)
+	(fp_circle
+		(center 0 0)
+		(end 10.86 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "4426095b-0aee-4a1d-87b3-206ad1c81437")
 	)
 	(pad "1" thru_hole roundrect
 		(at -2.5 0)
