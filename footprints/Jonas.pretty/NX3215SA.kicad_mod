@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "32.768kHz tuning-fork crystal, 3.2x1.5mm body, 2 pads: NDK NX3215SA, Epson FC-135/FC-135R/FC3215AN (xtal_ndk, xtal_epson)")
+	(tags "crystal 32.768kHz NDK NX3215SA Epson FC-135 3215")
 	(property "Reference" "REF**"
 		(at 1.175 -2.135 0)
 		(layer "F.SilkS")
@@ -14,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "XTAL_NX3215SA-32.768K-STD-MUA-8"
+	(property "Value" "NX3215SA"
 		(at 17.685 2.135 0)
 		(layer "F.Fab")
 		(uuid "5cb10c8f-de9f-42a4-ab67-e052c983751f")
@@ -170,6 +172,17 @@
 		(fill no)
 		(layer "F.Fab")
 		(uuid "a67505ae-a627-4bad-9d1d-e4df6eee01d6")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "4005ba2e-a682-4f47-acee-d1b45c4caafa")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
 	)
 	(pad "1" smd rect
 		(at -1.25 0)
