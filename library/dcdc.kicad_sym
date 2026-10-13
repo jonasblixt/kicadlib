@@ -4529,7 +4529,7 @@
 				)
 			)
 		)
-		(property "Footprint" "uDFN6_EP"
+		(property "Footprint" "Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.5mm_EP0.61x1.42mm"
 			(at 1.27 15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
