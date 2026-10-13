@@ -125,8 +125,8 @@ commit per action; the hash is on each ticked line.
   - `memory/SIM-ST-MFF2` (9): Hologram's MFF2 pinout lists 8 pins and no
     pad → no change.
   - `logic/SN74AVC4T774` (17): with F1.6.
-- [ ] **F1.12** `connectors/TFM-110-02-S-D-WT`: symbol pins 21/22 have no
-      pads (old footprint numbers its weld tabs `0`). → fix during migration.
+- [x] **F1.12** `connectors/TFM-110-02-S-D-WT`: symbol pins 21/22 have no
+      pads (old footprint numbers its weld tabs `0`). → fix during migration. — holes renumbered 21/22, `8b59022`
 - [ ] **F1.13** `power/PT65503`: pin 2 is defined twice, named `2` and `C`.
 - [ ] **F1.14** `cpu/MIMX8MM6DVTLZAA`, `MIMX8MN5DVTJZAA`: old BGA-486
       footprint has 487 distinct pad numbers. → check against the NXP ball
