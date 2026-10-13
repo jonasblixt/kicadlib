@@ -6,13 +6,13 @@
 	(descr "Coilcraft POE60F-xxL SMD PoE flyback transformer, 25.0x15.0mm body")
 	(tags "transformer flyback PoE Coilcraft POE60F")
 	(property "Reference" "REF**"
-		(at -0.3 -0.2 180)
+		(at 0 -8.6 0)
 		(layer "F.SilkS")
 		(uuid "cabc3bd5-226f-4256-8b70-99545b5b7734")
 		(effects
 			(font
-				(size 0.5 0.5)
-				(thickness 0.125)
+				(size 1 1)
+				(thickness 0.15)
 			)
 		)
 	)
