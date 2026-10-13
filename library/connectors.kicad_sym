@@ -10608,7 +10608,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TFM-105-02-S-D-WT"
+		(property "Footprint" "Jonas:Samtec_TFM-105-02-S-D-WT"
 			(at 20.32 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
