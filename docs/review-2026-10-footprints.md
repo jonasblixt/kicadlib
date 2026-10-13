@@ -681,6 +681,7 @@ Config and docs:
   on a built board it is the proven land and is migrated instead; the
   rest get a data sheet check first.
   - [x] dcdc (7 symbols, 6 footprints): `ae9638e`..`4dfdfcd`. Pads verified identical to `modules/`; KiCad DRC shows only the original copper findings (EP via annular/drill, WLCSP pitch), silk findings went 68 -> 0.
+  - [x] cpu (4 symbols, 3 footprints): `55ac534`..`8574f99`. Pads identical to `modules/`; DRC 0.
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
@@ -702,6 +703,9 @@ listed here for a manual check in KiCad. Tick when reviewed.
 - [ ] `Microchip_MLF-10_2x2mm_P0.4mm` (MIC23254) - migrated, pads unchanged; body per data sheet - `cd2634e`
 - [ ] `Microchip_FTQFN-24_3x4mm` (MIC28511) - migrated, pads unchanged; body 4x3 from old silk - `438756d`
 - [ ] `Torex_XCL226` (XCL226A0K1H2) - migrated, pads unchanged; body from old silk (XCL226 may really be 2.5x2.0, check) - `4dfdfcd`
+- [ ] `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm` (ADAU1467) - migrated, pads unchanged; body 12x12; vendor model re-rotated (-90,0,90) so the dimple is at pad 1 - `ed0d092`
+- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm` (AT91SAM9G25) - migrated, pads unchanged - `9778593`
+- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm` (i.MX 8M Mini/Nano) - migrated, pads unchanged incl. pads E23/J18 without a pin (F1.14) - `8574f99`
 
 ### 3D models
 
@@ -716,6 +720,8 @@ listed here for a manual check in KiCad. Tick when reviewed.
 - [ ] `Microchip_MLF-10_2x2mm_P0.4mm.step` - plain body, 0.55 per data sheet - `ae9638e`
 - [ ] `Microchip_FTQFN-24_3x4mm.step` - plain body, height 0.75 ASSUMED - `ae9638e`
 - [ ] `Torex_XCL226.step` - plain body, height 1.0 ASSUMED - `ae9638e`
+- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm.step` - plain body, height 1.4 ASSUMED - `55ac534`
+- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm.step` - plain body, height 1.2 ASSUMED - `55ac534`
 
 ## Open questions
 
