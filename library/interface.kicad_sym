@@ -2480,7 +2480,7 @@
 				)
 			)
 		)
-		(property "Footprint" "QFN-32-1EP_5x5mm_Pitch0.5mm"
+		(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.3x3.3mm"
 			(at 1.27 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3622,7 +3622,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Housings_DFN_QFN:QFN-24-1EP_4x4mm_Pitch0.5mm"
+		(property "Footprint" "Package_DFN_QFN:VQFN-24-1EP_4x4mm_P0.5mm_EP2.45x2.45mm"
 			(at 8.89 -17.78 0)
 			(show_name no)
 			(do_not_autoplace no)
