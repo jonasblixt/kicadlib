@@ -1096,7 +1096,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:TSOC6"
+		(property "Footprint" "Package_SO_J-Lead:TSOC-6_3.76x3.94mm_P1.27mm"
 			(at 6.35 13.97 0)
 			(show_name no)
 			(do_not_autoplace no)
