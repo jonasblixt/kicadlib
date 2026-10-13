@@ -596,7 +596,7 @@
 				)
 			)
 		)
-		(property "Footprint" "78171-5006"
+		(property "Footprint" "Jonas:Molex_78171-5006"
 			(at 0 -8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
