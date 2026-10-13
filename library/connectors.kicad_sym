@@ -4351,7 +4351,7 @@
 				)
 			)
 		)
-		(property "Footprint" "USB_Micro-B"
+		(property "Footprint" "Jonas:JAE_DX4R005JJ2R1800"
 			(at 3.81 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -1,0 +1,271 @@
+(footprint "JAE_DX4R005JJ2R1800"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/the Blixten Gateway/LED Device board copy of USB_Micro-B (pads unchanged; it numbers both shield pads on the +x side 6, where modules/ had 7); outline, courtyard and fab rebuilt to KLC in 2026-10. JAE DX4R005JJ2R1800 micro USB B receptacle; vendor STEP (K3D-DX4R005JJ2-V3)")
+	(tags "USB micro B receptacle JAE DX4R005")
+	(property "Reference" "REF**"
+		(at -0.03 -3.94 0)
+		(layer "F.SilkS")
+		(uuid "69131bb5-23f9-454a-b3fe-203368c96e62")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "JAE_DX4R005JJ2R1800"
+		(at -0.03 5.12 0)
+		(layer "F.Fab")
+		(uuid "d1af8eca-c7e8-447a-a8ce-4a18e70f33ef")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63360270-83d7-4d5c-9d17-449a93ac0cc5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c326b9fd-ebf1-47c9-bf3c-395e9afd4eb0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.351 -1.588)
+		(end -3.351 -2.588)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8c5cee9e-807f-4ab6-8be0-319813fc68e7")
+	)
+	(fp_line
+		(start -3.351 -2.588)
+		(end 4.349 -2.588)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "83a0f760-7deb-499b-848a-a43632d5c43f")
+	)
+	(fp_line
+		(start 4.349 -2.588)
+		(end 4.349 3.817)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "fcc59de2-5333-4f57-9d63-2bb241e7a8fb")
+	)
+	(fp_line
+		(start 4.349 3.817)
+		(end -4.351 3.817)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "95d5c69f-6a44-4067-a749-23338f3c7baa")
+	)
+	(fp_line
+		(start -4.351 3.817)
+		(end -4.351 -1.588)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5c5ff730-d2c7-4995-a370-a5153822f86d")
+	)
+	(fp_line
+		(start -4.461 -2.698)
+		(end 4.459 -2.698)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "76d6db74-e8dd-4f00-9603-f33b3b6d54db")
+	)
+	(fp_line
+		(start 4.459 -2.698)
+		(end 4.459 0.102)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "46e4f518-e2d4-4b54-8001-834317510701")
+	)
+	(fp_line
+		(start 4.459 2.172)
+		(end 4.459 3.927)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "73471495-4489-4edb-9fcb-8cef75f22da9")
+	)
+	(fp_line
+		(start -4.461 3.927)
+		(end 4.459 3.927)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a812d158-bff3-42a6-85f0-c494b9fb24e8")
+	)
+	(fp_line
+		(start -4.461 -2.698)
+		(end -4.461 0.102)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ab806655-54ed-4b55-abbb-71bc9814e55e")
+	)
+	(fp_line
+		(start -4.461 2.172)
+		(end -4.461 3.927)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b9208153-f16b-4153-88d7-b2e1a6009040")
+	)
+	(fp_circle
+		(center -4.701 -2.938)
+		(end -4.601 -2.938)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "05df996b-a9b3-4482-afbb-5e03c4093e78")
+	)
+	(fp_rect
+		(start -4.91 -3.14)
+		(end 4.85 4.32)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "47d31ba9-5c63-4a00-add2-18d582dcb93a")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.001 0.6145 0)
+		(layer "F.Fab")
+		(uuid "7e606109-4a51-4668-aedd-1b5ecd0575d7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.3009 -1.56254 90)
+		(size 1.35 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9c1bf2d9-b1d4-40fb-9698-bcba22b27439")
+	)
+	(pad "2" smd rect
+		(at -0.6509 -1.56254 90)
+		(size 1.35 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "873f9144-bebd-4b33-9a64-cb4b3d87c7f2")
+	)
+	(pad "3" smd rect
+		(at -0.0009 -1.56254 90)
+		(size 1.35 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ef671a9b-6b3f-48fb-8e14-efbbc8edda3e")
+	)
+	(pad "4" smd rect
+		(at 0.6491 -1.56254 90)
+		(size 1.35 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2f0e3f4b-f9cd-43db-91e3-6f7b190b022e")
+	)
+	(pad "5" smd rect
+		(at 1.2991 -1.56254 90)
+		(size 1.35 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8f08a7a4-3477-4452-8f1f-cedb94392300")
+	)
+	(pad "6" thru_hole circle
+		(at -3.5009 1.13746 90)
+		(size 1.55 1.55)
+		(drill 1.15)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(remove_unused_layers no)
+		(uuid "631d2245-aa59-4071-b4ab-f5c3cb88753a")
+	)
+	(pad "6" thru_hole circle
+		(at -2.5009 -1.56254 90)
+		(size 1.25 1.25)
+		(drill 0.85)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(remove_unused_layers no)
+		(uuid "684e1e1f-2cf9-47f1-9665-56492eb54673")
+	)
+	(pad "6" thru_hole circle
+		(at 2.4991 -1.56254 90)
+		(size 1.25 1.25)
+		(drill 0.85)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(remove_unused_layers no)
+		(uuid "78dda9c6-39f9-4d32-bd7f-19d3ba454765")
+	)
+	(pad "6" thru_hole circle
+		(at 3.4991 1.13746 90)
+		(size 1.55 1.55)
+		(drill 1.15)
+		(layers "*.Cu" "*.Mask" "F.SilkS")
+		(remove_unused_layers no)
+		(uuid "bc04893d-09fc-4390-a375-46c4e067d638")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/JAE_DX4R005JJ2R1800.step"
+		(offset
+			(xyz 0 0.381 1.27)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
