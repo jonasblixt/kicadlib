@@ -1753,7 +1753,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SOIC-8_3.9x4.9mm_Pitch1.27mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 0 24.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7013,7 +7013,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Housings_SSOP:SSOP-16_4.4x5.2mm_Pitch0.65mm"
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 30.48 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7662,7 +7662,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:QFN-36-1EP_6x6mm_Pitch0.5mm"
+		(property "Footprint" "Package_DFN_QFN:QFN-36-1EP_6x6mm_P0.5mm_EP3.7x3.7mm"
 			(at 12.7 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
