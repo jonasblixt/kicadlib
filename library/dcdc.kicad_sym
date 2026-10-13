@@ -31,7 +31,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WLCSP16"
+		(property "Footprint" "Jonas:onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm"
 			(at 7.62 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -420,7 +420,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WLCSP16"
+		(property "Footprint" "Jonas:onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm"
 			(at 7.62 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)

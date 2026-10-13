@@ -1,0 +1,245 @@
+(footprint "onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/WLCSP16 (pads unchanged, used on Sting2); outline, courtyard and fab rebuilt to KLC in 2026-10. onsemi (Fairchild) FAN48623 WLCSP-16, 1.6x1.6mm body (from the old silk outline), 0.4mm pitch")
+	(tags "WLCSP BGA 16 0.4mm FAN48623 onsemi")
+	(property "Reference" "REF**"
+		(at -0.15 -2.15 0)
+		(layer "F.SilkS")
+		(uuid "9e2c2afa-91fe-4e53-9048-dc7a8ba560ad")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm"
+		(at -0.15 1.85 0)
+		(layer "F.Fab")
+		(uuid "3df08883-c045-4000-92c6-7cf9fdb60c83")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "31091751-c0f0-4cf4-ab9c-4a694fb0b209")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c0f77aa1-2381-494e-9c43-d5e1c962091b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.8 -0.4)
+		(end -0.4 -0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e0afee23-c767-49ce-b593-64e5b3028cab")
+	)
+	(fp_line
+		(start -0.4 -0.8)
+		(end 0.8 -0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "54023e7b-c547-4a4b-8920-be84b518a896")
+	)
+	(fp_line
+		(start 0.8 -0.8)
+		(end 0.8 0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7fe7cb63-5017-49ea-a7e1-bebf19c5edff")
+	)
+	(fp_line
+		(start 0.8 0.8)
+		(end -0.8 0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "db9bcaa4-1e7e-4a15-a15c-e181ee65cd68")
+	)
+	(fp_line
+		(start -0.8 0.8)
+		(end -0.8 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f785cde4-72fb-4570-8663-8c83aabb605f")
+	)
+	(fp_circle
+		(center -1.15 -1.15)
+		(end -1.05 -1.15)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "ec62cdd0-bd3e-4f10-a37e-0be156eeed7b")
+	)
+	(fp_rect
+		(start -1.35 -1.35)
+		(end 1.05 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e7e3adef-042c-4fa6-8137-6dcfe16e209c")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "b3080081-601a-4123-a9bc-fa9f2a5ff669")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "A1" smd circle
+		(at -0.6 -0.6)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5a9137e8-0cbf-4010-94bc-a5a344c06236")
+	)
+	(pad "A2" smd circle
+		(at -0.2 -0.6)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b46bf1a4-5375-4f4d-a2fb-59e695841721")
+	)
+	(pad "A3" smd circle
+		(at 0.2 -0.6)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8481f77e-41a5-4dde-80c6-2d7ff4e6d689")
+	)
+	(pad "A4" smd circle
+		(at 0.6 -0.6)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2ebde86c-f606-4539-9ab5-51d16ad7b0d6")
+	)
+	(pad "B1" smd circle
+		(at -0.6 -0.2)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "37a24766-f3b1-43b8-8d21-db8e02e9a989")
+	)
+	(pad "B2" smd circle
+		(at -0.2 -0.2)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c7bf2853-c1ab-48b3-810f-8f6ef7f78579")
+	)
+	(pad "B3" smd circle
+		(at 0.2 -0.2)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0ba9981d-38f5-4b9f-a1d8-d6daf3b83d38")
+	)
+	(pad "B4" smd circle
+		(at 0.6 -0.2)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b442eacd-12a7-4ccc-8298-0343d3eb497a")
+	)
+	(pad "C1" smd circle
+		(at -0.6 0.2)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "70dc7648-8a98-4e19-9217-7e4a5f462050")
+	)
+	(pad "C2" smd circle
+		(at -0.2 0.2)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bf4872cb-4524-47c1-8024-3f01d114fd1a")
+	)
+	(pad "C3" smd circle
+		(at 0.2 0.2)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "12376f5d-4159-4ad4-a5a7-4bd2aef1e78b")
+	)
+	(pad "C4" smd circle
+		(at 0.6 0.2)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a5f6b652-fff6-486f-963d-e85558a3fde4")
+	)
+	(pad "D1" smd circle
+		(at -0.6 0.6)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "fcf81482-44de-451a-9953-9c69cc5390d4")
+	)
+	(pad "D2" smd circle
+		(at -0.2 0.6)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "05e5098e-197b-40d9-9dd4-5d29954e1a48")
+	)
+	(pad "D3" smd circle
+		(at 0.2 0.6)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8955556a-b1f3-4457-a5a9-007d5945bb03")
+	)
+	(pad "D4" smd circle
+		(at 0.6 0.6)
+		(size 0.215 0.215)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "197ea4a6-1f0f-496c-a62b-1181715ba2cd")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
