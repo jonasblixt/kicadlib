@@ -1,8 +1,8 @@
 # Imports Vishay IHLP shielded power inductor data into a KiCad
 # database-library SQLite file.
 #
-# SCOPE: this covers only the 4 case sizes (1212, 1616, 2020, 2525 - 103
-# of the 222 parts in the legacy library/vishay_IHLP_inductors.kicad_sym)
+# SCOPE: this covers only the 4 case sizes (1212, 1616, 2020, 2525 -
+# originally 103 of the 222 parts in the legacy library/vishay_IHLP_inductors.kicad_sym)
 # that already had a footprint in modules/footprints.pretty. The other 4
 # case sizes present in the legacy symbol library (3232, 4040, 5050,
 # 6767) are NOT included: building accurate footprints for them requires
@@ -25,6 +25,21 @@
 # value token used in ids (e.g. "1u2", "100n") is taken directly from
 # the legacy symbol's own name (e.g. "IHLP1212_1u2_4b") rather than
 # re-derived, since it was already correct there.
+#
+# 2026-10-05: the three 1212 "-11" series (IHLP-1212AB-11, -1212AE-11,
+# -1212BZ-11; 17 rows) are marked "Not for New Designs - Alternative
+# Device: IHLP1212-EZ-1Z" in Vishay's datasheets (docs 34299, 34300,
+# 34289, rev 23-Apr-2025). Those rows were replaced in the CSV by the
+# full IHLP-1212-EZ-1Z series (26 parts, IHLP1212<AB|AE|BZ>EZ<val>M1Z),
+# transcribed from Vishay doc 34671 rev 10-Jul-2026: Rated Current =
+# heat rating current (dT 40C), Saturation Current = the 20 % drop
+# column (the datasheet also lists a 30 % drop figure, not imported),
+# DCR = max. Note the -1Z inductance is specified at 1 MHz / 1 V (the
+# -11 series was 100 kHz / 0.25 V). Same 3.0 x 3.0 mm body, same heights
+# (AB 1.2 / AE 1.5 / BZ 2.0 mm max) and same typical pad layout (4.2 mm
+# overall, 1.2 mm pads) as the -11 series, so the existing
+# Jonas:IHLP1212AB/AE/BZ footprints are reused unchanged. No other
+# series in this library carried an NRND banner on that date.
 #
 # Id format follows NAMING.md section 4's inductor pattern:
 # L<case>_<value>_<tolerance>_<current>. Within the 103 in-scope parts
