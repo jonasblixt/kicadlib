@@ -944,7 +944,7 @@
 				)
 			)
 		)
-		(property "Footprint" "2450BM15B0002"
+		(property "Footprint" "RF_Converter:Balun_Johanson_0896BM15A0001"
 			(at 0 15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
