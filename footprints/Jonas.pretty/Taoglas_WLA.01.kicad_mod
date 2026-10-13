@@ -1,0 +1,187 @@
+(footprint "Taoglas_WLA.01"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/WLA.01 (pads unchanged, used on Blixten Gateway and LED Device); outline, courtyard and fab rebuilt to KLC in 2026-10. Taoglas WLA.01 2.4 GHz chip antenna; body from the old silk outline; WRL model from the repo history, old transform")
+	(tags "antenna 2.4GHz chip Taoglas WLA.01")
+	(property "Reference" "REF**"
+		(at -0.15 -2.15 0)
+		(layer "F.SilkS")
+		(uuid "7e28892c-cdc1-4e49-9f8f-e52b6c1fb6d2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Taoglas_WLA.01"
+		(at -0.15 1.85 0)
+		(layer "F.Fab")
+		(uuid "f0387ff7-2a45-4d8a-8c91-ea0aac3e865c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ca623a1-9acd-4785-a1ea-878b935f11cc")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "14da18a8-5867-459c-8efc-d854b31fabf9")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.8 -0.4)
+		(end -1.4 -0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c924ade5-9992-488d-a591-bc5c918b92e3")
+	)
+	(fp_line
+		(start -1.4 -0.8)
+		(end 1.8 -0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6ba313c0-bdfb-4239-8c97-e91d717e0ad8")
+	)
+	(fp_line
+		(start 1.8 -0.8)
+		(end 1.8 0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "af17c013-4f03-43ed-aaa1-b17756daa463")
+	)
+	(fp_line
+		(start 1.8 0.8)
+		(end -1.8 0.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "faf161a6-f9de-4640-a3b9-ed6f13b5f81c")
+	)
+	(fp_line
+		(start -1.8 0.8)
+		(end -1.8 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "382dc5ef-0bde-4178-a3ee-9980bf4877a2")
+	)
+	(fp_line
+		(start -1.14 -0.91)
+		(end 1.14 -0.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "31012d29-9c17-459b-a0cc-eccc6bdaf44f")
+	)
+	(fp_line
+		(start -1.14 0.91)
+		(end 1.14 0.91)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6dc44852-a102-4516-8e5e-af9c6666b2f4")
+	)
+	(fp_circle
+		(center -2.15 -1.15)
+		(end -2.05 -1.15)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "513e21ca-a95e-4c30-952f-2a39a2a130e5")
+	)
+	(fp_rect
+		(start -2.35 -1.35)
+		(end 2.05 1.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "b30af026-043f-4a67-a261-69c27a2c9715")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "0ca3e691-7dd7-46ec-80e2-b0343896717f")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.6 -0.5 90)
+		(size 0.6 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "9dbdc1df-b63d-444a-aa1d-f516df93dbcd")
+	)
+	(pad "2" smd rect
+		(at -1.6 0.5 90)
+		(size 0.6 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b08c0603-4da2-4daa-a435-a27e18ddb0a0")
+	)
+	(pad "3" smd rect
+		(at 1.6 0 90)
+		(size 1.6 0.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c12040c9-2762-437b-869e-bd420a445cb1")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Taoglas_WLA.01.wrl"
+		(offset
+			(xyz -0.254 0 0)
+		)
+		(scale
+			(xyz 0.3937 0.3937 0.3937)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)

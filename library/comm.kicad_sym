@@ -8429,7 +8429,7 @@
 				)
 			)
 		)
-		(property "Footprint" "WLA.01"
+		(property "Footprint" "Jonas:Taoglas_WLA.01"
 			(at 1.27 16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
