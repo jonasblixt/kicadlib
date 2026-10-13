@@ -15,7 +15,16 @@ kicadlib/
   footprints/<Vendor_Series>.pretty/   custom footprints, only when no standard KiCad match exists
   footprints/<Vendor_Series>.3dshapes/ matching STEP/WRL 3D models for custom footprints
   .claude/skills/                     project skills - check here before improvising a workflow
+  docs/                               review docs and action lists (see below)
 ```
+
+## Review docs
+
+`docs/review-*.md` hold repo audits with numbered action lists (e.g.
+`docs/review-2026-10-cleanup.md`). Don't read them by default - only when
+Jonas asks for a review/cleanup/fix session or refers to an action ID like
+`A2.3`. When working from one, tick off actions with the commit hash and
+add newly found issues to it rather than fixing them silently.
 
 ## Database libraries
 
