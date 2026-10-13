@@ -1,0 +1,246 @@
+Part Number,Frequency,Frequency Stability,Frequency Tolerance,Load Capacitance,ESR,Operating Temperature,Package,Manufacturer,Source
+NX1255GB-10.000000MHZ,10MHz,±50ppm,±50ppm,12pF,80 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-12.000000MHZ,12MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-12.288000MHZ,12.288MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-13.560000MHZ,13.56MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-14.318180MHZ,14.31818MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-16.000000MHZ,16MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-18.432000MHZ,18.432MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-20.000000MHZ,20MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-24.000000MHZ,24MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-25.000000MHZ,25MHz,±50ppm,±50ppm,12pF,50 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-3.579545MHZ,3.579545MHz,±50ppm,±50ppm,12pF,150 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-4.000000MHZ,4MHz,±50ppm,±50ppm,12pF,120 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-4.194304MHZ,4.194304MHz,±50ppm,±50ppm,12pF,120 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-4.915200MHZ,4.9152MHz,±50ppm,±50ppm,12pF,120 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-6.000000MHZ,6MHz,±50ppm,±50ppm,12pF,120 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-6.144000MHZ,6.144MHz,±50ppm,±50ppm,12pF,120 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-7.372800MHZ,7.3728MHz,±50ppm,±50ppm,12pF,120 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1255GB-8.000000MHZ,8MHz,±50ppm,±50ppm,12pF,80 Ohm,-10°C ~ 70°C,NX1255GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1612AA-26MHZ-TI2,26MHz,±20ppm,-,8pF,150 Ohm,-20°C ~ 70°C,NX1612AA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1612AA-26MHZSTD-CSI-1,26MHz,±20ppm,±20ppm,8pF,150 Ohm,-30°C ~ 75°C,NX1612AA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1612AA-26MHZSTD-CSI-3,26MHz,±25ppm,±20ppm,8pF,150 Ohm,-40°C ~ 85°C,NX1612AA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1612AA-40MHZ-EXS00A-CS05020,40MHz,±30ppm,±10ppm,7pF,80 Ohm,-20°C ~ 100°C,NX1612AA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX1612SA-32.000MHZ-CHP-CIS-3,32MHz,±20ppm,±10ppm,6pF,100 Ohm,-40°C ~ 85°C,NX1612SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2012SA-32.768K-STD-MUB-1,32.768kHz,-,±20ppm,12.5pF,80 kOhm,-40°C ~ 85°C,NX2012SA,NDK,NDK NX2012SA catalog sheet 2003E
+NX2016AB-26MHZSB1,26MHz,±15ppm,±10ppm,7pF,80 Ohm,-30°C ~ 75°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-26MHZSB2,26MHz,±15ppm,±15ppm,7pF,80 Ohm,-20°C ~ 70°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-26MHZST1,26MHz,±20ppm,±20ppm,8pF,80 Ohm,-30°C ~ 75°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-32MHZST2,32MHz,±20ppm,±20ppm,8pF,80 Ohm,-30°C ~ 75°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-36MHZST3,36MHz,±20ppm,±20ppm,8pF,60 Ohm,-30°C ~ 75°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-38.4MHZST4,38.4MHz,±20ppm,±20ppm,8pF,60 Ohm,-30°C ~ 75°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-38.4MHZSW1,38.4MHz,±10ppm,±10ppm,7pF,60 Ohm,-20°C ~ 70°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-38.4MHZSWW,38.4MHz,±20ppm,±20ppm,7pF,60 Ohm,-30°C ~ 75°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-40MHZSW2,40MHz,±10ppm,±10ppm,7pF,60 Ohm,-20°C ~ 70°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016AB-40MHZSW2W,40MHz,±20ppm,±20ppm,7pF,60 Ohm,-30°C ~ 75°C,NX2016AB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016SA-24.9231M-CHP-CZS-9,24.9231MHz,±25ppm,±15ppm,8pF,80 Ohm,-40°C ~ 110°C,NX2016SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016SA-25.000M-STD-CZS-1,25MHz,±15ppm,±15ppm,8pF,80 Ohm,-10°C ~ 75°C,NX2016SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016SA-26M-STD-CZS-1,26MHz,±15ppm,±15ppm,8pF,60 Ohm,-10°C ~ 75°C,NX2016SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016SA-26M-STD-CZS-2,26MHz,±25ppm,±15ppm,8pF,60 Ohm,-40°C ~ 85°C,NX2016SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2016SA-26MHZ-EXS00A-CS06025,26MHz,±20ppm,-,8pF,100 Ohm,-20°C ~ 70°C,NX2016SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+EXS00A-CS05400,19.2MHz,±30ppm,±20ppm,13pF,60 Ohm,-30°C ~ 85°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-16.000000MHZ,16MHz,±10ppm,±10ppm,10pF,80 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-16.000000MHZ-W1,16MHz,±20ppm,±20ppm,8pF,120 Ohm,-40°C ~ 85°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-16MHZ-EXS00A-CS05116,16MHz,±15ppm,±15ppm,12pF,80 Ohm,-10°C ~ 75°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-16MHZ-STD-CSW-4,16MHz,±15ppm,±15ppm,8pF,80 Ohm,-10°C ~ 75°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-16MHZ-STD-CSW-5,16MHz,±25ppm,±15ppm,8pF,80 Ohm,-40°C ~ 85°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-20.000000MHZ,20MHz,±10ppm,±10ppm,10pF,70 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-24.000000MHZ,24MHz,±10ppm,±10ppm,10pF,70 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-24.000000MHZ-B8,24MHz,±10ppm,±10ppm,10pF,100 Ohm,-20°C ~ 70°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-24.576000MHZ,24.576MHz,±10ppm,±10ppm,10pF,70 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-25.000M-STD-CSW-5,25MHz,±25ppm,±15ppm,8pF,60 Ohm,-40°C ~ 85°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-26.000000MHZ,26MHz,±10ppm,±10ppm,10pF,70 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-26.000000MHZ-B9,26MHz,±10ppm,±10ppm,10pF,100 Ohm,-20°C ~ 70°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-26MHZ-EXS00A-CS05497,26MHz,±10ppm,±15ppm,6pF,60 Ohm,-40°C ~ 85°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-26MHZ-STD-CSX-1,26MHz,±10ppm,±10ppm,8pF,60 Ohm,-20°C ~ 75°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-30.000000MHZ,30MHz,±10ppm,±10ppm,10pF,50 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-32.000000MHZ,32MHz,±10ppm,±10ppm,10pF,50 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-40.000000MHZ,40MHz,±10ppm,±10ppm,10pF,50 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-40.000000MHZ-W2,40MHz,±10ppm,±10ppm,10pF,50 Ohm,-20°C ~ 70°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-40.000000MHZ-W3,40MHz,±10ppm,±10ppm,10pF,50 Ohm,-20°C ~ 70°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-44.000000MHZ,44MHz,±10ppm,±10ppm,10pF,50 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX2520SA-48.000000MHZ,48MHz,±10ppm,±10ppm,10pF,50 Ohm,-10°C ~ 60°C,NX2520SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3215SA-32.768K-STD-MUA-14,32.768kHz,-,±20ppm,6pF,70 kOhm,-40°C ~ 85°C,NX3215SA,NDK,NDK NX3215SA catalog sheet 2003D
+NX3215SA-32.768K-STD-MUA-8,32.768kHz,-,±20ppm,12.5pF,70 kOhm,-40°C ~ 85°C,NX3215SA,NDK,NDK NX3215SA catalog sheet 2003D
+NX3215SA-32.768K-STD-MUA-9,32.768kHz,-,±20ppm,9pF,70 kOhm,-40°C ~ 85°C,NX3215SA,NDK,NDK NX3215SA catalog sheet 2003D
+NX3215SA-32.768K-STD-MUS-2,32.768kHz,-,±20ppm,12.5pF,80 kOhm,-40°C ~ 125°C,NX3215SA,NDK,NDK NX3215SA catalog sheet 2003D
+NX3215SA-32.768K-STD-MUS-3,32.768kHz,-,±20ppm,9pF,80 kOhm,-40°C ~ 125°C,NX3215SA,NDK,NDK NX3215SA catalog sheet 2003D
+NX3215SA-32.768K-STD-MUS-4,32.768kHz,-,±20ppm,6pF,80 kOhm,-40°C ~ 125°C,NX3215SA,NDK,NDK NX3215SA catalog sheet 2003D
+NX3225GA-10.000M-STD-CRG-1,10MHz,±30ppm,±20ppm,8pF,200 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-10.000M-STD-CRG-2,10MHz,±30ppm,±20ppm,8pF,200 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-12.000M-STD-CRA-1,12MHz,±150ppm,±50ppm,8pF,120 Ohm,-40°C ~ 150°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-12.288M-STD-CRG-2,12.288MHz,±30ppm,±20ppm,8pF,100 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-12MHZ-STD-CRG-1,12MHz,±30ppm,±20ppm,8pF,100 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-12MHZ-STD-CRG-2,12MHz,±30ppm,±20ppm,8pF,100 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-13.56M-STD-CRG-2,13.56MHz,±30ppm,±20ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-14.31818M-STD-CRG-1,14.31818MHz,±30ppm,±20ppm,8pF,80 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-14.31818M-STD-CRG-2,14.31818MHz,±30ppm,±20ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-14.7456M-STD-CRG-1,14.7456MHz,±30ppm,±20ppm,8pF,80 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-14.7456M-STD-CRG-2,14.7456MHz,±30ppm,±20ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-16.000M-STD-CRG-1,16MHz,±30ppm,±20ppm,8pF,80 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-16.000M-STD-CRG-2,16MHz,±30ppm,±20ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-16.9344M-STD-CRG-2,16.9344MHz,±30ppm,±20ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-19.2M-STD-CRG-2,19.2MHz,±30ppm,±20ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-20.000M-STD-CRG-1,20MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-20.000M-STD-CRG-2,20MHz,±30ppm,±20ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-20MHZ-STD-CRA-1,20MHz,±150ppm,±50ppm,8pF,100 Ohm,-40°C ~ 150°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-24.576M-STD-CRG-2,24.576MHz,±30ppm,±20ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-25.000M-STD-CRG-1,25MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-25.000M-STD-CRG-2,25MHz,±30ppm,±20ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-26.000M-STD-CRG-1,26MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-26.000M-STD-CRG-2,26MHz,±30ppm,±20ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-26MHZ-TI,26MHz,±40ppm,±20ppm,10pF,50 Ohm,-40°C ~ 85°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-27.000M-STD-CRG-1,27MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-27.12M-STD-CRG-2,27.12MHz,±30ppm,±20ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-27M-STD-CRG-2,27MHz,±30ppm,±20ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-30.000M-STD-CRG-1,30MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GA-30.000M-STD-CRG-2,30MHz,±30ppm,±20ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225GA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GA-32M-EXS00A-CG02611,32MHz,±20ppm,±20ppm,10pF,50 Ohm,0°C ~ 70°C,NX3225GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225GB-16M-STD-CRA-2,16MHz,±150ppm,±50ppm,8pF,120 Ohm,-40°C ~ 150°C,NX3225GB,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GB-20MHZ-STD-CRA-2,20MHz,±150ppm,±50ppm,8pF,100 Ohm,-40°C ~ 150°C,NX3225GB,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GD-10.000M-STD-CRA-3,10MHz,±150ppm,±50ppm,8pF,300 Ohm,-40°C ~ 150°C,NX3225GD,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225GD-8MHZ-STD-CRA-3,8MHz,±150ppm,±50ppm,8pF,500 Ohm,-40°C ~ 150°C,NX3225GD,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-12.000M-STD-CQR-1,12MHz,±25ppm,±15ppm,8pF,100 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-12.000M-STD-CQS-1,12MHz,±50ppm,±15ppm,8pF,120 Ohm,-40°C ~ 125°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-12.000M-STD-CRS-2,12MHz,±50ppm,±15ppm,8pF,120 Ohm,-40°C ~ 125°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-12.000MHZ-STD-CSR-1,12MHz,±15ppm,±15ppm,8pF,100 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-12.288M-STD-CRS-2,12.288MHz,±50ppm,±15ppm,8pF,120 Ohm,-40°C ~ 125°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-12.288M-STD-CSR-3,12.288MHz,±15ppm,±15ppm,8pF,80 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-12MHZ-STD-CSR-3,12MHz,±15ppm,±15ppm,8pF,100 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-12MHZ-STD-CSR-6,12MHz,±25ppm,±15ppm,8pF,100 Ohm,-40°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-13.000M-STD-CQR-1,13MHz,±25ppm,±15ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-13.560M-STD-CQR-1,13.56MHz,±25ppm,±15ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-13.56M-STD-CSR-3,13.56MHz,±15ppm,±15ppm,8pF,80 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-13M-STD-CSR-6,13MHz,±25ppm,±15ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-14.31818MHZ-STD-CSR-1,14.31818MHz,±15ppm,±15ppm,8pF,80 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-16.000000MHZ-B3,16MHz,±15ppm,±10ppm,7.2pF,80 Ohm,-30°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-16.000000MHZ-T1,16MHz,±10ppm,±10ppm,10pF,60 Ohm,-20°C ~ 70°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-16.000M-STD-CQR-1,16MHz,±25ppm,±15ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-16.000M-STD-CQS-1,16MHz,±50ppm,±15ppm,8pF,120 Ohm,-40°C ~ 125°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-16.000M-STD-CRS-2,16MHz,±50ppm,±15ppm,8pF,120 Ohm,-40°C ~ 125°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-16.000MHZ-STD-CSR-1,16MHz,±15ppm,±15ppm,8pF,80 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-16.384M-STD-CQR-1,16.384MHz,±25ppm,±15ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-16MHZ-STD-CSR-3,16MHz,±15ppm,±15ppm,8pF,80 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-16MHZ-STD-CSR-6,16MHz,±25ppm,±15ppm,8pF,80 Ohm,-40°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-20.000000MHZ-B2,20MHz,±15ppm,±10ppm,7.2pF,80 Ohm,-30°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-20.000M-STD-CQR-1,20MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-20.000M-STD-CQS-1,20MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-20.000M-STD-CRS-2,20MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-20.000M-STD-CSR-3,20MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-20.000MHZ-STD-CSR-1,20MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-22.000MHZ-STD-CSR-1,22MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-22.579M-STD-CQR-1,22.579MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-24.000M-STD-CQR-1,24MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-24.000M-STD-CQS-1,24MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-24.000MHZ-STD-CSR-1,24MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-24.305M-STD-CQR-1,24.305MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-24.576MHZ-STD-CSR-1,24.576MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-25.000M-STD-CQR-1,25MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-25.000M-STD-CQS-1,25MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-25.000M-STD-CRS-2,25MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-25.000M-STD-CSR-3,25MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-25.000M-STD-CSR-6,25MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-26.000000MHZ-B1,26MHz,±10ppm,±10ppm,10pF,50 Ohm,-20°C ~ 70°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-26.000000MHZ-G2,26MHz,±11ppm,±10ppm,10pF,50 Ohm,-20°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-26.000000MHZ-G3,26MHz,±10ppm,±10ppm,7.36pF,50 Ohm,-20°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-26.000000MHZ-G4,26MHz,±10ppm,±10ppm,10pF,50 Ohm,-20°C ~ 70°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-26.000M-STD-CQR-1,26MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-26.000M-STD-CSQ-1,26MHz,±10ppm,±10ppm,8pF,50 Ohm,-20°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-26.000M-STD-CSR-3,26MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-26.000MHZ-STD-CSR-1,26MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-27.000M-STD-CQR-1,27MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-27.000MHZ-STD-CSR-1,27MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-27.120M-STD-CQR-1,27.12MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-27.12M-STD-CSR-3,27.12MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-27M-STD-CRS-2,27MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-28.63636M-STD-CQR-1,28.6364MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-30.000M-STD-CSR-3,30MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-32.000M-STD-CQR-1,32MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-32.000MHZ-STD-CSR-1,32MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-32M-EXS00A-02994,32MHz,±15ppm,±10ppm,16pF,50 Ohm,-30°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-32MHZ-EXS00A-CS02368,32MHz,±16ppm,±10ppm,9pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-39.000000MHZ-B4,39MHz,±10ppm,±10ppm,12pF,50 Ohm,-20°C ~ 70°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-40.000M-STD-CQR-1,40MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-40.000M-STD-CQS-1,40MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-40.000M-STD-CRS-2,40MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-40.000MHZ-STD-CSR-1,40MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-40M-EXS00A-CS03880,40MHz,±17ppm,±10ppm,10pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SA-44.000MHZ-STD-CSR-1,44MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX3225SA,NDK,NDK spec sheet STD-CSR-1 (2012-07-30)
+NX3225SA-48.000M-STD-CQR-1,48MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-48.000M-STD-CQS-1,48MHz,±50ppm,±15ppm,8pF,100 Ohm,-40°C ~ 125°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SA-50.000M-STD-CQR-1,50MHz,±25ppm,±15ppm,8pF,50 Ohm,-40°C ~ 85°C,NX3225SA,NDK,NDK product search export (data/xtal_ndk.csv)
+NX3225SC-18.08M-STD-CRS-1,18.08MHz,±50ppm,±15ppm,8pF,120 Ohm,-40°C ~ 125°C,NX3225SC,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX3225SC-30.320M-EXS00A-CS03981,30.32MHz,±25ppm,±10ppm,6pF,100 Ohm,-40°C ~ 125°C,NX3225SC,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX4025DA-13.000000MHZ-B6,13MHz,±10ppm,±10ppm,10pF,60 Ohm,-20°C ~ 70°C,NX4025DA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX4025DA-15.360000MHZ-B7,15.36MHz,±10ppm,±10ppm,10pF,60 Ohm,-20°C ~ 75°C,NX4025DA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX4025DA-16.000000MHZ-B5,16MHz,±15ppm,±10ppm,7.2pF,60 Ohm,-30°C ~ 85°C,NX4025DA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-10.000000MHZ-LN-CD-1,10MHz,±50ppm,±50ppm,8pF,120 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-10.000M-STD-CSK-3,10MHz,±30ppm,±20ppm,8pF,100 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-10.000M-STD-CSU-1,10MHz,±150ppm,±50ppm,8pF,150 Ohm,-40°C ~ 150°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-11.0592M-STD-CSK-4,11.0592MHz,±30ppm,±20ppm,8pF,100 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-12.000000MHZ-LN-CD-1,12MHz,±50ppm,±50ppm,8pF,120 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-12.000M-STD-CSU-2,12MHz,±150ppm,±50ppm,8pF,150 Ohm,-40°C ~ 150°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-12.288000MHZ-LN-CD-1,12.288MHz,±50ppm,±50ppm,8pF,120 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-12.288M-STD-CSK-4,12.288MHz,±30ppm,±20ppm,8pF,100 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-12MHZ-STD-CSK-4,12MHz,±30ppm,±20ppm,8pF,100 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-12MHZ-STD-CSK-8,12MHz,±50ppm,±30ppm,8pF,120 Ohm,-40°C ~ 85°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-13.560000MHZ-LN-CD-1,13.56MHz,±50ppm,±50ppm,8pF,120 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-13.56M-STD-CSK-4,13.56MHz,±30ppm,±20ppm,8pF,100 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-13.56M-STD-CSU-2,13.56MHz,±150ppm,±50ppm,8pF,150 Ohm,-40°C ~ 150°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-14.31818M-STD-CSK-4,14.31818MHz,±30ppm,±20ppm,8pF,100 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-16.000000MHZ-LN-CD-1,16MHz,±50ppm,±50ppm,8pF,120 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-16.000M-STD-CSU-2,16MHz,±150ppm,±50ppm,8pF,120 Ohm,-40°C ~ 150°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-16.384000MHZ-LN-CD-1,16.384MHz,±50ppm,±50ppm,8pF,120 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-16MHZ-STD-CSK-4,16MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-16MHZ-STD-CSK-8,16MHz,±50ppm,±30ppm,8pF,120 Ohm,-40°C ~ 85°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-20.000000MHZ-LN-CD-1,20MHz,±50ppm,±50ppm,8pF,70 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-20.000M-STD-CSK-4,20MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-20.000M-STD-CSU-2,20MHz,±150ppm,±50ppm,8pF,100 Ohm,-40°C ~ 150°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-24.000000MHZ-LN-CD-1,24MHz,±50ppm,±50ppm,8pF,70 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-25.000000MHZ-LN-CD-1,25MHz,±50ppm,±50ppm,8pF,70 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-25.000M-STD-CSK-4,25MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-27.000000MHZ-LN-CD-1,27MHz,±50ppm,±50ppm,8pF,70 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-27M-STD-CSK-4,27MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-30.000000MHZ-LN-CD-1,30MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-30.000M-STD-CSK-4,30MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-32.000000MHZ-LN-CD-1,32MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-40.000000MHZ-LN-CD-1,40MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-40.000M-STD-CSU-2,40MHz,±150ppm,±50ppm,8pF,50 Ohm,-40°C ~ 150°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-48.000000MHZ-LN-CD-1,48MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-8.000M-STD-CSU-1,8MHz,±150ppm,±50ppm,8pF,300 Ohm,-40°C ~ 150°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GA-9.84375M-STD-CSU-1,9.84375MHz,±150ppm,±50ppm,8pF,220 Ohm,-40°C ~ 150°C,NX5032GA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GB-12MHZ-STD-CSK-5,12MHz,±30ppm,±20ppm,8pF,100 Ohm,-10°C ~ 70°C,NX5032GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GB-16MHZ-STD-CSK-5,16MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX5032GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GC-12MHZ-STD-CSK-6,12MHz,±15ppm,±15ppm,8pF,100 Ohm,-10°C ~ 75°C,NX5032GC,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032GC-16MHZ-STD-CSK-6,16MHz,±15ppm,±15ppm,8pF,50 Ohm,-10°C ~ 75°C,NX5032GC,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032SA-13.000000MHZ-G1,13MHz,±10ppm,±10ppm,8pF,40 Ohm,-20°C ~ 85°C,NX5032SA,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032SD-13.225625M-STD-CSY-1,13.225625MHz,±50ppm,±15ppm,12pF,120 Ohm,-40°C ~ 125°C,NX5032SD,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032SD-13.56MHZ-STD-CSY-1,13.56MHz,±50ppm,±15ppm,12pF,120 Ohm,-40°C ~ 125°C,NX5032SD,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032SD-20MHZ-STD-CSY-1,20MHz,±50ppm,±15ppm,12pF,80 Ohm,-40°C ~ 125°C,NX5032SD,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX5032SD-9.84375M-STD-CSY-1,9.84375MHz,±50ppm,±15ppm,12pF,150 Ohm,-40°C ~ 125°C,NX5032SD,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-10.000000MHZ,10MHz,±50ppm,±50ppm,8pF,100 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-12.000000MHZ,12MHz,±50ppm,±50ppm,8pF,80 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-12.288000MHZ,12.288MHz,±50ppm,±50ppm,8pF,80 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-12M-STD-CSF-4,12MHz,±30ppm,±20ppm,8pF,80 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-13.560000MHZ,13.56MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-14.318180MHZ,14.31818MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-16.934400MHZ,16.9344MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-18.432000MHZ,18.432MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-20.000000MHZ,20MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-20.000M-STD-CSF-4,20MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-24.000000MHZ,24MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-24.000M-STD-CSF-4,24MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-25.000000MHZ,25MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-25.000M-STD-CSF-4,25MHz,±30ppm,±20ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-27.000000MHZ,27MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-30.000000MHZ,30MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-32.000000MHZ,32MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-40.000000MHZ,40MHz,±50ppm,±50ppm,8pF,50 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-5MHZ-STD-CSF-3,5MHz,±30ppm,±20ppm,8pF,250 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-6MHZ-STD-CSF-3,6MHz,±30ppm,±20ppm,8pF,250 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-7.3728MHZ-STD-CSF-3,7.3728MHz,±30ppm,±20ppm,8pF,250 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-7.5MHZ-STD-CSF-4,7.5MHz,±30ppm,±20ppm,8pF,250 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-8.000000MHZ,8MHz,±50ppm,±50ppm,8pF,200 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-8.000M-STD-CSF-4,8MHz,±30ppm,±20ppm,8pF,200 Ohm,-10°C ~ 70°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-8.000M-STD-CSF-6,8MHz,±50ppm,±30ppm,8pF,200 Ohm,-40°C ~ 85°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"
+NX8045GB-8.000M-STD-CSJ-1,8MHz,±150ppm,±50ppm,8pF,220 Ohm,-40°C ~ 150°C,NX8045GB,NDK,"Digikey (legacy xtal_NDK import, not on ndk.com)"

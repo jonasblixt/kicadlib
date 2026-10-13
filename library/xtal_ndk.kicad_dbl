@@ -3,7 +3,7 @@
         "version": 0
     },
     "name": "NDK Crystals",
-    "description": "NDK quartz crystal resonators, converted from the legacy xtal_NDK.kicad_sym hand-maintained library.",
+    "description": "NDK quartz crystal resonators, built from data/xtal_ndk_parts.csv.",
     "source": {
         "type": "odbc",
         "dsn": "",
