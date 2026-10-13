@@ -239,7 +239,7 @@ out). "Twin" = pads identical within 0.1 mm.
 | `power/1206SFS200F_63-2` | 1206SFS200F/63-2 | `footprints:Fuse_1206_3216Metric` | `Fuse:Fuse_1206_3216Metric` | twin |
 | `power/LP5562` | LP5562 | `Jonas:DSBGA12` | `Package_BGA:Maxim_WLP-12_2.008x1.608mm_Layout4x3_P0.4mm` | twin geometry, Maxim-named |
 
-#### S* - Stock, chosen from the MPN/package - differs from the old one or old one missing (datasheet check during execution) (31)
+#### S* - Stock, chosen from the MPN/package - differs from the old one or old one missing (datasheet check during execution) (31) — done, see F7.2 (two targets changed, one moved to M)
 
 | Symbol | MPN | Now | Proposed | Note |
 |---|---|---|---|---|
@@ -275,7 +275,7 @@ out). "Twin" = pads identical within 0.1 mm.
 | `misc_inductors/LQH2MCN100K02L` | LQH2MCN100K02L | `L0806` | `Inductor_SMD:L_Murata_LQH2MCNxxxx02_2.0x1.6mm` | old L0806 missing |
 | `misc_inductors/PT61018PEL` | PT61018PEL | `Jonas:Ethernet_trafo_so16w` | `Transformer_SMD:Transformer_Ethernet_Bourns_PT61017PEL` | sibling Bourns part |
 
-#### S+sym - Stock, plus symbol pin renumbering (mounting/shield pads are MP/SH in stock) (4)
+#### S+sym - Stock, plus symbol pin renumbering (mounting/shield pads are MP/SH in stock) (4) — done, see F7.2
 
 | Symbol | MPN | Now | Proposed | Note |
 |---|---|---|---|---|
@@ -463,13 +463,17 @@ Symbols:
   `Wurth Elektronik`, `ON Semi`/`ONSemi`/`On Semi`, `ublox`/`U-Blox`,
   `Skyworks`/`Skyworks Solutions Inc.`, `Littlefuse` (also in the DB library
   name, A4.2); legacy owners `Linear` (12), `Fairchild` (5), `Freescale` (1).
-  Wrong: `Adafruit` on SK6812RGBW, `TI` on 74LVCH1T45GW (Nexperia part).
+  Wrong: `Adafruit` on SK6812RGBW (maker is Opsco), `TI` on 74LVCH1T45GW
+  (Nexperia part).
 - MPN field: `FTSH-105-01-F-DV-K.stp`, `Zynq 7010`, `STM32F446ZE` (no
   package suffix), trailing space in `KW-5R5C105-R `, `N/A` on three.
 - Reference prefixes vs KiCad convention: antennas `Z` (KiCad `AE`),
   push button `PB` (`SW`), SAW filter `X` (`FL`), mounting hole `M` (`H`),
   SK6812 `U` (`D`).
-- `ki_fp_filters` are stale in places (DS2482S `WLP`, SN74AVC4T774 `RSV`)
+- `logic/SN74AUP1G74DCU` names both pin 3 and pin 5 `Q`; pin 3 is Q̄
+  (the graphic has the inversion bubble, so it's cosmetic). Same for
+  `CLR`/`PRE` without `~{}`.
+- `ki_fp_filters` are stale in places (DS2482S `WLP`; SN74AVC4T774 fixed in F1.6)
   and only 94 symbols have them. After remapping, set them to match the
   chosen footprint or clear them.
 
@@ -507,8 +511,43 @@ Config and docs:
     but loses the old footprint's two thermal vias; 78171-0003's tabs are
     `MP` instead of `0` (no pin uses them); LTC4267's DHC16 was compared
     from history. Broken links 104 → 73.
-  - [ ] S+sym (4), needs open question 6.
-  - [ ] S\* (31), datasheet check per row.
+  - [x] S+sym (4), 2026-10-13 (Jonas OK'd question 6): `f51827a` 43045-0818,
+    `9a63bf3` 105133, `e3507a6` BatClip_54, `64e2808` RJHSE. One pin per
+    pad number: the first mounting/shield pin is renumbered `MP`/`SH`
+    (RJHSE's is also renamed `SH`) and its duplicates are deleted, since
+    duplicate pin numbers can leave a pad netless if one copy is unwired.
+    Boards updated from the library must move wires from deleted pins.
+    105133: the old footprint (from history) had round shell holes; Molex
+    SD-105133-001 rev E specifies 0.50 mm slots, as stock has.
+    BatClip_54: stock numbers all three legs `1` (one metal clip), so the
+    symbol keeps pin 1 only.
+  - [x] S\* (29 of 31), 2026-10-13: `ce31f3b` LEDs, `8e5b088` comm,
+    `d5875ae` connectors, `641b48b` cpu, `5fb1db0` dcdc, `9006199`
+    diode_misc, `4bb1083` interface, `0e1d564` logic, `faffbb0` memory,
+    `654efdc` misc_inductors. Each commit message lists the evidence per
+    row. Pin numbering was checked against the datasheet's column for the
+    ordered package, or against KiCad's stock symbol of the same part
+    (STM32F302K8, STM32L486ZG, SAMD21E15B, LAN8710, TCA9535, 1T45), or
+    the vendor package file (Zynq: all 225 balls). Changes from the F3
+    table:
+    - `interface/TCA9535RGER`: TI uses RGE0024**B** (EP 2.45 ± 0.1), not
+      RGE0024H (2.7) → `VQFN-24-1EP_4x4mm_P0.5mm_EP2.45x2.45mm`.
+    - `cpu/ATSAMD21E15B`: MU = VQFN-32 with **3.60** mm EP (Microchip
+      land 3.70), not 3.45 → `QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm`.
+    - `comm/2450AT18B100`: **moved to M.** Johanson's B100 spec gives a
+      0.8×1.6 mm pad land, 4.2 mm overall, which is exactly the old
+      footprint; the stock `Johanson_2450AT18x100` is the A100 land
+      (1.2×1.8 mm).
+    - `memory/MX25L12835F`: done earlier as F1.16.
+  - [ ] F7.2 follow-ups (new):
+    - `dcdc/LTC3612`: footprint is certain (LTC UDC20), but the symbol's
+      pin order could not be checked (analog.com and its mirrors refuse
+      connections from this machine). Check against the datasheet.
+    - `memory/IS62WV102416DBLL` and `connectors/GBC08SGSN-M89`: vendor
+      datasheets not reachable/checked; the IS62 footprint is a twin of
+      the old one, the GBC08 is a plain 1x08 2.54 mm header.
+    - `misc_inductors/PT61018PEL`: symbol labels RX/TX from the other side
+      than Bourns' schematic (TD/RD); pairing and polarity are right.
 - [ ] **F7.3** `Jonas.pretty` QA fixes (F4) and 3D cleanup (F5.1–F5.3).
 - [ ] **F7.4** Migrations (M), in batches by symbol library, each with a
       render contact sheet.
