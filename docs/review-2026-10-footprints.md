@@ -376,22 +376,25 @@ T2 and T3 (a board change, so re-check before re-release). C9's
 footprint Value is replaced by the symbol's). The other poetato
 footprints only have the cosmetic issues below.
 
-- [ ] **F4.1** `attr` wrong (affects BOM and position files):
-      SMD-only but marked `through_hole`: ~~`Coilcraft_FA2672`~~ (`117ea13`),
-      `Coilcraft_FA2925-AL`, `Coilcraft_POE60F`, `Texas_YJE`.
-      THT pads but marked `smd`: `T_Wurth_WE-RJ45LAN_7499210001A`,
-      `T_Wurth_WE-RJ45LAN_7499411122A`, ~~`T_Wurth_WE-RJ45LAN_7499511440`~~
-      (`b04fc79`). Verified with `kicad-cli pcb export pos --smd-only` on
-      a scratch board.
-- [ ] **F4.2** Courtyard: `Wurth_7499210123` pads stick out 0.54 mm;
-      `Texas_YJE` fab body 0.05 mm outside; 0.1 mm courtyard lines on
-      `Coilcraft_POE60F`, `Texas_YJE`, `Wurth_7499210123`.
+- [x] **F4.1** `attr` wrong (affects BOM and position files). All fixed,
+      one commit each, verified with `kicad-cli pcb export pos --smd-only`
+      on a scratch board:
+      SMD-only but marked `through_hole`: `Coilcraft_FA2672` (`117ea13`),
+      `Coilcraft_FA2925-AL` (`5689b1e`), `Coilcraft_POE60F` (`8a8ebfa`),
+      `Texas_YJE` (`85de11d`).
+      THT pads but marked `smd`: `T_Wurth_WE-RJ45LAN_7499210001A`
+      (`3aea93c`), `T_Wurth_WE-RJ45LAN_7499411122A` (`cf84e0f`),
+      `T_Wurth_WE-RJ45LAN_7499511440` (`b04fc79`).
+- [x] **F4.2** Courtyard. Fixed: `Wurth_7499210123` shield pads 15/16
+      stuck out 0.54 mm → courtyard widened to ±9.30 mm (`18eee39`); 0.1 mm
+      courtyard lines → 0.05 mm on `Wurth_7499210123`, `Texas_YJE`
+      (`3449c63`) and `Coilcraft_POE60F` (`d8e528b`). KiCad DRC on a
+      scratch board: no courtyard violations.
       **Corrected 2026-10-13:** the earlier "fab body outside courtyard" on
       `DLW5B_5050`, `NX3215SA`, `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`,
-      `SAMTEC_FTSH-105-01-L-DV-007-K` and `SOIC254P680X230-4N` was a 0.2 mm
-      pin-1 dot drawn on F.Fab beside the body, not the body; their bodies
-      are inside the courtyard with 0.25 mm clearance. KLC wants the F.Fab
-      pin-1 mark as a body chamfer instead (cosmetic, F4.9).
+      `SAMTEC_FTSH-105-01-L-DV-007-K`, `SOIC254P680X230-4N` and `Texas_YJE`
+      was a pin-1 dot/triangle drawn beside the body on F.Fab, not the body;
+      all bodies are inside their courtyards with ≥ 0.25 mm clearance (F4.9).
 - [ ] **F4.3** Missing layers: no silkscreen on `Coilcraft_FA2672`,
       `Coilcraft_FA2925-AL`, both `Eaton_KW_*`, `NX1255GB`, `NX3225SA`; no
       fab on `Coilcraft_POE60F`, `Wurth_7499210123`; no `${REFERENCE}` on
@@ -418,6 +421,10 @@ footprints only have the cosmetic issues below.
       body on F.Fab (`DLW5B_5050`, `NX3215SA`, `QFN-20_5x5mm…`,
       `SAMTEC_FTSH…`, `SOIC254P680X230-4N`); KLC uses a chamfered body
       corner on F.Fab and keeps the dot on silk only.
+- [ ] **F4.10** (new, from the F4.2 DRC run) Reference text is 0.5 mm on
+      `Wurth_7499210123` and `Coilcraft_POE60F` (KiCad's default minimum
+      silk text height is 0.8 mm; KLC uses 1.0 mm); `Wurth_7499210123`'s
+      silk body lines run across shield pads 15/16 (clipped by mask).
 - Note: `T_Wurth_WE-RJ45LAN_7498210003` has a rounded `Edge.Cuts` cutout —
   looks intentional (sink-mount), but it does cut the board.
 - Note: 15 footprints (`C_Murata_GA3`, 14× ECHU) are still KiCad 7 format —
