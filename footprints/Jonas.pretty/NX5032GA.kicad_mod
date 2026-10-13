@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "NDK NX5032GA crystal, 5.0x3.2mm body, 2 pads")
+	(tags "crystal NDK NX5032GA 5032")
 	(property "Reference" "REF**"
 		(at -1.218 -2.5064 0)
 		(layer "F.SilkS")
@@ -14,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "XTAL_NX5032GA-16.000000MHZ-LN-CD-1"
+	(property "Value" "NX5032GA"
 		(at 10.5676 2.5064 0)
 		(layer "F.Fab")
 		(uuid "0c7f6a11-d62c-4f56-8768-a4dc76d888c8")
@@ -188,6 +190,17 @@
 		)
 		(layer "F.Fab")
 		(uuid "50f8bbf4-c68b-49fd-888a-973bf4caa21e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "140cc6c3-7b25-4762-ba5f-88280a486ff3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
 	)
 	(pad "1" smd rect
 		(at -2 0)
