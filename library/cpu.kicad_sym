@@ -2015,7 +2015,7 @@
 				)
 			)
 		)
-		(property "Footprint" "217LFBGA"
+		(property "Footprint" "Jonas:Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm"
 			(at -44.45 7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
