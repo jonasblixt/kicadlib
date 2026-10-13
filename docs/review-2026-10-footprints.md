@@ -309,20 +309,20 @@ out). "Twin" = pads identical within 0.1 mm.
 | `comm/ANT016008LCD1575MA1` | ANT016008LCD1575MA1 | `ANT016008LCD1575MA1` | `Jonas:TDK_ANT016008LCD1575MA1` | no model |
 | `comm/DPX162500DT-8014A1` | DPX162500DT-8014A1 | `DPX1625` | `Jonas:TDK_DPX162500DT` | no model |
 | `comm/HHM22106C1` | HHM22106C1 | `HHM22106C1` | `Jonas:TDK_HHM22106C1` | no model |
-| `comm/mPCIe_modem` |  | `mPCIe` | `Jonas:mPCIe_Card_Socket` | + symbol bug PERST# on pin 21 |
+| `comm/mPCIe_modem` |  | `mPCIe` | `Jonas:JAE_MM60-52B1_Mini-PCIe` | + symbol bug PERST# on pin 21 |
 | `comm/SKY13587-378LF` | SKY13587-378LF | `MLPD6` | `Jonas:Skyworks_SKY13587-378LF` | MLPD6, split EP; no model |
 | `comm/WLA.01` | WLA.01 | `WLA.01` | `Jonas:Taoglas_WLA.01` | no model |
 | `connectors/0781715006` | 78171-5006 | `78171-5006` | `Jonas:Molex_78171-5006` | model available |
 | `connectors/34826-8200` | 34826-8200 | `34826-8200` | `Jonas:Molex_34826-8200` | no model |
 | `connectors/5-104074-8` | 5-104074-8 | `5-104074-8` | `Jonas:TE_5-104074-8` | model path dead |
 | `connectors/DX4R005JJ2R1800` | DX4R005JJ2R1800 | `USB_Micro-B` | `Jonas:JAE_DX4R005JJ2R1800` | model available |
-| `connectors/fakra_blue_0734035112` | 0734035112 | `fakra_th` | `Jonas:Molex_FAKRA_73403-511x` | one fp for 4 codings |
-| `connectors/fakra_bordeaux_0734035113` | 0734035113 | `fakra_th` | `Jonas:Molex_FAKRA_73403-511x` |  |
-| `connectors/fakra_green_734035114` | 734035114 | `fakra_th` | `Jonas:Molex_FAKRA_73403-511x` |  |
-| `connectors/fakra_violet_0734035117` | 0734035117 | `fakra_th` | `Jonas:Molex_FAKRA_73403-511x` |  |
+| `connectors/fakra_blue_0734035112` | 0734035112 | `fakra_th` | `Jonas:Molex_FAKRA_73403-51xx` | one fp for 4 codings |
+| `connectors/fakra_bordeaux_0734035113` | 0734035113 | `fakra_th` | `Jonas:Molex_FAKRA_73403-51xx` |  |
+| `connectors/fakra_green_734035114` | 734035114 | `fakra_th` | `Jonas:Molex_FAKRA_73403-51xx` |  |
+| `connectors/fakra_violet_0734035117` | 0734035117 | `fakra_th` | `Jonas:Molex_FAKRA_73403-51xx` |  |
 | `connectors/RJE72-188-1401` | RJE72-188-1401 | `Jonas:RJE72-188-1401` | `Jonas:Amphenol_RJE72-188-1401` | model available |
 | `connectors/TFM-105-02-S-D-WT` | TFM-105-02-S-D-WT | `TFM-105-02-S-D-WT` | `Jonas:Samtec_TFM-105-02-S-D-WT` | model available |
-| `connectors/TFM-110-02-S-D-WT` | TFM-110-02-S-D-WT | `Jonas:TFM-110-02-S-D-WT` | `Jonas:Samtec_TFM-110-02-S-D-WT` | tabs numbered 0 vs pins 21/22 |
+| `connectors/TFM-110-02-S-D-WT` | TFM-110-02-S-D-WT | `Jonas:TFM-110-02-S-D-WT` | `Jonas:Samtec_TFM-110-02-S-D-WT` | tabs numbered 0 vs pins 21/22 (renumbered 21/22, `8b59022`) |
 | `connectors/USB_A_292303-1` | 292303-1 | `USB_A_TH` | `Jonas:TE_292303-1` | stock 292303-7 is SMD; -1 is THT |
 | `cpu/ADAU1467` | ADAU1467WBCPZ300 | `CP-88-10` | `Jonas:ADI_CP-88-10_LFCSP-88` | model available |
 | `cpu/AT91SAM9G25` | AT91SAM9G25 | `217LFBGA` | `Jonas:Microchip_LFBGA-217_15x15mm_P0.8mm` | no model |
@@ -335,10 +335,10 @@ out). "Twin" = pads identical within 0.1 mm.
 | `dcdc/MIC23254` | MIC23254-GCYMT-TR | `MLF-10` | `Jonas:Microchip_MLF-10_P0.4mm` | no stock match |
 | `dcdc/MIC28511` | MIC28511-1YFL-T5 | `FQFN34-24` | `Jonas:Microchip_FTQFN-24_3x4mm` | multi-EP; no model |
 | `dcdc/XCL226A0K1H2` | XCL226A0K1H2 | `Torex_XCL22_QFN` | `Jonas:Torex_XCL226` | no model |
-| `interface/PLR135_T10` | PLR135_T10 | `PLR135_T10` | `Jonas:Everlight_PLR135` | model available |
-| `interface/PLT133_T10W` | PLT133/T10W | `PLT133_T10W` | `Jonas:Everlight_PLT133` | uses PLR135 model |
-| `interface/TORX1355(V,F)` | TORX1355(V,F) | `TOSLINK_VERTICAL` | `Jonas:Toshiba_TOTX1350_TORX1355` | stock TORX170 family differs |
-| `interface/TOTX1350(V,F)` | TOTX1350(V,F) | `TOSLINK_VERTICAL` | `Jonas:Toshiba_TOTX1350_TORX1355` |  |
+| `interface/PLR135_T10` | PLR135_T10 | `PLR135_T10` | `Jonas:Everlight_PLR135_PLT133` | model available |
+| `interface/PLT133_T10W` | PLT133/T10W | `PLT133_T10W` | `Jonas:Everlight_PLR135_PLT133` | uses PLR135 model |
+| `interface/TORX1355(V,F)` | TORX1355(V,F) | `TOSLINK_VERTICAL` | `Jonas:Toshiba_TORX1355_TOTX1350` | stock TORX170 family differs |
+| `interface/TOTX1350(V,F)` | TOTX1350(V,F) | `TOSLINK_VERTICAL` | `Jonas:Toshiba_TORX1355_TOTX1350` |  |
 | `power/bq27742-G1` | BQ27742YZFT-G1 | `DSBGA15` | `Jonas:Texas_YZF_DSBGA-15` | no stock DSBGA-15 |
 
 #### N - No usable footprint anywhere - build new from datasheet (9)
@@ -653,8 +653,8 @@ Config and docs:
   | MIC23254 | `MLF-10` | Gateway | old project `2x2mm.wrl` |
   | MIC28511 | `FQFN34-24` | Snigel2 | **generate** |
   | XCL226A0K1H2 | `Torex_XCL22_QFN` | - | **generate** |
-  | PLR135_T10, PLT133_T10W | `PLR135_T10` | - | repo `PLR135.STEP` |
-  | TORX1355, TOTX1350 | `TOSLINK_VERTICAL` | - | repo `User Library-torx-ph-iso7045.step` |
+  | PLR135_T10, PLT133_T10W | `PLR135_T10`, `PLT133_T10W` (identical) | - | repo `PLR135.STEP` |
+  | TORX1355, TOTX1350 | `TOSLINK_VERTICAL` | - | repo `toslink.step` (the footprint's own model) |
   | bq27742-G1 | `DSBGA15` | Sting2 | git history `15dsbga.wrl` |
   | LARA-R2 (N->M) | `LARA_R2_LGA` | Sting2 | git history `lara_r2.wrl` |
   | 1575AT43A0040 (N) | **new from data sheet** | - | **generate** |
@@ -666,13 +666,14 @@ Config and docs:
   | NLSV4T3144-D (N) | **new from data sheet** | - | **generate** |
   | PT65503 (N) | **new from data sheet** | - | **generate** |
 
-  Board copies that differ from `modules/` (use the built one, after a
-  data sheet check): `FQFN34-24` (MIC28511, Snigel2: pads up to 0.23 mm
-  apart), `VQFN_HR_22` (LM536355, Sting2: exposed-pad shapes),
-  `TFM-110-02-S-D-WT` (Sting2 differs, Gateway matches `modules/`),
-  `USB_Micro-B` (JAE DX4R005) and `WLA.01` (Gateway and LED Device
-  copies identical to each other, both differ from `modules/`), `5-104074-8`
-  (Snigel2). LARA-R2 moves from N to M: `modules/LARA_R2_LGA` exists (the
+  Board copies vs `modules/`: an earlier note here listed `FQFN34-24`,
+  `VQFN_HR_22`, `TFM-110-02-S-D-WT`, `WLA.01` and `5-104074-8` as
+  differing. That was an extraction bug (KiCad 4/5 boards store pad
+  angles including the footprint rotation); with it fixed, every board
+  copy is pad-for-pad identical to `modules/` except `USB_Micro-B`
+  (JAE DX4R005, Gateway and LED Device), which numbers all four shield
+  pads 6 where `modules/` and the symbol have 6/7. The migration keeps
+  6/7 (`24a6d48`). LARA-R2 moves from N to M: `modules/LARA_R2_LGA` exists (the
   symbol linked a wrong name) and is on the Sting2 board.
   Stock candidates from the 2026-10-13 recheck (LMZ10501 → TI SIL0008D,
   MIC23254 → DFN-10 2x2 P0.4, MIC28511 → QFN-24 3x4 P0.4, USB-A → TE
@@ -685,6 +686,7 @@ Config and docs:
   - [x] Audio Amp + power (TAS2770, bq27742-G1): `02b16d4`..`d449ba1`. Pads identical to `modules/`.
   - [x] interface (4 symbols, 2 footprints): `99f417b`, `32ef941`. Vendor models from modules/packages3d. Pads identical to `modules/`; DRC 0.
   - [x] comm (10 symbols, 10 footprints): `130c9c1`..`a15f9e3`. Pads identical to `modules/`; per-footprint DRC 0 (old versions had 19 silk-over-pad hits).
+  - [x] connectors (12 symbols, 9 footprints): `1bc0fa2`..`8b59022`. Vendor models (modules/packages3d, Snigel2 WRL). Pads identical to `modules/` except two fixes to match the symbols (DX4R005 shield 6/7, TFM-110 holes 21/22); per-footprint DRC 0 (old versions had 14 silk hits). MX34R36HF4T still linked 34826-8200 and stays in F7.5.
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
@@ -723,6 +725,15 @@ listed here for a manual check in KiCad. Tick when reviewed.
 - [ ] `Taoglas_WLA.01` - migrated, pads unchanged (= Gateway/LED Device boards); WRL model, old transform - `9f56273`
 - [ ] `JAE_MM60-52B1_Mini-PCIe` (mPCIe_modem) - migrated, pads unchanged; three WRL models (socket, holder, card), old transforms - `eb7f7ed`
 - [ ] `ublox_LARA-R2` - migrated from LARA_R2_LGA (symbol linked a non-existent name), pads unchanged; WRL model, old transform - `a15f9e3`
+- [ ] `Molex_78171-5006` - migrated, pads unchanged; vendor STEP, old transform, eyeballed - `1bc0fa2`
+- [ ] `Molex_34826-8200` - migrated, pads unchanged; vendor STEP, old transform, eyeballed - `07702d5`
+- [ ] `TE_5-104074-8` - migrated, pads unchanged; WRL from Snigel2 project, old transform, eyeballed - `bb03aa6`
+- [ ] `JAE_DX4R005JJ2R1800` - migrated from USB_Micro-B, shield pads 6/7 as modules/ (boards had all 6); vendor STEP - `0321d55`, `24a6d48`
+- [ ] `Amphenol_RJE72-188-1401` - migrated, pads unchanged; vendor STEP, old transform, eyeballed - `4584b70`
+- [ ] `Samtec_TFM-105-02-S-D-WT` - migrated, pads unchanged; vendor STEP - `2f8629d`
+- [ ] `Samtec_TFM-110-02-S-D-WT` - migrated; plated holes renumbered 0 -> 21/22 to match the symbol; vendor STEP - `b31d1fc`, `8b59022`
+- [ ] `TE_292303-1` - migrated from USB_A_TH, pads unchanged; vendor STEP - `2cf4d80`
+- [ ] `Molex_FAKRA_73403-51xx` - migrated from fakra_th, pads unchanged; one footprint for 4 codings, green vendor STEP - `6769a2a`
 
 ### 3D models
 
