@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "Murata DLW5BS/DLW5BT common-mode choke coil, 5.0x5.0mm body (ind_cmc_murata_dlw5b)")
+	(tags "common mode choke inductor Murata DLW5B 5050")
 	(property "Reference" "REF**"
 		(at 0.175 -4.135 0)
 		(layer "F.SilkS")
@@ -14,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "FIL_DLW5BTM101SQ2L"
+	(property "Value" "DLW5B_5050"
 		(at 8.43 3.885 0)
 		(layer "F.Fab")
 		(uuid "a35c4cc2-fbd6-4c30-ac92-29737c83f9b8")
@@ -286,6 +288,17 @@
 		(fill no)
 		(layer "F.Fab")
 		(uuid "7f7a4fc4-8b50-4995-b992-b5aba807a71d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "4d8a4ea0-9533-44f8-8721-d0e7a49bc0a1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
 	)
 	(pad "1" smd custom
 		(at 0.875 -1.075)
