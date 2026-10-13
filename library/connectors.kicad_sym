@@ -11487,7 +11487,7 @@
 				)
 			)
 		)
-		(property "Footprint" "USB_A_TH"
+		(property "Footprint" "Jonas:TE_292303-1"
 			(at -1.27 12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
