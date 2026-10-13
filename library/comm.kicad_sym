@@ -6723,7 +6723,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MLPD6"
+		(property "Footprint" "Jonas:Skyworks_SKY13587-378LF"
 			(at 10.16 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)

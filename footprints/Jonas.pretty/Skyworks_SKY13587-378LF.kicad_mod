@@ -1,0 +1,299 @@
+(footprint "Skyworks_SKY13587-378LF"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/MLPD6 (pads unchanged, used on Sting2); outline, courtyard and fab rebuilt to KLC in 2026-10. Skyworks SKY13587-378LF SPDT switch, MLPD-6 with EP; body from the old silk outline")
+	(tags "RF switch Skyworks SKY13587 MLPD")
+	(property "Reference" "REF**"
+		(at -0.15 -1.95 0)
+		(layer "F.SilkS")
+		(uuid "3d3e373f-7d6c-4169-a869-5b0c8ebffc37")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Skyworks_SKY13587-378LF"
+		(at -0.15 1.82 0)
+		(layer "F.Fab")
+		(uuid "8042bc37-a53a-40c8-98cc-2a536aa3a812")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "14fbf804-4dbf-4146-8487-fb26ce8afa5b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "42c8802d-cd1a-4204-a54f-927101d778b5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.8 -0.3)
+		(end -0.5 -0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dc69d95b-2caf-4ad1-8312-153c248d2995")
+	)
+	(fp_line
+		(start -0.5 -0.6)
+		(end 0.8 -0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "23545089-6782-49ca-aae4-188b2122f528")
+	)
+	(fp_line
+		(start 0.8 -0.6)
+		(end 0.8 0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1c0a8e75-6107-4649-a54a-91a230915f93")
+	)
+	(fp_line
+		(start 0.8 0.6)
+		(end -0.8 0.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2e2eb190-396f-49e1-8199-f6b619b1ce24")
+	)
+	(fp_line
+		(start -0.8 0.6)
+		(end -0.8 -0.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "49914971-7c56-43a0-8f86-05b376ba5a8e")
+	)
+	(fp_line
+		(start -0.91 -0.71)
+		(end -0.335 -0.71)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f92ed38d-1fab-4436-9406-92bc608200e7")
+	)
+	(fp_line
+		(start 0.335 -0.71)
+		(end 0.91 -0.71)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c96eb1ed-22d4-4be4-aa1d-df3a041c4506")
+	)
+	(fp_line
+		(start 0.91 -0.71)
+		(end 0.91 0.71)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5cb4a53e-5252-4f66-8444-612dffc3f5e6")
+	)
+	(fp_line
+		(start -0.91 0.71)
+		(end -0.335 0.71)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "79d9a1b1-48e1-4666-8dc7-c5dfb757dd66")
+	)
+	(fp_line
+		(start 0.335 0.71)
+		(end 0.91 0.71)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "896450e0-3c52-4d04-9121-e3a5a2c97293")
+	)
+	(fp_line
+		(start -0.91 -0.71)
+		(end -0.91 0.71)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9bc8011f-4d81-420a-866d-bbb314b7a7fd")
+	)
+	(fp_circle
+		(center -1.15 -0.95)
+		(end -1.05 -0.95)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "9b7c147e-7393-4c39-8eb9-668f23c8e66b")
+	)
+	(fp_rect
+		(start -1.35 -1.15)
+		(end 1.05 1.02)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "3b291917-946e-4a35-b3fc-c8b6cdd7e862")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "3ea851e0-2596-484f-9cd5-3f93631b66ae")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.485 -0.35)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "104ce4e4-ea03-4343-86bf-fbf8df33012b")
+	)
+	(pad "2" smd rect
+		(at -0.485 0)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5deba061-f2cf-44d0-9219-e02c221ca8ad")
+	)
+	(pad "2" smd rect
+		(at -0.2 0 180)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ba51334e-77c9-4dd0-9291-428cfd1fb4cf")
+	)
+	(pad "2" smd rect
+		(at -0.075 -0.075 45)
+		(size 0.2 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8adc2b1e-3805-4cf4-9f22-3f76743c003d")
+	)
+	(pad "2" smd rect
+		(at -0.075 0.075 135)
+		(size 0.2 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "086f2d5c-ea78-4b8c-b0b9-daaa6fd5c1d8")
+	)
+	(pad "2" smd rect
+		(at 0 -0.6 90)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c488cde0-a125-4729-8e39-10cc65802e6e")
+	)
+	(pad "2" smd rect
+		(at 0 -0.3 90)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c3df5d53-4130-45ac-989e-7539a8cc69aa")
+	)
+	(pad "2" smd rect
+		(at 0 0 90)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b5063580-9136-444a-9c6c-7c4d6d73343b")
+	)
+	(pad "2" smd rect
+		(at 0 0.3 90)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b23832da-5d8d-4dd7-bbcc-3db3653586f0")
+	)
+	(pad "2" smd rect
+		(at 0 0.6 90)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c3dd5698-bc67-4cb2-992b-cad46c6e7a87")
+	)
+	(pad "2" smd oval
+		(at 0.025 0 90)
+		(size 0.4 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "72a7023c-1d19-4fa6-be09-a8f06925233e")
+	)
+	(pad "3" smd rect
+		(at -0.485 0.35)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0d18c897-c54d-407f-b9ea-673bbedb701c")
+	)
+	(pad "4" smd rect
+		(at 0.485 0.35)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "5fc0bc56-e095-490c-a76d-2be7d6f8d473")
+	)
+	(pad "5" smd rect
+		(at 0.485 0)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "94a3e471-9654-44a6-82cc-0856e816b778")
+	)
+	(pad "6" smd rect
+		(at 0.485 -0.35)
+		(size 0.33 0.15)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "dc355ef9-c848-44a0-b450-f8e77b50bcbb")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Skyworks_SKY13587-378LF.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
