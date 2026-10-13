@@ -203,7 +203,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:Fuse_1206_3216Metric"
+		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
 			(at -5.08 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2107,7 +2107,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:DSBGA12"
+		(property "Footprint" "Package_BGA:Maxim_WLP-12_2.008x1.608mm_Layout4x3_P0.4mm"
 			(at 10.16 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
