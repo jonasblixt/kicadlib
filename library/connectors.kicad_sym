@@ -168,7 +168,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Molex_0430450818"
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0818_2x04-1MP_P3.00mm_Vertical"
 			(at -29.21 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -402,25 +402,7 @@
 						)
 					)
 				)
-				(number "9"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin no_connect line
-				(at 2.54 -2.54 90)
-				(length 2.54)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
+				(number "MP"
 					(effects
 						(font
 							(size 1.27 1.27)
