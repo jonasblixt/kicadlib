@@ -7232,7 +7232,7 @@
 				)
 			)
 		)
-		(property "Footprint" "34826-8200"
+		(property "Footprint" "Jonas:JAE_MX34R36HF4T"
 			(at 8.89 -8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
