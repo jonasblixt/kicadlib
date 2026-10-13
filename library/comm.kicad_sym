@@ -345,7 +345,7 @@
 				)
 			)
 		)
-		(property "Footprint" "2450AT18B100"
+		(property "Footprint" "Jonas:Johanson_2450AT18B100"
 			(at 11.43 8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
