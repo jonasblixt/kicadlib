@@ -1,0 +1,213 @@
+(footprint "Molex_146200"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/molex_lte_ant_146200 (pads unchanged, used on Sting2); outline, courtyard and fab rebuilt to KLC in 2026-10. Molex 146200 LTE/cellular flex-free SMD antenna; body from the old silk outline; WRL model from the repo history (3dmodels/), old transform")
+	(tags "antenna LTE cellular Molex 146200")
+	(property "Reference" "REF**"
+		(at -0.15 -4.35 0)
+		(layer "F.SilkS")
+		(uuid "a45ce750-1c44-4146-b65c-97422f593351")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Molex_146200"
+		(at -0.15 4.05 0)
+		(layer "F.Fab")
+		(uuid "68523527-c3c7-46f7-9bce-84e8e2aa1966")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fca38d3f-3783-4cae-866f-dcd8eba4470c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "42b63f9a-f13a-42ab-9614-3400a6935245")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -21 -2)
+		(end -20 -3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e1c452a0-35b4-4b0c-bb02-f88b8a3ffb5c")
+	)
+	(fp_line
+		(start -20 -3)
+		(end 21 -3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "94ef6430-1c37-4ff9-8e2f-ae1296151c66")
+	)
+	(fp_line
+		(start 21 -3)
+		(end 21 3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0d16fbe3-aea6-49c0-bc06-d45d4d30e66b")
+	)
+	(fp_line
+		(start 21 3)
+		(end -21 3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e7cd77b1-c4fe-464c-b0e5-4a5cc1456b1f")
+	)
+	(fp_line
+		(start -21 3)
+		(end -21 -2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9a79bff7-a7bc-4407-ab17-f6fc0cfba120")
+	)
+	(fp_line
+		(start -21.11 -3.11)
+		(end 21.11 -3.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "69bb51da-04e2-4ba0-b8bb-01cec016d5c8")
+	)
+	(fp_line
+		(start 21.11 -3.11)
+		(end 21.11 3.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0fbf1e53-47a1-41c5-aa9d-917df839071b")
+	)
+	(fp_line
+		(start -21.11 3.11)
+		(end 21.11 3.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "874f5782-3426-41c0-9b71-d76655564288")
+	)
+	(fp_line
+		(start -21.11 -3.11)
+		(end -21.11 3.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2c13eeba-c691-45f9-a31f-5aaddbf1967a")
+	)
+	(fp_circle
+		(center -21.35 -3.35)
+		(end -21.25 -3.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "46aa4d73-08b6-4dd0-af53-be0f4b40149b")
+	)
+	(fp_rect
+		(start -21.55 -3.55)
+		(end 21.25 3.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "1574accf-46ae-4bd3-88f3-ed151eaf8e56")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "54e06d1a-b6d2-4a30-bffb-5863e25611f5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" smd rect
+		(at -19 0)
+		(size 2 5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2324aab9-f7b4-4d39-ad6b-bc992f21c53c")
+	)
+	(pad "" smd rect
+		(at 19 0)
+		(size 2 5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "00722ec0-ecb2-484e-99b2-a55b0a939780")
+	)
+	(pad "1" smd rect
+		(at -13.1 -1.5)
+		(size 1 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "95ff3178-2c87-40d4-ae6d-626ce2708d73")
+	)
+	(pad "2" smd rect
+		(at -11.1 -1.5)
+		(size 1 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "23c82fb8-9825-40f0-9164-f66530325865")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Molex_146200.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 0.3937 0.3937 0.3937)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
