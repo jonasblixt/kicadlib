@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "SMD-4 (DIP-4 gull wing), 2.54mm pitch, 10.16mm lead span (Vishay VO618A-3X017T optocoupler); IPC-7351 name")
+	(tags "optocoupler SMD 4 2.54mm Vishay VO618A")
 	(property "Reference" "REF**"
 		(at -0.251195 -3.491565 0)
 		(layer "F.SilkS")
@@ -150,6 +152,28 @@
 		(fill no)
 		(layer "F.Fab")
 		(uuid "d2fd2ef7-c4ab-4804-bc56-f2571cc92898")
+	)
+	(fp_rect
+		(start -2.8 -2.3)
+		(end 2.8 2.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "90dda236-0811-410b-bf3b-296d9921e9d8")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "c2dfd56a-363a-4b3e-93e1-e66dc4b90bd6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
 	)
 	(pad "1" smd rect
 		(at -4.7 -1.27)
