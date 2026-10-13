@@ -8940,7 +8940,7 @@
 				)
 			)
 		)
-		(property "Footprint" "40p_header_2.54"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical"
 			(at -1.27 10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
