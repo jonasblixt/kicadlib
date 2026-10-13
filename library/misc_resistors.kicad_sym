@@ -24,7 +24,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "1kΩ"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -186,7 +186,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "0Ω"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -348,7 +348,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "0Ω"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -510,7 +510,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "0Ω"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -672,7 +672,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "0Ω"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -834,7 +834,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "0Ω"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -996,7 +996,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "0Ω"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1158,7 +1158,7 @@
 				)
 			)
 		)
-		(property "Value" "10"
+		(property "Value" "10Ω"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1320,7 +1320,7 @@
 				)
 			)
 		)
-		(property "Value" "R2512_12M_1_1W_Vishay_CRHV"
+		(property "Value" "12MΩ"
 			(at 0 0 90)
 			(show_name no)
 			(do_not_autoplace no)
