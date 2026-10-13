@@ -6032,7 +6032,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:LFBGA289"
+		(property "Footprint" "Package_BGA:LFBGA-289_14x14mm_Layout17x17_P0.8mm"
 			(at 22.86 209.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12040,7 +12040,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LFBGA289"
+		(property "Footprint" "Package_BGA:MAPBGA-289_14x14mm_Layout17x17_P0.8mm"
 			(at 22.86 209.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40549,7 +40549,7 @@
 				)
 			)
 		)
-		(property "Footprint" "UFBGA144"
+		(property "Footprint" "Package_BGA:UFBGA-144_10x10mm_Layout12x12_P0.8mm"
 			(at -34.29 5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
