@@ -19505,7 +19505,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BGA-486_27x27_P0.5mm_14.0x14.0mm"
+		(property "Footprint" "Jonas:NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm"
 			(at 20.32 -12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29272,7 +29272,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BGA-486_27x27_P0.5mm_14.0x14.0mm"
+		(property "Footprint" "Jonas:NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm"
 			(at 20.32 -12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
