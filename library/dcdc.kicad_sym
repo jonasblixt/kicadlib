@@ -2308,7 +2308,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TI_LMX_SIL"
+		(property "Footprint" "Jonas:Texas_SIL0008G_MicroSiP-8_3x2.6mm"
 			(at -15.24 5.08 0)
 			(show_name no)
 			(do_not_autoplace no)

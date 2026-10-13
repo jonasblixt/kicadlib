@@ -1,0 +1,252 @@
+(footprint "Texas_SIL0008G_MicroSiP-8_3x2.6mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/TI_LMX_SIL (pads unchanged); outline, courtyard and fab rebuilt to KLC in 2026-10. TI SIL0008 MicroSiP-8 power module, 3.00x2.60mm (LMZ10501 data sheet), LMZ10501")
+	(tags "MicroSiP uSiP SIL0008 LMZ10501 TI")
+	(property "Reference" "REF**"
+		(at -0.15 -2.65 0)
+		(layer "F.SilkS")
+		(uuid "3bb0384a-325d-437d-95bb-6a263fa9ae60")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Texas_SIL0008G_MicroSiP-8_3x2.6mm"
+		(at -0.15 2.35 0)
+		(layer "F.Fab")
+		(uuid "c73778be-7f28-4305-9265-780e50ad9b5c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c53a6a69-7b5b-42a0-aa76-c55d22a3c4af")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7ae787a0-1be7-41d2-ad0b-9023106a2c8f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.5 -0.65)
+		(end -0.85 -1.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0d6a301b-ed2d-4c18-931f-ffcfdc40ec53")
+	)
+	(fp_line
+		(start -0.85 -1.3)
+		(end 1.5 -1.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "dec6aefb-3b4e-45f7-b561-6d9be79c584e")
+	)
+	(fp_line
+		(start 1.5 -1.3)
+		(end 1.5 1.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1c0ef5dc-ca42-4f5d-8919-f0d6ee655b39")
+	)
+	(fp_line
+		(start 1.5 1.3)
+		(end -1.5 1.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a985e206-ecc4-43e6-8cb6-f7078fd8a6c5")
+	)
+	(fp_line
+		(start -1.5 1.3)
+		(end -1.5 -0.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "64febe0c-7b7b-4e3c-9d3e-e748b66f498b")
+	)
+	(fp_line
+		(start -1.61 -1.41)
+		(end 1.61 -1.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f4d775b9-1b72-4545-8048-07031ea5e66f")
+	)
+	(fp_line
+		(start 1.61 -1.41)
+		(end 1.61 1.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3c10ae28-dddd-4dc4-8e49-5c555e27a284")
+	)
+	(fp_line
+		(start -1.61 1.41)
+		(end 1.61 1.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e7c7e657-9897-4680-a217-7425a959f915")
+	)
+	(fp_line
+		(start -1.61 -1.41)
+		(end -1.61 1.41)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "26200004-0ba4-41f3-89d5-d58d506ac5de")
+	)
+	(fp_circle
+		(center -1.85 -1.65)
+		(end -1.75 -1.65)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "07fad073-63d9-4e89-8d41-05799eb93021")
+	)
+	(fp_rect
+		(start -2.05 -1.85)
+		(end 1.75 1.55)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "fd2898c7-5d0d-4d13-badc-fc0aed36c223")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "923dff2f-b38b-420b-acbb-70f48db1c26b")
+		(effects
+			(font
+				(size 0.85 0.85)
+				(thickness 0.128)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.96 -0.975)
+		(size 0.6 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "18c4f93e-7abd-4e9f-992f-41743b38eb07")
+	)
+	(pad "2" smd roundrect
+		(at -0.96 -0.325)
+		(size 0.6 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "37a3efa5-42bb-4fc7-9891-6e50e971d562")
+	)
+	(pad "3" smd roundrect
+		(at -0.96 0.325)
+		(size 0.6 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "cad1512a-851e-4c2b-914b-c2d6944982bb")
+	)
+	(pad "4" smd roundrect
+		(at -0.96 0.975)
+		(size 0.6 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "ff08b8bb-e25b-4d01-b110-27660e2416db")
+	)
+	(pad "5" smd roundrect
+		(at 0.96 0.975)
+		(size 0.6 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "768ec6b5-678e-4e08-900c-acddcde6fd2a")
+	)
+	(pad "6" smd roundrect
+		(at 0.96 0.325)
+		(size 0.6 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "8c30ccf7-d31a-4179-bb87-43d55dc8a4cb")
+	)
+	(pad "7" smd roundrect
+		(at 0.96 -0.325)
+		(size 0.6 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "1c09221b-3ba9-41c4-b628-f59195b1b449")
+	)
+	(pad "8" smd roundrect
+		(at 0.96 -0.975)
+		(size 0.6 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "8573e3df-51f4-4fd8-bb9c-cca0ed727a4a")
+	)
+	(pad "9" smd roundrect
+		(at 0 0 90)
+		(size 2.25 0.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "8ba1a349-223e-436e-b6af-b3543461d6ef")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Texas_SIL0008G_MicroSiP-8_3x2.6mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
