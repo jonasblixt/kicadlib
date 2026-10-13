@@ -684,6 +684,7 @@ Config and docs:
   - [x] cpu (4 symbols, 3 footprints): `55ac534`..`8574f99`. Pads identical to `modules/`; DRC 0.
   - [x] Audio Amp + power (TAS2770, bq27742-G1): `02b16d4`..`d449ba1`. Pads identical to `modules/`.
   - [x] interface (4 symbols, 2 footprints): `99f417b`, `32ef941`. Vendor models from modules/packages3d. Pads identical to `modules/`; DRC 0.
+  - [x] comm (10 symbols, 10 footprints): `130c9c1`..`a15f9e3`. Pads identical to `modules/`; per-footprint DRC 0 (old versions had 19 silk-over-pad hits).
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
@@ -712,6 +713,16 @@ listed here for a manual check in KiCad. Tick when reviewed.
 - [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm` (bq27742-G1) - migrated, pads unchanged; body per TI 4219381/A - `d449ba1`
 - [ ] `Everlight_PLR135_PLT133` (PLR135_T10, PLT133_T10W) - migrated, pads unchanged (the two old footprints were identical); body from old silk; vendor model with the old transform, eyeballed top/side - `99f417b`
 - [ ] `Toshiba_TORX1355_TOTX1350` (TORX1355, TOTX1350) - migrated, pads unchanged; body from old silk; vendor model (toslink.step) with the old transform, eyeballed top/side - `32ef941`
+- [ ] `Molex_146200` - migrated, pads unchanged; body from old silk; WRL model, old transform - `1cb696c`
+- [ ] `Johanson_2450AT18B100` - migrated, pads unchanged (= Johanson B100 land); body 3.2x1.6 - `462565d`
+- [ ] `Avago_ALM-GA001` - migrated from uDFN6_EP, pads unchanged; body from old silk - `375d3e6`
+- [ ] `TDK_ANT016008LCD1575MA1` - migrated, pads unchanged; body 1.6x0.8 - `b61a185`
+- [ ] `TDK_DPX162500DT` - migrated from DPX1625, pads unchanged; body 1.6x0.8 - `9e462f4`
+- [ ] `TDK_HHM22106C1` - migrated, pads unchanged; body 2.2x2.0 from old silk (may be larger than the real part, check) - `c0611a7`
+- [ ] `Skyworks_SKY13587-378LF` - migrated from MLPD6, pads unchanged; body from old silk - `40804f5`
+- [ ] `Taoglas_WLA.01` - migrated, pads unchanged (= Gateway/LED Device boards); WRL model, old transform - `9f56273`
+- [ ] `JAE_MM60-52B1_Mini-PCIe` (mPCIe_modem) - migrated, pads unchanged; three WRL models (socket, holder, card), old transforms - `eb7f7ed`
+- [ ] `ublox_LARA-R2` - migrated from LARA_R2_LGA (symbol linked a non-existent name), pads unchanged; WRL model, old transform - `a15f9e3`
 
 ### 3D models
 
@@ -730,6 +741,12 @@ listed here for a manual check in KiCad. Tick when reviewed.
 - [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm.step` - plain body, height 1.2 ASSUMED - `55ac534`
 - [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm.step` - plain body, 1.0 per TI drawing - `02b16d4`
 - [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm.step` - plain body, 0.625 per TI drawing - `02b16d4`
+- [ ] `Johanson_2450AT18B100.step` - plain body, 1.3 per Johanson spec - `130c9c1`
+- [ ] `Avago_ALM-GA001.step` - plain body, height 0.75 ASSUMED - `130c9c1`
+- [ ] `TDK_ANT016008LCD1575MA1.step` - plain body, height 0.5 ASSUMED - `130c9c1`
+- [ ] `TDK_DPX162500DT.step` - plain body, height 0.6 ASSUMED - `130c9c1`
+- [ ] `TDK_HHM22106C1.step` - plain body, height 0.6 ASSUMED - `130c9c1`
+- [ ] `Skyworks_SKY13587-378LF.step` - plain body, height 0.45 ASSUMED - `130c9c1`
 
 ## Open questions
 
