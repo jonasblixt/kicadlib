@@ -1587,7 +1587,7 @@
 				)
 			)
 		)
-		(property "Footprint" "VQFN_HR_22"
+		(property "Footprint" "Jonas:Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm"
 			(at 7.62 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
