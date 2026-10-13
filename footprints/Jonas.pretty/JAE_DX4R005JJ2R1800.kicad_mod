@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Migrated from modules/footprints.pretty/the Blixten Gateway/LED Device board copy of USB_Micro-B (pads unchanged; it numbers both shield pads on the +x side 6, where modules/ had 7); outline, courtyard and fab rebuilt to KLC in 2026-10. JAE DX4R005JJ2R1800 micro USB B receptacle; vendor STEP (K3D-DX4R005JJ2-V3)")
+	(descr "Migrated from modules/footprints.pretty/USB_Micro-B (pads unchanged: shield pads 6 on -x, 7 on +x, as the symbol has them; the Blixten Gateway/LED Device board copies numbered all four 6); outline, courtyard and fab rebuilt to KLC in 2026-10. JAE DX4R005JJ2R1800 micro USB B receptacle; vendor STEP (K3D-DX4R005JJ2-V3)")
 	(tags "USB micro B receptacle JAE DX4R005")
 	(property "Reference" "REF**"
 		(at -0.03 -3.94 0)
@@ -240,7 +240,7 @@
 		(remove_unused_layers no)
 		(uuid "684e1e1f-2cf9-47f1-9665-56492eb54673")
 	)
-	(pad "6" thru_hole circle
+	(pad "7" thru_hole circle
 		(at 2.4991 -1.56254 90)
 		(size 1.25 1.25)
 		(drill 0.85)
@@ -248,7 +248,7 @@
 		(remove_unused_layers no)
 		(uuid "78dda9c6-39f9-4d32-bd7f-19d3ba454765")
 	)
-	(pad "6" thru_hole circle
+	(pad "7" thru_hole circle
 		(at 3.4991 1.13746 90)
 		(size 1.55 1.55)
 		(drill 1.15)
