@@ -618,8 +618,8 @@ Config and docs:
       projects first, generate the rest; every generated footprint/model
       goes on the F8 review list). Sources searched: `modules/`, git
       history (3,072 model files ever committed), and the old projects
-      Snigel2, Sting2/Schematic, Vektor and Blixten Gateway on Y: (129
-      model files, 3 boards). "Built" = the footprint is on that project's
+      Snigel2, Sting2/Schematic, Vektor, Blixten Gateway and Blixten LED
+      Device on Y: (129 model files, 4 boards). "Built" = the footprint is on that project's
       board; in every case but the ones noted in the text below, the
       board's embedded copy is pad-for-pad identical to `modules/`.
 
@@ -633,14 +633,14 @@ Config and docs:
   | DPX162500DT-8014A1 | `DPX1625` | Sting2 | **generate** |
   | HHM22106C1 | `HHM22106C1` | Sting2 | **generate** |
   | SKY13587-378LF | `MLPD6` | Sting2 | **generate** |
-  | WLA.01 | `WLA.01` | Gateway | git history `wla.01.wrl` |
+  | WLA.01 | `WLA.01` | Gateway, LED Device | git history `wla.01.wrl` |
   | mPCIe_modem | `mPCIe` | - | git history `MPCI.STEP` |
   | 0781715006 | `78171-5006` | - | git history `781715006.stp` |
   | 34826-8200 | `34826-8200` | Sting2 | git history `348260200.stp` |
   | 5-104074-8 | `5-104074-8` | Snigel2 | old project `ampmodu_5-104074-8.wrl` |
-  | DX4R005JJ2R1800 | `USB_Micro-B` | Gateway | git history `K3D-DX4R005JJ2-V3_JAE_Proprietary.STEP` |
+  | DX4R005JJ2R1800 | `USB_Micro-B` | Gateway, LED Device | git history `K3D-DX4R005JJ2-V3_JAE_Proprietary.STEP` |
   | RJE72-188-1401 | `RJE72-188-1401` | Gateway | git history `M-RJE72-188-1X01-REVT1.STEP` |
-  | TFM-105-02-S-D-WT | `TFM-105-02-S-D-WT` | Snigel2 | git history `TFM-105-02-S-D-WT.stp` |
+  | TFM-105-02-S-D-WT | `TFM-105-02-S-D-WT` | Snigel2, LED Device | git history `TFM-105-02-S-D-WT.stp` |
   | TFM-110-02-S-D-WT | `TFM-110-02-S-D-WT` | Gateway, Sting2 | git history `TFM-110-02-S-D-WT.stp` |
   | USB_A_292303-1 | `USB_A_TH` | Snigel2 | repo `c-292303-1-e4-3d.stp` |
   | fakra x4 | `fakra_th` | Sting2 | git history `fakra_green_734035114.stp` |
@@ -670,7 +670,8 @@ Config and docs:
   data sheet check): `FQFN34-24` (MIC28511, Snigel2: pads up to 0.23 mm
   apart), `VQFN_HR_22` (LM536355, Sting2: exposed-pad shapes),
   `TFM-110-02-S-D-WT` (Sting2 differs, Gateway matches `modules/`),
-  `USB_Micro-B` (JAE DX4R005, Gateway), `WLA.01` (Gateway), `5-104074-8`
+  `USB_Micro-B` (JAE DX4R005) and `WLA.01` (Gateway and LED Device
+  copies identical to each other, both differ from `modules/`), `5-104074-8`
   (Snigel2). LARA-R2 moves from N to M: `modules/LARA_R2_LGA` exists (the
   symbol linked a wrong name) and is on the Sting2 board.
   Stock candidates from the 2026-10-13 recheck (LMZ10501 → TI SIL0008D,
