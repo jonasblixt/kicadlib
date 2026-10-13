@@ -2454,7 +2454,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "IHLP1212"
+		(property "Footprint" "Jonas:IHLP1212BZ"
 			(at 0.9652 -3.81 0)
 			(show_name no)
 			(do_not_autoplace no)

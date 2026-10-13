@@ -13258,7 +13258,7 @@
 				)
 			)
 		)
-		(property "Footprint" "jonas:Wurth_7499210123"
+		(property "Footprint" "Jonas:Wurth_7499210123"
 			(at 21.59 8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
