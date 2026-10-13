@@ -15,7 +15,7 @@
 			)
 		)
 	)
-	(property "Value" "Eaton_KW_21.5x9.5mm"
+	(property "Value" "Eaton_KW_13.5x8.8mm"
 		(at 0 1 0)
 		(unlocked yes)
 		(layer "F.Fab")
