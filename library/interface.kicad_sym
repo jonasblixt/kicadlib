@@ -3174,7 +3174,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PLR135_T10"
+		(property "Footprint" "Jonas:Everlight_PLR135_PLT133"
 			(at 10.16 -7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3398,7 +3398,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PLT133_T10W"
+		(property "Footprint" "Jonas:Everlight_PLR135_PLT133"
 			(at 10.16 -7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
