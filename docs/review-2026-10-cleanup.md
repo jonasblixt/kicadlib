@@ -32,20 +32,53 @@ Suggested order: A1 → A2 + A3 → A4 → A5 → (optional) A6.
 
 ## A1. Safe deletions (nothing references these)
 
-- [ ] **A1.1** Delete unreferenced 3D models in `modules/packages3d/`:
-      427 of 461 files, ~233 MB (`.step` ×394, `.stp` ×11, `.FCStd`/`.FCStd1`
-      ×20, `.igs`, `.pdf`). The 34 referenced ones are migrated in A2 and the
-      rest of `modules/` goes in A2.6.
-- [ ] **A1.2** `git rm -r footprints/Jonas.pretty/tmp/` — 40 KiCad-4-era
+A1.1–A1.5 landed together in the commit "Remove unreferenced files
+(A1.1–A1.5)". Everything removed is recoverable from history (e.g.
+`git show ebab8c3:<path>`).
+
+- [x] **A1.1** Delete unreferenced 3D models in `modules/packages3d/`:
+      ~~427 of 461 files, ~233 MB~~. Done: **371 of 461 files, 176 MB**
+      removed (old KiCad-stock package copies, displays, switches, unrelated
+      vendor parts). 90 kept:
+  - 62 referenced by a footprint in `modules/footprints.pretty` or
+    `Jonas.pretty` (matched by file stem, so a `.step` next to a referenced
+    `.wrl` stays). The original "34" undercounted: it missed paths
+    containing spaces (`User Library-*`, `Download_STP_* (rev1).stp`).
+  - 28 not referenced but useful to the footprint plan
+    (`review-2026-10-footprints.md` M/N/D/S+sym rows, F4.5, F5.5): vendor
+    STEPs `781715006`, `348260200`, `fakra_green_734035114`,
+    `M-RJE72-188-1X01-REVT1`, `M-RJHSE-X38X-02-REVT1` (+ `.FCStd`),
+    `TFM-110-02-S-D-WT`, `User Library-LFCSP_VQ88(CP-88-5)`,
+    `User Library-torx-ph-iso7045`, `c-1-1825027-1-g1-3d`, `keystone_pn54`,
+    `K3D-MM60-52B1-G1-V1_JAE_Proprietary.igs`, `MPCI`/`mpci_modem.fcstd`,
+    `Maxim_WLP-12`, `DSBGA-12_3x4_1.36x1.86mm_Pitch0.5mm`, `R-PWSON-N12`,
+    `SW_Tactile_SPST_Angled_PTS645Vx31-2LFS`; FreeCAD sources
+    `217LFBGA`, `9YZF`, `YJE`, `lara_r2`,
+    `LTE_antenna_molex_146200-001` (`.FCStd` + `.FCStd1`).
+  - The rest of `modules/` goes in A2.6.
+- [x] **A1.2** `git rm -r footprints/Jonas.pretty/tmp/` — 40 KiCad-4-era
       copies (`C_0402`, `CP_Elec_8x5.4`, `LFBGA289`, ...). Not a registered
-      library.
-- [ ] **A1.3** `git rm -r scripting/old_stuff/` — 24 files (old `.lib`
+      library. The stock matches that used `tmp/DHC16` and
+      `tmp/DFN-10-1EP_3x3mm_Pitch0.5mm` as their geometry are already
+      recorded in `review-2026-10-footprints.md`.
+- [x] **A1.3** `git rm -r scripting/old_stuff/` — 24 files (old `.lib`
       importer, DRC script, pinout generators). Recoverable from history.
 - [ ] **A1.4** `git rm library/LEDs.bak` (tracked despite `*.bak` in
       `.gitignore`) and delete the 13 other local `library/*.bak` files.
-- [ ] **A1.5** Delete unreferenced models in `footprints/Jonas.3dshapes/`:
+      `LEDs.bak` removed from git. The 12 other `.bak` files are untracked
+      and ignored, and were left on disk for Jonas to delete
+      (`rm library/*.bak`). Checked first: each is KiCad's "one save ago"
+      copy and holds no symbol that the current library lacks.
+      (`LEDs.bak`'s 20 Rohm SML-P1 LEDs are in `82a09c4`.)
+- [x] **A1.5** Delete unreferenced models in `footprints/Jonas.3dshapes/`:
       the 14 `C_Panasonic_ECHU_*.wrl` files and `C_Murata_GA3_5.7x2.8.wrl`
-      (footprints reference the `.step` versions).
+      (footprints reference the `.step` versions, which are all present).
+- [ ] **A1.8** (new) `scripting/gen_ndk_footprints.py` copies its NX2520SA
+      model from `modules/packages3d/"User Library-Crystal NDK NX2520SA
+      series.step"`, so A2.6 breaks it. Before A2.6, point `SRC_MODEL` at
+      `footprints/Jonas.3dshapes/NX2520SA.step` (or drop the copy step).
+      Also, both `gen_ndk_footprints.py` and `gen_ihlp_footprints.py`
+      hard-code the Cowork path `~/mnt/kicadlib/`. Make them repo-relative.
 - [ ] **A1.6** `data/cap_film_wima_pps.csv` has no importer/library.
       Delete, or keep if a WIMA library is planned (then note it here).
 - [ ] **A1.7** Decide on `simulation/` (35 MB, 427 AccuP `.s2p` files) and
@@ -198,7 +231,7 @@ of them on migration.
       `modules/packages3d` into `Jonas.3dshapes` for footprints that move.
 - [ ] **A2.5** Re-run the audit: zero symbols may reference `footprints:`,
       a bare name, or a missing `Jonas:` footprint.
-- [ ] **A2.6** `git rm -r modules/`.
+- [ ] **A2.6** `git rm -r modules/` (after A1.8).
 
 ## A3. Other broken footprint/model links
 

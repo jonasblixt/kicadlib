@@ -54,8 +54,8 @@ Proposed outcome for the symbols that need a footprint:
 | New footprint from datasheet (N) | 9 | 9 |
 
 So of the 152 footprints in `modules/footprints.pretty` (+40 in
-`Jonas.pretty/tmp/`), **31 move** into `Jonas.pretty`; the rest are either
-replaced by stock or unused.
+`Jonas.pretty/tmp/`, since removed by A1.2), **31 move** into
+`Jonas.pretty`; the rest are either replaced by stock or unused.
 
 ## F1. Bugs that exist today (independent of the migration)
 
@@ -373,8 +373,8 @@ out). "Twin" = pads identical within 0.1 mm.
 
 `Jonas.3dshapes` itself is healthy: all 45 STEP files are B-Rep, none CSG.
 
-- [ ] **F5.1** Orphans: the 15 `.wrl` files (A1.5) and the untracked
-      `614105150721 (rev1).stp`. The stock footprint
+- [ ] **F5.1** Orphans: ~~the 15 `.wrl` files~~ (removed, A1.5) and the
+      untracked `614105150721 (rev1).stp`. The stock footprint
       `USB_Micro-B_Wuerth_614105150721_Vertical` references a model that is
       missing from this KiCad install (see F5.4), which is probably why it
       was downloaded.
@@ -395,7 +395,11 @@ out). "Twin" = pads identical within 0.1 mm.
       Everlight PLR135 (also used by PLT133), Amphenol RJE72, Samtec
       TFM-105/-110, TE 292303-1, JAE DX4R005JJ2, Toshiba TOSLINK) — copy,
       rename, re-align (old offsets are KiCad-4 inches, WRLs scaled 0.3937;
-      use STEP at scale 1). The other 20 have no model. Proposal: ICs, BGAs
+      use STEP at scale 1). All 11 survived the A1.1 cleanup, as did a few
+      other models that may help (JAE MM60 mPCIe socket `.igs`, the `MPCI`
+      card STEP, FreeCAD sources for 217LFBGA/YZF/YJE/LARA-R2/146200, and
+      `348260200.stp` for Molex 34826); A1.1 lists them. The other 20 have
+      no model. Proposal: ICs, BGAs
       and QFNs get a generated body + pads via `scripting/step_brep_box.py`;
       connectors, antennas and modules get vendor STEPs (you download).
 - [ ] **F5.6** After F4/F5: render every `Jonas.pretty` footprint once and
@@ -449,8 +453,9 @@ Config and docs:
       render contact sheet.
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
-      `Jonas:` references; then `git rm -r modules/ footprints/Jonas.pretty/tmp/`
-      (A2.6, A1.2) and optionally A6.
+      `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
+      `git rm -r modules/` (A2.6) and optionally A6. (`Jonas.pretty/tmp/`
+      is already gone, A1.2.)
 - [ ] **F7.7** (optional) F6 field hygiene and F4.8 renames.
 
 ## Open questions
@@ -483,6 +488,6 @@ Config and docs:
 - A2.1 lists `LTC4267IDHC` (`DHC16`) as "not in modules": it exists in
   `Jonas.pretty/tmp/` (as does `DFN-10-1EP_3x3mm_Pitch0.5mm` for
   `LTC3447`, A3.1), which is also what the stock matches above were made
-  from.
+  from. (`tmp/` was later removed by A1.2; the files are in `ebab8c3`.)
 - A2.4: under this plan only 11 models from `modules/packages3d` are
   needed (F5.5), not ~34.
