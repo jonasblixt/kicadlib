@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "TI YJE 6-ball package, 1.15x2.2mm (TI CSD83325L dual N-channel MOSFET)")
+	(tags "TI YJE CSP CSD83325L")
 	(property "Reference" "${REFERENCE}"
 		(at 4.85 -0.05 0)
 		(layer "F.Fab")
