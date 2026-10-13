@@ -460,7 +460,7 @@
 				)
 			)
 		)
-		(property "Footprint" "0781710003"
+		(property "Footprint" "Connector_Molex:Molex_Pico-EZmate_78171-0003_1x03-1MP_P1.20mm_Vertical"
 			(at 0 12.7 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2182,7 +2182,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Molex_430450629"
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical"
 			(at 24.765 14.605 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4985,7 +4985,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:FTSH-105-01-F-DV-K"
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD"
 			(at 2.54 15.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7230,7 +7230,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MH_2.5mm"
+		(property "Footprint" "MountingHole:MountingHole_2.5mm"
 			(at 26.67 -16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10147,7 +10147,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TE_5103310_1"
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
 			(at 0 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
