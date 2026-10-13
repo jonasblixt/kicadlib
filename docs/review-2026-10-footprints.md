@@ -683,6 +683,7 @@ Config and docs:
   - [x] dcdc (7 symbols, 6 footprints): `ae9638e`..`4dfdfcd`. Pads verified identical to `modules/`; KiCad DRC shows only the original copper findings (EP via annular/drill, WLCSP pitch), silk findings went 68 -> 0.
   - [x] cpu (4 symbols, 3 footprints): `55ac534`..`8574f99`. Pads identical to `modules/`; DRC 0.
   - [x] Audio Amp + power (TAS2770, bq27742-G1): `02b16d4`..`d449ba1`. Pads identical to `modules/`.
+  - [x] interface (4 symbols, 2 footprints): `99f417b`, `32ef941`. Vendor models from modules/packages3d. Pads identical to `modules/`; DRC 0.
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
@@ -709,6 +710,8 @@ listed here for a manual check in KiCad. Tick when reviewed.
 - [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm` (i.MX 8M Mini/Nano) - migrated, pads unchanged incl. pads E23/J18 without a pin (F1.14) - `8574f99`
 - [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm` (TAS2770) - migrated, pads unchanged; body per TI 4223791/C. Note: original pads 2 and 26 are 0.19 mm apart (KiCad default clearance 0.2) - compare with TI's land pattern - `d1afb13`
 - [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm` (bq27742-G1) - migrated, pads unchanged; body per TI 4219381/A - `d449ba1`
+- [ ] `Everlight_PLR135_PLT133` (PLR135_T10, PLT133_T10W) - migrated, pads unchanged (the two old footprints were identical); body from old silk; vendor model with the old transform, eyeballed top/side - `99f417b`
+- [ ] `Toshiba_TORX1355_TOTX1350` (TORX1355, TOTX1350) - migrated, pads unchanged; body from old silk; vendor model (toslink.step) with the old transform, eyeballed top/side - `32ef941`
 
 ### 3D models
 
