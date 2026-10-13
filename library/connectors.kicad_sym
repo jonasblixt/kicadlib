@@ -1012,7 +1012,7 @@
 				)
 			)
 		)
-		(property "Footprint" "34826-8200"
+		(property "Footprint" "Jonas:Molex_34826-8200"
 			(at 7.62 16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
