@@ -1532,7 +1532,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DPX1625"
+		(property "Footprint" "Jonas:TDK_DPX162500DT"
 			(at 10.16 13.97 0)
 			(show_name no)
 			(do_not_autoplace no)
