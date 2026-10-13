@@ -32,8 +32,8 @@ Suggested order: A1 → A2 + A3 → A4 → A5 → (optional) A6.
 
 ## A1. Safe deletions (nothing references these)
 
-A1.1–A1.5 landed together in the commit "Remove unreferenced files
-(A1.1–A1.5)". Everything removed is recoverable from history (e.g.
+A1.1–A1.5 landed together in `c1fcbcf` ("Remove unreferenced files
+(A1.1–A1.5)"). Everything removed is recoverable from history (e.g.
 `git show ebab8c3:<path>`).
 
 - [x] **A1.1** Delete unreferenced 3D models in `modules/packages3d/`:
