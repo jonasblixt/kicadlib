@@ -2665,7 +2665,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "L0806"
+		(property "Footprint" "Inductor_SMD:L_Murata_LQH2MCNxxxx02_2.0x1.6mm"
 			(at 0.9652 -3.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3535,7 +3535,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:Ethernet_trafo_so16w"
+		(property "Footprint" "Transformer_SMD:Transformer_Ethernet_Bourns_PT61017PEL"
 			(at 15.24 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
