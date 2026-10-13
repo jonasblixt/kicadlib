@@ -60,46 +60,68 @@ So of the 152 footprints in `modules/footprints.pretty` (+40 in
 ## F1. Bugs that exist today (independent of the migration)
 
 These are wrong in the current library and affect any board made from it.
-Smallest, highest-value batch — do first.
+Smallest, highest-value batch — do first. Batch 1 (2026-10-13) landed one
+commit per action; the hash is on each ticked line.
 
-- [ ] **F1.1** `logic/SN74AHC1G00DCKR`: the GND pin is numbered **2**,
+- [x] **F1.1** `logic/SN74AHC1G00DCKR`: the GND pin is numbered **2**,
       same as input B. GND gets netlisted onto B and pad 3 floats.
-      → renumber GND to 3.
-- [ ] **F1.2** `comm/mPCIe_modem`: `PERST#` is pin **21**, which is also a
-      GND pin (mini-PCIe has PERST# on 22). → renumber to 22.
-- [ ] **F1.3** `comm/TJA1042TK_3`: footprint is a 0.5 mm-pitch DFN-8; the
+      → renumber GND to 3. — `4912daf`
+- [x] **F1.2** `comm/mPCIe_modem`: `PERST#` is pin **21**, which is also a
+      GND pin (mini-PCIe has PERST# on 22). → renumber to 22. — `98e3305`
+- [x] **F1.3** `comm/TJA1042TK_3`: footprint is a 0.5 mm-pitch DFN-8; the
       HVSON8 package (SOT782-1) is 0.65 mm pitch. → stock
       `Package_SON:HVSON-8-1EP_3x3mm_P0.65mm_EP1.6x2.4mm` (made from the
-      TJA1051 datasheet, same package).
-- [ ] **F1.4** `dcdc/LTC4065-4.4`: `uDFN6_EP` is a 0.4 mm-pitch ~1.5 mm
+      TJA1051 datasheet, same package). — `c8e2330`
+- [x] **F1.4** `dcdc/LTC4065-4.4`: `uDFN6_EP` is a 0.4 mm-pitch ~1.5 mm
       package; LTC4065EDC is LTC's DC6 (2×2 mm, 0.5 mm). → stock
       `Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.5mm_EP0.61x1.42mm` (KiCad's DC6).
-- [ ] **F1.5** `logic/SN74AHC1G08`: MPN is `…DCK` (SC-70-5), footprint is
+      — `340f9ee`
+- [x] **F1.5** `logic/SN74AHC1G08`: MPN is `…DCK` (SC-70-5), footprint is
       SOT-23-5 (and `ki_fp_filters` already says SC70). → `SOT-353_SC-70-5`.
+      — `ff5e918`
 - [ ] **F1.6** `logic/SN74AVC4T774`: three different packages — MPN
       `…RGYR` (VQFN 3.5×4, 0.5 mm), `ki_fp_filters` `RSV`, footprint RSA
       (4×4, 0.65 mm). → decide; for RGY:
-      `Texas_RGY_R-PVQFN-N16_EP2.05x2.55mm`.
+      `Texas_RGY_R-PVQFN-N16_EP2.05x2.55mm`. Waiting on Jonas (open
+      question 2). Its EP (pad 17, F1.11) is handled together with this.
 - [ ] **F1.7** `connectors/MX34R36HF4T`: 36-pin symbol borrows the 20-pad
       `34826-8200` footprint (pins 21–36 have no pads). → new footprint.
-- [ ] **F1.8** `connectors/Header_2.54mm_10p` (Würth 61201021621): old
+- [x] **F1.8** `connectors/Header_2.54mm_10p` (Würth 61201021621): old
       footprint numbers pads DIP-style (1–5 down one row, 6–10 back up the
       other). Würth and the symbol use odd/even, so the pinout is scrambled
       against an IDC cable. → `Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical`
-      (pad positions identical).
-- [ ] **F1.9** `connectors/430450427`: old `Molex_430450427` numbering is
+      (pad positions identical). — `4b20c3a`
+- [x] **F1.9** `connectors/430450427`: old `Molex_430450427` numbering is
       rotated 180° relative to the latch pegs; the sibling
       `Molex_430450629` and KiCad stock agree with each other. → stock
       `Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical` (positions
       within 0.09 mm). Worth checking any board that used this connector.
-- [ ] **F1.10** `dcdc/MIC23150-55YMT`, `MIC23150-SYMT`: old footprint is
-      stock `Micrel_MLF-8-1EP_2x2mm_P0.5mm_EP0.6x1.2mm` **minus the ePad**.
-      → stock footprint + EP pin in the symbol (confirm in datasheet).
-- [ ] **F1.11** Exposed pads with no symbol pin (pad gets no net):
-      `power/LTC2941IDCB#TRMPBF` (pad 7), `power/MAX16058ATA31+` (9),
-      `logic/SN74AVC4T774` (17), `memory/25AA1024` and
-      `memory/MX25L12835F` (9), `memory/SIM-ST-MFF2` (9). → per
-      datasheet, add an EP pin (usually GND) or confirm "may float".
+      — `80f3675`
+- [x] **F1.10** `dcdc/MIC23150-55YMT`, `MIC23150-SYMT`: ~~old footprint
+      is stock `Micrel_MLF-8-1EP…` minus the ePad~~. **Corrected:** the
+      MIC23150 TDFN-8 (MM) has **no** exposed pad (Micrel datasheet rev
+      2.1: pin table p. 2, land pattern p. 17). The old footprint was an
+      exact twin of stock `Package_DFN_QFN:DFN-8_2x2mm_P0.5mm` (no EP), so
+      this was only a broken link. → that footprint, no symbol change.
+      — `4408e37`
+- [x] **F1.11** Exposed pads with no symbol pin (pad gets no net). Checked
+      each datasheet; a pin is added only where the pad must be connected.
+      — `2d6eb5a`
+  - `power/MAX16058ATA31+` (9): "Connect exposed pad to GND" → pin 9
+    added, hidden passive, stacked on GND (pin 2).
+  - `power/LTC2941IDCB#TRMPBF` (7): "Exposed Pad (Pin 7): Do not connect"
+    → no change; the symbol was already right.
+  - `memory/MX25L12835F` (9): Macronix: "leave the metal pad floating or
+    connect it to the same ground as the GND pin … Do not connect the
+    metal pad to any other voltage or signal line" → no change (floating
+    allowed). But see F1.16.
+  - `memory/25AA1024` (9): DS20001836J says nothing about the pad's
+    connection → no change. Its EP is 4.0×2.3 mm (not the 4×4 of the old
+    footprint); check against the S\* target `DFN-S-8-1EP_6x5mm_P1.27mm`
+    in F7.2.
+  - `memory/SIM-ST-MFF2` (9): Hologram's MFF2 pinout lists 8 pins and no
+    pad → no change.
+  - `logic/SN74AVC4T774` (17): with F1.6.
 - [ ] **F1.12** `connectors/TFM-110-02-S-D-WT`: symbol pins 21/22 have no
       pads (old footprint numbers its weld tabs `0`). → fix during migration.
 - [ ] **F1.13** `power/PT65503`: pin 2 is defined twice, named `2` and `C`.
@@ -108,6 +130,17 @@ Smallest, highest-value batch — do first.
       map during migration.
 - [ ] **F1.15** `memory/IS46DR16640B`: fp filter says `BGA84`, footprint is
       a 90-site BGA, so pads sit at depopulated sites. → check the ball map.
+- [ ] **F1.16** (new, found in batch 1) `memory/MX25L12835F`: MPN
+      `MX25L12835FZ2I-10G` is the **8-WSON 8×6 mm** package (Macronix
+      ordering code `Z2`; `ZN` is 6×5 mm), but the footprint is 6×5 mm. →
+      Jonas: is the part Z2I (then
+      `Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm`; the Macronix EP is
+      4.7×4.6, so the 3.4×4.3 land is inside it, while the other stock 8×6
+      footprint's 6×4.8 EP would overhang) or ZNI (then fix the MPN and use
+      a 6×5 WSON)? No project under `work/jonas/Projects` uses it.
+- [ ] **F1.17** (new) `connectors/Wurth_7499210123`: footprint pads 7 and
+      8 (through-hole) have no symbol pin. Check the Würth datasheet
+      whether they are NC; add NC pins or wire them.
 
 ## F2. Migration method
 
@@ -167,8 +200,8 @@ out). "Twin" = pads identical within 0.1 mm.
 | `connectors/430450427` | 430450427 | `Molex_430450427` | `Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical` | old numbering rotated 180 deg vs pegs |
 | `connectors/Header_2.54mm_10p` | 61201021621 | `footprints:61201021621` | `Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical` | old pads numbered DIP-style |
 | `dcdc/LTC4065-4.4` | LTC4065EDC-4.4#TRMPBF | `uDFN6_EP` | `Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.5mm_EP0.61x1.42mm` | LTC DC6; current is 0.4 mm pitch |
-| `dcdc/MIC23150-55YMT` | MIC23150-55YMT | `DFN-8_2x2mm_Pitch0.5mm` | `Package_DFN_QFN:Micrel_MLF-8-1EP_2x2mm_P0.5mm_EP0.6x1.2mm` | old lacks ePad |
-| `dcdc/MIC23150-SYMT` | MIC23150-SYMT | `DFN-8_2x2mm_Pitch0.5mm` | `Package_DFN_QFN:Micrel_MLF-8-1EP_2x2mm_P0.5mm_EP0.6x1.2mm` | old lacks ePad |
+| `dcdc/MIC23150-55YMT` | MIC23150-55YMT | `DFN-8_2x2mm_Pitch0.5mm` | `Package_DFN_QFN:DFN-8_2x2mm_P0.5mm` | twin; part has no ePad (F1.10, corrected) |
+| `dcdc/MIC23150-SYMT` | MIC23150-SYMT | `DFN-8_2x2mm_Pitch0.5mm` | `Package_DFN_QFN:DFN-8_2x2mm_P0.5mm` | twin; part has no ePad (F1.10, corrected) |
 | `logic/SN74AHC1G08` | SN74AHC1G08DCK | `TO_SOT_Packages_SMD:SOT-23-5` | `Package_TO_SOT_SMD:SOT-353_SC-70-5` | DCK part on SOT-23-5 |
 
 #### S - Stock twin - pads identical to the old footprint within 0.1 mm (no change vs. today) (29)
@@ -237,7 +270,7 @@ out). "Twin" = pads identical within 0.1 mm.
 | `logic/SN74LV1T126` | SN74LV1T126DCKR | `SOT-353_SC-70-5` | `Package_TO_SOT_SMD:SOT-353_SC-70-5` |  |
 | `memory/25AA1024` | 25AA1024-I/MF | `footprints:DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm` | `Package_DFN_QFN:DFN-S-8-1EP_6x5mm_P1.27mm` | Microchip MF |
 | `memory/IS62WV102416DBLL` | IS62WV102416DBLL-45TLI | `TSOP-I-48_18.4x12mm_P0.5mm` | `Package_SO:TSOP-I-48_18.4x12mm_P0.5mm` |  |
-| `memory/MX25L12835F` | MX25L12835FZ2I-10G | `DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm` | `Package_DFN_QFN:WDFN-8-1EP_6x5mm_P1.27mm_EP3.4x4mm` | 8-WSON; EP |
+| `memory/MX25L12835F` | MX25L12835FZ2I-10G | `DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm` | `Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm` if Z2I (8x6) is right, see F1.16 | 8-WSON; EP |
 | `misc_inductors/LQH2MCN100K02L` | LQH2MCN100K02L | `L0806` | `Inductor_SMD:L_Murata_LQH2MCNxxxx02_2.0x1.6mm` | old L0806 missing |
 | `misc_inductors/PT61018PEL` | PT61018PEL | `Jonas:Ethernet_trafo_so16w` | `Transformer_SMD:Transformer_Ethernet_Bourns_PT61017PEL` | sibling Bourns part |
 
@@ -445,7 +478,11 @@ Config and docs:
 
 ## F7. Proposed order
 
-- [ ] **F7.1** F1 bug fixes (symbols only, plus the FIX remaps).
+- [ ] **F7.1** F1 bug fixes (symbols only, plus the FIX remaps). Batch 1
+      done 2026-10-13 (`4912daf`..`248baee`): F1.1–F1.5, F1.8–F1.11 and
+      the two J link fixes; broken footprint links 113 → 104. Left:
+      F1.6 and F1.16 (need Jonas), F1.7 (new footprint), F1.12–F1.15
+      (during migration), F1.17.
 - [ ] **F7.2** Stock remaps: S, then S+sym, then S\* (datasheet check per
       row) — one commit per symbol library.
 - [ ] **F7.3** `Jonas.pretty` QA fixes (F4) and 3D cleanup (F5.1–F5.3).

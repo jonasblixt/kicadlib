@@ -240,10 +240,11 @@ of them on migration.
   - `dcdc/LTC3447` → `Housings_DFN_QFN:DFN-10-1EP_3x3mm_Pitch0.5mm` → `Package_DFN_QFN:`
   - `interface/TCA9535RGER` → `Housings_DFN_QFN:QFN-24-1EP_4x4mm_Pitch0.5mm` → `Package_DFN_QFN:`
   - `logic/SN74AHC1G08` → `TO_SOT_Packages_SMD:SOT-23-5` → `Package_TO_SOT_SMD:`
+    (done as `SOT-353_SC-70-5` instead, since it's the DCK part: footprints review F1.5, `ff5e918`)
   - `logic/SN74AUP1G97DCKR` → `TO_SOT_Packages_SMD:SC-70-6` → `Package_TO_SOT_SMD:`
   - `logic/SN74AUP2G04DCKR` → `TO_SOT_Packages_SMD:SC-70-6` → `Package_TO_SOT_SMD:`
-- [ ] **A3.2** `connectors/Wurth_7499210123` uses `jonas:` (lowercase);
-      nicknames are case-sensitive → `Jonas:`.
+- [x] **A3.2** `connectors/Wurth_7499210123` uses `jonas:` (lowercase);
+      nicknames are case-sensitive → `Jonas:`. — `248baee`
 - [ ] **A3.3** Empty Footprint field — check these (power flags like
       `GND`, `PWR_FLAG`, `PxVx`, `NxVx`, `BOM_Entry` are fine):
       `comm/WYSBCVGXA`, `connectors/0428202222`, `connectors/Conn_01x30`,
