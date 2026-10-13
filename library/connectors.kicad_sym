@@ -1998,7 +1998,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Molex_430450427"
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical"
 			(at 24.765 14.605 0)
 			(show_name no)
 			(do_not_autoplace no)
