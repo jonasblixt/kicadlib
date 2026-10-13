@@ -1,0 +1,106 @@
+{
+    "meta": {
+        "version": 0
+    },
+    "name": "Epson Crystals",
+    "description": "Epson quartz crystals rated -40..+85 C or wider: TSX-3225 / FA-238 / FA-238V (MHz) and FC-series 32.768 kHz, built from data/xtal_epson.csv and data/xtal_epson_32k.csv.",
+    "source": {
+        "type": "odbc",
+        "dsn": "",
+        "username": "",
+        "password": "",
+        "timeout_seconds": 2,
+        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/xtal_epson.db"
+    },
+    "libraries": [
+        {
+            "name": "Epson",
+            "table": "xtal_epson",
+            "key": "id",
+            "symbols": "Symbol",
+            "footprints": "Footprints",
+            "fields": [
+                {
+                    "column": "Frequency",
+                    "name": "Frequency",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Frequency Stability",
+                    "name": "Frequency Stability",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Frequency Tolerance",
+                    "name": "Frequency Tolerance",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Load Capacitance",
+                    "name": "Load Capacitance",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "ESR",
+                    "name": "ESR",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Operating Temperature",
+                    "name": "Operating Temperature",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Package",
+                    "name": "Package",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": true
+                },
+                {
+                    "column": "Manufacturer",
+                    "name": "Manufacturer",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                },
+                {
+                    "column": "Part Number",
+                    "name": "Part Number",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                },
+                {
+                    "column": "Distributor Part Number",
+                    "name": "Distributor Part Number",
+                    "visible_on_add": false,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                },
+                {
+                    "column": "Value",
+                    "name": "Value",
+                    "visible_on_add": true,
+                    "visible_in_chooser": true,
+                    "show_name": false
+                }
+            ],
+            "properties": {
+                "description": "Description"
+            }
+        }
+    ]
+}
