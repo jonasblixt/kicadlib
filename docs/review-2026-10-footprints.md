@@ -87,8 +87,8 @@ commit per action; the hash is on each ticked line.
       by +2. Footprint `Texas_RGY_R-PVQFN-N16_EP2.05x2.55mm`, filter
       `Texas*RGY*PVQFN*`. TI only requires the thermal pad to be soldered,
       so pad 17 gets no pin. — `94fe08f`
-- [ ] **F1.7** `connectors/MX34R36HF4T`: 36-pin symbol borrows the 20-pad
-      `34826-8200` footprint (pins 21–36 have no pads). → new footprint.
+- [x] **F1.7** `connectors/MX34R36HF4T`: 36-pin symbol borrows the 20-pad
+      `34826-8200` footprint (pins 21–36 have no pads). → new footprint. — new footprint `JAE_MX34R36HF4T`, `e941797`
 - [x] **F1.8** `connectors/Header_2.54mm_10p` (Würth 61201021621): old
       footprint numbers pads DIP-style (1–5 down one row, 6–10 back up the
       other). Würth and the symbol use odd/even, so the pinout is scrambled
@@ -691,6 +691,7 @@ Config and docs:
   - [x] 1575AT43A0040: `8b81c83` (data sheet land, generated body)
   - [x] NLSV4T3144-D: `142a965` (data sheet land, generated body)
   - [x] PT65503: `d0e1644` (catalog land, generated body; also fixes F1.13)
+  - [x] MX34R36HF4T: `e941797` (data sheet land, generated envelope; also fixes F1.7)
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
       `git rm -r modules/` (A2.6) and optionally A6. (`Jonas.pretty/tmp/`
@@ -742,6 +743,7 @@ an old transform (3D model placements). Tick when reviewed.
 - [ ] `Johanson_1575AT43A0040` - **new from data sheet** (1575AT43A0040001E rev 4.0, mounting config 1 land 1.0x1.8 @ +-3.5) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm` (NLSV4T3144-D) - **new from data sheet** (case 523AE mounting footprint); pad 1 to pad 2 gap only 0.13 mm (vendor land, check vs your fab) - `142a965`
 - [ ] `APEM_PT65503` - **new from data sheet** (APEM PT65 catalog G17-G20, straight terminals; two pads numbered C) - `d0e1644`
+- [ ] `JAE_MX34R36HF4T` - **new from data sheet** (JAE MB-0240-1 / SJ110669 PCB layout); CHECK pin numbering (derived from the front-view terminal numbers, assumed to be the mating face) and the hold-down land (2.0x7.0 SMD oval + 3 plated 1.2 holes) - `e941797`
 
 ### 3D models
 
@@ -769,6 +771,7 @@ an old transform (3D model placements). Tick when reviewed.
 - [ ] `Johanson_1575AT43A0040.step` - plain body 7.0x2.0x0.8 per data sheet; no vendor STEP (Johanson: on request) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` - plain body 1.7x2.0x0.55 per data sheet; no vendor STEP (onsemi blocked) - `142a965`
 - [ ] `APEM_PT65503.step` - generated: body 10x10x6.5 per catalog, segment wheel box 2.8x9.5x4.4 with ASSUMED orientation; no vendor STEP - `d0e1644`
+- [ ] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `e941797`
 
 ### 3D model placements
 
@@ -811,6 +814,7 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `Johanson_1575AT43A0040`: `Johanson_1575AT43A0040.step` identity transform (generated, built in footprint coordinates) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm`: `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `142a965`
 - [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `d0e1644`
+- [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` identity transform (generated envelope, built in footprint coordinates) - `e941797`
 
 ## Open questions
 
