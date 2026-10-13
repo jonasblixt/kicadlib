@@ -5681,7 +5681,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MLF-10"
+		(property "Footprint" "Jonas:Microchip_MLF-10_2x2mm_P0.4mm"
 			(at -6.35 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)

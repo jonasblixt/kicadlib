@@ -1,0 +1,229 @@
+(footprint "Microchip_MLF-10_2x2mm_P0.4mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/MLF-10 (pads unchanged, used on Blixten Gateway); outline, courtyard and fab rebuilt to KLC in 2026-10. Micrel/Microchip 10-pin 2x2mm Thin MLF (MT), 0.55mm high, 0.4mm pitch (MIC23254 data sheet), MIC23254")
+	(tags "MLF DFN 10 0.4mm Micrel Microchip MIC23254")
+	(property "Reference" "REF**"
+		(at 0.15 -2.35 0)
+		(layer "F.SilkS")
+		(uuid "1bf2aed0-87bc-41a3-b7b0-b9b16880a13c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Microchip_MLF-10_2x2mm_P0.4mm"
+		(at 0.15 2.25 0)
+		(layer "F.Fab")
+		(uuid "01351422-d9ac-4a9b-8c92-e14e82e6b842")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2773d8fe-e8cb-4b72-997e-0d6bfa40f756")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e9b5680c-e523-41e1-94de-dd1eda9ef1af")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1 -1)
+		(end 0.5 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "04a14237-b354-4623-8000-9f090cd93c93")
+	)
+	(fp_line
+		(start 0.5 -1)
+		(end 1 -0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "80b027d3-64b7-4ccd-a554-e3d3d44b5eee")
+	)
+	(fp_line
+		(start 1 -0.5)
+		(end 1 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5db70bc1-7f4a-49fa-8be7-ea30bb39d209")
+	)
+	(fp_line
+		(start 1 1)
+		(end -1 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "648bbc1d-0d9e-440d-b86f-966835c1f1b6")
+	)
+	(fp_line
+		(start -1 1)
+		(end -1 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f149635b-fed0-4417-829c-cc26c81b46ae")
+	)
+	(fp_line
+		(start 1.11 -0.29)
+		(end 1.11 0.39)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d953572c-f9e4-41fa-a67b-d36fa340d139")
+	)
+	(fp_line
+		(start -1.11 -0.39)
+		(end -1.11 0.39)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7eff1570-4587-462b-a591-6f3954bc97c2")
+	)
+	(fp_circle
+		(center 1.35 -1.35)
+		(end 1.45 -1.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "7920291c-cef2-4b66-b19e-032fa5da2a6e")
+	)
+	(fp_rect
+		(start -1.25 -1.55)
+		(end 1.55 1.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "711540d1-304f-4d23-ab0a-36d1c87e50e3")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "cf333915-d7ef-40b0-ba00-33e27b819121")
+		(effects
+			(font
+				(size 0.65 0.65)
+				(thickness 0.098)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 0.8 -0.875)
+		(size 0.2 0.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e033e5a4-39cc-40a4-ac3b-e8b62f8a1662")
+	)
+	(pad "2" smd rect
+		(at 0.4 -0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "900da9a9-5f1d-4454-b7fb-c0d395f028a6")
+	)
+	(pad "3" smd rect
+		(at 0 -0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e8cb1edb-e6ca-46a3-9a8d-c8ee7c5da357")
+	)
+	(pad "4" smd rect
+		(at -0.4 -0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "52e1bc60-ddb6-4418-89d8-846d34c7277b")
+	)
+	(pad "5" smd rect
+		(at -0.8 -0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a4f34a96-0ac4-4056-a211-abca2b3e1b32")
+	)
+	(pad "6" smd rect
+		(at -0.8 0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "984a29c4-5ed9-48b4-9e1c-480e88159e50")
+	)
+	(pad "7" smd rect
+		(at -0.4 0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1d54eb0f-6a6f-43ca-93b7-8330ac9087f2")
+	)
+	(pad "8" smd rect
+		(at 0 0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d7eeb4fb-e234-499b-81e7-0aafe0949c48")
+	)
+	(pad "9" smd rect
+		(at 0.4 0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0c1315e9-6558-4001-bf57-0027813f56bc")
+	)
+	(pad "10" smd rect
+		(at 0.8 0.925)
+		(size 0.2 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "45a5d2fe-194f-4f2e-aa50-2fa753321ab1")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Microchip_MLF-10_2x2mm_P0.4mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
