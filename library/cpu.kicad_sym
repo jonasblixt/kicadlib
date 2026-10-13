@@ -11345,7 +11345,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:QFN-32-1EP_5x5mm_Pitch0.5mm"
+		(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm"
 			(at 12.7 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39844,7 +39844,7 @@
 				)
 			)
 		)
-		(property "Footprint" "QFN-32-1EP_5x5mm_Pitch0.5mm"
+		(property "Footprint" "Package_DFN_QFN:UFQFPN-32-1EP_5x5mm_P0.5mm_EP3.5x3.5mm"
 			(at 0 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46043,7 +46043,7 @@
 				)
 			)
 		)
-		(property "Footprint" "144LQFP"
+		(property "Footprint" "Package_QFP:LQFP-144_20x20mm_P0.5mm"
 			(at -19.05 13.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -48767,7 +48767,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_BGA:Xilinx_CLG225"
 			(at -31.75 1.27 0)
 			(show_name no)
 			(do_not_autoplace no)
