@@ -174,7 +174,7 @@
 			)
 		)
 	)
-	(pad "0" thru_hole circle
+	(pad "21" thru_hole circle
 		(at -8.255 0)
 		(size 1.5 1.5)
 		(drill 0.84)
@@ -182,7 +182,7 @@
 		(remove_unused_layers no)
 		(uuid "7f4cf1b9-d94e-4dab-a598-75e0fd8ae1ac")
 	)
-	(pad "0" thru_hole circle
+	(pad "22" thru_hole circle
 		(at 8.255 0)
 		(size 1.5 1.5)
 		(drill 0.84)
