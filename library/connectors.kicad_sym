@@ -10957,7 +10957,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:TFM-110-02-S-D-WT"
+		(property "Footprint" "Jonas:Samtec_TFM-110-02-S-D-WT"
 			(at 27.94 -1.27 0)
 			(show_name no)
 			(do_not_autoplace no)
