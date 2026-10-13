@@ -101,6 +101,8 @@ PLAIN_BODIES = {
     'Microchip_MLF-10_2x2mm_P0.4mm': (-1.0, -1.0, 1.0, 1.0, 0.55, (1.0, -1.0), 'MIC23254 data sheet, 0.55 +-0.05'),
     'Microchip_FTQFN-24_3x4mm': (-2.0, -1.5, 2.0, 1.5, 0.75, (-2.0, 1.5), 'assumed (typical FTQFN)'),
     'Torex_XCL226': (-1.5, -1.4, 1.5, 1.5, 1.0, (-1.5, -1.4), 'assumed (micro DC/DC module)'),
+    'Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm': (-7.5, -7.5, 7.5, 7.5, 1.4, (-7.5, -7.5), 'assumed (typical LFBGA)'),
+    'NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm': (-7.0, -7.0, 7.0, 7.0, 1.2, (-7.0, -7.0), 'assumed (typical FCBGA)'),
 }
 
 
