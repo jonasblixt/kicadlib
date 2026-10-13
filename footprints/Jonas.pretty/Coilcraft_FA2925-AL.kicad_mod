@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "Coilcraft FA2925-AL SMD flyback transformer, 18.5x13.46mm body")
+	(tags "transformer flyback Coilcraft FA2925")
 	(property "Reference" "REF**"
 		(at 0 0 0)
 		(unlocked yes)
@@ -928,6 +930,146 @@
 				(thickness 0.15)
 			)
 		)
+	)
+	(fp_line
+		(start -9.36 -6.84)
+		(end 9.36 -6.84)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3e3940e4-2bf6-41cd-a391-226008132d0b")
+	)
+	(fp_line
+		(start 9.36 -6.84)
+		(end 9.36 -5.895)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "91562b87-d850-4d1b-9c72-45daaaf9b183")
+	)
+	(fp_line
+		(start 9.36 -4.105)
+		(end 9.36 -3.395)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "480bda86-8a2e-4d1f-8305-bc9c647e5e16")
+	)
+	(fp_line
+		(start 9.36 -1.605)
+		(end 9.36 -0.895)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "35d61279-2ac1-468d-8fe8-2bb60b036b31")
+	)
+	(fp_line
+		(start 9.36 0.895)
+		(end 9.36 1.605)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b7255f93-2bbe-4490-a464-bad14c2c0c01")
+	)
+	(fp_line
+		(start 9.36 3.395)
+		(end 9.36 4.105)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "36598171-1938-4ecf-9b9d-c388eb3f1645")
+	)
+	(fp_line
+		(start 9.36 5.895)
+		(end 9.36 6.84)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "99316339-c187-47ff-a1a8-fbdee413f9dd")
+	)
+	(fp_line
+		(start -9.36 6.84)
+		(end 9.36 6.84)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fca74a31-d820-4925-b908-bf1cc713d8c8")
+	)
+	(fp_line
+		(start -9.36 -6.84)
+		(end -9.36 -5.895)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ba823412-018c-431b-88da-0d8e410b1924")
+	)
+	(fp_line
+		(start -9.36 -4.105)
+		(end -9.36 -3.395)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5b562d9d-56f9-4922-8f4c-06782f523ae0")
+	)
+	(fp_line
+		(start -9.36 -1.605)
+		(end -9.36 -0.895)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c11b55cc-6686-4cfb-a76e-14b04dfded5f")
+	)
+	(fp_line
+		(start -9.36 0.895)
+		(end -9.36 1.605)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5453dac1-0ca2-48b1-8330-b6a4c91220ac")
+	)
+	(fp_line
+		(start -9.36 3.395)
+		(end -9.36 4.105)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b0681a4b-fb14-4828-b4bc-f326d4c19e53")
+	)
+	(fp_line
+		(start -9.36 5.895)
+		(end -9.36 6.84)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "781518be-9542-4aba-aafc-8c3c157c3968")
 	)
 	(pad "1" smd roundrect
 		(at -8.745 5)
