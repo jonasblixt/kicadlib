@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "SOP-4, 2.54mm pitch, 6.8mm lead span, 4.4x4.3mm body (Panasonic AQY212GS PhotoMOS); IPC-7351 name")
+	(tags "SOP 4 2.54mm PhotoMOS AQY212")
 	(property "Reference" "REF**"
 		(at -0.675 -4.035 0)
 		(layer "F.SilkS")
@@ -230,6 +232,17 @@
 		(fill no)
 		(layer "F.Fab")
 		(uuid "e7fe0de0-2b03-4503-bcd8-c107ac2eee59")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "befc073c-d535-433e-911f-f2e9f0a8fe01")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
 	)
 	(pad "1" smd roundrect
 		(at -3.15 -1.27)
