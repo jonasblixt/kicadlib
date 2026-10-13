@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "Samtec FTSH-105-01-L-DV-007-K, 2x05, 1.27mm pitch, SMD header, position 7 removed (keyed ARM Cortex 10-pin SWD/JTAG)")
+	(tags "Samtec FTSH header 2x05 1.27mm SWD JTAG Cortex")
 	(property "Reference" "REF**"
 		(at -0.25 -5.314 0)
 		(layer "F.SilkS")
@@ -250,6 +252,17 @@
 		(fill no)
 		(layer "F.Fab")
 		(uuid "eee66f4b-ac27-44bf-8948-4c388e27b7b3")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "8bd6f4a8-2b71-4b9b-89c4-971fb8e29519")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
 	)
 	(pad "01" smd rect
 		(at -2.54 2.032)
