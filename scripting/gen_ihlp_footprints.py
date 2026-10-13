@@ -1,5 +1,6 @@
-import re
+import argparse
 import os
+import re
 
 # Legacy footprint geometry (pads + silk box), taken verbatim from
 # modules/footprints.pretty/IHLP<case>.kicad_mod. Pad positions/sizes/
@@ -73,24 +74,23 @@ CASES = {
             "CZ": "IHLP2525CZ.step",
             "EZ": "IHLP2525EZ.step",
         },
-        # UNCALIBRATED: the legacy footprint referenced a hand-authored WRL
-        # model (inch-based, scale 0.393701, offset/rotate tuned for that
-        # specific file: "../../../../../Users/jons/Documents/Projects/
-        # Snigel2/3D models/IHLP2525.wrl" - a broken absolute path pointing
-        # at a former developer's machine, not usable regardless). Since
-        # we're switching to the mm-native STEP models copied in from
-        # modules/packages3d, that old inch-scale transform doesn't apply.
-        # No calibration reference is available for these STEP files'
-        # origin/orientation, so this reuses the same rotate/scale pattern
-        # as the 2020 case (same footprint family, same pad orientation)
-        # with an offset only large enough to roughly center a ~7mm part.
-        # VERIFY IN KICAD'S 3D VIEWER before using - this is a best-effort
-        # placement, not a calibrated one.
-        "model_xform": {"offset": (0, 7.5, -3.2), "scale": (1, 1, 1), "rotate": (-90, 0, 0)},
+        # The generator's first guess here, offset (0, 7.5, -3.2), was
+        # placed by eye and then corrected by hand in KiCad's 3D viewer on
+        # the committed footprints (82a09c4). That calibrated offset was
+        # carried back into this script on 2026-10-13 so regenerating
+        # doesn't undo it. (The legacy footprint's inch-scale WRL transform
+        # pointed at a former developer's machine and was never usable.)
+        "model_xform": {"offset": (-1.5, 5.25, -2.5), "scale": (1, 1, 1), "rotate": (-90, 0, 0)},
     },
 }
 
-OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/Jonas.pretty")
+# Paths are relative to the repo (A1.8; this used to write to the Cowork
+# mount ~/mnt/kicadlib). --out writes elsewhere, e.g. to diff a run
+# against the committed footprints.
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_ap = argparse.ArgumentParser(description="Generate the Vishay IHLP footprints in Jonas.pretty.")
+_ap.add_argument("--out", default=os.path.join(REPO, "footprints", "Jonas.pretty"))
+OUT_DIR = _ap.parse_args().out
 os.makedirs(OUT_DIR, exist_ok=True)
 
 
@@ -101,6 +101,22 @@ def pad_extents(pad):
     if pad["rot"] in (90, 270):
         sx, sy = sy, sx
     return pad["x"] - sx / 2, pad["x"] + sx / 2, pad["y"] - sy / 2, pad["y"] + sy / 2
+
+
+
+def fab_ref_size(w, h):
+    """${REFERENCE} text size on F.Fab: 1.0 mm (KLC), scaled down to ~1/3
+    of the body's short side for small parts, never below 0.5 mm."""
+    s = round(min(w, h) * 0.32 / 0.05) * 0.05
+    return round(min(1.0, max(0.5, s)), 2)
+
+
+def fab_ref_lines(w, h):
+    fs = fab_ref_size(w, h)
+    return ['\t(fp_text user "${REFERENCE}" (at 0 0 0) (layer "F.Fab")',
+            '\t\t(uuid "00000000-0000-0000-0000-000000000006")',
+            f'\t\t(effects (font (size {fs} {fs}) (thickness {round(fs * 0.15, 3)})))',
+            '\t)']
 
 
 def gen_footprint(case, series, step_file, geo):
@@ -133,16 +149,23 @@ def gen_footprint(case, series, step_file, geo):
     # Y-gap between the pad edge and the box edge, on each side. If a
     # case has no such gap (pads reach all the way to the box's Y edge),
     # the tick for that side is simply omitted.
+    # 2026-10-13 (F4.3): the ticks used to start exactly at the pad edge,
+    # so with the 0.12 mm stroke they overlapped the pad's mask opening
+    # (KiCad DRC "silk clipped by solder mask" on every IHLP). They now
+    # start SILK_PAD_CLR past the pad edge and are dropped when that leaves
+    # less than 0.1 mm of tick.
+    SILK_PAD_CLR = 0.15
     pad_y_max = max(pad_extents(p)[3] for p in pads)
     silk_lines = [
         # top and bottom horizontal - unchanged from the legacy files
         (-box_x, box_y, box_x, box_y),
         (-box_x, -box_y, box_x, -box_y),
     ]
-    if pad_y_max < box_y - 0.01:
+    tick_start = round(pad_y_max + SILK_PAD_CLR, 3)
+    if tick_start < box_y - 0.1:
         for x in (-box_x, box_x):
-            silk_lines.append((x, pad_y_max, x, box_y))
-            silk_lines.append((x, -pad_y_max, x, -box_y))
+            silk_lines.append((x, tick_start, x, box_y))
+            silk_lines.append((x, -tick_start, x, -box_y))
 
     lines = []
     lines.append(f'(footprint "{name}"')
@@ -181,6 +204,7 @@ def gen_footprint(case, series, step_file, geo):
     lines.append('\t\t(uuid "00000000-0000-0000-0000-000000000005")')
     lines.append('\t\t(effects (font (size 1 1) (thickness 0.15)))')
     lines.append('\t)')
+    lines += fab_ref_lines(2 * box_x, 2 * box_y)
 
     uid = 100
     for (x1, y1, x2, y2) in silk_lines:
