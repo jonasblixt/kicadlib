@@ -14243,7 +14243,7 @@
 				)
 			)
 		)
-		(property "Footprint" "fakra_th"
+		(property "Footprint" "Jonas:Molex_FAKRA_73403-51xx"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14403,7 +14403,7 @@
 				)
 			)
 		)
-		(property "Footprint" "fakra_th"
+		(property "Footprint" "Jonas:Molex_FAKRA_73403-51xx"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14563,7 +14563,7 @@
 				)
 			)
 		)
-		(property "Footprint" "fakra_th"
+		(property "Footprint" "Jonas:Molex_FAKRA_73403-51xx"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14723,7 +14723,7 @@
 				)
 			)
 		)
-		(property "Footprint" "fakra_th"
+		(property "Footprint" "Jonas:Molex_FAKRA_73403-51xx"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

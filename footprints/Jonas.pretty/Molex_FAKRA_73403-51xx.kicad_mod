@@ -1,0 +1,229 @@
+(footprint "Molex_FAKRA_73403-51xx"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/fakra_th (pads unchanged, used on Sting2 (x4)); outline, courtyard and fab rebuilt to KLC in 2026-10. Molex FAKRA 73403-5112/5113/5114/5117 PCB jack (blue/bordeaux/green/violet), THT; vendor STEP (green, 734035114)")
+	(tags "FAKRA coax connector Molex 73403")
+	(property "Reference" "REF**"
+		(at -0.025 -5.42 0)
+		(layer "F.SilkS")
+		(uuid "bb807d60-3f42-47e4-a276-26c6023c30f2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Molex_FAKRA_73403-51xx"
+		(at -0.025 18.83 0)
+		(layer "F.Fab")
+		(uuid "f60458bc-23f9-4d7b-b4f2-df2f8c03ce8a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1524c22b-a4c5-46da-92b1-2102e49d9242")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b9194ecd-8708-4e49-8a06-4186ecb429c7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.318 -3.064)
+		(end -3.318 -4.064)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cfb76c04-48bf-4e02-aa75-fb370f18a9ed")
+	)
+	(fp_line
+		(start -3.318 -4.064)
+		(end 4.318 -4.064)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d27b89b1-4f0e-47f0-8973-b03e5677ab50")
+	)
+	(fp_line
+		(start 4.318 -4.064)
+		(end 4.318 17.526)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4695a771-ea8b-4c4d-b423-89db486bb32b")
+	)
+	(fp_line
+		(start 4.318 17.526)
+		(end -4.318 17.526)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "140f9331-4e57-4865-973d-f940091b2548")
+	)
+	(fp_line
+		(start -4.318 17.526)
+		(end -4.318 -3.064)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "51ecbe1c-0146-46a8-aca9-73afc3fca904")
+	)
+	(fp_line
+		(start -4.428 -4.174)
+		(end 4.428 -4.174)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9d39ef63-a649-4228-ace3-9ae589058364")
+	)
+	(fp_line
+		(start 4.428 -4.174)
+		(end 4.428 17.636)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "65332e71-c3d0-446e-ab88-e9c600cb41a2")
+	)
+	(fp_line
+		(start -4.428 17.636)
+		(end 4.428 17.636)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6edfa8e7-8782-444b-a4c0-17e9ad7b764a")
+	)
+	(fp_line
+		(start -4.428 -4.174)
+		(end -4.428 17.636)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e431de98-87d0-4d9c-b0f4-9b2351f026c8")
+	)
+	(fp_circle
+		(center -4.668 -4.414)
+		(end -4.568 -4.414)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "62bd131b-f5a2-4494-ba81-2c3935658ec5")
+	)
+	(fp_rect
+		(start -4.87 -4.62)
+		(end 4.82 18.03)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "2b039136-7f62-4bc3-9a66-82839e135361")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 6.731 0)
+		(layer "F.Fab")
+		(uuid "40242fa1-188b-4570-a4c3-71fa3a23c51b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2.2 2.2)
+		(drill 1.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "78f83dd3-1df7-42eb-bed7-7c42ba697895")
+	)
+	(pad "2" thru_hole circle
+		(at -2.54 -2.54)
+		(size 2.5 2.5)
+		(drill 1.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3580cecc-fce3-4602-ba8c-dee2802bbd9f")
+	)
+	(pad "2" thru_hole circle
+		(at -2.54 2.54)
+		(size 2.5 2.5)
+		(drill 1.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f4e7688b-2de9-40ff-aad8-6fcff3df4193")
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 -2.54)
+		(size 2.5 2.5)
+		(drill 1.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c1d194d9-d7e0-4d8d-9189-3a3875c63cae")
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 2.54)
+		(size 2.5 2.5)
+		(drill 1.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "1412674a-abb3-4c3a-820f-a0668fc11eb9")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Molex_FAKRA_73403-51xx.step"
+		(offset
+			(xyz 0 -18.415 3.81)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
