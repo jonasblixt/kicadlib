@@ -3238,7 +3238,7 @@
 				)
 			)
 		)
-		(property "Footprint" "KS54"
+		(property "Footprint" "Battery:BatteryClip_Keystone_54_D16-19mm"
 			(at 3.81 2.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3342,42 +3342,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at -5.08 3.81 0)
-				(length 5.08)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at -5.08 1.27 0)
-				(length 5.08)
-				(name "~"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
