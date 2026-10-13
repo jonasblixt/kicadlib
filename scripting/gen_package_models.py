@@ -88,6 +88,23 @@ def texas_yje():
     return 'Texas_YJE', boxes, 'TI PicoStar YJE0006A 1.11x2.16x0.22 mm, CSD83325L'
 
 
+def apem_pt65503():
+    # APEM PT65 series catalog (pages G17-G20): straight-terminal body
+    # 10.00 x 10.00 x 6.50, terminals 0.55 x 0.27 on a 7.62 x 2.54 grid,
+    # footprint origin = pin 1, body centred on the pin grid (3.81, 2.54).
+    # The segment wheel (SRPT659544: 9.50 dia, 2.80 wide, 4.40 above the
+    # body) is drawn as a box; its orientation is ASSUMED (not dimensioned
+    # against the pins in the catalog).
+    cx, cy = 3.81, -2.54          # model Y = -footprint Y
+    boxes = [box_c(cx, cy, 0, 10.0, 10.0, 6.5, BODY_DARK),
+             box_c(cx, cy, 6.5, 2.8, 9.5, 4.4, (0.85, 0.75, 0.15))]
+    for x in (0.0, 7.62):
+        for y in (0.0, 2.54, 5.08):
+            boxes.append(box_c(x, -y, -3.5, 0.55, 0.27, 3.5, TIN))
+    boxes.append(box_c(-0.4, 1.7, 6.5, 0.8, 0.8, 0.01, MARK))
+    return 'APEM_PT65503', boxes, 'APEM PT65503 coded rotary switch, segment wheel, 10x10x6.5 mm body'
+
+
 # Plain bodies for migrated IC footprints (F7.4) that had no model anywhere
 # (repo, git history, old projects). Body = the footprint's F.Fab body (in
 # footprint coordinates), pin-1 mark at the chamfered F.Fab corner (flipped
@@ -138,7 +155,7 @@ def main():
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
         print('wrote %s (%d boxes)' % (path, len(boxes)))
-    for fn in (qfn20_si3402, nx1255gb, texas_yje):
+    for fn in (qfn20_si3402, nx1255gb, texas_yje, apem_pt65503):
         name, boxes, descr = fn()
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)

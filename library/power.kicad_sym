@@ -4653,7 +4653,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Jonas:APEM_PT65503"
 			(at -10.16 -5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4755,24 +4755,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin passive line
-				(at -11.43 0 0)
-				(length 5.08)
-				(name "C"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
