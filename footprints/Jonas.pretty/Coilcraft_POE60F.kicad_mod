@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "Coilcraft POE60F-xxL SMD PoE flyback transformer, 25.0x15.0mm body")
+	(tags "transformer flyback PoE Coilcraft POE60F")
 	(property "Reference" "REF**"
 		(at -0.3 -0.2 180)
 		(layer "F.SilkS")
@@ -14,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "POE60F-50L_"
+	(property "Value" "Coilcraft_POE60F"
 		(at -8.75 8.75 0)
 		(layer "F.Fab")
 		(uuid "b36d5842-2c50-4322-b019-14d2cc4d8468")
@@ -104,6 +106,28 @@
 		(at 0 1 0)
 		(layer "F.Fab")
 		(uuid "d0c88281-af16-480b-af8d-4d65b2231aad")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -12.5 -7.5)
+		(end 12.5 7.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "fbb25258-0efa-4597-b4c9-1bc69d0735c1")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "843d8350-73d2-4613-b296-ead2fb36607f")
 		(effects
 			(font
 				(size 1 1)
