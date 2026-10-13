@@ -696,9 +696,11 @@ Config and docs:
 
 ## F8. Manual review: everything Claude generated (Jonas)
 
-Per Jonas (2026-10-13), every footprint and 3D model that Claude
-*generates* (as opposed to copying or migrating an existing one) is
-listed here for a manual check in KiCad. Tick when reviewed.
+Per Jonas (2026-10-13), everything Claude makes or touches is listed here
+for a manual check in KiCad: every footprint it creates or migrates
+(Footprints), every 3D model it generates or downloads (3D models), and
+every footprint where it places or adjusts a 3D model, including copying
+an old transform (3D model placements). Tick when reviewed.
 
 ### Footprints
 
@@ -758,6 +760,45 @@ listed here for a manual check in KiCad. Tick when reviewed.
 - [ ] `TDK_DPX162500DT.step` - plain body, height 0.6 ASSUMED - `130c9c1`
 - [ ] `TDK_HHM22106C1.step` - plain body, height 0.6 ASSUMED - `130c9c1`
 - [ ] `Skyworks_SKY13587-378LF.step` - plain body, height 0.45 ASSUMED - `130c9c1`
+
+### 3D model placements
+
+Every footprint where Claude placed or adjusted a 3D model (model file, offset, rotation, scale), including models copied with their old transform. Check in the KiCad 3D viewer that the body sits on the board, pin 1 and the pins line up with the pads, and connector openings face the right way.
+- [ ] `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`: `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
+- [ ] `NX1255GB`: `NX1255GB.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
+- [ ] `Texas_YJE`: `Texas_YJE.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
+- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm`: `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `75b538c`
+- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm`: `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `ba1b30b`
+- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm`: `Texas_SIL0008G_MicroSiP-8_3x2.6mm.step` identity transform (generated, built in footprint coordinates) - `d5f014d`
+- [ ] `Microchip_MLF-10_2x2mm_P0.4mm`: `Microchip_MLF-10_2x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `cd2634e`
+- [ ] `Microchip_FTQFN-24_3x4mm`: `Microchip_FTQFN-24_3x4mm.step` identity transform (generated, built in footprint coordinates) - `438756d`
+- [ ] `Torex_XCL226`: `Torex_XCL226.step` identity transform (generated, built in footprint coordinates) - `4dfdfcd`
+- [ ] `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm`: `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm.step` rotate (-90, 0, 90) (vendor STEP from modules/packages3d; rotation worked out by Claude, the old transform was wrong) - `ed0d092`
+- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm`: `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm.step` identity transform (generated, built in footprint coordinates) - `9778593`
+- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm`: `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `8574f99`
+- [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm`: `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm.step` identity transform (generated, built in footprint coordinates) - `d1afb13`
+- [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm`: `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `d449ba1`
+- [ ] `Everlight_PLR135_PLT133`: `Everlight_PLR135_PLT133.step` offset (0, -4.4, 0), rotate (-90, 0, -90) (vendor STEP, old transform) - `99f417b`
+- [ ] `Toshiba_TORX1355_TOTX1350`: `Toshiba_TORX1355_TOTX1350.step` identity transform (vendor STEP, old transform) - `32ef941`
+- [ ] `Molex_146200`: `Molex_146200.wrl` scale 0.3937 (WRL from git history, old transform) - `1cb696c`
+- [ ] `Johanson_2450AT18B100`: `Johanson_2450AT18B100.step` identity transform (generated, built in footprint coordinates) - `462565d`
+- [ ] `Avago_ALM-GA001`: `Avago_ALM-GA001.step` identity transform (generated, built in footprint coordinates) - `375d3e6`
+- [ ] `TDK_ANT016008LCD1575MA1`: `TDK_ANT016008LCD1575MA1.step` identity transform (generated, built in footprint coordinates) - `b61a185`
+- [ ] `TDK_DPX162500DT`: `TDK_DPX162500DT.step` identity transform (generated, built in footprint coordinates) - `9e462f4`
+- [ ] `TDK_HHM22106C1`: `TDK_HHM22106C1.step` identity transform (generated, built in footprint coordinates) - `c0611a7`
+- [ ] `Skyworks_SKY13587-378LF`: `Skyworks_SKY13587-378LF.step` identity transform (generated, built in footprint coordinates) - `40804f5`
+- [ ] `Taoglas_WLA.01`: `Taoglas_WLA.01.wrl` offset (-0.254, 0, 0), scale 0.3937 (WRL from git history, old transform) - `9f56273`
+- [ ] `JAE_MM60-52B1_Mini-PCIe`: `JAE_MM60-52B1_Mini-PCIe.wrl` offset (11.811, 0, 0), rotate (270, 0, 180), scale 0.3937; `JAE_MM60-52B1_Mini-PCIe_Holder.wrl` offset (11.811, 53.34, 0), scale 0.3937; `JAE_MM60-52B1_Mini-PCIe_Card.wrl` offset (11.811, 25.4, 1.27), rotate (90, 180, 180), scale 0.3937 (WRLs from git history, old transforms; three models: socket, holder, card) - `eb7f7ed`
+- [ ] `ublox_LARA-R2`: `ublox_LARA-R2.wrl` offset (0, 0, 1.651), rotate (180, 0, 0), scale 0.3937 (WRL from git history, old transform) - `a15f9e3`
+- [ ] `Molex_78171-5006`: `Molex_78171-5006.step` offset (0, -1.905, 1.27), rotate (-90, 0, 0) (vendor STEP, old transform) - `1bc0fa2`
+- [ ] `Molex_34826-8200`: `Molex_34826-8200.step` offset (17.018, -5.334, 7.366), rotate (90, 0, 0) (vendor STEP, old transform) - `07702d5`
+- [ ] `TE_5-104074-8`: `TE_5-104074-8.wrl` offset (0, -10.541, 2.413), rotate (-90, 0, 0), scale 0.3937 (WRL from the Snigel2 project, old transform) - `bb03aa6`
+- [ ] `JAE_DX4R005JJ2R1800`: `JAE_DX4R005JJ2R1800.step` offset (0, 0.381, 1.27), rotate (-90, 0, 0) (vendor STEP, old transform) - `0321d55`
+- [ ] `Amphenol_RJE72-188-1401`: `Amphenol_RJE72-188-1401.step` offset (-3.175, 4.191, 2.286), rotate (0, 90, 180) (vendor STEP, old transform) - `4584b70`
+- [ ] `Samtec_TFM-105-02-S-D-WT`: `Samtec_TFM-105-02-S-D-WT.step` rotate (-90, 0, 0) (vendor STEP, old transform) - `2f8629d`
+- [ ] `Samtec_TFM-110-02-S-D-WT`: `Samtec_TFM-110-02-S-D-WT.step` rotate (-90, 0, 0) (vendor STEP; old transform was for a WRL) - `b31d1fc`
+- [ ] `TE_292303-1`: `TE_292303-1.step` offset (0, -13, 3.5), rotate (-90, 0, 0) (vendor STEP, old transform) - `2cf4d80`
+- [ ] `Molex_FAKRA_73403-51xx`: `Molex_FAKRA_73403-51xx.step` offset (0, -18.415, 3.81) (vendor STEP (green variant), old transform) - `6769a2a`
 
 ## Open questions
 
