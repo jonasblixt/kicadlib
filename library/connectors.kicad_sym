@@ -2348,7 +2348,7 @@
 				)
 			)
 		)
-		(property "Footprint" "5-104074-8"
+		(property "Footprint" "Jonas:TE_5-104074-8"
 			(at 0 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
