@@ -899,7 +899,7 @@
 				)
 			)
 		)
-		(property "Footprint" "QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm.kicad_mod"
+		(property "Footprint" "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm"
 			(at 0 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4381,7 +4381,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DFN-12-1EP_3x4mm_P0.5mm_EP1.7x3.3mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-12-1EP_3x4mm_P0.5mm_EP1.7x3.3mm"
 			(at 0 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4726,7 +4726,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DFN-16-1EP_3x5mm_P0.5mm_EP1.66x4.4mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-16-1EP_3x5mm_P0.5mm_EP1.66x4.4mm"
 			(at 0 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5163,7 +5163,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DFN-8-1EP_3x3mm_P0.5mm_EP1.66x2.38mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_3x3mm_P0.5mm_EP1.66x2.38mm"
 			(at 6.35 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5436,7 +5436,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MAX7"
+		(property "Footprint" "RF_GPS:ublox_MAX"
 			(at -1.27 -10.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6436,7 +6436,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SF14"
+		(property "Footprint" "Filter:Filter_1411-5_1.4x1.1mm"
 			(at -1.27 11.43 0)
 			(show_name no)
 			(do_not_autoplace no)
