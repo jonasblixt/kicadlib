@@ -127,7 +127,7 @@ commit per action; the hash is on each ticked line.
   - `logic/SN74AVC4T774` (17): with F1.6.
 - [x] **F1.12** `connectors/TFM-110-02-S-D-WT`: symbol pins 21/22 have no
       pads (old footprint numbers its weld tabs `0`). → fix during migration. — holes renumbered 21/22, `8b59022`
-- [ ] **F1.13** `power/PT65503`: pin 2 is defined twice, named `2` and `C`.
+- [x] **F1.13** `power/PT65503`: pin 2 is defined twice, named `2` and `C`. — duplicate C pin deleted, both C pads numbered C, `d0e1644`
 - [ ] **F1.14** `cpu/MIMX8MM6DVTLZAA`, `MIMX8MN5DVTJZAA`: old BGA-486
       footprint has 487 distinct pad numbers. → check against the NXP ball
       map during migration.
@@ -690,6 +690,7 @@ Config and docs:
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
   - [x] 1575AT43A0040: `8b81c83` (data sheet land, generated body)
   - [x] NLSV4T3144-D: `142a965` (data sheet land, generated body)
+  - [x] PT65503: `d0e1644` (catalog land, generated body; also fixes F1.13)
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
       `git rm -r modules/` (A2.6) and optionally A6. (`Jonas.pretty/tmp/`
@@ -740,6 +741,7 @@ an old transform (3D model placements). Tick when reviewed.
 - [ ] `Molex_FAKRA_73403-51xx` - migrated from fakra_th, pads unchanged; one footprint for 4 codings, green vendor STEP - `6769a2a`
 - [ ] `Johanson_1575AT43A0040` - **new from data sheet** (1575AT43A0040001E rev 4.0, mounting config 1 land 1.0x1.8 @ +-3.5) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm` (NLSV4T3144-D) - **new from data sheet** (case 523AE mounting footprint); pad 1 to pad 2 gap only 0.13 mm (vendor land, check vs your fab) - `142a965`
+- [ ] `APEM_PT65503` - **new from data sheet** (APEM PT65 catalog G17-G20, straight terminals; two pads numbered C) - `d0e1644`
 
 ### 3D models
 
@@ -766,6 +768,7 @@ an old transform (3D model placements). Tick when reviewed.
 - [ ] `Skyworks_SKY13587-378LF.step` - plain body, height 0.45 ASSUMED - `130c9c1`
 - [ ] `Johanson_1575AT43A0040.step` - plain body 7.0x2.0x0.8 per data sheet; no vendor STEP (Johanson: on request) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` - plain body 1.7x2.0x0.55 per data sheet; no vendor STEP (onsemi blocked) - `142a965`
+- [ ] `APEM_PT65503.step` - generated: body 10x10x6.5 per catalog, segment wheel box 2.8x9.5x4.4 with ASSUMED orientation; no vendor STEP - `d0e1644`
 
 ### 3D model placements
 
@@ -807,6 +810,7 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `Molex_FAKRA_73403-51xx`: `Molex_FAKRA_73403-51xx.step` offset (0, -18.415, 3.81) (vendor STEP (green variant), old transform) - `6769a2a`
 - [ ] `Johanson_1575AT43A0040`: `Johanson_1575AT43A0040.step` identity transform (generated, built in footprint coordinates) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm`: `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `142a965`
+- [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `d0e1644`
 
 ## Open questions
 
