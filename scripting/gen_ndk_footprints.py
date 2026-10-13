@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Modernizes the 3 usable legacy NDK crystal footprints found in
-# modules/footprints.pretty/ into footprints/NDK.pretty/, for use by
+# modules/footprints.pretty/ into footprints/Jonas.pretty/, for use by
 # scripting/import_xtal_ndk.py. See that script's header for the full
 # footprint-mapping decision (which of the 21 package/series codes in
 # library/xtal_NDK.kicad_sym get one of these 3, which get a stock KiCad
@@ -18,36 +18,39 @@
 # the box's own top/bottom (NX1255GB) or all 4 edges (NX3225SA) actually
 # cross pad copper - a real DRC violation, not something safe to carry
 # forward as-is (same class of issue gen_ihlp_footprints.py fixed for
-# IHLP). Rather than hand-deriving safe corner-tick geometry per pad
-# layout, this script keeps the full silk box only where it verifiably
-# clears every pad (NX2520SA - clears by ~0.05mm on all 4 sides) and
-# drops the silk body outline entirely where it doesn't (NX1255GB,
-# NX3225SA), keeping only the reference/value silk text (which sits well
-# outside the body already). This matches how several of KiCad's own
-# official small-crystal footprints handle this same wraparound-vs-body
-# conflict. F.Fab still gets the full nominal-body outline regardless -
-# that layer is documentation-only and safe to overlap copper.
+# IHLP). This script keeps the full silk box only where it verifiably
+# clears every pad (NX2520SA - clears by ~0.05mm on all 4 sides). Where
+# it doesn't (NX1255GB, NX3225SA), it draws an L outside all pads at the
+# pin-1 corner instead (since 2026-10-13, F4.3; before that these two had
+# no silk outline at all), the way KiCad's stock Crystal_SMD_3225-4Pin
+# does. F.Fab gets the full nominal-body outline regardless (documentation
+# only, safe to overlap copper) plus a ${REFERENCE} text sized to the body.
 #
-# 3D MODELS: only NX2520SA has a real NDK-specific STEP model available
-# (modules/packages3d/"User Library-Crystal NDK NX2520SA series.step",
-# copied in here as footprints/NDK.3dshapes/NX2520SA.step with no
-# transform - the legacy footprint referenced it with an identity
-# offset/scale/rotate, so none is needed here either). NX1255GB has no
-# model in modules/packages3d at all. NX3225SA's legacy footprint
-# referenced a generic stock box placeholder ("${KISYS3DMOD}/Crystal SMD
-# 2.5x3.5mm.step") that doesn't even match this package's real 3.2x2.5mm
-# footprint - not carried forward, since a wrong model is worse than none
-# and no correctly-sized replacement was available in this session.
+# 3D MODELS: NX2520SA uses the NDK STEP model copied once from
+# modules/packages3d/"User Library-Crystal NDK NX2520SA series.step" to
+# footprints/Jonas.3dshapes/NX2520SA.step (identity transform, as the
+# legacy footprint had). NX3225SA uses Jonas.3dshapes/NX3225SA.step,
+# added by hand after the first generation and carried back into this
+# script (rotate -90 about X). NX1255GB has no model (F4.5); its legacy
+# file had none either. NX3225SA's legacy footprint referenced a generic
+# stock box placeholder ("${KISYS3DMOD}/Crystal SMD 2.5x3.5mm.step") that
+# doesn't match this package's real 3.2x2.5mm footprint - not carried
+# forward.
+import argparse
 import os
-import shutil
 
-OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/Jonas.pretty")
-MODEL_OUT_DIR = os.path.expanduser("~/mnt/kicadlib/footprints/Jonas.3dshapes")
+# Paths are relative to the repo (A1.8; this used to write to the Cowork
+# mount ~/mnt/kicadlib). --out writes elsewhere, e.g. to diff a run
+# against the committed footprints.
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_ap = argparse.ArgumentParser(description="Generate the NDK crystal footprints in Jonas.pretty.")
+_ap.add_argument("--out", default=os.path.join(REPO, "footprints", "Jonas.pretty"))
+OUT_DIR = _ap.parse_args().out
 os.makedirs(OUT_DIR, exist_ok=True)
-os.makedirs(MODEL_OUT_DIR, exist_ok=True)
 
-SRC_MODEL = os.path.expanduser(
-    "~/mnt/kicadlib/modules/packages3d/User Library-Crystal NDK NX2520SA series.step")
+# NX2520SA.step was copied once from modules/packages3d/"User Library-
+# Crystal NDK NX2520SA series.step"; footprints/Jonas.3dshapes/ is now its
+# source of truth, so the generator no longer copies it.
 DST_MODEL_NAME = "NX2520SA.step"
 
 FOOTPRINTS = {
@@ -65,31 +68,54 @@ FOOTPRINTS = {
         "pads": [(1, -0.85, 0.65), (2, 0.85, 0.65), (3, 0.85, -0.65), (4, -0.85, -0.65)],
         "pad_size": (1.2, 1.0),
         "box": (1.5, 1.2),
-        "ref_at": (0.4, 2),
-        "val_at": (1.1, -1.9),
+        "ref_at": (0, -2.1),
+        "val_at": (0, 2.1),
         "descr": "NDK NX2520SA-series crystal, 2.5mm x 2.0mm body, 4-pad wraparound package. "
                  "Also used for the NX2520SD/NX2520SG series (same 2.5x2.0mm land pattern, "
                  "differ only in body height, which the 2D footprint doesn't encode) - see "
                  "import_xtal_ndk.py's FOOTPRINT_MAP.",
         "model": DST_MODEL_NAME,
-        "keep_silk_box": True,
+        # The body box clears the pads by only 0.05 mm, which the 0.12 mm
+        # stroke eats (KiCad DRC: silk clipped by solder mask), so this one
+        # gets the pin-1 L as well since 2026-10-13 (F4.3).
+        "keep_silk_box": False,
     },
     "NX3225SA": {
         "pads": [(1, -1.1, 0.8), (2, 1.1, 0.8), (3, 1.1, -0.8), (4, -1.1, -0.8)],
         "pad_size": (1.4, 1.2),
         "box": (1.6, 1.25),
-        "ref_at": (0.2, 2.2),
-        "val_at": (1, -2.1),
+        "ref_at": (0, -2.4),
+        "val_at": (0, 2.4),
         "descr": "NDK NX3225SA-series crystal, 3.2mm x 2.5mm body, 4-pad wraparound package. "
                  "Also used for the NX3225GA/NX3225GB/NX3225GD/NX3225SC series (same "
                  "3.2x2.5mm land pattern per NDK's own package-size figures across all 5 "
                  "series in this dataset) - see import_xtal_ndk.py's FOOTPRINT_MAP.",
-        "model": None,
+        # NX3225SA.step was added to Jonas.3dshapes and wired into the
+        # committed footprint by hand after generation (82a09c4); carried
+        # back here 2026-10-13 so regenerating keeps it.
+        "model": "NX3225SA.step",
+        "model_rotate": (-90, 0, 0),
         "keep_silk_box": False,
     },
 }
 
 MARGIN = 0.25
+
+
+
+def fab_ref_size(w, h):
+    """${REFERENCE} text size on F.Fab: 1.0 mm (KLC), scaled down to ~1/3
+    of the body's short side for small parts, never below 0.5 mm."""
+    s = round(min(w, h) * 0.32 / 0.05) * 0.05
+    return round(min(1.0, max(0.5, s)), 2)
+
+
+def fab_ref_lines(w, h):
+    fs = fab_ref_size(w, h)
+    return ['\t(fp_text user "${REFERENCE}" (at 0 0 0) (layer "F.Fab")',
+            '\t\t(uuid "00000000-0000-0000-0000-000000000006")',
+            f'\t\t(effects (font (size {fs} {fs}) (thickness {round(fs * 0.15, 3)})))',
+            '\t)']
 
 
 def gen_footprint(name, geo):
@@ -140,12 +166,26 @@ def gen_footprint(name, geo):
     lines.append('\t\t(uuid "00000000-0000-0000-0000-000000000005")')
     lines.append('\t\t(effects (font (size 1 1) (thickness 0.15)))')
     lines.append('\t)')
+    lines += fab_ref_lines(2 * box_x, 2 * box_y)
 
     uid = 100
 
     if geo["keep_silk_box"]:
         silk_corners = [(-box_x, -box_y, box_x, -box_y), (box_x, -box_y, box_x, box_y),
                          (box_x, box_y, -box_x, box_y), (-box_x, box_y, -box_x, -box_y)]
+    else:
+        # The body box would cross the pads, so mark pin 1 with an L
+        # outside all pads instead (one full side + one full end at the
+        # pin-1 corner), like KiCad's stock Crystal_SMD_3225-4Pin. Lines
+        # sit 0.18 mm outside the pad/body extent: 0.12 mm clear of copper
+        # with the 0.12 mm stroke, and still inside the 0.25 mm courtyard.
+        _, x1p, y1p = next(p for p in pads if p[0] == 1)
+        sx = -1 if x1p < 0 else 1
+        sy = -1 if y1p < 0 else 1
+        ex = round(max(pad_x_max, box_x) + 0.18, 2)
+        ey = round(max(pad_y_max, box_y) + 0.18, 2)
+        silk_corners = [(sx * ex, -ey, sx * ex, ey), (-ex, sy * ey, ex, sy * ey)]
+    if silk_corners:
         for (x1, y1, x2, y2) in silk_corners:
             uid += 1
             lines.append(f'\t(fp_line (start {x1} {y1}) (end {x2} {y2})')
@@ -185,21 +225,16 @@ def gen_footprint(name, geo):
 
     if geo["model"]:
         lines.append(f'\t(model "${{JONAS_KICADLIB}}/footprints/Jonas.3dshapes/{geo["model"]}"')
+        rx, ry, rz = geo.get("model_rotate", (0, 0, 0))
         lines.append('\t\t(offset (xyz 0 0 0))')
         lines.append('\t\t(scale (xyz 1 1 1))')
-        lines.append('\t\t(rotate (xyz 0 0 0))')
+        lines.append(f'\t\t(rotate (xyz {rx} {ry} {rz}))')
         lines.append('\t)')
 
     lines.append(')')
     lines.append('')
     return "\n".join(lines), (crtyd_x, crtyd_y)
 
-
-if os.path.exists(SRC_MODEL):
-    shutil.copyfile(SRC_MODEL, os.path.join(MODEL_OUT_DIR, DST_MODEL_NAME))
-    print(f"copied 3D model -> {os.path.join(MODEL_OUT_DIR, DST_MODEL_NAME)}")
-else:
-    print(f"WARNING: source 3D model not found: {SRC_MODEL}")
 
 for name, geo in FOOTPRINTS.items():
     text, (cx, cy) = gen_footprint(name, geo)
