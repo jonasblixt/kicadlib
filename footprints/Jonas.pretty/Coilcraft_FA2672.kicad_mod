@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "Coilcraft FA2672-AL(D) SMD flyback transformer (Si3402 PoE reference design), 15.0x12.7mm body")
+	(tags "transformer flyback PoE Coilcraft FA2672")
 	(property "Reference" "REF**"
 		(at 0 0 0)
 		(unlocked yes)
@@ -768,6 +770,126 @@
 				(thickness 0.15)
 			)
 		)
+	)
+	(fp_line
+		(start -7.61 -6.46)
+		(end 7.61 -6.46)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0b3d8454-0332-45ea-b150-cfefac91b0e5")
+	)
+	(fp_line
+		(start 7.61 -6.46)
+		(end 7.61 -4.645)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c4fa503a-2e40-4780-b328-17aace48744a")
+	)
+	(fp_line
+		(start 7.61 -2.855)
+		(end 7.61 -2.145)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c41140c0-3620-4b25-b788-205c64eccf9b")
+	)
+	(fp_line
+		(start 7.61 -0.355)
+		(end 7.61 0.355)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5d0da9b2-325e-4810-b9ce-a8672339d709")
+	)
+	(fp_line
+		(start 7.61 2.145)
+		(end 7.61 2.855)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "31e9406b-6fda-4613-912a-5d3ea9258309")
+	)
+	(fp_line
+		(start 7.61 4.645)
+		(end 7.61 6.46)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "820c379d-f468-4c2d-b422-1283d98addff")
+	)
+	(fp_line
+		(start -7.61 6.46)
+		(end 7.61 6.46)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "85f6676e-d27f-4263-9aeb-c424e1d900e1")
+	)
+	(fp_line
+		(start -7.61 -6.46)
+		(end -7.61 -4.645)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cd996632-4367-414e-8622-6990a5efbe75")
+	)
+	(fp_line
+		(start -7.61 -2.855)
+		(end -7.61 -2.145)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "75331521-53f5-4235-9c3f-1a87f43587ae")
+	)
+	(fp_line
+		(start -7.61 -0.355)
+		(end -7.61 0.355)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c749b1a3-6631-48fc-8327-abce7db83469")
+	)
+	(fp_line
+		(start -7.61 2.145)
+		(end -7.61 2.855)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8a25d851-8fa6-40b3-9bfa-b3a627a9e921")
+	)
+	(fp_line
+		(start -7.61 4.645)
+		(end -7.61 6.46)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "95bf56df-522f-4261-96ef-f7552b9dc8ab")
 	)
 	(pad "1" smd roundrect
 		(at -6.855 3.75)
