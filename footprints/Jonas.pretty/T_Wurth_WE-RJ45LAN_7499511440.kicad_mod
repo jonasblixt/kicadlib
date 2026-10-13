@@ -52,7 +52,7 @@
 			)
 		)
 	)
-	(attr smd)
+	(attr through_hole)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -13.495 16.94)
@@ -369,17 +369,6 @@
 		(uuid "00a9e4fe-65c1-455a-8139-e06642df6e14")
 	)
 	(embedded_fonts no)
-	(model "${WE_3DMODEL_DIR}/Transformer_THT_Wurth.3dshapes/T_Wurth_WE-RJ45LAN_7499511440.step"
-		(offset
-			(xyz 0 0 0)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 0 0 0)
-		)
-	)
 	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/T_Wurth_WE-RJ45LAN_7499511440.step"
 		(offset
 			(xyz 0 0 0)
