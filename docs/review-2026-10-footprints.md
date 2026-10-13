@@ -395,14 +395,35 @@ footprints only have the cosmetic issues below.
       `SAMTEC_FTSH-105-01-L-DV-007-K`, `SOIC254P680X230-4N` and `Texas_YJE`
       was a pin-1 dot/triangle drawn beside the body on F.Fab, not the body;
       all bodies are inside their courtyards with ≥ 0.25 mm clearance (F4.9).
-- [ ] **F4.3** Missing layers: no silkscreen on `Coilcraft_FA2672`,
-      `Coilcraft_FA2925-AL`, both `Eaton_KW_*`, `NX1255GB`, `NX3225SA`; no
-      fab on `Coilcraft_POE60F`, `Wurth_7499210123`; no `${REFERENCE}` on
-      `F.Fab` on 22 (all IHLP*, NX*, and the vendor imports).
-- [ ] **F4.4** Fields: no `descr`/`tags` on 14 (mostly vendor imports);
-      Value ≠ footprint name on `DLW5B_5050`, `NX3215SA`, `NX5032GA`,
-      `Coilcraft_POE60F`, and ~~`Eaton_KW_13.5x8.8mm` (its Value said
-      `Eaton_KW_21.5x9.5mm`)~~ (`59b754b`); `Datasheet` empty on all 51.
+- [x] **F4.3** Missing layers. Done 2026-10-13: every `Jonas.pretty`
+      footprint now has silk, a fab body outline and `${REFERENCE}` on
+      F.Fab.
+  - Generated footprints, fixed in the generators (which are now
+    repo-relative, A1.8): `8e1fdf3` IHLP (×11: fab reference; silk ticks
+    moved 0.15 mm off the pads, which also clears 44 DRC "silk clipped by
+    solder mask" hits; the hand-calibrated 2525 model offset is now in the
+    script), `aea30fd` NX1255GB/NX2520SA/NX3225SA (fab reference; pin-1
+    L-shaped silk outside the pads, like stock Crystal_SMD_3225-4Pin, which
+    also clears 8 DRC hits on NX2520SA; NX3225SA's hand-added 3D model is
+    now in the script). Regenerated output equals the committed files
+    apart from these changes.
+  - Hand-made, one commit each: silk on `Coilcraft_FA2672` (`21f90aa`),
+    `Coilcraft_FA2925-AL` (`3ccb0c1`), `Eaton_KW_13.5x8.8mm` (`f777e2f`),
+    `Eaton_KW_21.5x9.5mm` (`f92962f`); fab body from the existing silk
+    body outline on `Coilcraft_POE60F` (`6cc50d7`),
+    `Vishay_SOIC254P1016X440-4N` (`0fe7096`, had only a pin-1 dot),
+    `Wurth_7499210123` (`473b7df`); `${REFERENCE}` on F.Fab on those and on
+    `DLW5B_5050` (`569a370`), `FUSC3216X85N` (`d8e3616`), `NX3215SA`
+    (`4d20fd6`), `NX5032GA` (`543d948`), `QFN-20_5x5mm…` (`909a5e3`),
+    `SAMTEC_FTSH…` (`53bec8c`), `SOIC254P680X230-4N` (`0b57e10`).
+    KiCad DRC on the 15: no new violations (5 before, 5 after, all F4.10).
+- [x] **F4.4** Fields. `descr`/`tags` added on all 14 that lacked them
+      (same commits as F4.3, plus `163890e` Texas_YJE); Value = footprint
+      name on `Coilcraft_POE60F`, `DLW5B_5050`, `NX3215SA`, `NX5032GA` (and
+      Eaton, `59b754b`). Descriptions name the parts each footprint serves;
+      no datasheet URLs were added (none were on hand to check). The empty
+      `Datasheet` property is left as is: KiCad's stock footprints keep it
+      empty too and put the link in `descr`.
 - [ ] **F4.5** No 3D model: `NX1255GB`, `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`,
       `Texas_YJE`.
 - [ ] **F4.6** Pads: `SAMTEC_FTSH-105-01-L-DV-007-K` numbers pads

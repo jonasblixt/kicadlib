@@ -73,12 +73,14 @@ A1.1–A1.5 landed together in `c1fcbcf` ("Remove unreferenced files
 - [x] **A1.5** Delete unreferenced models in `footprints/Jonas.3dshapes/`:
       the 14 `C_Panasonic_ECHU_*.wrl` files and `C_Murata_GA3_5.7x2.8.wrl`
       (footprints reference the `.step` versions, which are all present).
-- [ ] **A1.8** (new) `scripting/gen_ndk_footprints.py` copies its NX2520SA
+- [x] **A1.8** (new) `scripting/gen_ndk_footprints.py` copies its NX2520SA
       model from `modules/packages3d/"User Library-Crystal NDK NX2520SA
       series.step"`, so A2.6 breaks it. Before A2.6, point `SRC_MODEL` at
       `footprints/Jonas.3dshapes/NX2520SA.step` (or drop the copy step).
       Also, both `gen_ndk_footprints.py` and `gen_ihlp_footprints.py`
       hard-code the Cowork path `~/mnt/kicadlib/`. Make them repo-relative.
+      Done: both repo-relative with `--out`, NDK no longer copies the
+      model (`8e1fdf3`, `aea30fd`).
 - [ ] **A1.6** `data/cap_film_wima_pps.csv` has no importer/library.
       Delete, or keep if a WIMA library is planned (then note it here).
 - [ ] **A1.7** Decide on `simulation/` (35 MB, 427 AccuP `.s2p` files) and
