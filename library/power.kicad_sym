@@ -6963,7 +6963,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DSBGA15"
+		(property "Footprint" "Jonas:Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm"
 			(at -13.97 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
