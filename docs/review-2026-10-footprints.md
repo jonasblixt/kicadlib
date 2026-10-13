@@ -680,6 +680,7 @@ Config and docs:
   UQFN-12, TORX/TOTX → Toshiba 170 series): where the old footprint is
   on a built board it is the proven land and is migrated instead; the
   rest get a data sheet check first.
+  - [x] dcdc (7 symbols, 6 footprints): `ae9638e`..`4dfdfcd`. Pads verified identical to `modules/`; KiCad DRC shows only the original copper findings (EP via annular/drill, WLCSP pitch), silk findings went 68 -> 0.
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
@@ -695,7 +696,12 @@ listed here for a manual check in KiCad. Tick when reviewed.
 
 ### Footprints
 
-- (none yet; the F7.5 new footprints will be listed here)
+- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm` (FAN48623) - migrated, pads unchanged; outline/courtyard/fab rebuilt, body 1.6x1.6 from old silk - `75b538c`
+- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm` (LM536355) - migrated, pads unchanged; body per TI 4226904/A - `ba1b30b`
+- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm` (LMZ10501) - migrated, pads unchanged; body per data sheet - `d5f014d`
+- [ ] `Microchip_MLF-10_2x2mm_P0.4mm` (MIC23254) - migrated, pads unchanged; body per data sheet - `cd2634e`
+- [ ] `Microchip_FTQFN-24_3x4mm` (MIC28511) - migrated, pads unchanged; body 4x3 from old silk - `438756d`
+- [ ] `Torex_XCL226` (XCL226A0K1H2) - migrated, pads unchanged; body from old silk (XCL226 may really be 2.5x2.0, check) - `4dfdfcd`
 
 ### 3D models
 
@@ -704,7 +710,12 @@ listed here for a manual check in KiCad. Tick when reviewed.
 - [ ] `NX1255GB.step` - `scripting/gen_package_models.py`, `1acc16e`
 - [ ] `Texas_YJE.step` (CSD83325L) - `scripting/gen_package_models.py`,
       `1acc16e`
-
+- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step` - plain body, height 0.6 ASSUMED - `ae9638e`
+- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm.step` - plain body, 0.9 per TI drawing - `ae9638e`
+- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm.step` - plain body, height 1.0 ASSUMED - `ae9638e`
+- [ ] `Microchip_MLF-10_2x2mm_P0.4mm.step` - plain body, 0.55 per data sheet - `ae9638e`
+- [ ] `Microchip_FTQFN-24_3x4mm.step` - plain body, height 0.75 ASSUMED - `ae9638e`
+- [ ] `Torex_XCL226.step` - plain body, height 1.0 ASSUMED - `ae9638e`
 
 ## Open questions
 
