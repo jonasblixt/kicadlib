@@ -5961,7 +5961,7 @@
 				)
 			)
 		)
-		(property "Footprint" "FQFN34-24"
+		(property "Footprint" "Jonas:Microchip_FTQFN-24_3x4mm"
 			(at 0 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
