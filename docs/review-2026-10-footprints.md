@@ -366,24 +366,40 @@ out). "Twin" = pads identical within 0.1 mm.
 
 ## F4. Footprint review: `Jonas.pretty` (51 footprints)
 
+**Poetato first (2026-10-13).** Poetato (released for layout) places 14 of
+these footprints (18 parts). Checked against its PCB: T2 `Coilcraft_FA2672`
+was missing from SMD position files and T3 `T_Wurth_WE-RJ45LAN_7499511440`
+was in them; T3's first 3D model path was dead. Fixed in `117ea13` and
+`b04fc79`; poetato picks them up with *Update Footprints from Library* on
+T2 and T3 (a board change, so re-check before re-release). C9's
+`Eaton_KW_13.5x8.8mm` Value fix (`59b754b`) doesn't affect the board (the
+footprint Value is replaced by the symbol's). The other poetato
+footprints only have the cosmetic issues below.
+
 - [ ] **F4.1** `attr` wrong (affects BOM and position files):
-      SMD-only but marked `through_hole`: `Coilcraft_FA2672`,
+      SMD-only but marked `through_hole`: ~~`Coilcraft_FA2672`~~ (`117ea13`),
       `Coilcraft_FA2925-AL`, `Coilcraft_POE60F`, `Texas_YJE`.
       THT pads but marked `smd`: `T_Wurth_WE-RJ45LAN_7499210001A`,
-      `T_Wurth_WE-RJ45LAN_7499411122A`, `T_Wurth_WE-RJ45LAN_7499511440`.
-- [ ] **F4.2** Courtyard: `Wurth_7499210123` pads stick out 0.54 mm; fab
-      body outside courtyard on `DLW5B_5050`, `NX3215SA`,
-      `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`, `SAMTEC_FTSH-105-01-L-DV-007-K`,
-      `SOIC254P680X230-4N`, `Texas_YJE`; 0.1 mm courtyard lines on
+      `T_Wurth_WE-RJ45LAN_7499411122A`, ~~`T_Wurth_WE-RJ45LAN_7499511440`~~
+      (`b04fc79`). Verified with `kicad-cli pcb export pos --smd-only` on
+      a scratch board.
+- [ ] **F4.2** Courtyard: `Wurth_7499210123` pads stick out 0.54 mm;
+      `Texas_YJE` fab body 0.05 mm outside; 0.1 mm courtyard lines on
       `Coilcraft_POE60F`, `Texas_YJE`, `Wurth_7499210123`.
+      **Corrected 2026-10-13:** the earlier "fab body outside courtyard" on
+      `DLW5B_5050`, `NX3215SA`, `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`,
+      `SAMTEC_FTSH-105-01-L-DV-007-K` and `SOIC254P680X230-4N` was a 0.2 mm
+      pin-1 dot drawn on F.Fab beside the body, not the body; their bodies
+      are inside the courtyard with 0.25 mm clearance. KLC wants the F.Fab
+      pin-1 mark as a body chamfer instead (cosmetic, F4.9).
 - [ ] **F4.3** Missing layers: no silkscreen on `Coilcraft_FA2672`,
       `Coilcraft_FA2925-AL`, both `Eaton_KW_*`, `NX1255GB`, `NX3225SA`; no
       fab on `Coilcraft_POE60F`, `Wurth_7499210123`; no `${REFERENCE}` on
       `F.Fab` on 22 (all IHLP*, NX*, and the vendor imports).
 - [ ] **F4.4** Fields: no `descr`/`tags` on 14 (mostly vendor imports);
       Value ≠ footprint name on `DLW5B_5050`, `NX3215SA`, `NX5032GA`,
-      `Coilcraft_POE60F`, and `Eaton_KW_13.5x8.8mm` (its Value says
-      `Eaton_KW_21.5x9.5mm`); `Datasheet` empty on all 51.
+      `Coilcraft_POE60F`, and ~~`Eaton_KW_13.5x8.8mm` (its Value said
+      `Eaton_KW_21.5x9.5mm`)~~ (`59b754b`); `Datasheet` empty on all 51.
 - [ ] **F4.5** No 3D model: `NX1255GB`, `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`,
       `Texas_YJE`.
 - [ ] **F4.6** Pads: `SAMTEC_FTSH-105-01-L-DV-007-K` numbers pads
@@ -398,6 +414,10 @@ out). "Twin" = pads identical within 0.1 mm.
       (`QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`). Renaming means updating symbols
       and importers (all in this repo); existing boards keep their embedded
       copies.
+- [ ] **F4.9** (new, cosmetic) Pin-1 marker drawn as a dot beside the
+      body on F.Fab (`DLW5B_5050`, `NX3215SA`, `QFN-20_5x5mm…`,
+      `SAMTEC_FTSH…`, `SOIC254P680X230-4N`); KLC uses a chamfered body
+      corner on F.Fab and keeps the dot on silk only.
 - Note: `T_Wurth_WE-RJ45LAN_7498210003` has a rounded `Edge.Cuts` cutout —
   looks intentional (sink-mount), but it does cut the board.
 - Note: 15 footprints (`C_Murata_GA3`, 14× ECHU) are still KiCad 7 format —
@@ -413,8 +433,9 @@ out). "Twin" = pads identical within 0.1 mm.
       not shipped by KiCad at all (see F5.4), which is probably why it was
       downloaded.
 - [ ] **F5.2** Missing / dead: `T_Wurth_WE-RJ45LAN_7499210001A.step`
-      (`${WE_3DMODEL_DIR}` isn't defined); `T_Wurth_WE-RJ45LAN_7499511440`
-      has a second, dead `${WE_3DMODEL_DIR}` model entry next to the good one.
+      (`${WE_3DMODEL_DIR}` isn't defined); ~~`T_Wurth_WE-RJ45LAN_7499511440`
+      has a second, dead `${WE_3DMODEL_DIR}` model entry next to the good one~~
+      (removed, `b04fc79`; render confirms the remaining model loads).
 - [ ] **F5.3** Model names don't follow their footprint (`FA2925-AL.STEP`,
       `Coilcraft_POE60F-XXL.STEP`, `KW-5R5C*.STEP`, `AQY212GS.step`,
       `VO618A-3X017T.step`, `0ZCJ0005FF2E.step`, …) and extensions mix
