@@ -8570,7 +8570,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Torex_XCL22_QFN"
+		(property "Footprint" "Jonas:Torex_XCL226"
 			(at -21.59 17.78 0)
 			(show_name no)
 			(do_not_autoplace no)

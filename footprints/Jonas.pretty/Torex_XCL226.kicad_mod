@@ -1,0 +1,296 @@
+(footprint "Torex_XCL226"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/Torex_XCL22_QFN (pads unchanged); outline, courtyard and fab rebuilt to KLC in 2026-10. Torex XCL225/XCL226 micro DC/DC module with integrated inductor, body from the old silk outline, XCL226A0K1H2")
+	(tags "Torex XCL226 micro DC/DC module")
+	(property "Reference" "REF**"
+		(at 0 -2.75 0)
+		(layer "F.SilkS")
+		(uuid "5fc23865-2d7b-4c3a-aade-9599633d3afa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Torex_XCL226"
+		(at 0 2.55 0)
+		(layer "F.Fab")
+		(uuid "11050ebe-4a16-42d4-8763-fe182255d2e3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6221580f-18b7-4445-9f47-189f4bd15e26")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9c1dd846-fa96-4139-8de7-1fceb41bfdbf")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.5 -0.68)
+		(end -0.78 -1.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7c5d19d1-6091-4822-84bb-88b682bdc13c")
+	)
+	(fp_line
+		(start -0.78 -1.4)
+		(end 1.5 -1.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b5f5d46c-24c4-4438-866a-46c52d8ee9e6")
+	)
+	(fp_line
+		(start 1.5 -1.4)
+		(end 1.5 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f6a07019-7abd-49eb-980d-dc2b32d66fc7")
+	)
+	(fp_line
+		(start 1.5 1.5)
+		(end -1.5 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "30cee4ef-26d4-4ff0-b26b-bb817ae64ee3")
+	)
+	(fp_line
+		(start -1.5 1.5)
+		(end -1.5 -0.68)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2bd17d06-476c-4e5e-87cb-5d6ddf18e2dc")
+	)
+	(fp_line
+		(start -1.61 -1.51)
+		(end -0.885 -1.51)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "23b7430f-c6e7-4944-9a4e-b6d74a0d7969")
+	)
+	(fp_line
+		(start 0.885 -1.51)
+		(end 1.61 -1.51)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9abae5b6-7ba7-425c-97a5-362266daf38c")
+	)
+	(fp_line
+		(start 1.61 -1.51)
+		(end 1.61 -1.135)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "33d2f683-4b8f-4f96-b439-0f06206f6d08")
+	)
+	(fp_line
+		(start 1.61 1.135)
+		(end 1.61 1.61)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e374f250-0c29-4264-840d-8b8763a6afec")
+	)
+	(fp_line
+		(start -1.61 1.61)
+		(end 1.61 1.61)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "5fca1452-9df9-4ffc-b492-5b99fecf5699")
+	)
+	(fp_line
+		(start -1.61 -1.51)
+		(end -1.61 -1.135)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "eca8046e-ee62-4cfd-a155-c6329af76e8a")
+	)
+	(fp_line
+		(start -1.61 1.135)
+		(end -1.61 1.61)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "959faf04-e6ef-4bf5-9683-4bb2392af8ef")
+	)
+	(fp_circle
+		(center -1.85 -1.75)
+		(end -1.75 -1.75)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "f9622de8-3eaa-4c58-bd71-e46ffd6a7ab8")
+	)
+	(fp_rect
+		(start -2.05 -1.95)
+		(end 2.05 1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "3349df70-85de-494a-b0c4-53b96f36acea")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0.05 0)
+		(layer "F.Fab")
+		(uuid "5feb8a5d-480f-4815-bbc0-9843bc19645e")
+		(effects
+			(font
+				(size 0.95 0.95)
+				(thickness 0.142)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -1.45 -0.75)
+		(size 0.7 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "42658dce-b73c-4f61-85d7-e486076a82b3")
+	)
+	(pad "2" smd roundrect
+		(at -1.45 -0.25)
+		(size 0.7 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "f825a1c0-d5e3-40d7-a113-fa5e255e1874")
+	)
+	(pad "3" smd roundrect
+		(at -1.45 0.25)
+		(size 0.7 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "af4451d7-13c8-4066-9dad-e587049851b4")
+	)
+	(pad "4" smd roundrect
+		(at -1.45 0.75)
+		(size 0.7 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "bc3c9430-3252-4607-84ad-05a303d0c446")
+	)
+	(pad "5" smd roundrect
+		(at 1.45 0.75)
+		(size 0.7 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "40275481-3dc6-4e52-bbe4-98957cbb0b96")
+	)
+	(pad "6" smd roundrect
+		(at 1.45 0.25)
+		(size 0.7 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "3f74ce5d-13f9-4286-b5f2-3652b5d82746")
+	)
+	(pad "7" smd roundrect
+		(at 1.45 -0.25)
+		(size 0.7 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "2e688cb3-ff8d-4c35-a8fe-615fb84fcea6")
+	)
+	(pad "8" smd roundrect
+		(at 1.45 -0.75)
+		(size 0.7 0.25)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "84044e91-7104-45f4-b65f-f58c8ab5c274")
+	)
+	(pad "9" smd roundrect
+		(at 0 -1.11)
+		(size 1.25 0.38)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.1)
+		(uuid "3607d8a8-4767-4d08-8ef7-d8e79c1b3e9f")
+	)
+	(pad "10" smd roundrect
+		(at 0 1.11)
+		(size 1.25 0.38)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.1)
+		(uuid "8dcff494-ce95-4fcb-8060-682435c2eb95")
+	)
+	(pad "11" smd roundrect
+		(at 0 0 90)
+		(size 1.34 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.05)
+		(uuid "dd77bf75-bdbc-4cf0-813a-e42bf54860b6")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Torex_XCL226.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
