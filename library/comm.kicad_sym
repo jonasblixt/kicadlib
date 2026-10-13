@@ -475,7 +475,7 @@
 				)
 			)
 		)
-		(property "Footprint" "uDFN6_EP"
+		(property "Footprint" "Jonas:Avago_ALM-GA001"
 			(at 13.97 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
