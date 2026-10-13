@@ -809,7 +809,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:WLCSP20"
+		(property "Footprint" "Package_CSP:WLCSP-20_1.934x2.434mm_Layout4x5_P0.4mm"
 			(at 8.89 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1270,7 +1270,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:WLCSP12"
+		(property "Footprint" "Package_BGA:Texas_DSBGA-12_1.36x1.86mm_Layout3x4_P0.5mm"
 			(at -1.27 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3062,7 +3062,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:DFN-16-1EP_4x5mm_P0.5mm_EP2.44x4.34mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-16-1EP_4x5mm_P0.5mm_EP2.44x4.34mm"
 			(at -3.81 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3778,7 +3778,7 @@
 				)
 			)
 		)
-		(property "Footprint" "8DFN_EP"
+		(property "Footprint" "Package_DFN_QFN:DFN-8-1EP_2x3mm_P0.5mm_EP0.61x2.2mm"
 			(at 0 19.05 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4766,7 +4766,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DHC16"
+		(property "Footprint" "Package_DFN_QFN:DFN-16-1EP_3x5mm_P0.5mm_EP1.66x4.4mm"
 			(at 8.89 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
