@@ -5789,7 +5789,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:61201021621"
+		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
 			(at -24.13 8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
