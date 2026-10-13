@@ -613,13 +613,97 @@ Config and docs:
       than Bourns' schematic (TD/RD); pairing and polarity are right.
 - [ ] **F7.3** `Jonas.pretty` QA fixes (F4) and 3D cleanup (F5.1–F5.3).
 - [ ] **F7.4** Migrations (M), in batches by symbol library, each with a
-      render contact sheet.
+      render contact sheet. **Inventory 2026-10-13** (Jonas: Q7 = Vendor_Part
+      names; Q8 = reuse models from the repo, its history and the old
+      projects first, generate the rest; every generated footprint/model
+      goes on the F8 review list). Sources searched: `modules/`, git
+      history (3,072 model files ever committed), and the old projects
+      Snigel2, Sting2/Schematic, Vektor and Blixten Gateway on Y: (129
+      model files, 3 boards). "Built" = the footprint is on that project's
+      board; in every case but the ones noted in the text below, the
+      board's embedded copy is pad-for-pad identical to `modules/`.
+
+  | Symbol(s) | Footprint source | Built on | 3D model |
+  |---|---|---|---|
+  | TAS2770 | `RJQ0026A` | - | **generate** |
+  | 146200 | `molex_lte_ant_146200` | Sting2 | git history `LTE_antenna_molex_146200-001.wrl` |
+  | 2450AT18B100 | `2450AT18B100` | - | **generate** |
+  | ALM-GA001 | `uDFN6_EP` | Sting2 | **generate** |
+  | ANT016008LCD1575MA1 | `ANT016008LCD1575MA1` | Sting2 | **generate** |
+  | DPX162500DT-8014A1 | `DPX1625` | Sting2 | **generate** |
+  | HHM22106C1 | `HHM22106C1` | Sting2 | **generate** |
+  | SKY13587-378LF | `MLPD6` | Sting2 | **generate** |
+  | WLA.01 | `WLA.01` | Gateway | git history `wla.01.wrl` |
+  | mPCIe_modem | `mPCIe` | - | git history `MPCI.STEP` |
+  | 0781715006 | `78171-5006` | - | git history `781715006.stp` |
+  | 34826-8200 | `34826-8200` | Sting2 | git history `348260200.stp` |
+  | 5-104074-8 | `5-104074-8` | Snigel2 | old project `ampmodu_5-104074-8.wrl` |
+  | DX4R005JJ2R1800 | `USB_Micro-B` | Gateway | git history `K3D-DX4R005JJ2-V3_JAE_Proprietary.STEP` |
+  | RJE72-188-1401 | `RJE72-188-1401` | Gateway | git history `M-RJE72-188-1X01-REVT1.STEP` |
+  | TFM-105-02-S-D-WT | `TFM-105-02-S-D-WT` | Snigel2 | git history `TFM-105-02-S-D-WT.stp` |
+  | TFM-110-02-S-D-WT | `TFM-110-02-S-D-WT` | Gateway, Sting2 | git history `TFM-110-02-S-D-WT.stp` |
+  | USB_A_292303-1 | `USB_A_TH` | Snigel2 | repo `c-292303-1-e4-3d.stp` |
+  | fakra x4 | `fakra_th` | Sting2 | git history `fakra_green_734035114.stp` |
+  | ADAU1467 | `CP-88-10` | - | repo `User Library-LFCSP_VQ88(CP-88-5).step` |
+  | AT91SAM9G25 | `217LFBGA` | Gateway | git history `217LFBGA.wrl` |
+  | MIMX8MM6/MN5 | `BGA-486_27x27_P0.5mm_14.0x14.0mm` | - | **generate** |
+  | FAN48623 x2 | `WLCSP16` | Sting2 | **generate** |
+  | LM536355QRNLRQ1 | `VQFN_HR_22` | Sting2 | **generate** |
+  | LMZ10501SILR | `TI_LMX_SIL` | - | **generate** |
+  | MIC23254 | `MLF-10` | Gateway | old project `2x2mm.wrl` |
+  | MIC28511 | `FQFN34-24` | Snigel2 | **generate** |
+  | XCL226A0K1H2 | `Torex_XCL22_QFN` | - | **generate** |
+  | PLR135_T10, PLT133_T10W | `PLR135_T10` | - | repo `PLR135.STEP` |
+  | TORX1355, TOTX1350 | `TOSLINK_VERTICAL` | - | repo `User Library-torx-ph-iso7045.step` |
+  | bq27742-G1 | `DSBGA15` | Sting2 | git history `15dsbga.wrl` |
+  | LARA-R2 (N->M) | `LARA_R2_LGA` | Sting2 | git history `lara_r2.wrl` |
+  | 1575AT43A0040 (N) | **new from data sheet** | - | **generate** |
+  | WYSBCVGXA (N) | **new from data sheet** | - | **generate** |
+  | DuraClick_560020 (N) | **new from data sheet** | - | **generate** |
+  | MX34R36HF4T (N) | **new from data sheet** | - | **generate** |
+  | SF7W008S1AE900 (N) | **new from data sheet** | - | **generate** |
+  | LT8640 (N) | **new from data sheet** | - | **generate** |
+  | NLSV4T3144-D (N) | **new from data sheet** | - | **generate** |
+  | PT65503 (N) | **new from data sheet** | - | **generate** |
+
+  Board copies that differ from `modules/` (use the built one, after a
+  data sheet check): `FQFN34-24` (MIC28511, Snigel2: pads up to 0.23 mm
+  apart), `VQFN_HR_22` (LM536355, Sting2: exposed-pad shapes),
+  `TFM-110-02-S-D-WT` (Sting2 differs, Gateway matches `modules/`),
+  `USB_Micro-B` (JAE DX4R005, Gateway), `WLA.01` (Gateway), `5-104074-8`
+  (Snigel2). LARA-R2 moves from N to M: `modules/LARA_R2_LGA` exists (the
+  symbol linked a wrong name) and is on the Sting2 board.
+  Stock candidates from the 2026-10-13 recheck (LMZ10501 → TI SIL0008D,
+  MIC23254 → DFN-10 2x2 P0.4, MIC28511 → QFN-24 3x4 P0.4, USB-A → TE
+  292303-7, HHM22106C1 → Johanson 1.6x0.8 balun, ALM-GA001, NLSV4T3144 →
+  UQFN-12, TORX/TOTX → Toshiba 170 series): where the old footprint is
+  on a built board it is the proven land and is migrated instead; the
+  rest get a data sheet check first.
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
       `git rm -r modules/` (A2.6) and optionally A6. (`Jonas.pretty/tmp/`
       is already gone, A1.2.)
 - [ ] **F7.7** (optional) F6 field hygiene and F4.8 renames.
+
+## F8. Manual review: everything Claude generated (Jonas)
+
+Per Jonas (2026-10-13), every footprint and 3D model that Claude
+*generates* (as opposed to copying or migrating an existing one) is
+listed here for a manual check in KiCad. Tick when reviewed.
+
+### Footprints
+
+- (none yet; the F7.5 new footprints will be listed here)
+
+### 3D models
+
+- [ ] `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm.step` (Si3402, poetato U4) -
+      `scripting/gen_package_models.py`, `1acc16e`
+- [ ] `NX1255GB.step` - `scripting/gen_package_models.py`, `1acc16e`
+- [ ] `Texas_YJE.step` (CSD83325L) - `scripting/gen_package_models.py`,
+      `1acc16e`
+
 
 ## Open questions
 
