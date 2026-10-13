@@ -714,7 +714,7 @@
 				)
 			)
 		)
-		(property "Footprint" "ANT016008LCD1575MA1"
+		(property "Footprint" "Jonas:TDK_ANT016008LCD1575MA1"
 			(at 0 8.89 0)
 			(show_name no)
 			(do_not_autoplace no)

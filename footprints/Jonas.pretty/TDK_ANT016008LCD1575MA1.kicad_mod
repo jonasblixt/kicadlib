@@ -1,0 +1,173 @@
+(footprint "TDK_ANT016008LCD1575MA1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/ANT016008LCD1575MA1 (pads unchanged, used on Sting2); outline, courtyard and fab rebuilt to KLC in 2026-10. TDK ANT016008LCD1575MA1 GNSS chip antenna, 1.6x0.8mm")
+	(tags "antenna GNSS GPS chip TDK ANT016008")
+	(property "Reference" "REF**"
+		(at 0.15 -1.45 0)
+		(layer "F.SilkS")
+		(uuid "c1f5d95d-5fdc-4eaa-ae30-9e9e5630635d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TDK_ANT016008LCD1575MA1"
+		(at 0.15 1.75 0)
+		(layer "F.Fab")
+		(uuid "01607c9d-b220-4420-9c76-786bbb36e720")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b69750d9-a5db-4f76-a05c-7d3c54dceb09")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "935ffdf5-486a-41ea-8780-ea3142efc65b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.8 -0.4)
+		(end 0.8 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ea0f5946-b1e3-4611-ae2f-d109c473f879")
+	)
+	(fp_line
+		(start 0.8 -0.4)
+		(end 0.8 0.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1bd6dd4a-8daf-4514-b777-8ef7ec315898")
+	)
+	(fp_line
+		(start 0.8 0.2)
+		(end 0.6 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f7dda9c6-6e30-4381-9fd3-42e9e95f7d85")
+	)
+	(fp_line
+		(start 0.6 0.4)
+		(end -0.8 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f7114d34-c0ba-4f4a-b5a4-78c5ae9410e9")
+	)
+	(fp_line
+		(start -0.8 0.4)
+		(end -0.8 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e42476fd-993a-4786-be15-0cf6b1786f8e")
+	)
+	(fp_circle
+		(center 1.15 0.75)
+		(end 1.25 0.75)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "f453347c-6c5f-4af1-9d09-9d20ba2713a6")
+	)
+	(fp_rect
+		(start -1.05 -0.65)
+		(end 1.35 0.95)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d3c313f5-3efd-4f66-b715-3c554f6c6532")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "952538b3-4357-4a4c-8f91-11ac42ca43c9")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 0 0.2325)
+		(size 0.4 0.165)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b13d73bc-9770-441a-85b1-91e508b1bb99")
+	)
+	(pad "2" smd rect
+		(at -0.6325 0 90)
+		(size 0.6 0.165)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c585c94a-a927-41a7-822d-d6b3e97fe1be")
+	)
+	(pad "3" smd rect
+		(at 0.6325 0 90)
+		(size 0.6 0.165)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7b720f50-004d-40f8-954e-b13da59c06da")
+	)
+	(pad "4" smd rect
+		(at 0 -0.2325)
+		(size 0.4 0.165)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "49764ded-ec02-4fcf-994e-ce3370f8c53c")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/TDK_ANT016008LCD1575MA1.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
