@@ -31,8 +31,8 @@
 # footprints/Jonas.3dshapes/NX2520SA.step (identity transform, as the
 # legacy footprint had). NX3225SA uses Jonas.3dshapes/NX3225SA.step,
 # added by hand after the first generation and carried back into this
-# script (rotate -90 about X). NX1255GB has no model (F4.5); its legacy
-# file had none either. NX3225SA's legacy footprint referenced a generic
+# script (rotate -90 about X). NX1255GB uses the envelope model made by
+# scripting/gen_package_models.py (F4.5); its legacy file had none. NX3225SA's legacy footprint referenced a generic
 # stock box placeholder ("${KISYS3DMOD}/Crystal SMD 2.5x3.5mm.step") that
 # doesn't match this package's real 3.2x2.5mm footprint - not carried
 # forward.
@@ -61,7 +61,8 @@ FOOTPRINTS = {
         "ref_at": (-2.54, 4.4),
         "val_at": (-2.54, -4.4),
         "descr": "NDK NX1255GB-series crystal, 12.5mm x 5.5mm body, 4-pad wraparound package.",
-        "model": None,
+        # Envelope model from scripting/gen_package_models.py (F4.5).
+        "model": "NX1255GB.step",
         "keep_silk_box": False,
     },
     "NX2520SA": {

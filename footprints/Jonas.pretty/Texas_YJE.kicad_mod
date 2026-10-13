@@ -158,5 +158,16 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "0ac03c0f-c3e9-4244-b93c-c59f18a5da7a")
 	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Texas_YJE.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 	(embedded_fonts no)
 )

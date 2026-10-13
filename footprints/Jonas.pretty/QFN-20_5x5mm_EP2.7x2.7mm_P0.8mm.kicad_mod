@@ -439,5 +439,16 @@
 		(solder_mask_margin 0.102)
 		(uuid "2e916bba-13a5-46c3-9e15-af6bdb11a739")
 	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 	(embedded_fonts no)
 )
