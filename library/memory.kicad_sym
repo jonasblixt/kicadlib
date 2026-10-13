@@ -12241,7 +12241,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm"
+		(property "Footprint" "Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm"
 			(at 0 16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
