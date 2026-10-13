@@ -88,11 +88,44 @@ def texas_yje():
     return 'Texas_YJE', boxes, 'TI PicoStar YJE0006A 1.11x2.16x0.22 mm, CSD83325L'
 
 
+# Plain bodies for migrated IC footprints (F7.4) that had no model anywhere
+# (repo, git history, old projects). Body = the footprint's F.Fab body (in
+# footprint coordinates), pin-1 mark at the chamfered F.Fab corner (flipped
+# to model Y). Heights: data sheet where noted, otherwise ASSUMED from the
+# package type - check them on the F8 review list.
+#   name: (x1, y1, x2, y2, height, pin1_corner_xy, height source)
+PLAIN_BODIES = {
+    'onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm': (-0.8, -0.8, 0.8, 0.8, 0.6, (-0.8, -0.8), 'assumed (typical WLCSP)'),
+    'Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm': (-2.0, -2.5, 2.0, 2.5, 0.9, (-2.0, -2.5), 'TI 4226904/A, 0.9 max'),
+    'Texas_SIL0008G_MicroSiP-8_3x2.6mm': (-1.5, -1.3, 1.5, 1.3, 1.0, (-1.5, -1.3), 'assumed (MicroSiP with inductor)'),
+    'Microchip_MLF-10_2x2mm_P0.4mm': (-1.0, -1.0, 1.0, 1.0, 0.55, (1.0, -1.0), 'MIC23254 data sheet, 0.55 +-0.05'),
+    'Microchip_FTQFN-24_3x4mm': (-2.0, -1.5, 2.0, 1.5, 0.75, (-2.0, 1.5), 'assumed (typical FTQFN)'),
+    'Torex_XCL226': (-1.5, -1.4, 1.5, 1.5, 1.0, (-1.5, -1.4), 'assumed (micro DC/DC module)'),
+}
+
+
+def plain_body(name):
+    x1, y1, x2, y2, h, (px, py), _src = PLAIN_BODIES[name]
+    w, d = x2 - x1, y2 - y1
+    boxes = [box_c((x1 + x2) / 2, -(y1 + y2) / 2, 0, w, d, h, BODY_BLACK)]
+    m = min(0.4, 0.2 * min(w, d))
+    inset = m / 2 + 0.1 * min(w, d)
+    sx = 1 if px > (x1 + x2) / 2 else -1
+    sy = 1 if -py > -(y1 + y2) / 2 else -1
+    boxes.append(box_c(px - sx * inset, -py - sy * inset, h, m, m, 0.01, MARK))
+    return name, boxes, '%s plain body %.2fx%.2fx%.2f mm' % (name, w, d, h)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--out', default=os.path.join(REPO, 'footprints', 'Jonas.3dshapes'))
     out = ap.parse_args().out
     os.makedirs(out, exist_ok=True)
+    for name in PLAIN_BODIES:
+        name, boxes, descr = plain_body(name)
+        path = os.path.join(out, name + '.step')
+        write_step_boxes(path, name, boxes, descr)
+        print('wrote %s (%d boxes)' % (path, len(boxes)))
     for fn in (qfn20_si3402, nx1255gb, texas_yje):
         name, boxes, descr = fn()
         path = os.path.join(out, name + '.step')
