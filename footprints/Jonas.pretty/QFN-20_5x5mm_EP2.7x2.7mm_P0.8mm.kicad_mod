@@ -232,7 +232,7 @@
 	)
 	(fp_line
 		(start -2.5 2.5)
-		(end -2.5 -2.5)
+		(end -2.5 -1.5)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -242,7 +242,7 @@
 	)
 	(fp_line
 		(start 2.5 -2.5)
-		(end -2.5 -2.5)
+		(end -1.5 -2.5)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -270,17 +270,6 @@
 		(layer "F.Fab")
 		(uuid "f3fe24b0-0a5e-4f93-a8f1-a2cdfd8e88ad")
 	)
-	(fp_circle
-		(center -3.5 -1.2)
-		(end -3.4 -1.2)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(fill no)
-		(layer "F.Fab")
-		(uuid "0794369c-7618-4335-920d-43b40ca978c8")
-	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
@@ -291,6 +280,16 @@
 				(thickness 0.15)
 			)
 		)
+	)
+	(fp_line
+		(start -2.5 -1.5)
+		(end -1.5 -2.5)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5b3df0b7-e46c-4295-acf6-871d46231489")
 	)
 	(pad "1" smd oval
 		(at -2.35 -1.2)
