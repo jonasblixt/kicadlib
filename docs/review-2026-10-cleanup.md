@@ -277,13 +277,27 @@ of them on migration.
 - [ ] **A4.2** Naming fixes:
   - `cap_mlcc_murata_GRM` → `cap_mlcc_murata_grm` (lowercase).
   - `diode_tvs_littlefuse` → `diode_tvs_littelfuse` (vendor spelling).
-  - `data/ind_choke_murata_LQW_*.csv`, `data/ind_rfmw_murata_LQW_*.csv` →
-    lowercase `lqw`.
+  - ~~`data/ind_choke_murata_LQW_*.csv`, `data/ind_rfmw_murata_LQW_*.csv` →
+    lowercase `lqw`.~~ Done with A4.3 (renamed per series), except
+    `ind_choke_murata_LQW_8.csv`, see A4.6.
   - `import_ind_rfmw_murata_lqg.py` still mentions the old
     `ind_rf_murata_lqg15hn.kicad_dbl`.
-- [ ] **A4.3** LQW is split across `ind_choke_murata_lqw` and
-      `ind_rfmw_murata_lqw`, both showing as "LQW" in the chooser. Merge
-      them, or give distinct chooser names (e.g. `LQW (choke)`).
+- [x] **A4.3** LQW is split across `ind_choke_murata_lqw` and
+      `ind_rfmw_murata_lqw`, both showing as "LQW" in the chooser.
+      **Decision (Jonas, 2026-10-13): don't merge.** `LQW15` is the case
+      size and the next letters the product line, so split into one
+      library per series, named and chooser-labelled by series:
+      `ind_choke_murata_lqw15cn` (34), `_lqw15dn` (2), `_lqw18cn` (15),
+      `ind_rfmw_murata_lqw15an` (296), `_lqw15aw` (36), `_lqw18an` (99),
+      `_lqw2bas` (66). Shared parsing in `scripting/murata_lqw.py`; each
+      `import_<library>.py` regenerates its files with no arguments. The
+      548 rows are identical to the old merged libraries. Global
+      `sym-lib-table` updated (2 entries → 7). — see commit "A4.3 …"
+- [ ] **A4.6** (new) `data/ind_choke_murata_LQW_8.csv` is 95 Murata
+      LQW2UAS parts (1008/2520, non-magnetic, "High frequency circuits"),
+      i.e. RF, not choke, and no importer reads it. Either build
+      `ind_rfmw_murata_lqw2uas` (footprint `Inductor_SMD:L_1008_2520Metric`)
+      or delete the CSV.
 - [ ] **A4.4** Make chooser names (`libraries[].name`) consistently the
       series name. Currently `AlEl`, `TVS`, `Epson`, `NDK` are type/vendor
       names while the rest are series names.

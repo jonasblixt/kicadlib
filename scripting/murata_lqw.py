@@ -1,55 +1,44 @@
-# Imports Murata LQW-series high-Q RF wire-wound (non-magnetic core)
-# chip inductor data (Murata's own product-table CSV export, one file
-# per DigiKey/Murata pull) into a KiCad database-library SQLite file.
+# Shared code for the Murata LQW per-series importers
+# (import_ind_choke_murata_lqw*.py, import_ind_rfmw_murata_lqw*.py).
 #
-# Sibling library to ind_rfmw_murata_lqg (LQG15H/LQG18H) - same "rfmw"
-# subtype, same vendor, confusingly similar part-number prefix (LQW vs
-# LQG), but LQW is wire-wound rather than multilayer construction.
-# Checked "Applicable circuit classification" (all 497 rows say
-# "High frequency circuits") and "Characteristic" (all say
-# "Wire wound type (Non mag)" - non-magnetic core) before assuming this
-# belongs under rfmw rather than the OTHER Murata LQW library already in
-# this repo, ind_choke_murata_lqw - that one's source data is
-# "Wire wound type (Ferrite)" / "Power lines circuits", a genuinely
-# different product class (ferrite-core power-line choke) despite
-# sharing the LQW part-number prefix. Don't confuse the two when
-# extending either.
+# Until 2026-10-13 these were two merged libraries, ind_choke_murata_lqw
+# (LQW15CN/LQW15DN/LQW18CN) and ind_rfmw_murata_lqw (LQW15AN/LQW15AW/
+# LQW18AN/LQW2BAS), both showing up as "LQW" in the symbol chooser. Per
+# Jonas (cleanup review A4.3) they are not merged but split into one
+# library per series, named after the series (LQW15 is the case size,
+# the next two letters the product line), with the series as chooser
+# name. The parsing below is carried over unchanged from the two old
+# importers, which differed only in comments, the description suffix and
+# the .kicad_dbl texts; the split libraries contain exactly the same rows
+# (same ids, same values) as the old merged ones.
 #
-# Four source CSVs (ind_rfmw_murata_LQW_1-4.csv) merged into one library
-# the same way ind_rfmw_murata_lqg merged LQG15H/LQG18H - each file is a
-# separate DigiKey/Murata pull covering a different LQW sub-series and
-# case size:
-#   - LQW_1 (36 rows):  LQW15AW_80, EIA 0402, up to 140C
-#   - LQW_2 (296 rows): LQW15AN_80, EIA 0402, up to 125C (HiQtype/Low Rdc
-#     variant - same case as LQW15AW but a distinct sub-series; verified
-#     zero id collisions between the two despite sharing a case size)
-#   - LQW_3 (99 rows):  LQW18AN_00, EIA 0603, up to 125C
-#   - LQW_4 (66 rows):  LQW2BAS_0C, EIA 0805, up to 85C
-# Same per-row Series/Max Op Temp handling as ind_rfmw_murata_lqg and
-# ind_choke_murata_lqw since these vary by sub-series within the merged
-# library.
+# Source data is Murata's own product-table CSV export. Two product
+# classes share the LQW prefix and must not be mixed:
+#   - choke: "Wire wound type (Ferrite)", "Power lines circuits"
+#     (LQW15CN, LQW15DN, LQW18CN) - ferrite-core power-line chokes;
+#     "choke" is this repo's subtype code for them (not cmc: single
+#     2-terminal winding; not power: not DC-DC inductors).
+#   - rfmw: "Wire wound type (Non mag)", "High frequency circuits"
+#     (LQW15AN, LQW15AW, LQW18AN, LQW2BAS) - high-Q RF inductors, sibling
+#     of ind_rfmw_murata_lqg (multilayer).
 #
-# Same RF-inductor-trim field style as ind_rfmw_murata_lqg /
-# ind_choke_murata_lqw (Device:L, Inductance/Tolerance/Rated Current/
-# DCR/SRF/Max Op Temp/Series/Manufacturer/Part Number/Value, no
-# Saturation Current - only "Rated Current (Temperature Rise) / Max." is
-# ever populated across all 497 rows, same as both sibling libraries).
+# Field style: the RF-inductor-trim style of ind_rfmw_murata_lqg
+# (Device:L, Inductance/Tolerance/Rated Current/DCR/SRF/Max Op Temp/
+# Series/Manufacturer/Part Number/Value, no Saturation Current: only
+# "Rated Current (Temperature Rise) / Max." is populated in this data).
 #
-# format_srf() gained GHz support this library needed - unlike
-# ind_rfmw_murata_lqg/ind_choke_murata_lqw (MHz only, some with
-# thousands-comma), a meaningful fraction of this dataset's SRF values
-# are given directly in GHz (e.g. "2.1GHz", "12.5GHz"). Normalized
-# everything to MHz for consistency with the sibling libraries' SRF
-# field (1GHz = 1000MHz) rather than storing a mixed-unit column.
+# Units: inductance >= 1uH formats on the "u" scale (LQW15DN goes up to
+# 15uH); tolerance is a percentage except below 10nH, where Murata gives
+# an absolute value (e.g. LQW18CN4N9D00#, 4.9nH +/-0.5nH) which reuses
+# format_inductance(). SRF is normalized to MHz: some RF rows give GHz
+# ("2.1GHz" -> "2100MHz"), and thousands commas are dropped.
 #
-# Id format follows NAMING.md's inductor pattern: L<case>_<value>_
-# <tolerance>_<current>, same format_inductance()/format_current()
-# helpers as the sibling libraries. Verified zero id collisions across
-# all 497 rows from the four files combined.
+# Id format follows NAMING.md's inductor pattern:
+# L<case>_<value>_<tolerance>_<current>. Ids are unique within every
+# series (verified when the libraries were merged and again at the split).
 #
-# All three case sizes (0402, 0603, 0805) are standard EIA metric cases
-# with an exact dimensional match in KiCad's own Inductor_SMD.pretty -
-# no custom footprint needed.
+# Footprints: all cases (0402, 0603, 0805) are standard EIA metric cases
+# with an exact match in KiCad's Inductor_SMD.pretty.
 import argparse
 import csv
 import json
@@ -58,10 +47,10 @@ import sqlite3
 from pathlib import Path
 
 MANUFACTURER = "Murata"
+REPO = Path(__file__).resolve().parent.parent
 
 # EIA case code (from the "Size code in mm(inch)" column, e.g.
 # "1005/0402" -> "0402") -> (footprint library nickname, footprint name).
-# All standard KiCad footprints.
 footprint_mapping = {
     "0402": ("Inductor_SMD", "L_0402_1005Metric"),
     "0603": ("Inductor_SMD", "L_0603_1608Metric"),
@@ -72,6 +61,12 @@ TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 INDUCTANCE_RE = re.compile(r"^([\d,.]+)(nH|μH|uH)\s*\xb1([\d,.]+)(%|nH|μH|uH)$")
 CURRENT_RE = re.compile(r"^([\d,]+)mA$")
 SRF_RE = re.compile(r"^([\d,.]+)(MHz|GHz)$")
+
+# Description suffix per product class (kept from the old importers).
+KIND_TEXT = {
+    "choke": "power-line choke",
+    "rfmw": "high-Q RF",
+}
 
 
 def parse_case(raw):
@@ -86,6 +81,7 @@ def _to_henries(num_str, unit):
 
 def parse_inductance(raw):
     # "51nH \xb12%" -> (5.1e-8, 2.0, "%")
+    # "4.9nH \xb10.5nH" -> (4.9e-9, 0.5e-9, "abs")
     m = INDUCTANCE_RE.match(raw.strip())
     if not m:
         raise ValueError(f"could not parse inductance from {raw!r}")
@@ -97,10 +93,9 @@ def parse_inductance(raw):
 
 
 def format_inductance(henries):
-    # Returns (id_short, display_str), e.g. 51e-9 -> ("51n0", "51nH").
-    # Same IEC-60062-style formatter as ind_rfmw_murata_lqg /
-    # ind_choke_murata_lqw - always keeps a digit after the unit letter,
-    # matching NAMING.md's own "10n0"/"2u2" examples.
+    # Returns (id_short, display_str), e.g. 51e-9 -> ("51n0", "51nH"),
+    # 3.3e-6 -> ("3u3", "3.3μH"). IEC-60062 style, always keeps a digit
+    # after the unit letter, matching NAMING.md's "10n0"/"2u2" examples.
     if henries < 1000e-9:
         unit_id, unit_disp, factor = "n", "nH", 1e-9
     else:
@@ -129,17 +124,14 @@ def parse_current(raw):
 
 
 def format_current(amps):
-    # 0.6 -> "0A6", 1.4 -> "1A4" - matches NAMING.md's own inductor
-    # example ("1A2").
+    # 0.6 -> "0A6", 1.4 -> "1A4" - matches NAMING.md's inductor example.
     s = f"{amps:.1f}"
     int_part, dec_part = s.split(".")
     return f"{int_part}A{dec_part}"
 
 
 def format_srf(raw):
-    # "6,000MHz" -> "6000MHz", "2.1GHz" -> "2100MHz" - normalized to MHz
-    # (see header comment) so this matches the sibling libraries' SRF
-    # field even though the source mixes units.
+    # "6,000MHz" -> "6000MHz", "2.1GHz" -> "2100MHz"
     m = SRF_RE.match(raw.strip().replace(",", ""))
     if not m:
         raise ValueError(f"could not parse SRF from {raw!r}")
@@ -149,7 +141,8 @@ def format_srf(raw):
     return f"{int(round(value))}MHz"
 
 
-def load_inductors(csv_path):
+def load_inductors(csv_path, kind, series):
+    """Read one Murata CSV; refuse rows that aren't the expected series."""
     count = 0
     skipped_footprint = {}
     inductors = []
@@ -160,6 +153,10 @@ def load_inductors(csv_path):
 
         for row in reader:
             part_number = row["Part Number"]
+            row_series = row["Series"].split("_")[0]
+            if row_series != series:
+                raise ValueError(f"{csv_path}: {part_number} is series "
+                                 f"{row_series}, expected {series}")
             case = parse_case(row["Size code in mm(inch)"])
 
             if case not in footprint_mapping:
@@ -186,7 +183,6 @@ def load_inductors(csv_path):
             dcr = row["DC Resistance(max.)"].strip()
             srf = format_srf(row["Self-resonant frequency(min.)"])
             max_temp = row["Maximum operating temperature"].strip()
-            series = row["Series"].split("_")[0]
 
             id_str = f"L{case}_{value_id}_{tol_token}_{current_str}"
             if id_str in seen_ids:
@@ -199,17 +195,16 @@ def load_inductors(csv_path):
             count += 1
             current_disp = f"{irated:.2f}".rstrip("0").rstrip(".") + "A"
             description = (f"{value_disp}, {tol_disp}, {current_disp}, "
-                            f"DCR {dcr}, SRF {srf}, EIA {case}, {series}, "
-                            f"high-Q RF")
+                           f"DCR {dcr}, SRF {srf}, EIA {case}, {series}, "
+                           f"{KIND_TEXT[kind]}")
 
             print(f"{count} {id_str} {part_number}, {case}, {value_disp}, "
                   f"{tol_disp}, {current_str}, DCR {dcr}, SRF {srf}")
 
-            inductor = (id_str, value_disp, footprint, "Device:L",
-                        value_disp, tol_disp, current_str, dcr, srf,
-                        max_temp, series, description, part_number,
-                        MANUFACTURER)
-            inductors.append(inductor)
+            inductors.append((id_str, value_disp, footprint, "Device:L",
+                              value_disp, tol_disp, current_str, dcr, srf,
+                              max_temp, series, description, part_number,
+                              MANUFACTURER))
 
     if skipped_footprint:
         total_skipped = sum(skipped_footprint.values())
@@ -260,8 +255,7 @@ def write_database(db_path, table, inductors):
 
 
 def build_field_defs():
-    # Same RF-inductor-trim style as ind_rfmw_murata_lqg /
-    # ind_choke_murata_lqw.
+    # RF-inductor-trim style, same as ind_rfmw_murata_lqg.
     return [
         {"column": "Inductance", "name": "Inductance",
          "visible_on_add": False, "visible_in_chooser": False, "show_name": True},
@@ -286,12 +280,11 @@ def build_field_defs():
     ]
 
 
-def write_kicad_dbl(dbl_path, db_path, table):
+def write_kicad_dbl(dbl_path, db_path, table, chooser_name, title, description):
     content = {
         "meta": {"version": 0},
-        "name": "Murata LQW High-Q RF Wire-Wound Chip Inductors",
-        "description": ("Murata LQW15A/LQW18A/LQW2B High-Q RF Wire-Wound "
-                         "(Non-Magnetic Core) Chip Inductor Library"),
+        "name": title,
+        "description": description,
         "source": {
             "type": "odbc",
             "dsn": "",
@@ -305,7 +298,7 @@ def write_kicad_dbl(dbl_path, db_path, table):
         },
         "libraries": [
             {
-                "name": "LQW",
+                "name": chooser_name,
                 "table": table,
                 "key": "id",
                 "symbols": "Symbol",
@@ -321,38 +314,24 @@ def write_kicad_dbl(dbl_path, db_path, table):
         f.write("\n")
 
 
-def parse_args():
+def run(library, kind, series, title, description):
+    """Entry point for a per-series importer. Defaults reproduce the repo files."""
     parser = argparse.ArgumentParser(
-        description="Import Murata LQW-family high-Q RF wire-wound chip "
-                     "inductor CSV export(s) into a KiCad "
-                     "database-library SQLite file.")
-    parser.add_argument("--csv", required=True, nargs="+",
-                         help="Path(s) to the input CSV(s). Multiple "
-                              "values are merged into one library.")
-    parser.add_argument("--db", required=True,
-                         help="Path to the output .db SQLite file. Created "
-                              "if it doesn't exist.")
-    parser.add_argument("--table", required=True,
-                         help="Name of the table to (re)create inside the "
-                              "database, e.g. ind_rfmw_murata_lqw. Must "
-                              "match the corresponding .kicad_dbl 'table' "
-                              "field.")
-    parser.add_argument("--kicad-dbl", required=True,
-                         help="Path to (re)write the .kicad_dbl file.")
-    return parser.parse_args()
+        description=f"Import the Murata {series} CSV export into the "
+                    f"{library} KiCad database library.")
+    parser.add_argument("--csv", default=str(REPO / "data" / f"{library}.csv"),
+                        help="input CSV (default: data/<library>.csv)")
+    parser.add_argument("--db", default=str(REPO / "library" / f"{library}.db"),
+                        help="output SQLite file (default: library/<library>.db)")
+    parser.add_argument("--table", default=library,
+                        help="table name; must match the .kicad_dbl 'table' field")
+    parser.add_argument("--kicad-dbl", default=str(REPO / "library" / f"{library}.kicad_dbl"),
+                        help="output .kicad_dbl (default: library/<library>.kicad_dbl)")
+    args = parser.parse_args()
 
-
-def main():
-    args = parse_args()
-    inductors = []
-    for csv_path in args.csv:
-        inductors.extend(load_inductors(csv_path))
+    inductors = load_inductors(args.csv, kind, series)
     write_database(args.db, args.table, inductors)
-    write_kicad_dbl(args.kicad_dbl, args.db, args.table)
+    write_kicad_dbl(args.kicad_dbl, args.db, args.table, series, title, description)
 
     print(f"\nImported {len(inductors)} parts into {args.db} ({args.table})")
     print(f"Wrote {args.kicad_dbl}")
-
-
-if __name__ == "__main__":
-    main()

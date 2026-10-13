@@ -2,20 +2,20 @@
     "meta": {
         "version": 0
     },
-    "name": "Murata LQW Ferrite Wire-Wound Power-Line Choke Inductors",
-    "description": "Murata LQW15C/LQW15D/LQW18C Ferrite Wire-Wound Power-Line Choke Inductor Library",
+    "name": "Murata LQW2BAS High-Q RF Wire-Wound Chip Inductors",
+    "description": "Murata LQW2BAS (0805) high-Q RF wire-wound (non-magnetic core) chip inductor library",
     "source": {
         "type": "odbc",
         "dsn": "",
         "username": "",
         "password": "",
         "timeout_seconds": 2,
-        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/ind_choke_murata_lqw.db"
+        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/ind_rfmw_murata_lqw2bas.db"
     },
     "libraries": [
         {
-            "name": "LQW",
-            "table": "ind_choke_murata_lqw",
+            "name": "LQW2BAS",
+            "table": "ind_rfmw_murata_lqw2bas",
             "key": "id",
             "symbols": "Symbol",
             "footprints": "Footprints",

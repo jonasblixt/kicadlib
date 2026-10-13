@@ -4,10 +4,10 @@
 #
 # This is a genuine common-mode choke per NAMING.md's `cmc` inductor
 # subtype (two coupled windings, 4 terminals) - unlike the sibling
-# ind_choke_murata_lqw library, which despite the similar part-number
-# look (LQW vs DLW) is actually a plain 2-terminal ferrite choke. See
-# that script's header for the reasoning on why `choke` and `cmc` are
-# kept as separate subtype codes.
+# ind_choke_murata_lqw15cn/lqw15dn/lqw18cn libraries, which despite the
+# similar part-number look (LQW vs DLW) are plain 2-terminal ferrite
+# chokes. See scripting/murata_lqw.py's header for why `choke` and `cmc`
+# are kept as separate subtype codes.
 #
 # Two source CSVs (both "5050"/"2020" size, same package/footprint,
 # different sub-series):
