@@ -2251,7 +2251,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LARA_LGA"
+		(property "Footprint" "Jonas:ublox_LARA-R2"
 			(at 0 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
