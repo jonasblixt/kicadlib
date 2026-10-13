@@ -162,17 +162,6 @@
 		(layer "F.Fab")
 		(uuid "e42df9b1-62d7-4c8e-908e-e2e2f48d4502")
 	)
-	(fp_circle
-		(center -2.5 0)
-		(end -2.4 0)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(fill no)
-		(layer "F.Fab")
-		(uuid "a67505ae-a627-4bad-9d1d-e4df6eee01d6")
-	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
