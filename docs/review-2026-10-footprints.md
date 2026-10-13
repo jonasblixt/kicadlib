@@ -430,9 +430,11 @@ footprints only have the cosmetic issues below.
       header), checked in KiCad renders. The first QFN-20 model put 5
       terminals per side; the Si3402 has 4 on the left/right and 6 on the
       top/bottom, as the footprint already had. Fixed before committing.
-- [ ] **F4.6** Pads: `SAMTEC_FTSH-105-01-L-DV-007-K` numbers pads
+- [x] **F4.6** Pads: `SAMTEC_FTSH-105-01-L-DV-007-K` numbers pads
       `01`…`10` (its symbol matches, but nothing else in the repo uses
       leading zeros; stock Samtec/pin-header footprints use `1`…`10`).
+      Done in `81de170`: pads and the symbol's pin numbers/names renumbered
+      together. Poetato J3 must update symbol and footprint together.
 - [x] **F4.7** Unused: `NX5032GA` (NDK 5032 rows use stock
       `Crystal_SMD_5032-*`), `T_Wurth_WE-RJ45LAN_7499210001A` (also A3.4).
       Both deleted (`c8d3ce9` with `NX5032GA.step`, `aafe5a6`); neither is
@@ -444,14 +446,20 @@ footprints only have the cosmetic issues below.
       (`QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`). Renaming means updating symbols
       and importers (all in this repo); existing boards keep their embedded
       copies.
-- [ ] **F4.9** (new, cosmetic) Pin-1 marker drawn as a dot beside the
-      body on F.Fab (`DLW5B_5050`, `NX3215SA`, `QFN-20_5x5mm…`,
-      `SAMTEC_FTSH…`, `SOIC254P680X230-4N`); KLC uses a chamfered body
-      corner on F.Fab and keeps the dot on silk only.
-- [ ] **F4.10** (new, from the F4.2 DRC run) Reference text is 0.5 mm on
-      `Wurth_7499210123` and `Coilcraft_POE60F` (KiCad's default minimum
-      silk text height is 0.8 mm; KLC uses 1.0 mm); `Wurth_7499210123`'s
-      silk body lines run across shield pads 15/16 (clipped by mask).
+- [x] **F4.9** Pin-1 marks on F.Fab replaced by KLC body chamfers at the
+      pad-1 corner (min(1 mm, 25 % of the short side), capped where an edge
+      is short): `DLW5B_5050` (`eae9348`), `QFN-20_5x5mm…` (`0764f90`),
+      `SAMTEC_FTSH…` (`06f26bd`, 0.66 mm, outer corner, not the notch at
+      the side ear), `SOIC254P680X230-4N` (`e638ac4`), `Texas_YJE`
+      (`ecf4189`, also centred its fab reference, which sat outside the
+      body), `Vishay_SOIC254P1016X440-4N` (`6387ded`); `NX3215SA`
+      (`8003f1e`) only loses its dot (2-pad crystal, not polarized). The
+      Coilcraft FA2672/FA2925 vendor drawings keep their pin-1 circle on
+      the body. DRC on these: 0 before, 0 after.
+- [x] **F4.10** (from the F4.2 DRC run) 0.5 mm silk references on
+      `Wurth_7499210123` and `Coilcraft_POE60F` → 1.0 mm, moved off the
+      body to just above it; `Wurth_7499210123` silk re-cut 0.2 mm clear of
+      every pad (`51d8d36`, `619530e`). DRC on the two: 4 before, 0 after.
 - Note: `T_Wurth_WE-RJ45LAN_7498210003` has a rounded `Edge.Cuts` cutout —
   looks intentional (sink-mount), but it does cut the board.
 - Note: 15 footprints (`C_Murata_GA3`, 14× ECHU) are still KiCad 7 format —
