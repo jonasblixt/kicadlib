@@ -688,6 +688,7 @@ Config and docs:
   - [x] comm (10 symbols, 10 footprints): `130c9c1`..`a15f9e3`. Pads identical to `modules/`; per-footprint DRC 0 (old versions had 19 silk-over-pad hits).
   - [x] connectors (12 symbols, 9 footprints): `1bc0fa2`..`8b59022`. Vendor models (modules/packages3d, Snigel2 WRL). Pads identical to `modules/` except two fixes to match the symbols (DX4R005 shield 6/7, TFM-110 holes 21/22); per-footprint DRC 0 (old versions had 14 silk hits). MX34R36HF4T still linked 34826-8200 and stays in F7.5.
 - [ ] **F7.5** New footprints (N), one at a time from datasheets.
+  - [x] 1575AT43A0040: `8b81c83` (data sheet land, generated body)
 - [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
       `git rm -r modules/` (A2.6) and optionally A6. (`Jonas.pretty/tmp/`
@@ -736,6 +737,7 @@ an old transform (3D model placements). Tick when reviewed.
 - [ ] `Samtec_TFM-110-02-S-D-WT` - migrated; plated holes renumbered 0 -> 21/22 to match the symbol; vendor STEP - `b31d1fc`, `8b59022`
 - [ ] `TE_292303-1` - migrated from USB_A_TH, pads unchanged; vendor STEP - `2cf4d80`
 - [ ] `Molex_FAKRA_73403-51xx` - migrated from fakra_th, pads unchanged; one footprint for 4 codings, green vendor STEP - `6769a2a`
+- [ ] `Johanson_1575AT43A0040` - **new from data sheet** (1575AT43A0040001E rev 4.0, mounting config 1 land 1.0x1.8 @ +-3.5) - `8b81c83`
 
 ### 3D models
 
@@ -760,6 +762,7 @@ an old transform (3D model placements). Tick when reviewed.
 - [ ] `TDK_DPX162500DT.step` - plain body, height 0.6 ASSUMED - `130c9c1`
 - [ ] `TDK_HHM22106C1.step` - plain body, height 0.6 ASSUMED - `130c9c1`
 - [ ] `Skyworks_SKY13587-378LF.step` - plain body, height 0.45 ASSUMED - `130c9c1`
+- [ ] `Johanson_1575AT43A0040.step` - plain body 7.0x2.0x0.8 per data sheet; no vendor STEP (Johanson: on request) - `8b81c83`
 
 ### 3D model placements
 
@@ -799,6 +802,7 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `Samtec_TFM-110-02-S-D-WT`: `Samtec_TFM-110-02-S-D-WT.step` rotate (-90, 0, 0) (vendor STEP; old transform was for a WRL) - `b31d1fc`
 - [ ] `TE_292303-1`: `TE_292303-1.step` offset (0, -13, 3.5), rotate (-90, 0, 0) (vendor STEP, old transform) - `2cf4d80`
 - [ ] `Molex_FAKRA_73403-51xx`: `Molex_FAKRA_73403-51xx.step` offset (0, -18.415, 3.81) (vendor STEP (green variant), old transform) - `6769a2a`
+- [ ] `Johanson_1575AT43A0040`: `Johanson_1575AT43A0040.step` identity transform (generated, built in footprint coordinates) - `8b81c83`
 
 ## Open questions
 
