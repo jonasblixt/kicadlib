@@ -31,7 +31,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm"
+		(property "Footprint" "Package_DFN_QFN:DFN-S-8-1EP_6x5mm_P1.27mm"
 			(at 10.16 19.05 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4511,7 +4511,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TSOP-I-48_18.4x12mm_P0.5mm"
+		(property "Footprint" "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm"
 			(at 0 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
