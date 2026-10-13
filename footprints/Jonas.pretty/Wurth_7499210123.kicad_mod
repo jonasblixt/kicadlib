@@ -3,6 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
+	(descr "Wurth WE-RJ45LAN 7499210123 RJ45 jack with integrated magnetics and LEDs, THT, 15.9x21.6mm body")
+	(tags "RJ45 Ethernet jack magnetics Wurth 7499210123")
 	(property "Reference" "REF**"
 		(at 0 4.826 0)
 		(layer "F.SilkS")
@@ -108,6 +110,28 @@
 			(font
 				(size 0.6 0.6)
 				(thickness 0.06)
+			)
+		)
+	)
+	(fp_rect
+		(start -7.874 -7.493)
+		(end 8.001 14.097)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "3183664c-fa1e-4d9d-9526-a87ef4d8ebeb")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.0635 3.302 0)
+		(layer "F.Fab")
+		(uuid "2b68eecc-b1f3-4513-a864-3a20c6d6a9fa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
 			)
 		)
 	)
