@@ -31,7 +31,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RJQ0026A"
+		(property "Footprint" "Jonas:Texas_RJQ0026A_VQFN-HR-26_4x3.5mm"
 			(at 6.35 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
