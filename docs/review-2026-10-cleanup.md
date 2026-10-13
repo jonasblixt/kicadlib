@@ -292,7 +292,7 @@ of them on migration.
       `_lqw2bas` (66). Shared parsing in `scripting/murata_lqw.py`; each
       `import_<library>.py` regenerates its files with no arguments. The
       548 rows are identical to the old merged libraries. Global
-      `sym-lib-table` updated (2 entries → 7). — see commit "A4.3 …"
+      `sym-lib-table` updated (2 entries → 7). — `0a9b4c5`
 - [ ] **A4.6** (new) `data/ind_choke_murata_LQW_8.csv` is 95 Murata
       LQW2UAS parts (1008/2520, non-magnetic, "High frequency circuits"),
       i.e. RF, not choke, and no importer reads it. Either build
