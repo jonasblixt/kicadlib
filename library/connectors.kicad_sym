@@ -8660,7 +8660,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:RJE72-188-1401"
+		(property "Footprint" "Jonas:Amphenol_RJE72-188-1401"
 			(at -1.27 26.67 0)
 			(show_name no)
 			(do_not_autoplace no)
