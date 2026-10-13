@@ -1,0 +1,229 @@
+(footprint "Toshiba_TORX1355_TOTX1350"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Migrated from modules/footprints.pretty/TOSLINK_VERTICAL (pads unchanged); outline, courtyard and fab rebuilt to KLC in 2026-10. Toshiba TORX1355(V,F) receiver / TOTX1350(V,F) transmitter, vertical, THT; body from the old silk outline; 3D model is toslink.step from modules/packages3d")
+	(tags "Toshiba TORX1355 TOTX1350 TOSLINK optical")
+	(property "Reference" "REF**"
+		(at 0.025 -6.55 0)
+		(layer "F.SilkS")
+		(uuid "a1a743e0-cbe9-4742-9e6e-8a0f795fa03f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Toshiba_TORX1355_TOTX1350"
+		(at 0.025 6.6 0)
+		(layer "F.Fab")
+		(uuid "72aaeb5b-ecda-4811-9ba4-7a314dd47718")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5efd1fa7-7d56-40a9-b0a6-17579302f1ba")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "910ac38c-0a42-4281-b9f6-9316203e25e7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -7.7 -5.25)
+		(end 7.7 -5.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "857055c5-cdcc-4857-91b2-debcdba812d4")
+	)
+	(fp_line
+		(start 7.7 -5.25)
+		(end 7.7 4.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c7459689-8e14-4115-9fed-5f6c3170ea5d")
+	)
+	(fp_line
+		(start 7.7 4.25)
+		(end 6.7 5.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0a318665-ae84-421b-8323-fd977dd33307")
+	)
+	(fp_line
+		(start 6.7 5.25)
+		(end -7.7 5.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7031970b-4fc9-4ea8-b043-ee4d4842b49e")
+	)
+	(fp_line
+		(start -7.7 5.25)
+		(end -7.7 -5.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "65176662-f93b-4423-99a9-ecec50ef41e9")
+	)
+	(fp_line
+		(start -7.81 -5.36)
+		(end 7.81 -5.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "84a9e6fe-112b-495a-89fe-c04b781a818f")
+	)
+	(fp_line
+		(start 7.81 -5.36)
+		(end 7.81 5.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2367b94f-3913-42ee-91c0-a4e7388c495e")
+	)
+	(fp_line
+		(start -7.81 5.36)
+		(end 7.81 5.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a9d1d77e-44b1-4014-947c-d9b505b2ad43")
+	)
+	(fp_line
+		(start -7.81 -5.36)
+		(end -7.81 5.36)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "341c3245-290a-4977-8bcf-9db1038baeb1")
+	)
+	(fp_circle
+		(center 8.05 5.6)
+		(end 8.15 5.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "df99ea1c-8f0a-4ffa-b9bc-1265c031b7b2")
+	)
+	(fp_rect
+		(start -8.2 -5.75)
+		(end 8.25 5.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "36a3ff34-ad4a-47af-aa39-e20243fc1355")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "28c10c4e-d810-4f55-9c08-ad42cb0f6be4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 2.54 3.85)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "fb04be05-aadb-4d63-8618-8f398d5d4c67")
+	)
+	(pad "2" thru_hole circle
+		(at 0 3.85)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "80e48134-33cb-4f98-bbb0-684da841c36f")
+	)
+	(pad "3" thru_hole circle
+		(at -2.54 3.85)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "24b124ab-631a-43ea-bb0d-e401c141b157")
+	)
+	(pad "4" thru_hole circle
+		(at -6.525 0)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "24b82265-7b96-4fc4-ab43-80aa83e3b107")
+	)
+	(pad "5" thru_hole circle
+		(at 6.525 0)
+		(size 1.524 1.524)
+		(drill 0.762)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "628038ab-a130-41bf-af40-a065af3afe1a")
+	)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Toshiba_TORX1355_TOTX1350.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)
