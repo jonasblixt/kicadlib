@@ -19,7 +19,7 @@
 #     "choke" is this repo's subtype code for them (not cmc: single
 #     2-terminal winding; not power: not DC-DC inductors).
 #   - rfmw: "Wire wound type (Non mag)", "High frequency circuits"
-#     (LQW15AN, LQW15AW, LQW18AN, LQW2BAS) - high-Q RF inductors, sibling
+#     (LQW15AN, LQW15AW, LQW18AN, LQW2BAS, LQW2UAS) - high-Q RF inductors, sibling
 #     of ind_rfmw_murata_lqg (multilayer).
 #
 # Field style: the RF-inductor-trim style of ind_rfmw_murata_lqg
@@ -37,8 +37,16 @@
 # L<case>_<value>_<tolerance>_<current>. Ids are unique within every
 # series (verified when the libraries were merged and again at the split).
 #
-# Footprints: all cases (0402, 0603, 0805) are standard EIA metric cases
-# with an exact match in KiCad's Inductor_SMD.pretty.
+# Footprints: 0402, 0603, 0805 are standard EIA metric cases with a match
+# in KiCad's Inductor_SMD.pretty. 1008 (LQW2UAS, added 2026-10-19, A4.6)
+# uses Inductor_SMD:L_Coilcraft_1008HQ_2520Metric: Murata's standard land
+# for LQW2UA (O05E catalog, RF Inductors Soldering and Mounting: a=1.27 gap,
+# b=3.3 overall, c=2.54 wide, i.e. 1.015x2.54 pads at +-1.1425) matches
+# it within 0.005 mm. The generic L_1008_2520Metric (1.25x2.2 pads, 0.9 gap)
+# is 0.35 mm off and Murata stresses that the land should not project
+# beyond the electrode for high Q. The Coilcraft body (2.92x2.79x2.03) is
+# slightly larger than LQW2UAS (2.62x2.45x1.83); KiCad ships no 3D model
+# for it.
 import argparse
 import csv
 import json
@@ -55,6 +63,7 @@ footprint_mapping = {
     "0402": ("Inductor_SMD", "L_0402_1005Metric"),
     "0603": ("Inductor_SMD", "L_0603_1608Metric"),
     "0805": ("Inductor_SMD", "L_0805_2012Metric"),
+    "1008": ("Inductor_SMD", "L_Coilcraft_1008HQ_2520Metric"),
 }
 
 TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
