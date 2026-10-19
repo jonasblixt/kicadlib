@@ -2,16 +2,10 @@
 # inductor data (Murata's own product-table CSV export, one file per
 # case-size series) into a KiCad database-library SQLite file.
 #
-# Naming note: NAMING.md documents `rf` as the inductor subtype code for
-# this part class (its own worked example is
-# "ind_rf_murata_lqg15hn.kicad_dbl"), but Jonas asked for this library as
-# ind_rfmw_murata_lqg - `rfmw`, not `rf`. That matches the capacitor side
-# of NAMING.md exactly (`rfmw` = "High-Q RF/microwave ceramic",
-# cap_rfmw_kyocera_accu_p), so this is treated as the same code reused
-# consistently for RF-purposed parts across both cap_ and ind_, and
-# NAMING.md's inductor table is the one that's stale - it should probably
-# be updated to say `rfmw` too, but that's a doc fix for Jonas to make,
-# not something this script does.
+# Naming note: the library is ind_rfmw_murata_lqg - `rfmw`, the same code
+# as the capacitor side (cap_rfmw_kyocera_accu_p), reused for RF-purposed
+# parts across cap_ and ind_. The old NAMING.md said `rf` for inductors;
+# it was updated to `rfmw` in 2026-10 (cleanup review A4.2/A5.2).
 #
 # Two source CSVs, both Murata LQG-family 0402/0603 multilayer RF chip
 # inductors differing mainly by case size, merged into one umbrella
