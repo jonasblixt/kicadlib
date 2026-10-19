@@ -35,6 +35,11 @@ fixing them silently.
 
 ## Summary
 
+**Status 2026-10-19:** 233 of 234 symbols resolve (`scripting/audit_refs.py`);
+`modules/` is removed. Open: F7.5 for four parts (data sheets needed),
+F1.18, F1.19, F4.8 (optional), the F5.3 rest (rename batch, cleanup
+A5.4) and Jonas's F8 review.
+
 | | |
 |---|---|
 | Symbols | 234 (231 non-power) |
@@ -128,20 +133,41 @@ commit per action; the hash is on each ticked line.
 - [x] **F1.12** `connectors/TFM-110-02-S-D-WT`: symbol pins 21/22 have no
       pads (old footprint numbers its weld tabs `0`). → fix during migration. — holes renumbered 21/22, `8b59022`
 - [x] **F1.13** `power/PT65503`: pin 2 is defined twice, named `2` and `C`. — duplicate C pin deleted, both C pads numbered C, `d0e1644`
-- [ ] **F1.14** `cpu/MIMX8MM6DVTLZAA`, `MIMX8MN5DVTJZAA`: old BGA-486
+- [x] **F1.14** `cpu/MIMX8MM6DVTLZAA`, `MIMX8MN5DVTJZAA`: old BGA-486
       footprint has 487 distinct pad numbers. → check against the NXP ball
-      map during migration.
-- [ ] **F1.15** `memory/IS46DR16640B`: fp filter says `BGA84`, footprint is
+      map during migration. — E23 was a phantom pad at a depopulated site
+      (IMX8MMCEC: contact tables list the other 486 balls, ball map shows
+      E23 empty); removed, `45962e0`. J18 is a real NC ball. The Nano
+      (IMX8MNCEC) assigns 420 balls; its symbol matches.
+- [x] **F1.15** `memory/IS46DR16640B`: fp filter says `BGA84`, footprint is
       a 90-site BGA, so pads sit at depopulated sites. → check the ball map.
+      — JEDEC DDR2 x16 84-ball ballout (Micron 1Gb DDR2 Figure 7; ISSI's
+      site is bot-protected): **B2 = VSSQ had no pin**, added; F7 renamed
+      LQDS -> LDQS; filter fixed. A2/E2 NC, R3/R7/R8 RFU; K1, L9, M1, N9,
+      P1, R9 are depopulated sites the stock BGA-90 still has (unconnected)
+      pads for. `a456c2c`
 - [x] **F1.16** (new, found in batch 1) `memory/MX25L12835F`: MPN
       `MX25L12835FZ2I-10G` is the **8-WSON 8×6 mm** package (Macronix
       ordering code `Z2`; `ZN` is 6×5 mm), but the footprint was 6×5 mm.
       Jonas confirmed Z2I. → `Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm`
       (pad rows at ±3.75 mm match the outline; the 3.4×4.3 EP land is
       inside the package's 4.7×4.6 pad). — `8cb4f26`
-- [ ] **F1.17** (new) `connectors/Wurth_7499210123`: footprint pads 7 and
+- [x] **F1.17** (new) `connectors/Wurth_7499210123`: footprint pads 7 and
       8 (through-hole) have no symbol pin. Check the Würth datasheet
-      whether they are NC; add NC pins or wire them.
+      whether they are NC; add NC pins or wire them. — Würth's own KiCad
+      library (7499210123A) declares them no_connect; added as NC pins,
+      `e7cc7cb`.
+- [ ] **F1.18** (new) `connectors/GBC08SGSN-M89` uses the THT vertical
+      `PinHeader_1x08_P2.54mm_Vertical`, but Sullins' catalog says `-M89`
+      = SMT, horizontal (pins parallel to the board, tails bent down to
+      SMD feet), `GS` = 0.318" head / 0.180" tail. KiCad has no stock
+      footprint for it; a new one needs Sullins' drawing for the part
+      (Jonas to download). No schematic uses the symbol.
+- [ ] **F1.19** (new) `diode_misc/PDS1040-13`, `PDS5100Q-13D`: two `A`
+      pins both numbered 2 (the stock PowerDI-5 has two anode pads named
+      2). Per the F7.2 rule, keep one pin per pad number (drop the offset
+      one at y=2.54). Poetato uses PDS5100Q-13D twice, so this goes in the
+      rename batch (cleanup A5.4).
 
 ## F2. Migration method
 
@@ -469,21 +495,30 @@ footprints only have the cosmetic issues below.
 
 `Jonas.3dshapes` itself is healthy: all 45 STEP files are B-Rep, none CSG.
 
-- [ ] **F5.1** Orphans: ~~the 15 `.wrl` files~~ (removed, A1.5) and the
+- [x] **F5.1** Orphans: ~~the 15 `.wrl` files~~ (removed, A1.5) and the
       untracked `614105150721 (rev1).stp`. The stock footprint
       `USB_Micro-B_Wuerth_614105150721_Vertical` references a model that is
       not shipped by KiCad at all (see F5.4), which is probably why it was
-      downloaded.
-- [ ] **F5.2** Missing / dead: `T_Wurth_WE-RJ45LAN_7499210001A.step`
+      downloaded. — Not an orphan: poetato's board references it on that
+      stock footprint. Committed as is, `c7f801e`; clean name in the
+      rename batch.
+- [x] **F5.2** Missing / dead: `T_Wurth_WE-RJ45LAN_7499210001A.step`
       (`${WE_3DMODEL_DIR}` isn't defined); ~~`T_Wurth_WE-RJ45LAN_7499511440`
       has a second, dead `${WE_3DMODEL_DIR}` model entry next to the good one~~
       (removed, `b04fc79`; render confirms the remaining model loads).
+      The 7499210001A footprint itself was deleted (`aafe5a6`).
 - [ ] **F5.3** Model names don't follow their footprint (`FA2925-AL.STEP`,
       `Coilcraft_POE60F-XXL.STEP`, `KW-5R5C*.STEP`, `AQY212GS.step`,
       `VO618A-3X017T.step`, `0ZCJ0005FF2E.step`, …) and extensions mix
       `.STEP`/`.step`/`.stp`. Proposal: `<footprint>.step`, shared only where
       the body really is identical (`IHLP1212.step` for the three 1212s).
-- [ ] **F5.4** ~~KiCad install is only half populated~~. **Corrected
+      Progress 2026-10-19: `Coilcraft_FA2925-AL`, `Coilcraft_POE60F`,
+      `Eaton_KW_21.5x9.5mm`, `Wurth_7499210123` renamed (`27b16c4`). The
+      six models poetato's board uses (0ZCJ0005FF2E, AQY212GS,
+      Coilcraft_FA2672-AL, FTSH-105-01-L-DV-007-K-TR,
+      KW-5R5C104_224_334-R, VO618A-3X017T) wait for the rename batch
+      (cleanup A5.4), together with F4.8 for the IPC-named footprints.
+- [x] **F5.4** ~~KiCad install is only half populated~~. **Corrected
       2026-10-13:** the install is complete (re-run of the installer
       changed nothing: 7,251 STEP files, 3.2 GB). Of the 13,881 distinct
       model paths stock footprints reference, 6,748 simply do not exist
@@ -499,7 +534,9 @@ footprints only have the cosmetic issues below.
       enclosure fit matters; (c) a separate overlay of generated/vendor
       models for these exact paths. Do not copy stock footprints into
       `Jonas.pretty` just to get a body.
-- [ ] **F5.5** Migrated footprints (M): 11 of 31 have a usable STEP in
+      **Jonas 2026-10-19: (a) accept.** Per board, (b) stays possible, as
+      poetato does for the Würth USB connector.
+- [x] **F5.5** Migrated footprints (M): 11 of 31 have a usable STEP in
       `modules/packages3d` (Molex 78171-5006, ADAU1467 LFCSP-88, FAKRA,
       Everlight PLR135 (also used by PLT133), Amphenol RJE72, Samtec
       TFM-105/-110, TE 292303-1, JAE DX4R005JJ2, Toshiba TOSLINK) — copy,
@@ -511,9 +548,13 @@ footprints only have the cosmetic issues below.
       no model. Proposal: ICs, BGAs
       and QFNs get a generated body + pads via `scripting/step_brep_box.py`;
       connectors, antennas and modules get vendor STEPs (you download).
-- [ ] **F5.6** After F4/F5: render every `Jonas.pretty` footprint once and
+      — Done during F7.4 (models listed per footprint in F8).
+- [x] **F5.6** After F4/F5: render every `Jonas.pretty` footprint once and
       look at the contact sheet — none of the custom models has ever been
-      checked visually.
+      checked visually. — `scripting/render_footprints.py` (`97333c5`):
+      all 85 render with a body (top + iso views, HTML contact sheet).
+      Pin-1 and pad alignment are for Jonas's F8 pass; the sheet is the
+      quickest way through it.
 
 ## F6. Other inconsistencies found
 
@@ -558,12 +599,14 @@ Config and docs:
 
 ## F7. Proposed order
 
-- [ ] **F7.1** F1 bug fixes (symbols only, plus the FIX remaps). Batch 1
+- [x] **F7.1** F1 bug fixes (symbols only, plus the FIX remaps). Batch 1
       done 2026-10-13 (`4912daf`..`248baee`): F1.1–F1.5, F1.8–F1.11 and
       the two J link fixes; broken footprint links 113 → 104. F1.16 and
       F1.6 followed (`8cb4f26`, `94fe08f`). Left: F1.7 (new footprint),
-      F1.12–F1.15 (during migration), F1.17.
-- [ ] **F7.2** Stock remaps: S, then S+sym, then S\* (datasheet check per
+      F1.12–F1.15 (during migration), F1.17. All done by 2026-10-19
+      (F1.7 `e941797`, F1.12 `8b59022`, F1.13 `d0e1644`, F1.14 `45962e0`,
+      F1.15 `a456c2c`, F1.17 `e7cc7cb`); new F1.18/F1.19 are open.
+- [x] **F7.2** Stock remaps: S, then S+sym, then S\* (datasheet check per
       row) — one commit per symbol library.
   - [x] S (29 symbols), 2026-10-13: `610e64f` LEDs, `a01f7bb` adcdac,
     `9f9fd69` comm, `ecfa484` connectors, `71f40a7` cpu, `f0b4b4b` dcdc,
@@ -602,16 +645,25 @@ Config and docs:
       footprint; the stock `Johanson_2450AT18x100` is the A100 land
       (1.2×1.8 mm).
     - `memory/MX25L12835F`: done earlier as F1.16.
-  - [ ] F7.2 follow-ups (new):
+  - [x] F7.2 follow-ups (new), checked 2026-10-19:
     - `dcdc/LTC3612`: footprint is certain (LTC UDC20), but the symbol's
       pin order could not be checked (analog.com and its mirrors refuse
       connections from this machine). Check against the datasheet.
+      **Checked** against Jonas's copy (Projects/Marmoset 3612fc, UDC
+      pinout): all 20 pins and EP 21 (PGND) match. No change.
     - `memory/IS62WV102416DBLL` and `connectors/GBC08SGSN-M89`: vendor
       datasheets not reachable/checked; the IS62 footprint is a twin of
       the old one, the GBC08 is a plain 1x08 2.54 mm header.
+      **IS62WV102416DBLL-45TLI**: TSOP-I 48 is right; a search extract of
+      ISSI's IS62/65WV102416DALL/DBLL sheet confirms pins 1, 12, 27, 37,
+      45, 46, 48, all matching. The full table was not reachable (ISSI
+      bot protection; the IS61 high-speed sheet has a different pinout).
+      **GBC08**: wrong footprint, see F1.18.
     - `misc_inductors/PT61018PEL`: symbol labels RX/TX from the other side
       than Bourns' schematic (TD/RD); pairing and polarity are right.
-- [ ] **F7.3** `Jonas.pretty` QA fixes (F4) and 3D cleanup (F5.1–F5.3).
+      No change: the labels are from the PHY's side.
+- [x] **F7.3** `Jonas.pretty` QA fixes (F4) and 3D cleanup (F5.1–F5.3).
+      F5.3's rest is in the rename batch (cleanup A5.4).
 - [x] **F7.4** Migrations (M), in batches by symbol library, each with a
       render contact sheet. **Inventory 2026-10-13** (Jonas: Q7 = Vendor_Part
       names; Q8 = reuse models from the repo, its history and the old
@@ -692,10 +744,16 @@ Config and docs:
   - [x] NLSV4T3144-D: `142a965` (data sheet land, generated body)
   - [x] PT65503: `d0e1644` (catalog land, generated body; also fixes F1.13)
   - [x] MX34R36HF4T: `e941797` (data sheet land, generated envelope; also fixes F1.7)
-- [ ] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
+  - [ ] LT8640, DuraClick_560020, SF7W008S1AE900, WYSBCVGXA: blocked on
+    data sheets this machine can't download (analog.com, molex.com, JAE
+    login, Taiyo Yuden none online). Jonas to download them.
+- [x] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
       `git rm -r modules/` (A2.6) and optionally A6. (`Jonas.pretty/tmp/`
-      is already gone, A1.2.)
+      is already gone, A1.2.) — audit committed as
+      `scripting/audit_refs.py` (`7b0faf2`); it reports only the F7.5
+      parts and F1.19. Nothing depends on `modules/`, so it was removed
+      (`d8fba33`) ahead of F7.5, which needs nothing from it. A6 not done.
 - [ ] **F7.7** (optional) F6 field hygiene and F4.8 renames.
 
 ## F8. Manual review: everything Claude generated (Jonas)
@@ -716,7 +774,7 @@ an old transform (3D model placements). Tick when reviewed.
 - [ ] `Torex_XCL226` (XCL226A0K1H2) - migrated, pads unchanged; body from old silk (XCL226 may really be 2.5x2.0, check) - `4dfdfcd`
 - [ ] `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm` (ADAU1467) - migrated, pads unchanged; body 12x12; vendor model re-rotated (-90,0,90) so the dimple is at pad 1 - `ed0d092`
 - [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm` (AT91SAM9G25) - migrated, pads unchanged - `9778593`
-- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm` (i.MX 8M Mini/Nano) - migrated, pads unchanged incl. pads E23/J18 without a pin (F1.14) - `8574f99`
+- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm` (i.MX 8M Mini/Nano) - migrated, pads unchanged; phantom pad E23 later removed per the NXP ball map (F1.14) - `8574f99`, `45962e0`
 - [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm` (TAS2770) - migrated, pads unchanged; body per TI 4223791/C. Note: original pads 2 and 26 are 0.19 mm apart (KiCad default clearance 0.2) - compare with TI's land pattern - `d1afb13`
 - [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm` (bq27742-G1) - migrated, pads unchanged; body per TI 4219381/A - `d449ba1`
 - [ ] `Everlight_PLR135_PLT133` (PLR135_T10, PLT133_T10W) - migrated, pads unchanged (the two old footprints were identical); body from old silk; vendor model with the old transform, eyeballed top/side - `99f417b`
@@ -822,6 +880,7 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
    will never use again (e.g. 2016-era AT91SAM9G25, LARA-R2, FAKRA, mPCIe
    modem)? Deleting them shrinks M and N.
 2. F1.6 — which SN74AVC4T774 package do you actually use?
+   **Answered: RGYR (`94fe08f`).**
 3. `connectors/RPi_GPIO` — socket (HAT side) or header (Pi side)?
    **Answered: Pi HAT, so the socket (`8952e3d`).**
 4. `power/1-1825027-1` — stock `SW_Tactile_SPST_Angled_PTS645Vx31-2LFS`
@@ -832,13 +891,16 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
    `Balun_Johanson_0896BM15A0001`): fine to use as-is, or would you rather
    have renamed copies in `Jonas.pretty`?
 6. S+sym — OK to renumber symbol pins to `MP`/`SH` so the stock Molex, RJ45,
-   USB and battery-clip footprints fit?
+   USB and battery-clip footprints fit? **Answered: yes (F7.2).**
 7. Footprint naming (F4.8): rename the existing `Jonas.pretty` footprints
-   now, or only apply the convention to new/migrated ones?
+   now, or only apply the convention to new/migrated ones? **Answered:
+   Vendor_Part for new/migrated; renaming the old ones stays optional
+   (F4.8, best done with the rename batch).**
 8. Missing 3D models (F5.5): OK to generate simple bodies for ICs, with you
-   downloading vendor STEPs for connectors/antennas/modules?
+   downloading vendor STEPs for connectors/antennas/modules? **Answered:
+   reuse repo/history models first, generate the rest, all on F8.**
 9. S\* rows need datasheet checks — OK for me to fetch datasheets from the
-   web (TI, ADI, NXP, Microchip, ...) during the work?
+   web (TI, ADI, NXP, Microchip, ...) during the work? **Answered: yes.**
 
 ## Corrections to `review-2026-10-cleanup.md`
 
