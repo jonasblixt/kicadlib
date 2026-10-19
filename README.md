@@ -52,8 +52,6 @@ kicadlib/
     Jonas.3dshapes/   one 3D model per custom footprint, same base name
   data/           source tables for the database libraries (vendor CSV exports)
   scripting/      importers and generators (see below)
-  datasheets/     vendor data sheets for the database library families
-  simulation/     vendor simulation models (Kyocera Accu-P S-parameters)
   docs/           review docs: audits with numbered action lists
   modules/        LEGACY KiCad 4/5 footprints and models, being retired
   NAMING.md       detailed naming reference for the database libraries
