@@ -38,6 +38,11 @@
 # is not unique (the "AF" and "FF" variants share a hold current and
 # differ in max voltage / max current), hold + voltage is - verified
 # unique across all 18 rows; the seen_ids check is a safety net.
+#
+# Footprint names changed 2026-10-19 (footprints review F4.8, KiCad-stock /
+# Vendor_Part naming): FUSC3216X85N -> Fuse_Bel_0ZCJ_1206_3216Metric (model
+# 0ZCJ0005FF2E.step -> Fuse_Bel_0ZCJ_1206_3216Metric.step).
+# Older names in the comments above refer to the same files.
 import argparse
 import csv
 import json
@@ -47,7 +52,7 @@ from pathlib import Path
 
 MANUFACTURER = "Bel Fuse"
 SYMBOL = "Device:Polyfuse"
-FOOTPRINT = "Jonas:FUSC3216X85N"
+FOOTPRINT = "Jonas:Fuse_Bel_0ZCJ_1206_3216Metric"
 CASE = "1206"
 
 TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")

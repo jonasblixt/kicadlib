@@ -36,6 +36,12 @@
 # stock box placeholder ("${KISYS3DMOD}/Crystal SMD 2.5x3.5mm.step") that
 # doesn't match this package's real 3.2x2.5mm footprint - not carried
 # forward.
+#
+# Footprint names changed 2026-10-19 (footprints review F4.8, KiCad-stock /
+# Vendor_Part naming): NX1255GB -> Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm;
+# NX2520SA -> Crystal_SMD_NDK_NX2520SA-4Pin_2.5x2.0mm; NX3225SA ->
+# Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm (models renamed to match).
+# Older names in the comments above refer to the same files.
 import argparse
 import os
 
@@ -51,7 +57,15 @@ os.makedirs(OUT_DIR, exist_ok=True)
 # NX2520SA.step was copied once from modules/packages3d/"User Library-
 # Crystal NDK NX2520SA series.step"; footprints/Jonas.3dshapes/ is now its
 # source of truth, so the generator no longer copies it.
-DST_MODEL_NAME = "NX2520SA.step"
+DST_MODEL_NAME = "Crystal_SMD_NDK_NX2520SA-4Pin_2.5x2.0mm.step"
+
+# Footprint names follow KiCad's stock crystal pattern (F4.8, 2026-10-19);
+# the tags keep the NDK series.
+FP_NAME = {
+    "NX1255GB": "Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm",
+    "NX2520SA": "Crystal_SMD_NDK_NX2520SA-4Pin_2.5x2.0mm",
+    "NX3225SA": "Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm",
+}
 
 FOOTPRINTS = {
     "NX1255GB": {
@@ -62,7 +76,7 @@ FOOTPRINTS = {
         "val_at": (-2.54, -4.4),
         "descr": "NDK NX1255GB-series crystal, 12.5mm x 5.5mm body, 4-pad wraparound package.",
         # Envelope model from scripting/gen_package_models.py (F4.5).
-        "model": "NX1255GB.step",
+        "model": "Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm.step",
         "keep_silk_box": False,
     },
     "NX2520SA": {
@@ -94,7 +108,7 @@ FOOTPRINTS = {
         # NX3225SA.step was added to Jonas.3dshapes and wired into the
         # committed footprint by hand after generation (82a09c4); carried
         # back here 2026-10-13 so regenerating keeps it.
-        "model": "NX3225SA.step",
+        "model": "Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm.step",
         "model_rotate": (-90, 0, 0),
         "keep_silk_box": False,
     },
@@ -119,7 +133,8 @@ def fab_ref_lines(w, h):
             '\t)']
 
 
-def gen_footprint(name, geo):
+def gen_footprint(series, geo):
+    name = FP_NAME[series]
     pads = geo["pads"]
     psx, psy = geo["pad_size"]
     box_x, box_y = geo["box"]
@@ -138,7 +153,7 @@ def gen_footprint(name, geo):
     lines.append('\t(generator_version "10.0")')
     lines.append('\t(layer "F.Cu")')
     lines.append(f'\t(descr "{geo["descr"]}")')
-    lines.append(f'\t(tags "crystal NDK {name}")')
+    lines.append(f'\t(tags "crystal NDK {series}")')
     lines.append('\t(attr smd)')
     lines.append('\t(property "Reference" "REF**"')
     lines.append(f'\t\t(at {ref_x} {ref_y} 0)')
@@ -237,9 +252,9 @@ def gen_footprint(name, geo):
     return "\n".join(lines), (crtyd_x, crtyd_y)
 
 
-for name, geo in FOOTPRINTS.items():
-    text, (cx, cy) = gen_footprint(name, geo)
-    path = os.path.join(OUT_DIR, f"{name}.kicad_mod")
+for series, geo in FOOTPRINTS.items():
+    text, (cx, cy) = gen_footprint(series, geo)
+    path = os.path.join(OUT_DIR, f"{FP_NAME[series]}.kicad_mod")
     with open(path, "w", encoding="utf-8") as f:
         f.write(text)
     print(f"wrote {path} (courtyard {cx} x {cy} half-extents)")

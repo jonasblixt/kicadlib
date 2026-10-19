@@ -28,7 +28,7 @@ GENERIC = {"connectors/Conn_01x30", "diode_misc/D_TVS_Uni", "power/BOM_Entry", "
 # Models in Jonas.3dshapes that no Jonas footprint references because a
 # board uses them on a stock footprint (F5.4: stock footprints without a
 # KiCad model get one per board).
-PER_BOARD_MODELS = {"614105150721 (rev1).stp"}  # poetato: USB_Micro-B_Wuerth_614105150721_Vertical
+PER_BOARD_MODELS = {"USB_Micro-B_Wuerth_614105150721_Vertical.step"}  # poetato: USB_Micro-B_Wuerth_614105150721_Vertical
 
 
 def symbols(path):

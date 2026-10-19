@@ -67,6 +67,11 @@
 # common-mode choke. Its default pin-to-winding pairing has NOT been
 # cross-checked against Murata's own pin-connection diagram for this
 # part; verify before relying on winding polarity/pairing in a design.
+#
+# Footprint names changed 2026-10-19 (footprints review F4.8, KiCad-stock /
+# Vendor_Part naming): DLW5B_5050 -> L_CommonModeChoke_Murata_DLW5B_5.0x5.0mm
+# (models renamed to match).
+# Older names in the comments above refer to the same files.
 import argparse
 import csv
 import json
@@ -75,7 +80,7 @@ import sqlite3
 from pathlib import Path
 
 MANUFACTURER = "Murata"
-FOOTPRINT = "Jonas:DLW5B_5050"
+FOOTPRINT = "Jonas:L_CommonModeChoke_Murata_DLW5B_5.0x5.0mm"
 SYMBOL = "Device:Filter_EMI_CommonMode"
 
 TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")

@@ -329,7 +329,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "Jonas:TI_DFB0038A"
+		(property "Footprint" "Jonas:Texas_DFB0038A_TSSOP-38_4.4x9.7mm_P0.5mm"
 			(at -112.776 30.226 0)
 			(show_name no)
 			(do_not_autoplace no)

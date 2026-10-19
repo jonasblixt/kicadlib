@@ -90,6 +90,12 @@
 # (FC-12M, FC2012AN/AA/SN) and 1.65 x 1.05 mm (FC1610AN/BN) series have
 # no footprint in this repo, so they are imported without one, as
 # xtal_ndk does for NX2012SA.
+#
+# Footprint names changed 2026-10-19 (footprints review F4.8, KiCad-stock /
+# Vendor_Part naming): NX3215SA -> Crystal_SMD_NDK_NX3215SA-2Pin_3.2x1.5mm;
+# NX3225SA -> Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm (models renamed to
+# match).
+# Older names in the comments above refer to the same files.
 import argparse
 import csv
 import json
@@ -100,12 +106,12 @@ MANUFACTURER = "Epson"
 
 # series (Model column) -> (symbol, footprint "lib:name" or "" for none)
 SERIES_MAP = {
-    "TSX-3225": ("Device:Crystal_GND24", "Jonas:NX3225SA"),
-    "FA-238": ("Device:Crystal_GND24", "Jonas:NX3225SA"),
-    "FA-238V": ("Device:Crystal_GND24", "Jonas:NX3225SA"),
-    "FC-135": ("Device:Crystal", "Jonas:NX3215SA"),
-    "FC-135R": ("Device:Crystal", "Jonas:NX3215SA"),
-    "FC3215AN": ("Device:Crystal", "Jonas:NX3215SA"),
+    "TSX-3225": ("Device:Crystal_GND24", "Jonas:Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm"),
+    "FA-238": ("Device:Crystal_GND24", "Jonas:Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm"),
+    "FA-238V": ("Device:Crystal_GND24", "Jonas:Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm"),
+    "FC-135": ("Device:Crystal", "Jonas:Crystal_SMD_NDK_NX3215SA-2Pin_3.2x1.5mm"),
+    "FC-135R": ("Device:Crystal", "Jonas:Crystal_SMD_NDK_NX3215SA-2Pin_3.2x1.5mm"),
+    "FC3215AN": ("Device:Crystal", "Jonas:Crystal_SMD_NDK_NX3215SA-2Pin_3.2x1.5mm"),
     "FC-12M": ("Device:Crystal", ""),
     "FC2012AN": ("Device:Crystal", ""),
     "FC2012AA": ("Device:Crystal", ""),

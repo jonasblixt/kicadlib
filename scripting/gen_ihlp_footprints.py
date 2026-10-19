@@ -19,9 +19,9 @@ CASES = {
         "val_at": (1.9, -2.2),
         "body_lw_mm": (3.65, 3.00),  # from Description, for courtyard sizing
         "series": {
-            "AB": "IHLP1212.step",
-            "AE": "IHLP1212.step",
-            "BZ": "IHLP1212.step",
+            "AB": "L_Vishay_IHLP-1212.step",
+            "AE": "L_Vishay_IHLP-1212.step",
+            "BZ": "L_Vishay_IHLP-1212.step",
         },
         "model_xform": {"offset": (-1.75, 1.5, 0), "scale": (1, 1, 1), "rotate": (0, 0, 0)},
     },
@@ -35,8 +35,8 @@ CASES = {
         "val_at": (-0.06, -2.94),
         "body_lw_mm": (4.45, 4.06),
         "series": {
-            "AB": "IHLP1616AB.step",
-            "BZ": "IHLP1616BZ.step",
+            "AB": "L_Vishay_IHLP-1616AB.step",
+            "BZ": "L_Vishay_IHLP-1616BZ.step",
         },
         "model_xform": {"offset": (-0.2, 6.6, -2.5), "scale": (1, 1, 1), "rotate": (-90, 0, 0)},
     },
@@ -50,9 +50,9 @@ CASES = {
         "val_at": (0.7, -3.4),
         "body_lw_mm": (5.49, 5.18),
         "series": {
-            "AB": "IHLP2020AB.step",
-            "BZ": "IHLP2020BZ.step",
-            "CZ": "IHLP2020CZ.step",
+            "AB": "L_Vishay_IHLP-2020AB.step",
+            "BZ": "L_Vishay_IHLP-2020BZ.step",
+            "CZ": "L_Vishay_IHLP-2020CZ.step",
         },
         "model_xform": {"offset": (-0.65, 6.1, -2.5), "scale": (1, 1, 1), "rotate": (-90, 0, 0)},
     },
@@ -69,10 +69,10 @@ CASES = {
             # All 3 IHLP2525BD parts in this library's scope (3.3-10uH) fall
             # in the "(1.5-10uH)" step variant's range - the "(0.1-1.0uH)"
             # variant isn't needed for this dataset. Copied in as plain
-            # "IHLP2525BD.step" (see footprints/Vishay_IHLP.3dshapes/).
-            "BD": "IHLP2525BD.step",
-            "CZ": "IHLP2525CZ.step",
-            "EZ": "IHLP2525EZ.step",
+            # "L_Vishay_IHLP-2525BD.step" (see footprints/Vishay_IHLP.3dshapes/).
+            "BD": "L_Vishay_IHLP-2525BD.step",
+            "CZ": "L_Vishay_IHLP-2525CZ.step",
+            "EZ": "L_Vishay_IHLP-2525EZ.step",
         },
         # The generator's first guess here, offset (0, 7.5, -3.2), was
         # placed by eye and then corrected by hand in KiCad's 3D viewer on
@@ -120,7 +120,7 @@ def fab_ref_lines(w, h):
 
 
 def gen_footprint(case, series, step_file, geo):
-    name = f"IHLP{case}{series}"
+    name = f"L_Vishay_IHLP-{case}{series}"
     pads = geo["pads"]
     box_x, box_y = geo["box"]
     ref_x, ref_y = geo["ref_at"]

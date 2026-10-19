@@ -120,7 +120,7 @@
 		(uuid "a82a3d1b-f6f6-4d1e-bf36-0af7b0a08f75")
 	)
 	(embedded_fonts no)
-	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/KW-5R5C104_224_334-R.STEP"
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Eaton_KW_13.5x8.8mm.step"
 		(offset
 			(xyz 0 0 5.5)
 		)

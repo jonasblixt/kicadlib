@@ -101,6 +101,13 @@
 #
 # The part number is used directly as the database id. All part numbers
 # are distinct, so there is no duplicate-part handling beyond a check.
+#
+# Footprint names changed 2026-10-19 (footprints review F4.8, KiCad-stock /
+# Vendor_Part naming): NX1255GB -> Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm;
+# NX2520SA -> Crystal_SMD_NDK_NX2520SA-4Pin_2.5x2.0mm; NX3215SA ->
+# Crystal_SMD_NDK_NX3215SA-2Pin_3.2x1.5mm; NX3225SA ->
+# Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm (models renamed to match).
+# Older names in the comments above refer to the same files.
 import argparse
 import csv
 import json
@@ -122,12 +129,12 @@ SYMBOL_MAP = {
 # package -> (footprint library nickname, footprint name), or None if no
 # footprint is assigned.
 FOOTPRINT_MAP = {
-    "NX1255GB": ("Jonas", "NX1255GB"),
-    "NX2520SA": ("Jonas", "NX2520SA"),
-    "NX3215SA": ("Jonas", "NX3215SA"),
-    "NX3225SA": ("Jonas", "NX3225SA"),
-    "NX3225GA": ("Jonas", "NX3225SA"),
-    "NX3225SC": ("Jonas", "NX3225SA"),
+    "NX1255GB": ("Jonas", "Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm"),
+    "NX2520SA": ("Jonas", "Crystal_SMD_NDK_NX2520SA-4Pin_2.5x2.0mm"),
+    "NX3215SA": ("Jonas", "Crystal_SMD_NDK_NX3215SA-2Pin_3.2x1.5mm"),
+    "NX3225SA": ("Jonas", "Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm"),
+    "NX3225GA": ("Jonas", "Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm"),
+    "NX3225SC": ("Jonas", "Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm"),
     "NX2016AB": ("Crystal", "Crystal_SMD_2016-4Pin_2.0x1.6mm"),
     "NX2016SA": ("Crystal", "Crystal_SMD_2016-4Pin_2.0x1.6mm"),
     "NX5032GA": ("Crystal", "Crystal_SMD_5032-2Pin_5.0x3.2mm"),

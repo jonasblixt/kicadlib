@@ -2556,7 +2556,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Jonas:T_Wurth_WE-RJ45LAN_7499511440"
+		(property "Footprint" "Jonas:Wurth_WE-RJ45LAN_7499511440"
 			(at 12.7 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5189,7 +5189,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "Jonas:SAMTEC_FTSH-105-01-L-DV-007-K"
+		(property "Footprint" "Jonas:Samtec_FTSH-105-01-L-DV-007-K"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12519,7 +12519,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Jonas:T_Wurth_WE-RJ45LAN_7498210002"
+		(property "Footprint" "Jonas:Wurth_WE-RJ45LAN_7498210002"
 			(at 12.7 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13150,7 +13150,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:Wurth_7499210123"
+		(property "Footprint" "Jonas:Wurth_WE-RJ45LAN_7499210123"
 			(at 21.59 8.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13538,7 +13538,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Jonas:T_Wurth_WE-RJ45LAN_7499411122A"
+		(property "Footprint" "Jonas:Wurth_WE-RJ45LAN_7499411122A"
 			(at 12.7 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14918,7 +14918,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Jonas:T_Wurth_WE-RJ45LAN_7498210003"
+		(property "Footprint" "Jonas:Wurth_WE-RJ45LAN_7498210003"
 			(at 12.7 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)

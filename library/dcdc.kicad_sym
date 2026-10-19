@@ -6947,7 +6947,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Jonas:QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm"
+		(property "Footprint" "Jonas:Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm"
 			(at -67.818 3.048 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -89,6 +89,11 @@
 #   broken absolute path; there's no calibration reference for the new
 #   mm-native STEP models, so a best-effort transform (matching the 2020
 #   footprint's pattern) was used instead. Verify in KiCad's 3D viewer.
+#
+# Footprint names changed 2026-10-19 (footprints review F4.8, KiCad-stock /
+# Vendor_Part naming): IHLP<case><series> -> L_Vishay_IHLP-<case><series>
+# (models likewise, IHLP1212.step -> L_Vishay_IHLP-1212.step).
+# Older names in the comments above refer to the same files.
 import argparse
 import csv
 import json
@@ -104,17 +109,17 @@ MANUFACTURER = "Vishay"
 # footprints/Jonas.pretty/ custom-footprint library (fp-lib-table
 # nickname "Jonas").
 FOOTPRINT_MAP = {
-    ("1212", "AB"): "Jonas:IHLP1212AB",
-    ("1212", "AE"): "Jonas:IHLP1212AE",
-    ("1212", "BZ"): "Jonas:IHLP1212BZ",
-    ("1616", "AB"): "Jonas:IHLP1616AB",
-    ("1616", "BZ"): "Jonas:IHLP1616BZ",
-    ("2020", "AB"): "Jonas:IHLP2020AB",
-    ("2020", "BZ"): "Jonas:IHLP2020BZ",
-    ("2020", "CZ"): "Jonas:IHLP2020CZ",
-    ("2525", "BD"): "Jonas:IHLP2525BD",
-    ("2525", "CZ"): "Jonas:IHLP2525CZ",
-    ("2525", "EZ"): "Jonas:IHLP2525EZ",
+    ("1212", "AB"): "Jonas:L_Vishay_IHLP-1212AB",
+    ("1212", "AE"): "Jonas:L_Vishay_IHLP-1212AE",
+    ("1212", "BZ"): "Jonas:L_Vishay_IHLP-1212BZ",
+    ("1616", "AB"): "Jonas:L_Vishay_IHLP-1616AB",
+    ("1616", "BZ"): "Jonas:L_Vishay_IHLP-1616BZ",
+    ("2020", "AB"): "Jonas:L_Vishay_IHLP-2020AB",
+    ("2020", "BZ"): "Jonas:L_Vishay_IHLP-2020BZ",
+    ("2020", "CZ"): "Jonas:L_Vishay_IHLP-2020CZ",
+    ("2525", "BD"): "Jonas:L_Vishay_IHLP-2525BD",
+    ("2525", "CZ"): "Jonas:L_Vishay_IHLP-2525CZ",
+    ("2525", "EZ"): "Jonas:L_Vishay_IHLP-2525EZ",
 }
 
 TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")

@@ -331,7 +331,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Jonas:SOIC254P680X230-4N"
+		(property "Footprint" "Jonas:Panasonic_SOP-4_4.4x4.3mm_P2.54mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3344,7 +3344,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Jonas:Texas_YJE"
+		(property "Footprint" "Jonas:Texas_YJE0006A_PicoStar-6_1.15x2.2mm"
 			(at -7.62 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9067,7 +9067,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "Jonas:Vishay_SOIC254P1016X440-4N"
+		(property "Footprint" "Jonas:Vishay_SMD-4_W10.16mm_P2.54mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

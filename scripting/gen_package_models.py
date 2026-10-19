@@ -27,6 +27,13 @@
 #     top-left (footprint pad A1 at x = -0.325, y = -0.65).
 #
 # Run with no arguments to regenerate all three; --out writes elsewhere.
+#
+# Footprint names changed 2026-10-19 (footprints review F4.8, KiCad-stock /
+# Vendor_Part naming): QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm ->
+# Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm; NX1255GB ->
+# Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm; Texas_YJE ->
+# Texas_YJE0006A_PicoStar-6_1.15x2.2mm.
+# Older names in the comments above refer to the same files.
 import argparse
 import os
 
@@ -63,7 +70,7 @@ def qfn20_si3402():
     boxes.append(box_c(0, 0, 0, ep, ep, 0.02, TIN))
     # pin-1 mark on top, near footprint pad 1 (x -2.35, y -1.2) -> model (-, +)
     boxes.append(box_c(-1.7, 1.7, a, 0.5, 0.5, 0.01, MARK))
-    return 'QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm', boxes, 'QFN-20 5x5x0.85 mm, Si3402-B-GM'
+    return 'Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm', boxes, 'QFN-20 5x5x0.85 mm, Si3402-B-GM'
 
 
 def nx1255gb():
@@ -74,7 +81,7 @@ def nx1255gb():
         for sign in (-1, 1):
             # wraparound terminal: 1.5 under the body + 0.5 up the long side
             boxes.append(box_c(x, sign * (wy / 2 - td / 2 + out / 2), 0, tw, td + out, th, TIN))
-    return 'NX1255GB', boxes, 'NDK NX1255GB 11.8x5.5x2.5 mm'
+    return 'Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm', boxes, 'NDK NX1255GB 11.8x5.5x2.5 mm'
 
 
 def texas_yje():
@@ -85,7 +92,7 @@ def texas_yje():
             boxes.append(box_c(x, y, 0, land, land, lh, TIN))
     # pin-A1 mark on top, footprint A1 (x -0.325, y -0.65) -> model (-, +)
     boxes.append(box_c(-0.33, 0.78, lh + h, 0.25, 0.25, 0.005, MARK))
-    return 'Texas_YJE', boxes, 'TI PicoStar YJE0006A 1.11x2.16x0.22 mm, CSD83325L'
+    return 'Texas_YJE0006A_PicoStar-6_1.15x2.2mm', boxes, 'TI PicoStar YJE0006A 1.11x2.16x0.22 mm, CSD83325L'
 
 
 def apem_pt65503():
