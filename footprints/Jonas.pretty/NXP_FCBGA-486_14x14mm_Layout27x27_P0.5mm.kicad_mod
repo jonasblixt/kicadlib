@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Migrated from modules/footprints.pretty/BGA-486_27x27_P0.5mm_14.0x14.0mm (pads unchanged); outline, courtyard and fab rebuilt to KLC in 2026-10. NXP FCBGA-486, 14x14mm, 27x27 grid, 0.5mm pitch (i.MX 8M Mini / Nano). Has 487 pads: E23 and J18 have no pin on the i.MX8M Mini symbol (F1.14, check the NXP ball map)")
+	(descr "Migrated from modules/footprints.pretty/BGA-486_27x27_P0.5mm_14.0x14.0mm (pads unchanged); outline, courtyard and fab rebuilt to KLC in 2026-10. NXP FCBGA-486, 14x14mm, 27x27 grid, 0.5mm pitch (i.MX 8M Mini / Nano). 486 pads per the NXP ball map (IMX8MMCEC/IMX8MNCEC); the modules/ original had a phantom pad at the depopulated site E23, removed (F1.14). J18 is NC on the Mini; the Nano leaves 66 balls unassigned")
 	(tags "BGA FCBGA 486 0.5mm NXP i.MX8M")
 	(property "Reference" "REF**"
 		(at 0 -8.8 0)
@@ -1535,12 +1535,6 @@
 		(size 0.225 0.225)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "fb7ccf2e-7bde-4838-911b-74dee19bf5a6")
-	)
-	(pad "E23" smd circle
-		(at 4.5 -4.5)
-		(size 0.225 0.225)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "06cca68b-2f34-4ebd-86d8-95c4ac91c3f3")
 	)
 	(pad "E24" smd circle
 		(at 5 -4.5)
