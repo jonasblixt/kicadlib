@@ -8,11 +8,13 @@
 # Until 2026-10-19 this script used cwd-relative paths and wrote only the
 # .db; the .kicad_dbl was hand-written (cleanup review A4.1/A4.5). It now
 # reuses murata_cap.py's writers (same schema and field set as the Murata
-# MLCC libraries) and regenerates both files with no arguments.
+# MLCC libraries) and regenerates both files with no arguments (--db and
+# --kicad-dbl redirect the output).
 #
 # Values: the small parts come in 0.05 pF steps; the pF formatting
 # keeps a second decimal only where the value needs it (A4.7, see below).
 # The id still carries the CSV's tolerance text verbatim ("±0.01 pF").
+import argparse
 import csv
 from pathlib import Path
 
@@ -110,11 +112,14 @@ def load_capacitors(csv_path):
 
 
 if __name__ == "__main__":
-    db_path = REPO / "library" / f"{LIBRARY}.db"
-    dbl_path = REPO / "library" / f"{LIBRARY}.kicad_dbl"
+    parser = argparse.ArgumentParser(
+        description=f"Import the Accu-P CSV into the {LIBRARY} KiCad database library.")
+    parser.add_argument("--db", default=str(REPO / "library" / f"{LIBRARY}.db"))
+    parser.add_argument("--kicad-dbl", default=str(REPO / "library" / f"{LIBRARY}.kicad_dbl"))
+    args = parser.parse_args()
     capacitors = load_capacitors(REPO / "data" / f"{LIBRARY}.csv")
-    write_database(str(db_path), LIBRARY, capacitors)
-    write_kicad_dbl(str(dbl_path), str(db_path), LIBRARY, "AccuP",
+    write_database(args.db, LIBRARY, capacitors)
+    write_kicad_dbl(args.kicad_dbl, args.db, LIBRARY, "AccuP",
                     "Kyocera Accu-P RFMW Capacitor Library")
-    print(f"Imported {len(capacitors)} parts into {db_path} ({LIBRARY})")
-    print(f"Wrote {dbl_path}")
+    print(f"Imported {len(capacitors)} parts into {args.db} ({LIBRARY})")
+    print(f"Wrote {args.kicad_dbl}")

@@ -23,7 +23,6 @@
 import argparse
 import csv
 import json
-import os
 import re
 import sqlite3
 from pathlib import Path
@@ -148,13 +147,14 @@ def write_database(db_path, table, capacitors):
     if not TABLE_NAME_RE.match(table):
         raise ValueError(f"'{table}' is not a valid SQLite table name")
 
-    # Start from an empty file so nothing but this table survives (the old
-    # GRM .db still carried a stale cap_mlcc_murata table from a rename).
-    if os.path.exists(db_path):
-        os.remove(db_path)
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
-    cursor.execute(f"DROP TABLE IF EXISTS {table}")
+    # Drop every table, not just ours, so nothing else survives (the old
+    # GRM .db still carried a stale cap_mlcc_murata table from a rename).
+    # Dropping rather than deleting the file works while KiCad has it open.
+    for (old,) in cursor.execute(
+            "SELECT name FROM sqlite_master WHERE type = 'table'").fetchall():
+        cursor.execute(f'DROP TABLE "{old}"')
 
     cursor.execute(f"""
     CREATE TABLE {table} (
