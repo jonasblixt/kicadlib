@@ -1,8 +1,34 @@
-# This can import muratas official CSV exports
+# Shared code for the Murata MLCC importers (import_cap_mlcc_murata_GRM.py,
+# import_cap_rfmw_murata_gqm.py), which read Murata's own product-table
+# CSV exports. Until 2026-10-19 this was the generic, argument-driven
+# import_murata_cap.py; it only wrote the .db, and the arguments used were
+# never recorded (cleanup review A4.1). The parsing below is unchanged, so
+# both libraries come out with exactly the rows they had before.
+#
+# Field style: ceramic/MLCC (Device:C, Value = "${Capacitance}",
+# Capacitance/Voltage/Dielectric/Manufacturer/Part Number). The
+# .kicad_dbl writer here reproduces the hand-written files of GRM, GQM and
+# cap_rfmw_kyocera_accu_p, which share this field set, so the Kyocera
+# importer reuses it.
+#
+# Only X7R, X5R and C0G rows are imported, in the cases listed in
+# case_mapping (KiCad stock Capacitor_SMD footprints).
+#
+# Duplicate ids: the id (case/value/voltage/dielectric/tolerance) does not
+# include thickness, so thickness variants of one part collide (e.g.
+# GRM031R60J104MG01 vs GRM033R60J104ME19; 101 rows in GRM, all differing
+# only in part number). INSERT OR REPLACE keeps the last such row; that
+# behaviour is kept so the libraries stay identical, and each collision is
+# now printed.
 import argparse
 import csv
+import json
+import os
 import re
 import sqlite3
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parent.parent
 
 case_mapping = {
     "0.6mm0.3mm": "0201",
@@ -30,27 +56,10 @@ footprint_mapping = {
 TABLE_NAME_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(
-        description="Import a Murata product-list CSV into a "
-                     "KiCad database-library SQLite file.")
-    parser.add_argument("--csv", required=True,
-                         help="Path to the input CSV (e.g. Murata GRM "
-                              "series product list export).")
-    parser.add_argument("--db", required=True,
-                         help="Path to the output .db SQLite file. Created "
-                              "if it doesn't exist.")
-    parser.add_argument("--table", required=True,
-                         help="Name of the table to (re)create inside the "
-                              "database, e.g. cap_mlcc_murata_grm. Must "
-                              "match what the corresponding .kicad_dbl "
-                              "'table' field references.")
-    return parser.parse_args()
-
-
 def load_capacitors(csv_path):
     count = 0
     capacitors = []
+    seen_ids = {}
 
     with open(csv_path, newline="", encoding="utf-8") as csvfile:
         reader = csv.reader(csvfile, delimiter=",")
@@ -117,6 +126,10 @@ def load_capacitors(csv_path):
                 capacitance_str = f"{capacitance_pf:.1f}pF"
 
             id_str = f"C{case_size}_{short_str}_{voltage}V_{dielectric}_{tolerance}"
+            if id_str in seen_ids:
+                print(f"WARNING: duplicate id '{id_str}' - {part_number} "
+                      f"replaces {seen_ids[id_str]}")
+            seen_ids[id_str] = part_number
 
             print(f"{count} {id_str} {part_number}, {case_size}, {dielectric}, "
                   f"{capacitance_input_str} ({capacitance_str}) [{short_str}], "
@@ -135,6 +148,10 @@ def write_database(db_path, table, capacitors):
     if not TABLE_NAME_RE.match(table):
         raise ValueError(f"'{table}' is not a valid SQLite table name")
 
+    # Start from an empty file so nothing but this table survives (the old
+    # GRM .db still carried a stale cap_mlcc_murata table from a rename).
+    if os.path.exists(db_path):
+        os.remove(db_path)
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     cursor.execute(f"DROP TABLE IF EXISTS {table}")
@@ -164,12 +181,75 @@ def write_database(db_path, table, capacitors):
     conn.close()
 
 
-def main():
-    args = parse_args()
+def build_field_defs():
+    # Ceramic/MLCC style.
+    return [
+        {"column": "Capacitance", "name": "Capacitance",
+         "visible_on_add": False, "visible_in_chooser": False, "show_name": True},
+        {"column": "Voltage", "name": "Voltage",
+         "visible_on_add": True, "visible_in_chooser": False, "show_name": False},
+        {"column": "Dielectric", "name": "Dielectric",
+         "visible_on_add": True, "visible_in_chooser": False, "show_name": False},
+        {"column": "Manufacturer", "name": "Manufacturer",
+         "visible_on_add": False, "visible_in_chooser": True, "show_name": True},
+        {"column": "Part Number", "name": "Part Number",
+         "visible_on_add": False, "visible_in_chooser": True, "show_name": True},
+        {"column": "Value", "name": "Value",
+         "visible_on_add": True, "visible_in_chooser": True},
+    ]
+
+
+def write_kicad_dbl(dbl_path, db_path, table, chooser_name, title):
+    content = {
+        "meta": {"version": 0},
+        "name": title,
+        "description": title,
+        "source": {
+            "type": "odbc",
+            "dsn": "",
+            "username": "",
+            "password": "",
+            "timeout_seconds": 2,
+            "connection_string": (
+                "Driver={SQLite3 ODBC Driver};"
+                f"Database=${{CWD}}/{Path(db_path).name}"
+            ),
+        },
+        "libraries": [
+            {
+                "name": chooser_name,
+                "table": table,
+                "key": "id",
+                "symbols": "Symbol",
+                "footprints": "Footprints",
+                "fields": build_field_defs(),
+                "properties": {"description": "Description"},
+            }
+        ],
+    }
+
+    with open(dbl_path, "w", encoding="utf-8") as f:
+        json.dump(content, f, indent=4)
+        f.write("\n")
+
+
+def run(library, csv_name, chooser_name, title):
+    """Entry point for a per-series importer. Defaults reproduce the repo files."""
+    parser = argparse.ArgumentParser(
+        description=f"Import the Murata {chooser_name} CSV export into the "
+                    f"{library} KiCad database library.")
+    parser.add_argument("--csv", default=str(REPO / "data" / csv_name),
+                        help=f"input CSV (default: data/{csv_name})")
+    parser.add_argument("--db", default=str(REPO / "library" / f"{library}.db"),
+                        help="output SQLite file (default: library/<library>.db)")
+    parser.add_argument("--table", default=library,
+                        help="table name; must match the .kicad_dbl 'table' field")
+    parser.add_argument("--kicad-dbl", default=str(REPO / "library" / f"{library}.kicad_dbl"),
+                        help="output .kicad_dbl (default: library/<library>.kicad_dbl)")
+    args = parser.parse_args()
+
     capacitors = load_capacitors(args.csv)
     write_database(args.db, args.table, capacitors)
+    write_kicad_dbl(args.kicad_dbl, args.db, args.table, chooser_name, title)
     print(f"Imported {len(capacitors)} parts into {args.db} ({args.table})")
-
-
-if __name__ == "__main__":
-    main()
+    print(f"Wrote {args.kicad_dbl}")
