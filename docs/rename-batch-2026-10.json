@@ -1,0 +1,571 @@
+{
+ "symbol_libraries": {
+  "0428202222": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "0430450818": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "0781710003": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "0781715006": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "1-1825027-1": {
+   "from": "power",
+   "to": "switch"
+  },
+  "1051330011": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "1206SFS200F_63-2": {
+   "from": "power",
+   "to": "protection"
+  },
+  "1308_750319693": {
+   "from": "misc_inductors",
+   "to": "ind_misc"
+  },
+  "2450BM15B0002": {
+   "from": "misc_inductors",
+   "to": "ind_misc"
+  },
+  "2N7002": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "34826-8200": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "430450427": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "430450629": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "5-104074-8": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "7499511440": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "AFE7225": {
+   "from": "adcdac",
+   "to": "analog"
+  },
+  "AQY212GS": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "BC817DPN": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "BC817DS": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "BSS84": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "BatClip_54": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "C1808_1n_3000V_X7R_10": {
+   "from": "misc_capacitors",
+   "to": "cap_misc"
+  },
+  "CSD17313Q2Q1": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "CSD83325L": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "Conn_01x30": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "DX4R005JJ2R1800": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "DuraClick_560020": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "FA2672-ALD": {
+   "from": "misc_inductors",
+   "to": "ind_misc"
+  },
+  "FA2925-AL": {
+   "from": "misc_inductors",
+   "to": "ind_misc"
+  },
+  "FDV304P": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "FTSH-105-01-F-DV-K": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "FTSH-105-01-L-DV-007-K": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "GBC08SGSN-M89": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "HSMD-C170": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "HSMG-C170": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "HSMS-C170": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "HSMY-C170": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "Header_2.54mm_10p": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "IHLP1212_1u2_4b": {
+   "from": "misc_inductors",
+   "to": "ind_misc"
+  },
+  "INA226": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "KW-5R5C105-R": {
+   "from": "misc_capacitors",
+   "to": "cap_misc"
+  },
+  "KW-5R5C334H-R": {
+   "from": "misc_capacitors",
+   "to": "cap_misc"
+  },
+  "L6470": {
+   "from": "power",
+   "to": "driver"
+  },
+  "LED0402_150040AS73240": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "LED0402_150040BS73240": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "LED0402_150040RS73240": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "LED0402_150040SS73240": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "LED0402_150040VS73240": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "LED0402_150040WS73240": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "LED0402_150040YS73240": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "LM74610": {
+   "from": "power",
+   "to": "protection"
+  },
+  "LP3470A293DBVR": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "LP3470A308DBVR": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "LP5562": {
+   "from": "power",
+   "to": "led"
+  },
+  "LQH2MCN100K02L": {
+   "from": "misc_inductors",
+   "to": "ind_misc"
+  },
+  "LSM9DS1": {
+   "from": "sensors",
+   "to": "analog"
+  },
+  "LTC2941IDCB#TRMPBF": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "LTC3873IDDB-5": {
+   "from": "power",
+   "to": "dcdc"
+  },
+  "LTST-C19HE1WT": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "M-RJHSE-5385-02": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "MAX16058ATA31+": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "MHNP_2.5mm": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "MMA8653FC": {
+   "from": "sensors",
+   "to": "analog"
+  },
+  "MMBTA42": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "MX34R36HF4T": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "NCP360SNAET1G": {
+   "from": "power",
+   "to": "protection"
+  },
+  "NCP380HSNAJAAT1G": {
+   "from": "power",
+   "to": "protection"
+  },
+  "NCV7240": {
+   "from": "power",
+   "to": "driver"
+  },
+  "NTK3134N": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "PAC1934": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "PHPT61002PYCLHX": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "PIMC31": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "PIMN31": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "POE60F-50L_": {
+   "from": "misc_inductors",
+   "to": "ind_misc"
+  },
+  "PT61018PEL": {
+   "from": "misc_inductors",
+   "to": "ind_misc"
+  },
+  "PT65503": {
+   "from": "power",
+   "to": "switch"
+  },
+  "PUMD13": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "PUMH13": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "Phoenix_1757268": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "Phoenix_1757349": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "R0204_1k_1_250mW_Vishay_SMM0204": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "R0402_0R_1_200mW_Vishay_CRCWHPe3": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "R0603_0R_1_333mW_Vishay_CRCWHPe3": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "R0805_0R_1_500mW_Vishay_CRCWHPe3": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "R1206_0R_1_750mW_Vishay_CRCWHPe3": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "R1210_0R_1_750mW_Vishay_CRCWHPe3": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "R2512_0R_1_1.5W_Vishay_CRCWHPe3": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "R2512_10R_1_1.5W_Vishay_CRCWHPe3": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "R2512_12M_1_1W_Vishay_CRHV": {
+   "from": "misc_resistors",
+   "to": "res_misc"
+  },
+  "RJE72-188-1401": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "RPi_GPIO": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "SF7W008S1AE900": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "SK6812RGBW": {
+   "from": "LEDs",
+   "to": "led"
+  },
+  "SQJ886EP": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "Si3440ADV": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "SiSS23DN": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "TAS2770": {
+   "from": "Audio Amp",
+   "to": "analog"
+  },
+  "TE_5103310-1": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "TFM-105-02-S-D-WT": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "TFM-110-02-S-D-WT": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "TLVH431AQDBVR": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "TPS25910": {
+   "from": "power",
+   "to": "protection"
+  },
+  "TPS26625DRCR": {
+   "from": "power",
+   "to": "protection"
+  },
+  "TPS3701": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "TPS78318DDCR": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "TPS7A1633DRBR": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "USB_A_292303-1": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "VO618A-3X017T": {
+   "from": "transistors",
+   "to": "transistor"
+  },
+  "Wurth_61300211121": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "Wurth_61300611121": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "Wurth_614105150721": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "Wurth_7498210002": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "Wurth_7499210123": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "Wurth_7499411122A": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "bq27742-G1": {
+   "from": "power",
+   "to": "power_mgmt"
+  },
+  "fakra_blue_0734035112": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "fakra_bordeaux_0734035113": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "fakra_green_734035114": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "fakra_violet_0734035117": {
+   "from": "connectors",
+   "to": "conn"
+  },
+  "wurth_7498210003": {
+   "from": "connectors",
+   "to": "conn"
+  }
+ },
+ "database_nicknames": {
+  "cap_mlcc_murata_GRM": "cap_mlcc_murata_grm",
+  "diode_tvs_littlefuse": "diode_tvs_littelfuse",
+  "cap_rfmw_kyocera_accu_p": "cap_rfmw_kyocera_accup"
+ },
+ "chooser_names": {
+  "cap_alel_chemicon": {
+   "from": "AlEl",
+   "to": "Chemi-Con"
+  },
+  "diode_tvs_littlefuse": {
+   "from": "TVS",
+   "to": "SMAJ-SMCJ"
+  },
+  "xtal_epson": {
+   "from": "Epson",
+   "to": "TSX-FA-FC"
+  },
+  "xtal_ndk": {
+   "from": "NDK",
+   "to": "NX"
+  }
+ },
+ "footprints": {
+  "Coilcraft_FA2925-AL": "Coilcraft_FA2925",
+  "DLW5B_5050": "L_CommonModeChoke_Murata_DLW5B_5.0x5.0mm",
+  "FUSC3216X85N": "Fuse_Bel_0ZCJ_1206_3216Metric",
+  "IHLP1212AB": "L_Vishay_IHLP-1212AB",
+  "IHLP1212AE": "L_Vishay_IHLP-1212AE",
+  "IHLP1212BZ": "L_Vishay_IHLP-1212BZ",
+  "IHLP1616AB": "L_Vishay_IHLP-1616AB",
+  "IHLP1616BZ": "L_Vishay_IHLP-1616BZ",
+  "IHLP2020AB": "L_Vishay_IHLP-2020AB",
+  "IHLP2020BZ": "L_Vishay_IHLP-2020BZ",
+  "IHLP2020CZ": "L_Vishay_IHLP-2020CZ",
+  "IHLP2525BD": "L_Vishay_IHLP-2525BD",
+  "IHLP2525CZ": "L_Vishay_IHLP-2525CZ",
+  "IHLP2525EZ": "L_Vishay_IHLP-2525EZ",
+  "NX1255GB": "Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm",
+  "NX2520SA": "Crystal_SMD_NDK_NX2520SA-4Pin_2.5x2.0mm",
+  "NX3215SA": "Crystal_SMD_NDK_NX3215SA-2Pin_3.2x1.5mm",
+  "NX3225SA": "Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm",
+  "QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm": "Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm",
+  "SAMTEC_FTSH-105-01-L-DV-007-K": "Samtec_FTSH-105-01-L-DV-007-K",
+  "SOIC254P680X230-4N": "Panasonic_SOP-4_4.4x4.3mm_P2.54mm",
+  "TI_DFB0038A": "Texas_DFB0038A_TSSOP-38_4.4x9.7mm_P0.5mm",
+  "T_Wurth_WE-PPTI-1308": "Wurth_WE-PPTI-1308",
+  "T_Wurth_WE-RJ45LAN_7498210002": "Wurth_WE-RJ45LAN_7498210002",
+  "T_Wurth_WE-RJ45LAN_7498210003": "Wurth_WE-RJ45LAN_7498210003",
+  "T_Wurth_WE-RJ45LAN_7499411122A": "Wurth_WE-RJ45LAN_7499411122A",
+  "T_Wurth_WE-RJ45LAN_7499511440": "Wurth_WE-RJ45LAN_7499511440",
+  "Texas_YJE": "Texas_YJE0006A_PicoStar-6_1.15x2.2mm",
+  "Vishay_SOIC254P1016X440-4N": "Vishay_SMD-4_W10.16mm_P2.54mm",
+  "Wurth_7499210123": "Wurth_WE-RJ45LAN_7499210123"
+ },
+ "models": {
+  "0ZCJ0005FF2E.step": "Fuse_Bel_0ZCJ_1206_3216Metric.step",
+  "614105150721 (rev1).stp": "USB_Micro-B_Wuerth_614105150721_Vertical.step",
+  "AQY212GS.step": "Panasonic_SOP-4_4.4x4.3mm_P2.54mm.step",
+  "Coilcraft_FA2672-AL.STEP": "Coilcraft_FA2672.step",
+  "Coilcraft_FA2925-AL.step": "Coilcraft_FA2925.step",
+  "DLW5B_5050.step": "L_CommonModeChoke_Murata_DLW5B_5.0x5.0mm.step",
+  "FTSH-105-01-L-DV-007-K-TR.stp": "Samtec_FTSH-105-01-L-DV-007-K.step",
+  "IHLP1212.step": "L_Vishay_IHLP-1212.step",
+  "IHLP1616AB.step": "L_Vishay_IHLP-1616AB.step",
+  "IHLP1616BZ.step": "L_Vishay_IHLP-1616BZ.step",
+  "IHLP2020AB.step": "L_Vishay_IHLP-2020AB.step",
+  "IHLP2020BZ.step": "L_Vishay_IHLP-2020BZ.step",
+  "IHLP2020CZ.step": "L_Vishay_IHLP-2020CZ.step",
+  "IHLP2525BD.step": "L_Vishay_IHLP-2525BD.step",
+  "IHLP2525CZ.step": "L_Vishay_IHLP-2525CZ.step",
+  "IHLP2525EZ.step": "L_Vishay_IHLP-2525EZ.step",
+  "KW-5R5C104_224_334-R.STEP": "Eaton_KW_13.5x8.8mm.step",
+  "NX1255GB.step": "Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm.step",
+  "NX2520SA.step": "Crystal_SMD_NDK_NX2520SA-4Pin_2.5x2.0mm.step",
+  "NX3215SA.step": "Crystal_SMD_NDK_NX3215SA-2Pin_3.2x1.5mm.step",
+  "NX3225SA.step": "Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm.step",
+  "QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm.step": "Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm.step",
+  "T_Wurth_WE-PPTI-1308.step": "Wurth_WE-PPTI-1308.step",
+  "T_Wurth_WE-RJ45LAN_7498210002.step": "Wurth_WE-RJ45LAN_7498210002.step",
+  "T_Wurth_WE-RJ45LAN_7498210003.step": "Wurth_WE-RJ45LAN_7498210003.step",
+  "T_Wurth_WE-RJ45LAN_7499411122A.step": "Wurth_WE-RJ45LAN_7499411122A.step",
+  "T_Wurth_WE-RJ45LAN_7499511440.step": "Wurth_WE-RJ45LAN_7499511440.step",
+  "Texas_YJE.step": "Texas_YJE0006A_PicoStar-6_1.15x2.2mm.step",
+  "VO618A-3X017T.step": "Vishay_SMD-4_W10.16mm_P2.54mm.step",
+  "Wurth_7499210123.step": "Wurth_WE-RJ45LAN_7499210123.step"
+ }
+}
