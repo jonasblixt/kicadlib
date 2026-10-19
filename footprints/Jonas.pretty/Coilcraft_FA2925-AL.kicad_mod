@@ -1142,7 +1142,7 @@
 		(uuid "a3752a95-2985-41aa-a986-6a19c80afb3d")
 	)
 	(embedded_fonts no)
-	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/FA2925-AL.STEP"
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Coilcraft_FA2925-AL.step"
 		(offset
 			(xyz 0 0 0.25)
 		)

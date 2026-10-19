@@ -206,7 +206,7 @@
 		(uuid "67f1b27f-2ada-4785-8d3d-15686f8398d9")
 	)
 	(embedded_fonts no)
-	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Coilcraft_POE60F-XXL.STEP"
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Coilcraft_POE60F.step"
 		(offset
 			(xyz 0 0 0.25)
 		)

@@ -308,7 +308,7 @@
 		(uuid "428aa3a8-51e5-4ce0-b02d-ec0cd7a4840e")
 	)
 	(embedded_fonts no)
-	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Wurth_7499210123.stp"
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Wurth_7499210123.step"
 		(offset
 			(xyz 0 -3.24 8.5)
 		)
