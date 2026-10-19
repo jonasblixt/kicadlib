@@ -33,7 +33,7 @@ def build_field_defs():
 ```
 
 If the part family is safety-rated (carries an X1/X2/Y1/Y2 classification,
-as with `cap_xy_vishay_vj` and `cap_xy_murata_ga3`), append a
+as with `cap_xy_murata_ga3`), append a
 `"Safety Rating"` field:
 
 ```python
@@ -63,9 +63,12 @@ CREATE TABLE {table} (
 ## Polarized-electrolytic style
 
 Used for polarized/electrolytic-type parts: aluminum electrolytic,
-aluminum polymer, tantalum polymer, and film chip capacitors whose
-datasheets carry ESR/endurance-style data. Symbol is
-`Device:C_Polarized_US`.
+aluminum polymer, tantalum polymer. Symbol is `Device:C_Polarized_US`.
+
+Film chip capacitors whose datasheets carry ESR/endurance-style data
+(`cap_film_panasonic_echux`) use the same ESR/Leakage/Endurance/Temp
+Range/Ripple Current fields, but `Device:C` (not polarized) and no
+`Series` field; copy `import_cap_film_panasonic_echux.py`.
 
 ```python
 def build_field_defs():
@@ -153,7 +156,7 @@ Both styles share the same wrapper — only `name`, `description`,
     },
     "libraries": [
         {
-            "name": "<SHORT library nickname shown in KiCad's chooser - e.g. \"VJ\", \"GA3\", \"OSCON\", \"ECHU(X)\" - a few characters pulled from the series name, NOT the full table name>",
+            "name": "<chooser name: the series name, e.g. \"GRM\", \"GA3\", \"OSCON\", \"ECHU(X)\"; for a multi-series library the family name (\"IHLP\", \"NX\", \"SMAJ-SMCJ\"), else the vendor (\"Chemi-Con\"). Schematics store <library>:<chooser>/<id>, so changing it later breaks projects>",
             "table": "<library_name>",
             "key": "id",
             "symbols": "Symbol",

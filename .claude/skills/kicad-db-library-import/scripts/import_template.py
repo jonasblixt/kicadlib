@@ -4,6 +4,9 @@
 # in the repo (table-name validation, the seen_ids dedup pattern, the
 # write_database/write_kicad_dbl pair, the argparse interface) so each new
 # library only has to supply the CSV-specific parsing and the field style.
+# Every argument defaults to the repo paths, so running the script with no
+# arguments regenerates the committed library (scripting/check_importers.py
+# relies on that or on the --csv/--db/--table/--kicad-dbl convention).
 #
 # See references/field_styles.md for the two build_field_defs() styles
 # (ceramic-MLCC vs. polarized-electrolytic) and their matching
@@ -21,13 +24,18 @@ import re
 import sqlite3
 from pathlib import Path
 
+LIBRARY = "TODO_type_subtype_vendor_series"  # see NAMING.md; also the table name
+CHOOSER_NAME = "TODO"  # series name ("GRM"), family for multi-series ("IHLP"),
+                       # else vendor; part of every schematic reference
+REPO = Path(__file__).resolve().parent.parent
 MANUFACTURER = "TODO"  # or derive per-row if the CSV spans multiple manufacturers
 
 # TODO: case-size key (however this CSV identifies it - an EIA code, a
 # (length, width) tuple, whatever's natural) -> (footprint library
-# nickname, footprint name). Use "Capacitor_SMD" / "Capacitor_Tantalum_SMD"
-# for KiCad standard footprints; use a custom nickname only if a matching
-# footprints/<Nickname>.pretty/ has already been built for this case.
+# nickname, footprint name). Use KiCad stock footprints ("Capacitor_SMD",
+# "Inductor_SMD", ...) checked against the vendor's land pattern; use
+# ("Jonas", "<name>") only for a footprint that already exists in
+# footprints/Jonas.pretty.
 footprint_mapping = {
     # "1808": ("Capacitor_SMD", "C_1808_4520Metric"),
 }
@@ -44,17 +52,18 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description="Import a TODO CSV export into a KiCad database-"
                      "library SQLite file.")
-    parser.add_argument("--csv", required=True, nargs="+",
+    parser.add_argument("--csv", nargs="+",
+                         default=[str(REPO / "data" / f"{LIBRARY}.csv")],
                          help="Path(s) to the input CSV(s). Multiple "
                               "values are merged into one library.")
-    parser.add_argument("--db", required=True,
+    parser.add_argument("--db", default=str(REPO / "library" / f"{LIBRARY}.db"),
                          help="Path to the output .db SQLite file. Created "
                               "if it doesn't exist.")
-    parser.add_argument("--table", required=True,
+    parser.add_argument("--table", default=LIBRARY,
                          help="Name of the table to (re)create inside the "
                               "database. Must match the corresponding "
                               ".kicad_dbl 'table' field.")
-    parser.add_argument("--kicad-dbl", required=True,
+    parser.add_argument("--kicad-dbl", default=str(REPO / "library" / f"{LIBRARY}.kicad_dbl"),
                          help="Path to (re)write the .kicad_dbl file.")
     return parser.parse_args()
 
@@ -178,10 +187,7 @@ def write_kicad_dbl(dbl_path, db_path, table):
         },
         "libraries": [
             {
-                "name": "TODO",  # SHORT nickname shown in KiCad's chooser -
-                                 # e.g. "VJ", "GA3", "OSCON", "ECHU(X)" - a
-                                 # few characters pulled from the series
-                                 # name, NOT the full table name
+                "name": CHOOSER_NAME,
                 "table": table,
                 "key": "id",
                 "symbols": "Symbol",

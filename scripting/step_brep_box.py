@@ -1,6 +1,7 @@
 # Minimal STEP AP214 B-Rep box generator for KiCad footprint 3D models.
 #
-# WHY THIS EXISTS: footprints/Murata_GA3.3dshapes/C_Murata_GA3_5.7x2.8.step
+# WHY THIS EXISTS: footprints/Jonas.3dshapes/C_Murata_GA3_5.7x2.8.step (then in
+# footprints/Murata_GA3.3dshapes/)
 # was hand-authored using CSG primitives (BLOCK + CSG_SOLID entities, from
 # ISO 10303-42's constructive-solid-geometry schema) wrapped in a plain
 # SHAPE_REPRESENTATION. That's valid STEP syntax, but KiCad's underlying

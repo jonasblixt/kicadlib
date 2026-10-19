@@ -592,12 +592,14 @@ Config and docs:
   `sym-lib-table` uses `${JONAS_KICADLIB}` — use the variable for both.
 - `CLAUDE.md` points to
   `.claude/skills/kicad-db-library-import/references/step_brep_authoring.md`,
-  which doesn't exist (only `field_styles.md` does).
+  which doesn't exist (only `field_styles.md` does). **Fixed 2026-10-19:**
+  written with the skill update.
 - `CLAUDE.md` says no CAD viewer is available in-session — true for the
   Cowork sandbox, but a local Claude Code session on archimedes has KiCad
-  10 and can render. Worth stating both.
+  10 and can render. Worth stating both. **Fixed in A5.3 (`2c7a92d`).**
 - `scripting/step_brep_box.py`'s header still refers to
   `footprints/Murata_GA3.3dshapes/` (pre-`Jonas.3dshapes` layout).
+  **Fixed 2026-10-19.**
 - Nothing on this machine depends on `modules/` through a lib table: the
   only project-level tables (`Projects/B1`, `Snigel2`, `Snappy`, 2016–2018)
   point at long-dead paths, and `.kicad_pcb` files embed their footprints.
