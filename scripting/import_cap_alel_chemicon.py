@@ -3,8 +3,11 @@
 # Successor Model, Series, ... Rated Voltage[Vdc], Capacitance[uF],
 # Capacitance Tolerance Code, Dimensions D[mm]/L[mm]/T[mm], ... ESR1/2,
 # Leakage Current, Endurance1/2, ...) into a KiCad database-library
-# SQLite file, following the same id scheme as the cap_mlcc_murata_GRM /
+# SQLite file, following the same id scheme as the cap_mlcc_murata_grm /
 # cap_rfmw_* importers.
+#
+# Chooser name AlEl -> Chemi-Con on 2026-10-19 (cleanup review A4.4): the
+# library spans 20 Chemi-Con series with no common family name.
 #
 # All series live in a single table (a per-series split was tried and
 # reverted - it didn't work well). "Dielectric" carries the Chemi-Con
@@ -328,7 +331,7 @@ def write_kicad_dbl(dbl_path, db_path, table):
         },
         "libraries": [
             {
-                "name": "AlEl",
+                "name": "Chemi-Con",
                 "table": table,
                 "key": "id",
                 "symbols": "Symbol",

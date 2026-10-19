@@ -1,7 +1,7 @@
 # Imports Murata GA3 safety-certified (X1/Y2) MLCC capacitor data (Murata's
 # own product-table CSV export) into a KiCad database-library SQLite file,
 # following the ceramic-MLCC field convention used by
-# cap_mlcc_murata_GRM / cap_rfmw_kyocera_accu_p / cap_rfmw_murata_gqm /
+# cap_mlcc_murata_grm / cap_rfmw_kyocera_accup / cap_rfmw_murata_gqm /
 # cap_xy_vishay_vj - NOT the polarized-electrolytic convention
 # (cap_alel_chemicon and friends): Symbol is Device:C (these are
 # non-polarized ceramic caps), Value is shown normally with its label, and

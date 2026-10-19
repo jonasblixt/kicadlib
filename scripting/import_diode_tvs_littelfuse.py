@@ -2,6 +2,10 @@
 # suppression) protection diode data into a KiCad database-library
 # SQLite file.
 #
+# Renamed from diode_tvs_littlefuse (vendor misspelt) on 2026-10-19
+# (cleanup review A4.2); chooser name TVS -> SMAJ-SMCJ, the series
+# family (A4.4).
+#
 # NEW CATEGORY: this is kicadlib's first `diode_` database library.
 # NAMING.md doesn't document a diode section - it explicitly lists
 # `diodes` among the small hand-maintained libraries considered out of
@@ -9,7 +13,7 @@
 # database library anyway (630 SKUs is well past the "hand-author one
 # symbol per part" threshold the other database libraries use as their
 # bar), so this follows the same `<type>_<subtype>_<vendor>` naming
-# shape as the rest of the repo (`diode_tvs_littlefuse`) without an
+# shape as the rest of the repo (`diode_tvs_littelfuse`) without an
 # established NAMING.md section to match against - a future addition to
 # NAMING.md documenting a `diode_tvs` (and maybe `diode_rect`/
 # `diode_zener`/...) type-code table would be a reasonable follow-up if
@@ -258,7 +262,7 @@ def write_kicad_dbl(dbl_path, db_path, table):
         },
         "libraries": [
             {
-                "name": "TVS",
+                "name": "SMAJ-SMCJ",
                 "table": table,
                 "key": "id",
                 "symbols": "Symbol",
@@ -283,7 +287,7 @@ def parse_args():
     parser.add_argument("--db", required=True,
                          help="Path to the output .db SQLite file.")
     parser.add_argument("--table", required=True,
-                         help="Table name, e.g. diode_tvs_littlefuse.")
+                         help="Table name, e.g. diode_tvs_littelfuse.")
     parser.add_argument("--kicad-dbl", required=True,
                          help="Path to (re)write the .kicad_dbl file.")
     return parser.parse_args()

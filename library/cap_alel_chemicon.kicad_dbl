@@ -14,7 +14,7 @@
     },
     "libraries": [
         {
-            "name": "AlEl",
+            "name": "Chemi-Con",
             "table": "cap_alel_chemicon",
             "key": "id",
             "symbols": "Symbol",

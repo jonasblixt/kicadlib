@@ -20,7 +20,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 LIB = REPO / "library"
-SCRIPT = {"cap_rfmw_kyocera_accu_p": "import_cap_rfmw_kyocera_accup.py"}  # until the A4.2 rename
+SCRIPT = {}  # library -> importer file, where the names differ
 EXTRA_CSV = {
     "ind_rfmw_murata_lqg": ["ind_rfmw_murata_lqg15h.csv", "ind_rfmw_murata_lqg18h.csv"],
     "xtal_epson": ["xtal_epson.csv", "xtal_epson_32k.csv"],

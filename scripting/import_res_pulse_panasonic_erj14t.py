@@ -4,7 +4,7 @@
 #
 # This is the first RESISTOR database library in the repo, so there was no
 # existing res_* field-style precedent to copy the way cap_xy_murata_ga3
-# copies cap_mlcc_murata_GRM. The style below extrapolates the established
+# copies cap_mlcc_murata_grm. The style below extrapolates the established
 # ceramic/MLCC capacitor convention (non-polarized part, Device:<part>
 # symbol, Value shown normally, no ESR/Endurance-style fields) to
 # resistors: Symbol is Device:R, and Resistance/Power/Tolerance/TCR stand

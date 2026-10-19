@@ -3,7 +3,7 @@
 # case-size series) into a KiCad database-library SQLite file.
 #
 # Naming note: the library is ind_rfmw_murata_lqg - `rfmw`, the same code
-# as the capacitor side (cap_rfmw_kyocera_accu_p), reused for RF-purposed
+# as the capacitor side (cap_rfmw_kyocera_accup), reused for RF-purposed
 # parts across cap_ and ind_. The old NAMING.md said `rf` for inductors;
 # it was updated to `rfmw` in 2026-10 (cleanup review A4.2/A5.2).
 #

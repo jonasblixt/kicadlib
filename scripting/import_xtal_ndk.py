@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 # Builds the xtal_ndk KiCad database library from data/xtal_ndk_parts.csv.
 #
+# Chooser name NDK -> NX on 2026-10-19 (cleanup review A4.4): every package
+# in the library is an NX-series crystal.
+#
 # SOURCE (since the 2026-10-08 review): data/xtal_ndk_parts.csv, a
 # hand-maintained table with one row per orderable part. Its "Source"
 # column records where each row's electrical data comes from; it is not
@@ -317,7 +320,7 @@ def write_kicad_dbl(dbl_path, db_path, table):
         },
         "libraries": [
             {
-                "name": "NDK",
+                "name": "NX",
                 "table": table,
                 "key": "id",
                 "symbols": "Symbol",

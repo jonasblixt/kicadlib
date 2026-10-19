@@ -10,12 +10,12 @@
         "username": "",
         "password": "",
         "timeout_seconds": 2,
-        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/diode_tvs_littlefuse.db"
+        "connection_string": "Driver={SQLite3 ODBC Driver};Database=${CWD}/diode_tvs_littelfuse.db"
     },
     "libraries": [
         {
-            "name": "TVS",
-            "table": "diode_tvs_littlefuse",
+            "name": "SMAJ-SMCJ",
+            "table": "diode_tvs_littelfuse",
             "key": "id",
             "symbols": "Symbol",
             "footprints": "Footprints",

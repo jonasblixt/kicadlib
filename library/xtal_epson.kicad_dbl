@@ -14,7 +14,7 @@
     },
     "libraries": [
         {
-            "name": "Epson",
+            "name": "TSX-FA-FC",
             "table": "xtal_epson",
             "key": "id",
             "symbols": "Symbol",

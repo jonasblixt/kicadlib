@@ -14,7 +14,7 @@
     },
     "libraries": [
         {
-            "name": "NDK",
+            "name": "NX",
             "table": "xtal_ndk",
             "key": "id",
             "symbols": "Symbol",

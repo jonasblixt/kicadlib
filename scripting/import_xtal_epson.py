@@ -3,6 +3,9 @@
 # Builds the xtal_epson KiCad database library from data/xtal_epson.csv
 # (MHz crystals) and data/xtal_epson_32k.csv (32.768 kHz crystals).
 #
+# Chooser name Epson -> TSX-FA-FC on 2026-10-19 (cleanup review A4.4): the
+# series families in the library.
+#
 # SOURCE: data/xtal_epson.csv is a transcription of Epson's own crystal-
 # unit parametric search (epsondevice.com/crystal/en/product-search/
 # crystal-unit.html?model=...), captured 2026-10-08 for the three series
@@ -384,7 +387,7 @@ def write_kicad_dbl(dbl_path, table):
         },
         "libraries": [
             {
-                "name": "Epson",
+                "name": "TSX-FA-FC",
                 "table": table,
                 "key": "id",
                 "symbols": "Symbol",

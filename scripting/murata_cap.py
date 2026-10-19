@@ -1,4 +1,4 @@
-# Shared code for the Murata MLCC importers (import_cap_mlcc_murata_GRM.py,
+# Shared code for the Murata MLCC importers (import_cap_mlcc_murata_grm.py,
 # import_cap_rfmw_murata_gqm.py), which read Murata's own product-table
 # CSV exports. Until 2026-10-19 this was the generic, argument-driven
 # import_murata_cap.py; it only wrote the .db, and the arguments used were
@@ -8,7 +8,7 @@
 # Field style: ceramic/MLCC (Device:C, Value = "${Capacitance}",
 # Capacitance/Voltage/Dielectric/Manufacturer/Part Number). The
 # .kicad_dbl writer here reproduces the hand-written files of GRM, GQM and
-# cap_rfmw_kyocera_accu_p, which share this field set, so the Kyocera
+# cap_rfmw_kyocera_accup, which share this field set, so the Kyocera
 # importer reuses it.
 #
 # Only X7R, X5R and C0G rows are imported, in the cases listed in

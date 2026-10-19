@@ -1,5 +1,5 @@
 # Imports Kyocera AVX Accu-P thin-film RF capacitors (hand-built CSV,
-# data/cap_rfmw_kyocera_accu_p.csv) into the cap_rfmw_kyocera_accu_p KiCad
+# data/cap_rfmw_kyocera_accup.csv) into the cap_rfmw_kyocera_accup KiCad
 # database library. All parts are C0G-like thin film; the dielectric is
 # fixed to "C0G" and cases map to KiCad stock Capacitor_SMD footprints.
 # The CSV's file_path column names Kyocera's .s2p S-parameter files; they
@@ -11,6 +11,9 @@
 # MLCC libraries) and regenerates both files with no arguments (--db and
 # --kicad-dbl redirect the output).
 #
+# Renamed from cap_rfmw_kyocera_accu_p on 2026-10-19 (A4.1: the series
+# slug is accup, as this importer always was).
+#
 # Values: the small parts come in 0.05 pF steps; the pF formatting
 # keeps a second decimal only where the value needs it (A4.7, see below).
 # The id still carries the CSV's tolerance text verbatim ("±0.01 pF").
@@ -20,7 +23,7 @@ from pathlib import Path
 
 from murata_cap import write_database, write_kicad_dbl
 
-LIBRARY = "cap_rfmw_kyocera_accu_p"
+LIBRARY = "cap_rfmw_kyocera_accup"
 REPO = Path(__file__).resolve().parent.parent
 
 footprint_mapping = {
