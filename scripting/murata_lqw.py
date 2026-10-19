@@ -37,8 +37,12 @@
 # L<case>_<value>_<tolerance>_<current>. Ids are unique within every
 # series (verified when the libraries were merged and again at the split).
 #
-# Footprints: 0402, 0603, 0805 are standard EIA metric cases with a match
-# in KiCad's Inductor_SMD.pretty. 1008 (LQW2UAS, added 2026-10-19, A4.6)
+# Footprints: 0402 and 0603 are standard EIA metric cases with a match
+# in KiCad's Inductor_SMD.pretty. 0805 (only LQW2BAS, Murata size code
+# 2015/0805) uses Inductor_SMD:L_Coilcraft_0805HQ_2012Metric since
+# 2026-10-19 (A4.8): its 1.02x1.78 pads at +-0.89 are exactly Murata's LQW2BA
+# land (O05E: a=0.76, b=2.8, c=1.78); the generic L_0805_2012Metric was
+# 0.33 mm off in width. No KiCad 3D model for it. 1008 (LQW2UAS, added 2026-10-19, A4.6)
 # uses Inductor_SMD:L_Coilcraft_1008HQ_2520Metric: Murata's standard land
 # for LQW2UA (O05E catalog, RF Inductors Soldering and Mounting: a=1.27 gap,
 # b=3.3 overall, c=2.54 wide, i.e. 1.015x2.54 pads at +-1.1425) matches
@@ -62,7 +66,7 @@ REPO = Path(__file__).resolve().parent.parent
 footprint_mapping = {
     "0402": ("Inductor_SMD", "L_0402_1005Metric"),
     "0603": ("Inductor_SMD", "L_0603_1608Metric"),
-    "0805": ("Inductor_SMD", "L_0805_2012Metric"),
+    "0805": ("Inductor_SMD", "L_Coilcraft_0805HQ_2012Metric"),
     "1008": ("Inductor_SMD", "L_Coilcraft_1008HQ_2520Metric"),
 }
 
