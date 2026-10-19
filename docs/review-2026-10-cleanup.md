@@ -28,6 +28,10 @@ session, add it here instead of fixing it silently.
 
 Suggested order: A1 → A2 + A3 → A4 → A5 → (optional) A6.
 
+**Status 2026-10-19:** A1, A2, A3 done; A4.5-A4.7 and A5.2/A5.3 done.
+Open: the rename batch A5.4 (A4.1 rest, A4.2, A4.4, A5.1; waiting for
+Jonas on the `power` split), A4.8, and optional A6.
+
 ---
 
 ## A1. Safe deletions (nothing references these)
@@ -63,13 +67,14 @@ A1.1–A1.5 landed together in `c1fcbcf` ("Remove unreferenced files
       recorded in `review-2026-10-footprints.md`.
 - [x] **A1.3** `git rm -r scripting/old_stuff/` — 24 files (old `.lib`
       importer, DRC script, pinout generators). Recoverable from history.
-- [ ] **A1.4** `git rm library/LEDs.bak` (tracked despite `*.bak` in
+- [x] **A1.4** `git rm library/LEDs.bak` (tracked despite `*.bak` in
       `.gitignore`) and delete the 13 other local `library/*.bak` files.
       `LEDs.bak` removed from git. The 12 other `.bak` files are untracked
       and ignored, and were left on disk for Jonas to delete
       (`rm library/*.bak`). Checked first: each is KiCad's "one save ago"
       copy and holds no symbol that the current library lacks.
-      (`LEDs.bak`'s 20 Rohm SML-P1 LEDs are in `82a09c4`.)
+      (`LEDs.bak`'s 20 Rohm SML-P1 LEDs are in `82a09c4`.) Done in
+      `c1fcbcf`; the 12 local `.bak` files are still on disk (2026-10-19).
 - [x] **A1.5** Delete unreferenced models in `footprints/Jonas.3dshapes/`:
       the 14 `C_Panasonic_ECHU_*.wrl` files and `C_Murata_GA3_5.7x2.8.wrl`
       (footprints reference the `.step` versions, which are all present).
@@ -81,15 +86,22 @@ A1.1–A1.5 landed together in `c1fcbcf` ("Remove unreferenced files
       hard-code the Cowork path `~/mnt/kicadlib/`. Make them repo-relative.
       Done: both repo-relative with `--out`, NDK no longer copies the
       model (`8e1fdf3`, `aea30fd`).
-- [ ] **A1.6** `data/cap_film_wima_pps.csv` has no importer/library.
+- [x] **A1.6** `data/cap_film_wima_pps.csv` has no importer/library.
       Delete, or keep if a WIMA library is planned (then note it here).
-- [ ] **A1.7** Decide on `simulation/` (35 MB, 427 AccuP `.s2p` files) and
+      Jonas: delete. — `abf5603`
+- [x] **A1.7** Decide on `simulation/` (35 MB, 427 AccuP `.s2p` files) and
       `datasheets/` (27 MB PDFs). Neither is referenced by any importer or
       library. Options: keep as reference, or drop and rely on Datasheet
       URLs in the DBs. If kept, fix the `kyrocera` typo in
       `datasheets/cap/cap_rfmw_kyrocera_Accu-P.pdf`.
+      Jonas: delete both. — `ea7a99e` (README updated with it)
 
 ## A2. Retire `modules/footprints.pretty` (152 footprints)
+
+**Done 2026-10-19.** The symbol side was fixed through
+`review-2026-10-footprints.md` (F7.1 bug fixes, F7.2 stock remaps, F7.4
+migrations, F7.5 new footprints); `scripting/audit_refs.py` (`7b0faf2`)
+finds no remaining use of `modules/`, and it was removed in `d8fba33`.
 
 About 75 of them are still in use. For each footprint, decide: **remap the
 symbol to a stock KiCad footprint**, or **move it into `Jonas.pretty`**
@@ -109,7 +121,7 @@ absolute paths (`/Users/jons/...`, `C:/Users/jonas.persson/Desktop`,
 `../../../../../Users/...`) or KiCad 4 `${KISYS3DMOD}` names — rewrite all
 of them on migration.
 
-- [ ] **A2.1** Symbols with **no library nickname** in the Footprint field
+- [x] **A2.1** Symbols with **no library nickname** in the Footprint field
       (87). "In modules" = a footprint of that name exists in
       `modules/footprints.pretty`.
 
@@ -206,7 +218,7 @@ of them on migration.
   Accurate as of `82a09c4`; re-run the audit (see end of file) before
   fixing in case symbols changed since.
 
-- [ ] **A2.2** Symbols using the `footprints:` nickname
+- [x] **A2.2** Symbols using the `footprints:` nickname
       (= `modules/footprints.pretty`):
   - `comm/USB2512B` → `footprints:QFN-36-1EP_6x6mm_Pitch0.5mm`
   - `connectors/Header_2.54mm_10p` → `footprints:61201021621`
@@ -216,7 +228,7 @@ of them on migration.
   - `diode_misc/DS9503P+` → `footprints:TSOC6`
   - `memory/25AA1024` → `footprints:DFN-8-1EP_6x5mm_P1.27mm_EP4x4mm`
   - `power/1206SFS200F_63-2` → `footprints:Fuse_1206_3216Metric`
-- [ ] **A2.3** Symbols pointing at `Jonas:X` where X only exists in
+- [x] **A2.3** Symbols pointing at `Jonas:X` where X only exists in
       `modules` (or nowhere):
   - `LEDs/LTST-C19HE1WT` → `Jonas:liteon_rgb_0603`
   - `comm/146200` → `Jonas:molex_lte_ant_146200`
@@ -229,15 +241,19 @@ of them on migration.
   - `misc_inductors/PT61018PEL` → `Jonas:Ethernet_trafo_so16w`
   - `power/1-1825027-1` → `Jonas:1-1825027-1`
   - `power/LP5562` → `Jonas:DSBGA12`
-- [ ] **A2.4** Move the ~34 3D models still referenced from
+- [x] **A2.4** Move the ~34 3D models still referenced from
       `modules/packages3d` into `Jonas.3dshapes` for footprints that move.
-- [ ] **A2.5** Re-run the audit: zero symbols may reference `footprints:`,
-      a bare name, or a missing `Jonas:` footprint.
-- [ ] **A2.6** `git rm -r modules/` (after A1.8).
+      — done per footprint during F7.4 (11 needed, see F5.5).
+- [x] **A2.5** Re-run the audit: zero symbols may reference `footprints:`,
+      a bare name, or a missing `Jonas:` footprint. — committed as
+      `scripting/audit_refs.py` (`7b0faf2`); the only broken link left is
+      `dcdc/LT8640` (F7.5, data sheet needed).
+- [x] **A2.6** `git rm -r modules/` (after A1.8). — `d8fba33`
 
 ## A3. Other broken footprint/model links
 
-- [ ] **A3.1** KiCad 4 library nicknames that no longer exist; remap:
+- [x] **A3.1** KiCad 4 library nicknames that no longer exist; remap
+      (done with the stock remaps, footprints review F7.2):
   - `comm/SN65C3232EPWR` → `Housings_SSOP:SSOP-16_4.4x5.2mm_Pitch0.65mm` → `Package_SO:`
   - `dcdc/LTC3447` → `Housings_DFN_QFN:DFN-10-1EP_3x3mm_Pitch0.5mm` → `Package_DFN_QFN:`
   - `interface/TCA9535RGER` → `Housings_DFN_QFN:QFN-24-1EP_4x4mm_Pitch0.5mm` → `Package_DFN_QFN:`
@@ -247,25 +263,34 @@ of them on migration.
   - `logic/SN74AUP2G04DCKR` → `TO_SOT_Packages_SMD:SC-70-6` → `Package_TO_SOT_SMD:`
 - [x] **A3.2** `connectors/Wurth_7499210123` uses `jonas:` (lowercase);
       nicknames are case-sensitive → `Jonas:`. — `248baee`
-- [ ] **A3.3** Empty Footprint field — check these (power flags like
+- [x] **A3.3** Empty Footprint field — check these (power flags like
       `GND`, `PWR_FLAG`, `PxVx`, `NxVx`, `BOM_Entry` are fine):
       `comm/WYSBCVGXA`, `connectors/0428202222`, `connectors/Conn_01x30`,
       `connectors/DuraClick_560020`, `connectors/GBC08SGSN-M89`,
       `connectors/SF7W008S1AE900`, `cpu/Zynq_7010`, `dcdc/TLV62084DSG`,
       `diode_misc/D_TVS_Uni`, `logic/NLSV4T3144-D`, `power/PT65503`.
+      Status 2026-10-19: all filled except `comm/WYSBCVGXA`,
+      `connectors/DuraClick_560020`, `connectors/SF7W008S1AE900` (F7.5,
+      waiting for data sheets) and the intentionally generic ones.
 - [x] **A3.4** Unused footprints in `Jonas.pretty`: `NX5032GA`,
       `T_Wurth_WE-RJ45LAN_7499210001A`, `Wurth_7499210123` (the last is
       explained by A3.2). Wire them to a symbol or delete. Done:
       `Wurth_7499210123` wired (A3.2, `248baee`), the other two deleted
       (`c8d3ce9`, `aafe5a6`).
-- [ ] **A3.5** Footprints referencing missing models:
+- [x] **A3.5** Footprints referencing missing models:
       `T_Wurth_WE-RJ45LAN_7499210001A.step`,
-      `tssop-38_4.4x9.7mm_p0.5mm.step`.
-- [ ] **A3.6** Untracked `footprints/Jonas.3dshapes/614105150721 (rev1).stp`:
+      `tssop-38_4.4x9.7mm_p0.5mm.step`. — the 7499210001A footprint was
+      deleted (`aafe5a6`); TSSOP-38 is a stock model that exists.
+- [x] **A3.6** Untracked `footprints/Jonas.3dshapes/614105150721 (rev1).stp`:
       rename without spaces/parens and reference it from its footprint.
-- [ ] **A3.7** Two footprints use `${WE_3DMODEL_DIR}` (external Würth model
+      — not an orphan: poetato's board puts it on the stock
+      `USB_Micro-B_Wuerth_614105150721_Vertical` (F5.4 option b), so it was
+      committed under its current name (`c7f801e`). The clean name waits
+      for the rename batch (A5.4) so poetato's path changes only once.
+- [x] **A3.7** Two footprints use `${WE_3DMODEL_DIR}` (external Würth model
       library). Copy the models into `Jonas.3dshapes` so the repo is
-      self-contained.
+      self-contained. — no footprint uses it any more (`b04fc79`,
+      `aafe5a6`).
 
 ## A4. Database libraries
 
@@ -278,14 +303,21 @@ of them on migration.
     `data/cap_mlcc_murata_gqm.csv` (mlcc vs rfmw mismatch).
   - `cap_rfmw_kyocera_accu_p`: importer is `import_cap_rfmw_kyocera_accup.py`,
     `simulation/` uses `accup`. Pick `accup` and rename the library.
+  - Progress 2026-10-19: GRM and GQM got no-argument importers on the
+    shared `murata_cap.py` (`441da29`; GQM's CSV renamed to
+    `data/cap_rfmw_murata_gqm.csv`); the AccuP importer now reproduces
+    its library from any directory (`bcdab15`). Left: the `accu_p` ->
+    `accup` rename, in the rename batch (A5.4).
 - [ ] **A4.2** Naming fixes:
   - `cap_mlcc_murata_GRM` → `cap_mlcc_murata_grm` (lowercase).
   - `diode_tvs_littlefuse` → `diode_tvs_littelfuse` (vendor spelling).
   - ~~`data/ind_choke_murata_LQW_*.csv`, `data/ind_rfmw_murata_LQW_*.csv` →
     lowercase `lqw`.~~ Done with A4.3 (renamed per series), except
     `ind_choke_murata_LQW_8.csv`, see A4.6.
-  - `import_ind_rfmw_murata_lqg.py` still mentions the old
-    `ind_rf_murata_lqg15hn.kicad_dbl`.
+  - ~~`import_ind_rfmw_murata_lqg.py` still mentions the old
+    `ind_rf_murata_lqg15hn.kicad_dbl`.~~ Fixed with A5.2 (`3566959`).
+  - The two renames change library nicknames that poetato uses (158 GRM
+    and 10 TVS references), so they go in the rename batch (A5.4).
 - [x] **A4.3** LQW is split across `ind_choke_murata_lqw` and
       `ind_rfmw_murata_lqw`, both showing as "LQW" in the chooser.
       **Decision (Jonas, 2026-10-13): don't merge.** `LQW15` is the case
@@ -297,16 +329,33 @@ of them on migration.
       `import_<library>.py` regenerates its files with no arguments. The
       548 rows are identical to the old merged libraries. Global
       `sym-lib-table` updated (2 entries → 7). — `0a9b4c5`
-- [ ] **A4.6** (new) `data/ind_choke_murata_LQW_8.csv` is 95 Murata
+- [x] **A4.6** (new) `data/ind_choke_murata_LQW_8.csv` is 95 Murata
       LQW2UAS parts (1008/2520, non-magnetic, "High frequency circuits"),
       i.e. RF, not choke, and no importer reads it. Either build
       `ind_rfmw_murata_lqw2uas` (footprint `Inductor_SMD:L_1008_2520Metric`)
       or delete the CSV.
+      Jonas: build. — `7230bce`: `ind_rfmw_murata_lqw2uas`, 95 parts, CSV
+      renamed to match. Footprint `Inductor_SMD:L_Coilcraft_1008HQ_2520Metric`
+      instead: Murata's LQW2UA land (O05E: a=1.27, b=3.3, c=2.54) matches it
+      within 0.005 mm, the generic L_1008 is 0.35 mm off.
+- [x] **A4.7** (new) `cap_rfmw_kyocera_accu_p` rounded values to 0.1 pF:
+      60 of 427 parts showed the wrong capacitance (1.05 pF as "1.1pF")
+      and 50 overwrote a neighbour's id (`C0201_0p1_...` carried the
+      0.15 pF part). Values and ids now keep 0.05 pF steps; 377 -> 426
+      rows. — `02f7882` (not used by poetato)
+- [ ] **A4.8** (new) `ind_rfmw_murata_lqw2bas` uses the generic
+      `L_0805_2012Metric`, but `Inductor_SMD:L_Coilcraft_0805HQ_2012Metric`
+      matches Murata's LQW2BA land (a=0.76, b=2.8, c=1.78) exactly, as the
+      Coilcraft 1008HQ does for LQW2UAS. Switch? (Not used by poetato.)
 - [ ] **A4.4** Make chooser names (`libraries[].name`) consistently the
       series name. Currently `AlEl`, `TVS`, `Epson`, `NDK` are type/vendor
-      names while the rest are series names.
-- [ ] **A4.5** Re-run every importer and confirm `.db`/`.kicad_dbl` come out
-      byte-identical (or explain the diff).
+      names while the rest are series names. Note: schematics store
+      `<nickname>:<chooser name>/<id>`, so this changes symbol ids too ->
+      rename batch (A5.4).
+- [x] **A4.5** Re-run every importer and confirm `.db`/`.kicad_dbl` come out
+      byte-identical (or explain the diff). — `scripting/check_importers.py`
+      (`7fe0f6f`): all 28 libraries reproduce (.kicad_dbl as text, .db by
+      schema and rows; .db bytes differ only in SQLite's change counter).
 
 Renames of `.kicad_dbl` files change the library nickname in
 `sym-lib-table`; do them in one batch with A5.
@@ -334,8 +383,26 @@ but "Update from library" breaks until each project's `sym-lib-table` is
 remapped. Do all renames in one batch.
 
 - [ ] **A5.1** Rename symbol libraries per the table (decide on `cpu`/`mcu`
-      and the `power` split first).
-- [ ] **A5.2** Update `NAMING.md`. It's stale: it still talks about `.lib`
+      and the `power` split first). Jonas 2026-10-19: keep `cpu`. Proposed
+      `power` split (waiting for Jonas):
+      - `power` keeps the schematic helpers: `GND`, `PxVx`, `NxVx`,
+        `PWR_FLAG`, `BOM_Entry`, `TP`. These are 496 of poetato's 502
+        `power:` references, and this `power` already replaces KiCad's
+        stock one in the sym-lib-table, so no remap.
+      - new `protection`: `1206SFS200F_63-2`, `LM74610`, `NCP360SNAET1G`,
+        `NCP380HSNAJAAT1G`, `TPS25910`, `TPS26625DRCR`.
+      - new `power_mgmt`: supervisors `LP3470A293DBVR`, `LP3470A308DBVR`,
+        `MAX16058ATA31+`, `TPS3701`; monitors `INA226`, `PAC1934`; gauges
+        `LTC2941IDCB#TRMPBF`, `bq27742-G1`; LDOs `TPS78318DDCR`,
+        `TPS7A1633DRBR`; reference `TLVH431AQDBVR`.
+      - to existing libraries: `LTC3873IDDB-5` (boost/flyback controller)
+        -> `dcdc`; `LP5562` (LED driver) -> `LEDs`/`led`.
+      - new `driver`: `L6470` (stepper), `NCV7240` (relay).
+      - switches `1-1825027-1`, `PT65503`: new `switch`, or keep in
+        `power` (2 symbols).
+      Poetato remaps 6 references (LP3470A293DBVR, TLVH431AQDBVR,
+      TPS26625DRCR, 2 each).
+- [x] **A5.2** Update `NAMING.md`. It's stale: it still talks about `.lib`
       files, `cap_mlcc_murata` and `footprints.pretty`, and disagrees with
       current practice:
   - inductor type code `rf` → `rfmw` (matches caps and existing libraries);
@@ -343,12 +410,30 @@ remapped. Do all renames in one batch.
   - make **one `.kicad_dbl` per series** (one importer each) the official
     rule, replacing the "one per vendor+type, multiple `libraries[]`" advice.
   - Consider moving it to `docs/naming.md`.
-- [ ] **A5.3** Update `CLAUDE.md`: it describes `footprints/<Vendor_Series>.pretty`
+  - Done: rewritten for current practice, kept at the root where the
+    README links it. — `3566959`
+- [x] **A5.3** Update `CLAUDE.md`: it describes `footprints/<Vendor_Series>.pretty`
       but the repo uses a single `Jonas.pretty`. Recommendation: keep one
       library (fewer `fp-lib-table` entries) and fix the doc. Also unify
       footprint names inside it (`T_Wurth_*` vs `Wurth_*`, bare part
       numbers, IPC names like `SOIC254P680X230-4N`) on a `Vendor_Part`
-      scheme.
+      scheme. — `2c7a92d` (the footprint renames themselves are F4.8).
+- [ ] **A5.4** (new) **Rename batch.** Everything that changes a library
+      nickname, chooser name, symbol, or model path poetato uses, done in
+      one go so poetato remaps once (sym-lib-table + *Update Symbols /
+      Footprints from Library*):
+      - A5.1 symbol library renames and the `power` split;
+      - A4.2 `cap_mlcc_murata_GRM` -> `_grm`, `diode_tvs_littlefuse` ->
+        `_littelfuse`; A4.1 `cap_rfmw_kyocera_accu_p` -> `_accup`;
+      - A4.4 chooser names;
+      - footprints review F5.3 rest: the six models poetato's board uses
+        (`0ZCJ0005FF2E`, `AQY212GS`, `Coilcraft_FA2672-AL`,
+        `FTSH-105-01-L-DV-007-K-TR`, `KW-5R5C104_224_334-R`,
+        `VO618A-3X017T`) and `614105150721 (rev1).stp` (A3.6);
+      - footprints review F1.19 (PowerDI-5 duplicate pin, poetato uses
+        PDS5100Q-13D);
+      - optionally F4.8 footprint renames, so models are renamed once.
+      Waiting for Jonas's go on A5.1.
 
 ## A6. (Optional) Shrink history
 
@@ -357,6 +442,10 @@ remapped. Do all renames in one batch.
       ~410 MB to tens of MB. This rewrites `master` too and needs a
       force-push; only worth it if nobody else has clones. Requires explicit
       go-ahead from Jonas.
+      Caution: after the rewrite, what A1.1 kept and A2.6 removed is gone
+      for good, including the vendor STEPs A1.1 listed as useful for stock
+      footprints without a KiCad model (RJHSE, 1-1825027-1, keystone PN54,
+      Maxim WLP-12, ...). Copy any you want first.
 
 ---
 
