@@ -12,8 +12,8 @@ kicadlib/
   scripting/import_<library_name>.py  importer that produced the library
   library/<library_name>.db           SQLite database (generated)
   library/<library_name>.kicad_dbl    KiCad database-library definition (generated)
-  footprints/<Vendor_Series>.pretty/   custom footprints, only when no standard KiCad match exists
-  footprints/<Vendor_Series>.3dshapes/ matching STEP/WRL 3D models for custom footprints
+  footprints/Jonas.pretty/            custom footprints (nickname "Jonas"), only when no stock KiCad match exists
+  footprints/Jonas.3dshapes/          their 3D models, <footprint>.step
   .claude/skills/                     project skills - check here before improvising a workflow
   docs/                               review docs and action lists (see below)
 ```
@@ -55,12 +55,14 @@ polymer, tantalum polymer, and film-chip parts.
 
 Prefer KiCad's own standard footprint libraries (`Capacitor_SMD.pretty`,
 `Capacitor_Tantalum_SMD.pretty`, etc.) over building something custom.
-Only add a custom `footprints/<Vendor_Series>.pretty/` + matching
-`.3dshapes/` pair when no standard footprint is an acceptable match for a
-case size, and note the reasoning (dimensions, source or lack of source
-datasheet, any interpolation used) in both the footprint's `descr` field
-and the importer script's header comment - a future session re-reading
-either file has no other way to recover why a decision was made.
+Only add a custom footprint when no standard footprint is an acceptable
+match, and then to the single library `footprints/Jonas.pretty` (named
+`Vendor_Part`, see `NAMING.md` §5) with its model in
+`footprints/Jonas.3dshapes/<footprint>.step`. Note the reasoning
+(dimensions, source or lack of source datasheet, any interpolation used)
+in both the footprint's `descr` field and the importer or generator
+script's header comment - a future session re-reading either file has no
+other way to recover why a decision was made.
 
 No CAD library (cadquery, FreeCAD, pythonocc) or network access to fetch
 pre-built 3D models is available in a Claude session's sandbox, and PyPI
@@ -73,9 +75,13 @@ silently fails to load it (bit Murata_GA3's footprint this way). Full
 guidance, the helper's API, and validation steps live in the
 `kicad-db-library-import` skill's `references/step_brep_authoring.md` -
 read that before authoring or changing any `.3dshapes/*.step` file.
-Nothing in this repo's custom STEP files has been visually confirmed in
-an actual CAD viewer (none is available in-session) - always flag that
-to Jonas when delivering a new or changed one.
+Nothing in this repo's custom STEP files has been visually confirmed by
+Jonas in a CAD viewer - always flag that to Jonas when delivering a new or
+changed one, and add it to the F8 review list in
+`docs/review-2026-10-footprints.md`. Sessions running locally on
+archimedes (Claude Code, not Cowork) do have KiCad 10:
+`scripting/render_footprints.py` renders footprints with their models for
+a first look.
 
 ## Working in this environment
 
