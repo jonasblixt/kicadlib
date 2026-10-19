@@ -8,8 +8,11 @@
 # Until 2026-10-19 this script used cwd-relative paths and wrote only the
 # .db; the .kicad_dbl was hand-written (cleanup review A4.1/A4.5). It now
 # reuses murata_cap.py's writers (same schema and field set as the Murata
-# MLCC libraries) and regenerates both files with no arguments. The
-# parsing is unchanged and the rows are identical.
+# MLCC libraries) and regenerates both files with no arguments.
+#
+# Values: the small parts come in 0.05 pF steps; the pF formatting
+# keeps a second decimal only where the value needs it (A4.7, see below).
+# The id still carries the CSV's tolerance text verbatim ("±0.01 pF").
 import csv
 from pathlib import Path
 
@@ -31,6 +34,7 @@ footprint_mapping = {
 def load_capacitors(csv_path):
     count = 0
     capacitors = []
+    seen_ids = {}
 
     with open(csv_path, newline="", encoding="utf-8") as csvfile:
         reader = csv.reader(csvfile, delimiter=",")
@@ -75,16 +79,26 @@ def load_capacitors(csv_path):
                     short_str = f"{int(capacitance_nf)}n"
                 capacitance_str =  f"{capacitance_nf:.1f}nF"
             else:
-                capacitance_pf = capacitance * 1e12
-                frac = int(round(capacitance_pf % 1.0, 1)*10)
-                if frac > 0:
-                    short_str = f"{int(capacitance_pf)}p{frac}"
+                # Accu-P comes in 0.05 pF steps, so keep two decimals where
+                # needed (0.15pF -> "0p15", "0.15pF"). Rounding to 0.1 pF
+                # used to give 60 rows the wrong value and let 50 of them
+                # overwrite a neighbour's id (A4.7).
+                pf_int, hundredths = divmod(round(capacitance * 1e14), 100)
+                if hundredths % 10:
+                    short_str = f"{pf_int}p{hundredths:02d}"
+                    capacitance_str = f"{pf_int}.{hundredths:02d}pF"
+                elif hundredths:
+                    short_str = f"{pf_int}p{hundredths // 10}"
+                    capacitance_str = f"{pf_int}.{hundredths // 10}pF"
                 else:
-                    short_str = f"{int(capacitance_pf)}p"
-                capacitance_str = f"{capacitance_pf:.1f}pF"
+                    short_str = f"{pf_int}p"
+                    capacitance_str = f"{pf_int}.0pF"
 
             id_str = f"C{case_size}_{short_str}_{voltage}V_{dielectric}_{tolerance}"
-
+            if id_str in seen_ids:
+                print(f"WARNING: duplicate id '{id_str}' - {part_number} "
+                      f"replaces {seen_ids[id_str]}")
+            seen_ids[id_str] = part_number
 
 
             print(f"{count} {id_str} {part_number}, {case_size}, {dielectric}, {capacitance_str} ({capacitance_str}) [{short_str}], {capacitance} {tolerance}, {voltage}V")
