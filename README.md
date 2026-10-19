@@ -13,7 +13,7 @@ The library has two halves:
   per real part.
 - **Database libraries** (`library/*.kicad_dbl` + `*.db`), generated from
   vendor part tables. They cover whole passive families, from MLCCs to
-  crystals: about 14,500 orderable parts in 27 libraries.
+  crystals: about 11,700 orderable parts in 28 libraries.
 
 Footprints come from KiCad's stock libraries wherever one really fits. The
 rest live in one custom library, `footprints/Jonas.pretty`, with a 3D model
@@ -53,7 +53,6 @@ kicadlib/
   data/           source tables for the database libraries (vendor CSV exports)
   scripting/      importers and generators (see below)
   docs/           review docs: audits with numbered action lists
-  modules/        LEGACY KiCad 4/5 footprints and models, being retired
   NAMING.md       detailed naming reference for the database libraries
   CLAUDE.md       working notes for Claude sessions in this repo
 ```
@@ -62,7 +61,10 @@ kicadlib/
 
 | Script | What it does |
 |---|---|
-| `import_<library>.py` | Builds `library/<library>.db` and `.kicad_dbl` from `data/<library>*.csv`. One per database library; shared helpers in `import_murata_cap.py` and `murata_lqw.py`. |
+| `import_<library>.py` | Builds `library/<library>.db` and `.kicad_dbl` from `data/<library>*.csv`. One per database library; shared helpers in `murata_cap.py` and `murata_lqw.py`. |
+| `check_importers.py` | Re-runs every importer into a temp directory and checks it reproduces the committed library. |
+| `audit_refs.py` | Checks symbol footprint links, database footprints, 3D model paths and symbol pins vs footprint pads. |
+| `render_footprints.py` | Renders every `Jonas.pretty` footprint with its 3D model into an HTML contact sheet (needs KiCad's Python). |
 | `gen_ihlp_footprints.py` | Generates the Vishay IHLP power inductor footprints. |
 | `gen_ndk_footprints.py` | Generates the NDK crystal footprints. |
 | `gen_package_models.py` | Generates 3D models for custom footprints that have no vendor model. |
@@ -119,12 +121,13 @@ footprint. All rows share a generic symbol such as `Device:C`.
 |---|---|
 | Capacitors | `cap_mlcc_murata_GRM`, `cap_rfmw_murata_gqm`, `cap_rfmw_kyocera_accu_p`, `cap_alel_chemicon`, `cap_alpoly_panasonic_oscon`, `cap_tapoly_panasonic_poscap`, `cap_film_panasonic_echux`, `cap_xy_murata_ga3` |
 | Resistors | `res_chip_vishay_crcw`, `res_sense_koaspeer_sr73`, `res_sense_koaspeer_ur73`, `res_pulse_panasonic_erj14t` |
-| Inductors | `ind_power_vishay_ihlp`, `ind_rfmw_murata_lqg`, `ind_rfmw_murata_lqw15an`, `ind_rfmw_murata_lqw15aw`, `ind_rfmw_murata_lqw18an`, `ind_rfmw_murata_lqw2bas`, `ind_choke_murata_lqw15cn`, `ind_choke_murata_lqw15dn`, `ind_choke_murata_lqw18cn`, `ind_cmc_murata_dlw5b` |
+| Inductors | `ind_power_vishay_ihlp`, `ind_rfmw_murata_lqg`, `ind_rfmw_murata_lqw15an`, `ind_rfmw_murata_lqw15aw`, `ind_rfmw_murata_lqw18an`, `ind_rfmw_murata_lqw2bas`, `ind_rfmw_murata_lqw2uas`, `ind_choke_murata_lqw15cn`, `ind_choke_murata_lqw15dn`, `ind_choke_murata_lqw18cn`, `ind_cmc_murata_dlw5b` |
 | Other | `bead_emi_murata_blm`, `diode_tvs_littlefuse`, `fuse_pptc_bel_0zcj`, `xtal_epson`, `xtal_ndk` |
 
 **The importer is the source of truth.** Never edit a `.db` or `.kicad_dbl`
 by hand. Change `scripting/import_<library>.py` (or the CSV in `data/`) and
-re-run it; re-running must reproduce the committed files exactly. Each
+re-run it; re-running must reproduce the committed files exactly
+(`scripting/check_importers.py` checks all of them). Each
 importer's header comment records the source data, the footprint mapping and
 any judgement calls.
 
@@ -219,12 +222,3 @@ Some older footprints predate these rules: `IHLP*`, `NX*`, `DLW5B_5050`,
 
 **3D models** take the footprint's name: `Jonas.3dshapes/<footprint>.step`
 (or `.wrl` where only a WRL exists).
-
-## Legacy: `modules/`
-
-`modules/` holds the KiCad 4/5-era footprint library and its 3D models.
-It is not in any library table. Nothing in the current libraries points at
-it any more: everything still needed has been migrated into
-`Jonas.pretty`, with pads unchanged. It stays only until the last new
-footprints are done (F7.5/F7.6 in `docs/review-2026-10-footprints.md`), and
-will then be removed.
