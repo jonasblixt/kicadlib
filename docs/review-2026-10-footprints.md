@@ -37,8 +37,8 @@ fixing them silently.
 
 **Status 2026-10-19:** 233 of 234 symbols resolve (`scripting/audit_refs.py`);
 `modules/` is removed. Open: F7.5 for four parts (data sheets needed),
-F1.18, F1.19, F4.8 (optional), the F5.3 rest (rename batch, cleanup
-A5.4) and Jonas's F8 review.
+F1.18 and Jonas's F8 review. The rename batch (F1.19, F4.8, F5.3 rest;
+cleanup A5.4) is done: `docs/rename-batch-2026-10.md`.
 
 | | |
 |---|---|
@@ -163,11 +163,11 @@ commit per action; the hash is on each ticked line.
       SMD feet), `GS` = 0.318" head / 0.180" tail. KiCad has no stock
       footprint for it; a new one needs Sullins' drawing for the part
       (Jonas to download). No schematic uses the symbol.
-- [ ] **F1.19** (new) `diode_misc/PDS1040-13`, `PDS5100Q-13D`: two `A`
+- [x] **F1.19** (new) `diode_misc/PDS1040-13`, `PDS5100Q-13D`: two `A`
       pins both numbered 2 (the stock PowerDI-5 has two anode pads named
       2). Per the F7.2 rule, keep one pin per pad number (drop the offset
       one at y=2.54). Poetato uses PDS5100Q-13D twice, so this goes in the
-      rename batch (cleanup A5.4).
+      rename batch (cleanup A5.4). — `ef8e3e4`
 
 ## F2. Migration method
 
@@ -465,13 +465,16 @@ footprints only have the cosmetic issues below.
       `Crystal_SMD_5032-*`), `T_Wurth_WE-RJ45LAN_7499210001A` (also A3.4).
       Both deleted (`c8d3ce9` with `NX5032GA.step`, `aafe5a6`); neither is
       on poetato's board.
-- [ ] **F4.8** (optional) Names are mixed — `T_Wurth_*` vs `Wurth_*`,
+- [x] **F4.8** (optional) Names are mixed — `T_Wurth_*` vs `Wurth_*`,
       `SAMTEC_*`, `TI_*` vs `Texas_*`, IPC-style (`FUSC3216X85N`,
       `SOIC254P680X230-4N`, `Vishay_SOIC254P1016X440-4N`), bare series
       (`IHLP1212AB`, `NX3225SA`, `DLW5B_5050`), generic
       (`QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`). Renaming means updating symbols
       and importers (all in this repo); existing boards keep their embedded
-      copies.
+      copies. — Done with the rename batch, `47f4464`: 30 footprints renamed
+      (the commit message says 25; it is 30), generators and importers
+      updated, map in `docs/rename-batch-2026-10.md`. `C_Murata_GA3_5.7x2.8`,
+      `Eaton_KW_*`, `Coilcraft_FA2672` kept their names.
 - [x] **F4.9** Pin-1 marks on F.Fab replaced by KLC body chamfers at the
       pad-1 corner (min(1 mm, 25 % of the short side), capped where an edge
       is short): `DLW5B_5050` (`eae9348`), `QFN-20_5x5mm…` (`0764f90`),
@@ -507,7 +510,7 @@ footprints only have the cosmetic issues below.
       has a second, dead `${WE_3DMODEL_DIR}` model entry next to the good one~~
       (removed, `b04fc79`; render confirms the remaining model loads).
       The 7499210001A footprint itself was deleted (`aafe5a6`).
-- [ ] **F5.3** Model names don't follow their footprint (`FA2925-AL.STEP`,
+- [x] **F5.3** Model names don't follow their footprint (`FA2925-AL.STEP`,
       `Coilcraft_POE60F-XXL.STEP`, `KW-5R5C*.STEP`, `AQY212GS.step`,
       `VO618A-3X017T.step`, `0ZCJ0005FF2E.step`, …) and extensions mix
       `.STEP`/`.step`/`.stp`. Proposal: `<footprint>.step`, shared only where
@@ -518,6 +521,8 @@ footprints only have the cosmetic issues below.
       Coilcraft_FA2672-AL, FTSH-105-01-L-DV-007-K-TR,
       KW-5R5C104_224_334-R, VO618A-3X017T) wait for the rename batch
       (cleanup A5.4), together with F4.8 for the IPC-named footprints.
+      Rest done in `47f4464`: every model in `Jonas.3dshapes` now carries its
+      footprint's name (30 renames, incl. the per-board USB model).
 - [x] **F5.4** ~~KiCad install is only half populated~~. **Corrected
       2026-10-13:** the install is complete (re-run of the installer
       changed nothing: 7,251 STEP files, 3.2 GB). Of the 13,881 distinct
@@ -754,7 +759,8 @@ Config and docs:
       `scripting/audit_refs.py` (`7b0faf2`); it reports only the F7.5
       parts and F1.19. Nothing depends on `modules/`, so it was removed
       (`d8fba33`) ahead of F7.5, which needs nothing from it. A6 not done.
-- [ ] **F7.7** (optional) F6 field hygiene and F4.8 renames.
+- [ ] **F7.7** (optional) F6 field hygiene and F4.8 renames. F4.8 done
+      (`47f4464`); F6 field hygiene remains optional.
 
 ## F8. Manual review: everything Claude generated (Jonas)
 
@@ -762,7 +768,8 @@ Per Jonas (2026-10-13), everything Claude makes or touches is listed here
 for a manual check in KiCad: every footprint it creates or migrates
 (Footprints), every 3D model it generates or downloads (3D models), and
 every footprint where it places or adjusts a 3D model, including copying
-an old transform (3D model placements). Tick when reviewed.
+an old transform (3D model placements). Tick when reviewed. Names are as
+of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 
 ### Footprints
 
@@ -805,10 +812,10 @@ an old transform (3D model placements). Tick when reviewed.
 
 ### 3D models
 
-- [ ] `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm.step` (Si3402, poetato U4) -
+- [ ] `Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm.step` (Si3402, poetato U4) -
       `scripting/gen_package_models.py`, `1acc16e`
-- [ ] `NX1255GB.step` - `scripting/gen_package_models.py`, `1acc16e`
-- [ ] `Texas_YJE.step` (CSD83325L) - `scripting/gen_package_models.py`,
+- [ ] `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm.step` - `scripting/gen_package_models.py`, `1acc16e`
+- [ ] `Texas_YJE0006A_PicoStar-6_1.15x2.2mm.step` (CSD83325L) - `scripting/gen_package_models.py`,
       `1acc16e`
 - [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step` - plain body, height 0.6 ASSUMED - `ae9638e`
 - [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm.step` - plain body, 0.9 per TI drawing - `ae9638e`
@@ -834,9 +841,9 @@ an old transform (3D model placements). Tick when reviewed.
 ### 3D model placements
 
 Every footprint where Claude placed or adjusted a 3D model (model file, offset, rotation, scale), including models copied with their old transform. Check in the KiCad 3D viewer that the body sits on the board, pin 1 and the pins line up with the pads, and connector openings face the right way.
-- [ ] `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`: `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
-- [ ] `NX1255GB`: `NX1255GB.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
-- [ ] `Texas_YJE`: `Texas_YJE.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
+- [ ] `Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm`: `Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
+- [ ] `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm`: `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
+- [ ] `Texas_YJE0006A_PicoStar-6_1.15x2.2mm`: `Texas_YJE0006A_PicoStar-6_1.15x2.2mm.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
 - [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm`: `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `75b538c`
 - [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm`: `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `ba1b30b`
 - [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm`: `Texas_SIL0008G_MicroSiP-8_3x2.6mm.step` identity transform (generated, built in footprint coordinates) - `d5f014d`

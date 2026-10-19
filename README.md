@@ -9,7 +9,7 @@ sheet.**
 The library has two halves:
 
 - **Hand-maintained symbol libraries** (`library/*.kicad_sym`), grouped by
-  function: `dcdc`, `comm`, `connectors`, and so on. About 230 symbols, one
+  function: `dcdc`, `comm`, `conn`, and so on. About 230 symbols, one
   per real part.
 - **Database libraries** (`library/*.kicad_dbl` + `*.db`), generated from
   vendor part tables. They cover whole passive families, from MLCCs to
@@ -32,7 +32,7 @@ for each in `footprints/Jonas.3dshapes`.
    - `.kicad_sym` files with type `KiCad`, e.g.
      `${JONAS_KICADLIB}/library/dcdc.kicad_sym`
    - `.kicad_dbl` files with type `Database`, e.g.
-     `${JONAS_KICADLIB}/library/cap_mlcc_murata_GRM.kicad_dbl`
+     `${JONAS_KICADLIB}/library/cap_mlcc_murata_grm.kicad_dbl`
 4. Add the footprint library to the global **fp-lib-table** under the
    nickname **`Jonas`**: `${JONAS_KICADLIB}/footprints/Jonas.pretty`. Symbols
    refer to it as `Jonas:<footprint>`, so the nickname must be exactly that.
@@ -91,18 +91,20 @@ Grouped by what the part does, not by who makes it:
 | `cpu` | Processors, MCUs, SoCs |
 | `memory` | Flash, RAM, EEPROM |
 | `dcdc` | Switching regulators, PMICs, power modules |
-| `power` | Power path, protection, supervisors, switches, battery parts |
+| `power` | Schematic helpers: power flags (`GND`, `PxVx`, `NxVx`, `PWR_FLAG`), `BOM_Entry`, `TP` |
+| `power_mgmt` | Supervisors, power monitors, gas gauges, LDOs, references |
+| `protection` | Fuses, eFuses, hot-swap, ideal-diode and overvoltage controllers |
 | `comm` | Radios, modules, antennas, RF parts, transceivers |
 | `interface` | PHYs, level shifters, optical links, bus interfaces |
 | `logic` | Logic gates, buffers, translators |
-| `adcdac` | Converters |
-| `Audio Amp` | Audio amplifiers |
-| `sensors` | Sensors |
-| `transistors` | Discrete transistors |
+| `analog` | Converters, audio amplifiers, sensors |
+| `driver` | Motor and relay drivers |
+| `transistor` | Discrete transistors, optocouplers, solid-state relays |
 | `diode_misc` | Diodes not covered by a database library |
-| `LEDs` | LEDs |
-| `connectors` | Connectors, card sockets, headers |
-| `misc_capacitors`, `misc_inductors`, `misc_resistors` | One-off passives outside the database libraries |
+| `led` | LEDs and LED drivers |
+| `conn` | Connectors, card sockets, headers |
+| `switch` | Switches |
+| `cap_misc`, `ind_misc`, `res_misc` | One-off passives outside the database libraries |
 
 Every symbol's **Footprint** field names its footprint with a library
 nickname: a stock library (`Package_DFN_QFN:...`) or `Jonas:...`, never a
@@ -119,10 +121,10 @@ footprint. All rows share a generic symbol such as `Device:C`.
 
 | Family | Libraries |
 |---|---|
-| Capacitors | `cap_mlcc_murata_GRM`, `cap_rfmw_murata_gqm`, `cap_rfmw_kyocera_accu_p`, `cap_alel_chemicon`, `cap_alpoly_panasonic_oscon`, `cap_tapoly_panasonic_poscap`, `cap_film_panasonic_echux`, `cap_xy_murata_ga3` |
+| Capacitors | `cap_mlcc_murata_grm`, `cap_rfmw_murata_gqm`, `cap_rfmw_kyocera_accup`, `cap_alel_chemicon`, `cap_alpoly_panasonic_oscon`, `cap_tapoly_panasonic_poscap`, `cap_film_panasonic_echux`, `cap_xy_murata_ga3` |
 | Resistors | `res_chip_vishay_crcw`, `res_sense_koaspeer_sr73`, `res_sense_koaspeer_ur73`, `res_pulse_panasonic_erj14t` |
 | Inductors | `ind_power_vishay_ihlp`, `ind_rfmw_murata_lqg`, `ind_rfmw_murata_lqw15an`, `ind_rfmw_murata_lqw15aw`, `ind_rfmw_murata_lqw18an`, `ind_rfmw_murata_lqw2bas`, `ind_rfmw_murata_lqw2uas`, `ind_choke_murata_lqw15cn`, `ind_choke_murata_lqw15dn`, `ind_choke_murata_lqw18cn`, `ind_cmc_murata_dlw5b` |
-| Other | `bead_emi_murata_blm`, `diode_tvs_littlefuse`, `fuse_pptc_bel_0zcj`, `xtal_epson`, `xtal_ndk` |
+| Other | `bead_emi_murata_blm`, `diode_tvs_littelfuse`, `fuse_pptc_bel_0zcj`, `xtal_epson`, `xtal_ndk` |
 
 **The importer is the source of truth.** Never edit a `.db` or `.kicad_dbl`
 by hand. Change `scripting/import_<library>.py` (or the CSV in `data/`) and
@@ -181,12 +183,11 @@ The rules are meant to answer one question: *can I find the part from what
 it is, and tell from the name where it came from?*
 
 **Symbol libraries.** Hand-maintained libraries take a short, lowercase
-function name (`dcdc`, `comm`). Two older names (`Audio Amp`, `LEDs`) don't
-follow this yet.
+function name (`dcdc`, `comm`); the one-off passives are `cap_misc`,
+`ind_misc`, `res_misc`.
 
 **Database libraries** follow `<type>_<subtype>_<vendor>[_<series>]`,
-lowercase and underscore-separated. The one exception is
-`cap_mlcc_murata_GRM`, whose series stays upper case.
+lowercase and underscore-separated.
 
 | Part | Type | Subtypes in use |
 |---|---|---|
@@ -217,8 +218,9 @@ reserved codes not yet in use; parts of it predate the 2026 rework.
 - **Generated passive families:** the KiCad stock pattern, e.g.
   `C_Panasonic_ECHU_D1_6041Metric_H1.90mm`.
 
-Some older footprints predate these rules: `IHLP*`, `NX*`, `DLW5B_5050`,
-`T_Wurth_*`, `FUSC3216X85N`. Renaming them is an open, optional item (F4.8).
+The older footprints were renamed to these rules in 2026-10 (F4.8, e.g.
+`IHLP1212AB` -> `L_Vishay_IHLP-1212AB`); `docs/rename-batch-2026-10.md`
+lists every old and new name.
 
 **3D models** take the footprint's name: `Jonas.3dshapes/<footprint>.step`
 (or `.wrl` where only a WRL exists).

@@ -6,9 +6,9 @@ libraries, their tables and part ids are named, and why. Rewritten
 KiCad-5 `.lib` conversion, which is finished.
 
 Hand-maintained symbol libraries (`library/*.kicad_sym`) are grouped by
-function and take a short lowercase name (`dcdc`, `comm`, `memory`). They
-are out of scope here; renames for the few that don't fit (`LEDs`,
-`Audio Amp`, ...) are proposed in `docs/review-2026-10-cleanup.md` (A5.1).
+function and take a short lowercase name (`dcdc`, `comm`, `memory`,
+`power_mgmt`); one-off passives live in `cap_misc`, `ind_misc`, `res_misc`.
+They are out of scope here beyond that (renamed in 2026-10, A5.1).
 
 ## 1. Database library names
 
@@ -32,10 +32,10 @@ are out of scope here; renames for the few that don't fit (`LEDs`,
   `data/<name>.csv`, or `data/<name>_1.csv`, `_2.csv`, ... when the vendor
   export comes in several files.
 
-Names that don't follow this yet, renamed together with A5.1 so projects
-remap once: `cap_mlcc_murata_GRM` (upper-case series),
-`diode_tvs_littlefuse` (vendor spelling: Littelfuse) and
-`cap_rfmw_kyocera_accu_p` (series slug `accup`, as its importer).
+Three libraries were renamed to this in 2026-10 (A4.1/A4.2):
+`cap_mlcc_murata_GRM` -> `cap_mlcc_murata_grm`, `diode_tvs_littlefuse` ->
+`diode_tvs_littelfuse`, `cap_rfmw_kyocera_accu_p` -> `cap_rfmw_kyocera_accup`
+(`docs/rename-batch-2026-10.md`).
 
 ## 2. Type and subtype codes
 
@@ -75,8 +75,9 @@ Check this table (and `library/`) before inventing a new code.
 
 - `libraries[].table`: the SQLite table, equal to the library name.
 - `libraries[].name`: the label in KiCad's symbol chooser, the series name
-  (`GRM`, `LQW15AN`, `IHLP`). Older libraries still use type or vendor
-  names (`AlEl`, `TVS`, `Epson`, `NDK`, A4.4).
+  (`GRM`, `LQW15AN`). A library spanning several series uses their family
+  name (`IHLP`, `LQG`, `NX`, `SMAJ-SMCJ`, `TSX-FA-FC`), or the vendor name
+  when there is none (`Chemi-Con`, 20 series).
 - `key` is the `id` column; `symbols` / `footprints` name the `Symbol` and
   `Footprints` columns; `properties.description` points at `Description`.
 - Field definitions follow one of two styles (ceramic or
@@ -84,7 +85,7 @@ Check this table (and `library/`) before inventing a new code.
   skill.
 
 **A schematic stores a database part as `<nickname>:<chooser name>/<id>`**
-(e.g. `cap_mlcc_murata_GRM:GRM/C0402_1u_10V_X7R_10%`). Renaming a library,
+(e.g. `cap_mlcc_murata_grm:GRM/C0402_1u_10V_X7R_10%`). Renaming a library,
 its chooser name, or the id format therefore breaks *Update Symbols from
 Library* in every project that uses it, until the project's symbols are
 remapped. Do such renames in planned batches and list the affected
@@ -129,9 +130,11 @@ IEC-60062-style values where the unit letter is the decimal point (`2u2`,
   (`JAE_MX34R36HF4T`); IC packages are vendor, vendor package code, then
   KiCad-style dimensions (`Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm`);
   generated passive families follow the stock pattern
-  (`C_Panasonic_ECHU_D1_6041Metric_H1.90mm`).
+  (`C_Panasonic_ECHU_D1_6041Metric_H1.90mm`, `L_Vishay_IHLP-1212AB`,
+  `Crystal_SMD_NDK_NX3225SA-4Pin_3.2x2.5mm`).
 - The 3D model is `footprints/Jonas.3dshapes/<footprint>.step` (`.wrl` only
   where no STEP exists), referenced through `${JONAS_KICADLIB}`. A model is
   shared only when bodies are identical (`IHLP1212.step`).
 - Database rows reference footprints with their nickname
-  (`Inductor_SMD:L_0402_1005Metric`, `Jonas:DLW5B_5050`), never a bare name.
+  (`Inductor_SMD:L_0402_1005Metric`, `Jonas:L_CommonModeChoke_Murata_DLW5B_5.0x5.0mm`),
+  never a bare name.
