@@ -24,7 +24,7 @@ JONAS_PRETTY = REPO / "footprints" / "Jonas.pretty"
 JONAS_3D = REPO / "footprints" / "Jonas.3dshapes"
 # Footprint fields intentionally left empty (generic symbols; the DB or the
 # user supplies the footprint).
-GENERIC = {"connectors/Conn_01x30", "diode_misc/D_TVS_Uni", "power/BOM_Entry", "power/PWR_FLAG"}
+GENERIC = {"conn/Conn_01x30", "diode_misc/D_TVS_Uni", "power/BOM_Entry", "power/PWR_FLAG"}
 # Models in Jonas.3dshapes that no Jonas footprint references because a
 # board uses them on a stock footprint (F5.4: stock footprints without a
 # KiCad model get one per board).

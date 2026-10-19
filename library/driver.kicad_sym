@@ -2,7 +2,7 @@
 	(version 20251024)
 	(generator "kicad_symbol_editor")
 	(generator_version "10.0")
-	(symbol "AFE7225"
+	(symbol "L6470"
 		(pin_names
 			(offset 1.016)
 		)
@@ -12,7 +12,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 2.54 105.41 0)
+			(at 1.27 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21,8 +21,8 @@
 				)
 			)
 		)
-		(property "Value" "AFE7225"
-			(at 10.16 -2.54 0)
+		(property "Value" "L6470"
+			(at 3.81 -1.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -31,14 +31,14 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm"
-			(at 0 123.19 0)
+		(property "Footprint" "Package_SO:HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP2.75x6.2mm"
+			(at 0 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
 			(effects
 				(font
-					(size 2.9972 2.9972)
+					(size 1.524 1.524)
 				)
 			)
 		)
@@ -52,7 +52,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fully integrated microstepping motor driver with motion engine and SPI"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -63,8 +63,8 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TI"
-			(at 0 130.81 0)
+		(property "Manufacturer" "ST"
+			(at 0 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -74,8 +74,8 @@
 				)
 			)
 		)
-		(property "Part Number" "AFE7225IRGCT"
-			(at 0 128.27 0)
+		(property "Part Number" "L6470HTR"
+			(at 0 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(hide yes)
@@ -85,68 +85,12 @@
 				)
 			)
 		)
-		(symbol "AFE7225_0_0"
-			(pin bidirectional line
-				(at -5.08 2.54 0)
-				(length 5.08)
-				(name "BIASJ"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "18"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 20.32 0)
-				(length 5.08)
-				(name "PDN"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "56"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 31.75 100.33 180)
-				(length 5.08)
-				(name "VCM"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "63"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-		)
-		(symbol "AFE7225_0_1"
+		(symbol "L6470_0_1"
 			(rectangle
-				(start 0 0)
-				(end 26.67 102.87)
+				(start 27.94 44.45)
+				(end 0 0)
 				(stroke
-					(width 0.3048)
+					(width 0)
 					(type solid)
 				)
 				(fill
@@ -154,11 +98,11 @@
 				)
 			)
 		)
-		(symbol "AFE7225_1_1"
-			(pin bidirectional line
-				(at 31.75 25.4 180)
+		(symbol "L6470_1_1"
+			(pin input line
+				(at 33.02 22.86 180)
 				(length 5.08)
-				(name "AVDD18_ADC"
+				(name "OUT1A"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -173,10 +117,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 87.63 180)
+			(pin input line
+				(at 33.02 34.29 180)
 				(length 5.08)
-				(name "INN_B_ADC"
+				(name "VSA"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -191,10 +135,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 90.17 180)
+			(pin input line
+				(at -5.08 29.21 0)
 				(length 5.08)
-				(name "INP_B_ADC"
+				(name "STBY_N/RST_N"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -209,10 +153,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 27.94 180)
+			(pin input line
+				(at -5.08 31.75 0)
 				(length 5.08)
-				(name "AVDD18_ADC"
+				(name "SW"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -227,10 +171,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 92.71 180)
+			(pin input line
+				(at 33.02 36.83 180)
 				(length 5.08)
-				(name "INN_A_ADC"
+				(name "ADCIN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -245,10 +189,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 95.25 180)
+			(pin input line
+				(at -5.08 40.64 0)
 				(length 5.08)
-				(name "INP_A_ADC"
+				(name "VREG"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -263,10 +207,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 30.48 180)
+			(pin input line
+				(at -5.08 3.81 0)
 				(length 5.08)
-				(name "AVDD18_ADC"
+				(name "OSCIN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -281,10 +225,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 54.61 180)
+			(pin input line
+				(at -5.08 1.27 0)
 				(length 5.08)
-				(name "CLKINN"
+				(name "OSCOUT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -299,10 +243,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 57.15 180)
+			(pin input line
+				(at 33.02 11.43 180)
 				(length 5.08)
-				(name "CLKINP"
+				(name "AGND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -317,10 +261,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 17.78 180)
+			(pin input line
+				(at 33.02 39.37 180)
 				(length 5.08)
-				(name "DVDD18_CLK"
+				(name "CP"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -335,10 +279,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 44.45 180)
+			(pin input line
+				(at 33.02 43.18 180)
 				(length 5.08)
-				(name "AVDD3_DAC"
+				(name "VBOOT"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -353,10 +297,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 81.28 180)
+			(pin input line
+				(at 33.02 26.67 180)
 				(length 5.08)
-				(name "IOUTP_A_DAC"
+				(name "VSB"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -371,10 +315,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 83.82 180)
+			(pin input line
+				(at 33.02 8.89 180)
 				(length 5.08)
-				(name "IOUTN_A_DAC"
+				(name "PGND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -389,10 +333,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 46.99 180)
+			(pin input line
+				(at 33.02 20.32 180)
 				(length 5.08)
-				(name "AVDD3_DAC"
+				(name "OUT1B"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -407,10 +351,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 76.2 180)
+			(pin input line
+				(at 33.02 15.24 180)
 				(length 5.08)
-				(name "IOUTP_B_DAC"
+				(name "OUT2B"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -425,10 +369,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 78.74 180)
+			(pin input line
+				(at 33.02 29.21 180)
 				(length 5.08)
-				(name "IOUTN_B_DAC"
+				(name "VSB"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -443,10 +387,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 41.91 180)
+			(pin input line
+				(at -5.08 43.18 0)
 				(length 5.08)
-				(name "AVDD3_DAC"
+				(name "VDD"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -461,10 +405,28 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 20.32 180)
+			(pin input line
+				(at -5.08 12.7 0)
 				(length 5.08)
-				(name "DVDD18_DAC"
+				(name "SDO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -5.08 15.24 0)
+				(length 5.08)
+				(name "CK"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -479,10 +441,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 64.77 180)
+			(pin input line
+				(at -5.08 10.16 0)
 				(length 5.08)
-				(name "AUXDAC_A"
+				(name "SDI"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -497,10 +459,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 62.23 180)
+			(pin input line
+				(at 33.02 6.35 180)
 				(length 5.08)
-				(name "AUXDAC_B"
+				(name "DGND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -515,10 +477,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 49.53 180)
+			(pin input line
+				(at -5.08 21.59 0)
 				(length 5.08)
-				(name "AVDD3_AUX"
+				(name "BUSY_N/SYNC"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -533,10 +495,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 72.39 180)
+			(pin input line
+				(at -5.08 7.62 0)
 				(length 5.08)
-				(name "AUXADC_A"
+				(name "CS_N"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -551,10 +513,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 69.85 180)
+			(pin input line
+				(at -5.08 24.13 0)
 				(length 5.08)
-				(name "AUXADC_B"
+				(name "FLAG_N"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -569,10 +531,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 33.02 180)
+			(pin input line
+				(at -5.08 26.67 0)
 				(length 5.08)
-				(name "AVDD18_ADC"
+				(name "STCK"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -587,10 +549,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 24.13 0)
+			(pin input line
+				(at 33.02 31.75 180)
 				(length 5.08)
-				(name "DACDATA11"
+				(name "VSA"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -605,10 +567,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 26.67 0)
+			(pin input line
+				(at 33.02 3.81 180)
 				(length 5.08)
-				(name "DACDATA10"
+				(name "PGND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -623,10 +585,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 29.21 0)
+			(pin input line
+				(at 33.02 17.78 180)
 				(length 5.08)
-				(name "DACDATA9"
+				(name "OUT2A"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -641,10 +603,10 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 31.75 0)
+			(pin input line
+				(at 33.02 1.27 180)
 				(length 5.08)
-				(name "DACDATA8"
+				(name "GND_EP"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -659,17 +621,118 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 34.29 0)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "NCV7240"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at 1.27 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NCV7240"
+			(at 5.08 -1.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm"
+			(at 30.48 -19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Description" "Octal Low-Side Relay Driver"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "ON Semi"
+			(at 6.35 -13.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Part Number" "NCV7240"
+			(at 6.35 -16.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(symbol "NCV7240_0_1"
+			(rectangle
+				(start 0 35.56)
+				(end 15.24 0)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "NCV7240_1_1"
+			(pin power_out line
+				(at 20.32 5.08 180)
 				(length 5.08)
-				(name "DACDATA7"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "30"
+				(number "1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -677,17 +740,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 36.83 0)
+			(pin power_out line
+				(at -5.08 2.54 0)
 				(length 5.08)
-				(name "DACDATA6"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "31"
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -695,17 +758,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 15.24 180)
+			(pin open_collector line
+				(at 20.32 33.02 180)
 				(length 5.08)
-				(name "DVDD18"
+				(name "OUT1"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "32"
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -713,17 +776,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 39.37 0)
+			(pin open_collector line
+				(at 20.32 30.48 180)
 				(length 5.08)
-				(name "DACDATA5"
+				(name "OUT2"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "33"
+				(number "4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -731,17 +794,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 57.15 0)
+			(pin open_collector line
+				(at 20.32 27.94 180)
 				(length 5.08)
-				(name "DAC_DCLKIN"
+				(name "OUT3"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "34"
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -749,17 +812,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 41.91 0)
+			(pin open_collector line
+				(at 20.32 25.4 180)
 				(length 5.08)
-				(name "DACDATA4"
+				(name "OUT4"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "35"
+				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -767,17 +830,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 44.45 0)
+			(pin open_collector line
+				(at 20.32 22.86 180)
 				(length 5.08)
-				(name "DACDATA3"
+				(name "OUT5"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "36"
+				(number "7"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -785,17 +848,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 46.99 0)
+			(pin open_collector line
+				(at 20.32 20.32 180)
 				(length 5.08)
-				(name "DACDATA2"
+				(name "OUT6"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "37"
+				(number "8"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -803,17 +866,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 49.53 0)
+			(pin open_collector line
+				(at 20.32 17.78 180)
 				(length 5.08)
-				(name "DACDATA1"
+				(name "OUT7"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "38"
+				(number "9"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -821,17 +884,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 52.07 0)
+			(pin open_collector line
+				(at 20.32 15.24 180)
 				(length 5.08)
-				(name "DACDATA0"
+				(name "OUT8"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "39"
+				(number "10"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -839,17 +902,35 @@
 					)
 				)
 			)
-			(pin bidirectional line
+			(pin power_out line
+				(at 20.32 2.54 180)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
 				(at -5.08 5.08 0)
 				(length 5.08)
-				(name "SYNCIN"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "40"
+				(number "12"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -857,17 +938,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 10.16 180)
+			(pin power_in line
+				(at 20.32 7.62 180)
 				(length 5.08)
-				(name "DVDD18"
+				(name "VDD"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "41"
+				(number "13"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -875,17 +956,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 67.31 0)
+			(pin input line
+				(at -5.08 25.4 0)
 				(length 5.08)
-				(name "ADCDATA11"
+				(name "IN4"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "42"
+				(number "14"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -893,17 +974,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 69.85 0)
+			(pin input line
+				(at -5.08 27.94 0)
 				(length 5.08)
-				(name "ADCDATA10"
+				(name "IN3"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "43"
+				(number "15"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -911,17 +992,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 72.39 0)
+			(pin input line
+				(at -5.08 30.48 0)
 				(length 5.08)
-				(name "ADCDATA9"
+				(name "IN2"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "44"
+				(number "16"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -929,35 +1010,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 74.93 0)
+			(pin input line
+				(at -5.08 33.02 0)
 				(length 5.08)
-				(name "ADCDATA8"
+				(name "IN1"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "45"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 77.47 0)
-				(length 5.08)
-				(name "ADCDATA7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "46"
+				(number "17"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -965,179 +1028,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 100.33 0)
-				(length 5.08)
-				(name "ADC_DCLKOUT"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "47"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 80.01 0)
-				(length 5.08)
-				(name "ADCDATA6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "48"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 31.75 12.7 180)
-				(length 5.08)
-				(name "DVDD18"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "49"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 82.55 0)
-				(length 5.08)
-				(name "ADCDATA5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "50"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 85.09 0)
-				(length 5.08)
-				(name "ADCDATA4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "51"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 87.63 0)
-				(length 5.08)
-				(name "ADCDATA3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "52"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 90.17 0)
-				(length 5.08)
-				(name "ADCDATA2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "53"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 92.71 0)
-				(length 5.08)
-				(name "ADCDATA1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "54"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -5.08 95.25 0)
-				(length 5.08)
-				(name "ADCDATA0"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "55"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
+			(pin input line
 				(at -5.08 7.62 0)
 				(length 5.08)
-				(name "SEN"
+				(name "LHI"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "57"
+				(number "18"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1145,17 +1046,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 10.16 0)
+			(pin output line
+				(at -5.08 19.05 0)
 				(length 5.08)
-				(name "SDATA"
+				(name "SO"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "58"
+				(number "19"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1163,8 +1064,8 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 12.7 0)
+			(pin input line
+				(at -5.08 16.51 0)
 				(length 5.08)
 				(name "SCLK"
 					(effects
@@ -1173,7 +1074,7 @@
 						)
 					)
 				)
-				(number "59"
+				(number "20"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1181,17 +1082,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 15.24 0)
+			(pin input line
+				(at -5.08 10.16 0)
 				(length 5.08)
-				(name "SDOUT"
+				(name "EN"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "60"
+				(number "21"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1199,17 +1100,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at -5.08 17.78 0)
+			(pin input line
+				(at -5.08 21.59 0)
 				(length 5.08)
-				(name "RESET"
+				(name "SI"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "61"
+				(number "22"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1217,17 +1118,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 35.56 180)
+			(pin input line
+				(at -5.08 13.97 0)
 				(length 5.08)
-				(name "AVDD18_ADC"
+				(name "CSB"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "62"
+				(number "23"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1235,35 +1136,17 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 31.75 38.1 180)
+			(pin power_in line
+				(at 20.32 10.16 180)
 				(length 5.08)
-				(name "AVDD18_ADC"
+				(name "VDDA"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "64"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 31.75 2.54 180)
-				(length 5.08)
-				(name "EP_GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "65"
+				(number "24"
 					(effects
 						(font
 							(size 1.27 1.27)
