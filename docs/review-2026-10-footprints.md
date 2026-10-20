@@ -36,8 +36,8 @@ fixing them silently.
 ## Summary
 
 **Status 2026-10-20:** all symbols resolve (`scripting/audit_refs.py`: OK);
-`modules/` is removed. F7.5 is done (LT8640 drawn, the other three
-removed). Open: F1.18 and Jonas's F8 review. The rename batch (F1.19, F4.8, F5.3 rest;
+`modules/` is removed. F7.5, F1.18 and the F9 model-placement fixes are done.
+Open: Jonas's F8 review. The rename batch (F1.19, F4.8, F5.3 rest;
 cleanup A5.4) is done: `docs/rename-batch-2026-10.md`.
 
 | | |
@@ -157,12 +157,14 @@ commit per action; the hash is on each ticked line.
       whether they are NC; add NC pins or wire them. — Würth's own KiCad
       library (7499210123A) declares them no_connect; added as NC pins,
       `e7cc7cb`.
-- [ ] **F1.18** (new) `connectors/GBC08SGSN-M89` uses the THT vertical
+- [x] **F1.18** (new) `connectors/GBC08SGSN-M89` uses the THT vertical
       `PinHeader_1x08_P2.54mm_Vertical`, but Sullins' catalog says `-M89`
       = SMT, horizontal (pins parallel to the board, tails bent down to
       SMD feet), `GS` = 0.318" head / 0.180" tail. KiCad has no stock
       footprint for it; a new one needs Sullins' drawing for the part
-      (Jonas to download). No schematic uses the symbol.
+      (Jonas to download). No schematic uses the symbol. — new footprint
+      `Jonas:Sullins_GBC08SGSN-M89` from the catalog pp.112-113, foot
+      estimated (Sullins gives no PCB layout), `d6ae08f`.
 - [x] **F1.19** (new) `diode_misc/PDS1040-13`, `PDS5100Q-13D`: two `A`
       pins both numbered 2 (the stock PowerDI-5 has two anode pads named
       2). Per the F7.2 rule, keep one pin per pad number (drop the offset
@@ -800,10 +802,10 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `JAE_MM60-52B1_Mini-PCIe` (mPCIe_modem) - migrated, pads unchanged; three WRL models (socket, holder, card), old transforms - `eb7f7ed`
 - [ ] `ublox_LARA-R2` - migrated from LARA_R2_LGA (symbol linked a non-existent name), pads unchanged; WRL model, old transform - `a15f9e3`
 - [ ] `Molex_78171-5006` - migrated, pads unchanged; vendor STEP, old transform, eyeballed - `1bc0fa2`
-- [ ] `Molex_34826-8200` - migrated, pads unchanged; vendor STEP, old transform, eyeballed - `07702d5`
-- [ ] `TE_5-104074-8` - migrated, pads unchanged; WRL from Snigel2 project, old transform, eyeballed - `bb03aa6`
+- [ ] `Molex_34826-8200` - migrated, pads unchanged (= Molex SD-34826-001 PCB layout); body outline redrawn from that drawing (F9.4) - `07702d5`, `bb97505`
+- [ ] `TE_5-104074-8` - migrated, pads unchanged; body outline redrawn from TE catalog 1307819 p.27, ears in the courtyard (F9.5) - `bb03aa6`, `1be9727`
 - [ ] `JAE_DX4R005JJ2R1800` - migrated from USB_Micro-B, shield pads 6/7 as modules/ (boards had all 6); vendor STEP - `0321d55`, `24a6d48`
-- [ ] `Amphenol_RJE72-188-1401` - migrated, pads unchanged; vendor STEP, old transform, eyeballed - `4584b70`
+- [ ] `Amphenol_RJE72-188-1401` - migrated, pads unchanged; PCB notch added on Dwgs.User per Amphenol P-RJE72-188-1X0X (F9.8); note -1X01 is specified for a 2.36 mm PCB (Gateway is 1.6) - `4584b70`, `1018250`
 - [ ] `Samtec_TFM-105-02-S-D-WT` - migrated, pads unchanged; vendor STEP - `2f8629d`
 - [ ] `Samtec_TFM-110-02-S-D-WT` - migrated; plated holes renumbered 0 -> 21/22 to match the symbol; vendor STEP - `b31d1fc`, `8b59022`
 - [ ] `TE_292303-1` - migrated from USB_A_TH, pads unchanged; vendor STEP - `2cf4d80`
@@ -813,6 +815,9 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `APEM_PT65503` - **new from data sheet** (APEM PT65 catalog G17-G20, straight terminals; two pads numbered C) - `d0e1644`
 - [ ] `JAE_MX34R36HF4T` - **new from data sheet** (JAE MB-0240-1 / SJ110669 PCB layout); CHECK pin numbering (derived from the front-view terminal numbers, assumed to be the mating face) and the hold-down land (2.0x7.0 SMD oval + 3 plated 1.2 holes) - `e941797`
 - [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm` (LT8640) - **new from data sheet** (LT8640 rev G p.27 recommended land); CHECK the two SW pad positions (22 at y +0.305, 21 at y +1.075, read from the 2.127/0.356/0.770 and 0.055 BSC dimensions) - `a8cc26a`
+- [ ] `Sullins_GBC08SGSN-M89` - **new from catalog** (Sullins pp.112-113, -M89 lying flat); CHECK the pads: Sullins gives no PCB layout and does not dimension the foot, so the foot (1.74 long, 2.83..4.57 from the insulator) is estimated from the drawing - `d6ae08f`
+- [ ] `Coilcraft_POE60F` - body outline redrawn from Coilcraft 381-1 (17.60x17.20, was 25x15); pads unchanged (= recommended land) - `4856e58`
+- [ ] `Wurth_WE-RJ45LAN_7499511440` - courtyard widened over the panel-ground springs - `76a78d7`
 
 ### 3D models
 
@@ -840,6 +845,7 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `Johanson_1575AT43A0040.step` - plain body 7.0x2.0x0.8 per data sheet; no vendor STEP (Johanson: on request) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` - plain body 1.7x2.0x0.55 per data sheet; no vendor STEP (onsemi blocked) - `142a965`
 - [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` - body 3.0x4.0x0.75, terminals and SW pads per data sheet; no vendor STEP (analog.com blocked) - `a8cc26a`
+- [ ] `Sullins_GBC08SGSN-M89.step` - generated envelope (insulator 20.32x2.54x3.56, posts, jog and foot boxes; foot estimated) - `d6ae08f`
 - [ ] `APEM_PT65503.step` - generated: body 10x10x6.5 per catalog, segment wheel box 2.8x9.5x4.4 with ASSUMED orientation; no vendor STEP - `d0e1644`
 - [x] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `e941797`. Replaced 2026-10-20 by JAE's own STEP (SJ110669_MX34R36HF4T_V1, supplied by Jonas); generator removed - `827eeac`.
 
@@ -872,18 +878,20 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `Taoglas_WLA.01`: `Taoglas_WLA.01.wrl` offset (-0.254, 0, 0), scale 0.3937 (WRL from git history, old transform) - `9f56273`
 - [ ] `JAE_MM60-52B1_Mini-PCIe`: `JAE_MM60-52B1_Mini-PCIe.wrl` offset (11.811, 0, 0), rotate (270, 0, 180), scale 0.3937; `JAE_MM60-52B1_Mini-PCIe_Holder.wrl` offset (11.811, 53.34, 0), scale 0.3937; `JAE_MM60-52B1_Mini-PCIe_Card.wrl` offset (11.811, 25.4, 1.27), rotate (90, 180, 180), scale 0.3937 (WRLs from git history, old transforms; three models: socket, holder, card) - `eb7f7ed`
 - [ ] `ublox_LARA-R2`: `ublox_LARA-R2.wrl` offset (0, 0, 1.651), rotate (180, 0, 0), scale 0.3937 (WRL from git history, old transform) - `a15f9e3`
-- [ ] `Molex_78171-5006`: `Molex_78171-5006.step` offset (0, -1.905, 1.27), rotate (-90, 0, 0) (vendor STEP, old transform) - `1bc0fa2`
-- [ ] `Molex_34826-8200`: `Molex_34826-8200.step` offset (17.018, -5.334, 7.366), rotate (90, 0, 0) (vendor STEP, old transform) - `07702d5`
+- [ ] `Molex_78171-5006`: `Molex_78171-5006.step` offset (0, -1.905, 1.45), rotate (-90, 0, 0) (vendor STEP, old transform; z 1.27 -> 1.45 so the tails sit on the pads, F9.2) - `1bc0fa2`, `db6f195`
+- [ ] `Molex_34826-8200`: `Molex_34826-8200.step` offset (17.076, -5.334, 7.366), rotate (90, 0, 0) (vendor STEP, old transform; x +0.058 to centre the pins in the holes, F9.4) - `07702d5`, `bb97505`
 - [ ] `TE_5-104074-8`: `TE_5-104074-8.wrl` offset (0, -10.541, 2.413), rotate (-90, 0, 0), scale 0.3937 (WRL from the Snigel2 project, old transform) - `bb03aa6`
 - [ ] `JAE_DX4R005JJ2R1800`: `JAE_DX4R005JJ2R1800.step` offset (0, 0.381, 1.27), rotate (-90, 0, 0) (vendor STEP, old transform) - `0321d55`
 - [ ] `Amphenol_RJE72-188-1401`: `Amphenol_RJE72-188-1401.step` offset (-3.175, 4.191, 2.286), rotate (0, 90, 180) (vendor STEP, old transform) - `4584b70`
-- [ ] `Samtec_TFM-105-02-S-D-WT`: `Samtec_TFM-105-02-S-D-WT.step` rotate (-90, 0, 0) (vendor STEP, old transform) - `2f8629d`
-- [ ] `Samtec_TFM-110-02-S-D-WT`: `Samtec_TFM-110-02-S-D-WT.step` rotate (-90, 0, 0) (vendor STEP; old transform was for a WRL) - `b31d1fc`
+- [ ] `Samtec_TFM-105-02-S-D-WT`: `Samtec_TFM-105-02-S-D-WT.step` offset (0, 0, 0.15), rotate (-90, 0, 0) (vendor STEP, old transform; z +0.15, F9.1) - `2f8629d`, `db6f195`
+- [ ] `Samtec_TFM-110-02-S-D-WT`: `Samtec_TFM-110-02-S-D-WT.step` offset (0, 0, 0.15), rotate (-90, 0, 0) (vendor STEP; old transform was for a WRL; z +0.15, F9.1) - `b31d1fc`, `db6f195`
 - [ ] `TE_292303-1`: `TE_292303-1.step` offset (0, -13, 3.5), rotate (-90, 0, 0) (vendor STEP, old transform) - `2cf4d80`
 - [ ] `Molex_FAKRA_73403-51xx`: `Molex_FAKRA_73403-51xx.step` offset (0, -18.415, 3.81) (vendor STEP (green variant), old transform) - `6769a2a`
 - [ ] `Johanson_1575AT43A0040`: `Johanson_1575AT43A0040.step` identity transform (generated, built in footprint coordinates) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm`: `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `142a965`
 - [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm`: `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `a8cc26a`
+- [ ] `Samtec_FTSH-105-01-L-DV-007-K`: `Samtec_FTSH-105-01-L-DV-007-K.step` offset (0, 0, 0.406), rotate (-90, 0, 0) (z 0.5 -> 0.406 so the terminals sit on the pads, F9.3) - `db6f195`
+- [ ] `Sullins_GBC08SGSN-M89`: `Sullins_GBC08SGSN-M89.step` identity transform (generated, built in footprint coordinates) - `d6ae08f`
 - [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `d0e1644`
 - [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` offset (0, -7.25, 6.3), rotate (-90, 0, 0) (JAE vendor STEP, SolidWorks Y-up; placed by the hold-down pegs on the three holes, pin-1 foot over pad 1, lead feet on the board; rendered top/bottom/side, pegs centred in the holes) - `827eeac`
 
@@ -906,32 +914,32 @@ models (0.03-0.10 into the board, terminal geometry), Mini-PCIe socket
 (0.10 into the board), ublox_LARA-R2 (0.05 above). Würth 7498210003's
 below-board body sits in its own Edge.Cuts cutout, as intended.
 
-- [ ] **F9.1** `Samtec_TFM-105-02-S-D-WT`, `Samtec_TFM-110-02-S-D-WT`:
+- [x] **F9.1** `Samtec_TFM-105-02-S-D-WT`, `Samtec_TFM-110-02-S-D-WT`:
       model 0.15 mm into the board (SMD tails at -0.15 over every pad).
-      Fix: z offset 0 -> 0.15. (F8 placements)
-- [ ] **F9.2** `Molex_78171-5006`: model 0.18 mm into the board over every
-      pad. Fix: z offset 1.27 -> 1.45. (F8 placement)
-- [ ] **F9.3** `Samtec_FTSH-105-01-L-DV-007-K`: terminals 0.094 mm above the
-      pads. Fix: z offset 0.5 -> 0.406. (pre-cleanup footprint)
-- [ ] **F9.4** `Molex_34826-8200`: pins sit in all 22 holes (model placed
+      Fix: z offset 0 -> 0.15. (F8 placements) — `db6f195`
+- [x] **F9.2** `Molex_78171-5006`: model 0.18 mm into the board over every
+      pad. Fix: z offset 1.27 -> 1.45. (F8 placement) — `db6f195`
+- [x] **F9.3** `Samtec_FTSH-105-01-L-DV-007-K`: terminals 0.094 mm above the
+      pads. Fix: z offset 0.5 -> 0.406. (pre-cleanup footprint) — `db6f195`
+- [x] **F9.4** `Molex_34826-8200`: pins sit in all 22 holes (model placed
       right), but F.Fab/courtyard are ~1.3-1.5 mm off from the model in y
       (rebuilt from the old silk in `07702d5`); the model overhangs the
-      courtyard by 0.71. Check the outline against Molex's drawing.
-- [ ] **F9.5** `TE_5-104074-8`: pins in all 7 holes, but the model is
+      courtyard by 0.71. Check the outline against Molex's drawing. — `bb97505` (outline per Molex SD-34826-001; model +0.058 in x)
+- [x] **F9.5** `TE_5-104074-8`: pins in all 7 holes, but the model is
       ~1.5 mm wider per side than F.Fab and overhangs the courtyard by
-      0.99. Check the outline against TE's drawing.
-- [ ] **F9.6** `Coilcraft_POE60F`: vendor model is 22.0 x 17.2, footprint
+      0.99. Check the outline against TE's drawing. — `1be9727` (outline per TE catalog 1307819 p.27, ears in the courtyard)
+- [x] **F9.6** `Coilcraft_POE60F`: vendor model is 22.0 x 17.2, footprint
       descr/F.Fab say a 25.0 x 15.0 body; model overhangs the courtyard by
       0.58. Pads all covered. Check the data sheet for which is right.
-      (pre-cleanup footprint)
-- [ ] **F9.7** `Wurth_WE-RJ45LAN_7499511440`: model overhangs the courtyard
-      by 0.43. (pre-cleanup footprint)
-- [ ] **F9.8** `Amphenol_RJE72-188-1401`: the jack hangs 3.5 mm through the
+      (pre-cleanup footprint) — `4856e58` (Coilcraft 381-1: body 17.60x17.20; the model was right)
+- [x] **F9.7** `Wurth_WE-RJ45LAN_7499511440`: model overhangs the courtyard
+      by 0.43. (pre-cleanup footprint) — `76a78d7` (courtyard x -15.28..5.13; the springs are real, Wurth cutout 17.55)
+- [x] **F9.8** `Amphenol_RJE72-188-1401`: the jack hangs 3.5 mm through the
       board and needs a notch; the footprint doesn't show it. Blixten
       Gateway's board has it (footprint coords x -8.1..8.1, y 2.09 to the
       board edge at 14.89), and the model's below-board part fits that
       notch. Add the notch as Edge.Cuts (like `Wurth_WE-RJ45LAN_7498210003`)
-      or at least a Dwgs.User note.
+      or at least a Dwgs.User note. — `1018250` (notch on Dwgs.User per Amphenol P-RJE72-188-1X0X rev D)
 
 ## Open questions
 
