@@ -841,7 +841,7 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` - plain body 1.7x2.0x0.55 per data sheet; no vendor STEP (onsemi blocked) - `142a965`
 - [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` - body 3.0x4.0x0.75, terminals and SW pads per data sheet; no vendor STEP (analog.com blocked) - `a8cc26a`
 - [ ] `APEM_PT65503.step` - generated: body 10x10x6.5 per catalog, segment wheel box 2.8x9.5x4.4 with ASSUMED orientation; no vendor STEP - `d0e1644`
-- [ ] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `e941797`
+- [x] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `e941797`. Replaced 2026-10-20 by JAE's own STEP (SJ110669_MX34R36HF4T_V1, supplied by Jonas); generator removed - `827eeac`.
 
 ### 3D model placements
 
@@ -885,7 +885,7 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm`: `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `142a965`
 - [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm`: `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `a8cc26a`
 - [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `d0e1644`
-- [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` identity transform (generated envelope, built in footprint coordinates) - `e941797`
+- [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` offset (0, -7.25, 6.3), rotate (-90, 0, 0) (JAE vendor STEP, SolidWorks Y-up; placed by the hold-down pegs on the three holes, pin-1 foot over pad 1, lead feet on the board; rendered top/bottom/side, pegs centred in the holes) - `827eeac`
 
 ## Open questions
 
