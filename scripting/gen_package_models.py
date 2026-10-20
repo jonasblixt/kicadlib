@@ -18,6 +18,12 @@
 #     VHHB-1). 4 terminals on the left/right sides (pins 1-4, 11-14) and 6
 #     on the top/bottom (5-10, 15-20), Figures 6/7. Pin 1 is the top of the
 #     left row (footprint pad 1 at x = -2.35, y = -1.2).
+#   Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm (LT8640): LT8640/LT8640-1
+#     data sheet rev G, p.27 (UDC20(18), LTC DWG 05-08-1956 rev C): 3.00 x
+#     4.00, A = 0.75, b = 0.25, L = 0.40, e = 0.50; pins 5 and 12 removed;
+#     two SW pads 0.22 wide (0.356 and 0.400 long, 0.770 apart). Pin 1 is
+#     the top of the left row (footprint pad 1 at x = -1.40, y = -1.25).
+#     analog.com refuses downloads here, so no vendor STEP.
 #   NX1255GB (NDK): NDK catalog sheet cu37_071108_NX1255GB_e1: body
 #     11.8 x 5.5, H = 2.5 +-0.15; four wraparound terminals 2.0 wide x 1.5
 #     deep on the long edges at 5.08 mm pitch.
@@ -71,6 +77,29 @@ def qfn20_si3402():
     # pin-1 mark on top, near footprint pad 1 (x -2.35, y -1.2) -> model (-, +)
     boxes.append(box_c(-1.7, 1.7, a, 0.5, 0.5, 0.01, MARK))
     return 'Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm', boxes, 'QFN-20 5x5x0.85 mm, Si3402-B-GM'
+
+
+def analog_udc18():
+    # LT8640/LT8640-1 data sheet rev G p.27 (UDC20(18), LTC DWG 05-08-1956
+    # rev C; the UDCF on p.28 has the same outline): 3.00 x 4.00 x 0.75,
+    # b = 0.25, L = 0.40, e = 0.50; pins 1-6 / 11-16 on the long sides with
+    # 5 and 12 removed, 7-10 / 17-20 on the short sides; SW pads 0.22 wide,
+    # 22 is 0.356 long from 0.127 below centre, 21 is 0.400 long, 0.770 on.
+    w, d, a, b, e, l = 3.0, 4.0, 0.75, 0.25, 0.50, 0.40
+    t, out = 0.2, 0.02
+    boxes = [box_c(0, 0, 0, w, d, a, BODY_BLACK)]
+    for sign in (-1, 1):
+        for i in range(6):
+            if i == 4:    # pin 5 (left) / pin 12 (right) position
+                continue
+            boxes.append(box_c(sign * (w / 2 - l / 2 + out / 2), -(-1.25 + i * e), 0, l + out, b, t, TIN))
+        for x in (-0.75, -0.25, 0.25, 0.75):
+            boxes.append(box_c(x, sign * (d / 2 - l / 2 + out / 2), 0, b, l + out, t, TIN))
+    for y, ln in ((0.127 + 0.356 / 2, 0.356), (0.127 + 0.356 / 2 + 0.770, 0.400)):
+        boxes.append(box_c(0, -y, 0, 0.22, ln, 0.02, TIN))
+    # pin-1 mark on top, near footprint pad 1 (x -1.40, y -1.25) -> model (-, +)
+    boxes.append(box_c(-0.9, 1.4, a, 0.4, 0.4, 0.01, MARK))
+    return 'Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm', boxes, 'UDC20(18) QFN 3x4x0.75 mm, LT8640'
 
 
 def nx1255gb():
@@ -177,7 +206,7 @@ def main():
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
         print('wrote %s (%d boxes)' % (path, len(boxes)))
-    for fn in (qfn20_si3402, nx1255gb, texas_yje, apem_pt65503, jae_mx34r36hf4t):
+    for fn in (qfn20_si3402, analog_udc18, nx1255gb, texas_yje, apem_pt65503, jae_mx34r36hf4t):
         name, boxes, descr = fn()
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
