@@ -252,7 +252,7 @@
 	)
 	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Samtec_TFM-105-02-S-D-WT.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz 0 0 0.15)
 		)
 		(scale
 			(xyz 1 1 1)

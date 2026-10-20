@@ -234,7 +234,7 @@
 	)
 	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Molex_78171-5006.step"
 		(offset
-			(xyz 0 -1.905 1.27)
+			(xyz 0 -1.905 1.45)
 		)
 		(scale
 			(xyz 1 1 1)

@@ -329,7 +329,7 @@
 	(embedded_fonts no)
 	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/Samtec_FTSH-105-01-L-DV-007-K.step"
 		(offset
-			(xyz 0 0 0.5)
+			(xyz 0 0 0.406)
 		)
 		(scale
 			(xyz 1 1 1)
