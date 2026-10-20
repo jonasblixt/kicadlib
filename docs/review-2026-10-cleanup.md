@@ -28,8 +28,9 @@ session, add it here instead of fixing it silently.
 
 Suggested order: A1 → A2 + A3 → A4 → A5 → (optional) A6.
 
-**Status 2026-10-20:** A1-A5 done, including the rename batch A5.4
-(`docs/rename-batch-2026-10.md`). Open: A7.1 (new, small) and optional A6.
+**Status 2026-10-20:** A1-A6 done, including the rename batch A5.4
+(`docs/rename-batch-2026-10.md`) and the history rewrite A6.1
+(`.git` 417 MB -> 10 MB). Open: A7.1 (new, small).
 
 ---
 
@@ -444,7 +445,7 @@ remapped. Do all renames in one batch.
 
 ## A6. (Optional) Shrink history
 
-- [ ] **A6.1** After A1/A2, rewrite history with `git filter-repo` to drop
+- [x] **A6.1** After A1/A2, rewrite history with `git filter-repo` to drop
       `modules/packages3d` (and other deleted bulk), bringing `.git` from
       ~410 MB to tens of MB. This rewrites `master` too and needs a
       force-push; only worth it if nobody else has clones. Requires explicit
@@ -453,6 +454,13 @@ remapped. Do all renames in one batch.
       for good, including the vendor STEPs A1.1 listed as useful for stock
       footprints without a KiCad model (RJHSE, 1-1825027-1, keystone PN54,
       Maxim WLP-12, ...). Copy any you want first.
+      — Done 2026-10-20 (Jonas: keep nothing from those folders; only
+      clone, no PRs; he holds a pre-rewrite bundle). `master` fast-forwarded
+      to `rework_2026`, then two `git filter-repo --invert-paths
+      --prune-empty never` passes dropped `modules/`, `datasheets/`,
+      `simulation/` and the old top-level `3dmodels/`; `.git` 417 MB ->
+      10 MB, all 237 commits kept, doc hashes remapped (`0839cc3`).
+      `.gitattributes` added (`878793a`). `rework_2026` deleted.
 
 ## A7. Found later
 
