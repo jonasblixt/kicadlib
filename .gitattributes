@@ -1,0 +1,15 @@
+# KiCad sources, scripts, docs: LF in the repo and on disk (KiCad writes LF)
+*.kicad_sym text eol=lf
+*.kicad_mod text eol=lf
+*.kicad_dbl text eol=lf
+*.py        text eol=lf
+*.md        text eol=lf
+*.csv       text eol=lf
+# 3D models: text (STEP/VRML are ASCII; the generators write in text mode,
+# so line endings follow the OS), but no line diffs
+*.step -diff
+*.stp  -diff
+*.wrl  -diff
+# generated SQLite libraries and PDFs
+*.db   binary
+*.pdf  binary
