@@ -24,6 +24,9 @@
 #     two SW pads 0.22 wide (0.356 and 0.400 long, 0.770 apart). Pin 1 is
 #     the top of the left row (footprint pad 1 at x = -1.40, y = -1.25).
 #     analog.com refuses downloads here, so no vendor STEP.
+#   Sullins_GBC08SGSN-M89: Sullins catalog pp.112-113 (-M89 SMT horizontal,
+#     GS head 8.08 / tail 4.57, insulator 2.54 x 3.56, B = 20.32). The tail's
+#     jog and foot are ESTIMATED from the drawing (Sullins: consult factory).
 #   NX1255GB (NDK): NDK catalog sheet cu37_071108_NX1255GB_e1: body
 #     11.8 x 5.5, H = 2.5 +-0.15; four wraparound terminals 2.0 wide x 1.5
 #     deep on the long edges at 5.08 mm pitch.
@@ -100,6 +103,27 @@ def analog_udc18():
     # pin-1 mark on top, near footprint pad 1 (x -1.40, y -1.25) -> model (-, +)
     boxes.append(box_c(-0.9, 1.4, a, 0.4, 0.4, 0.01, MARK))
     return 'Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm', boxes, 'UDC20(18) QFN 3x4x0.75 mm, LT8640'
+
+
+def sullins_gbc08_m89():
+    # Sullins GBC08SGSN-M89 (catalog pp.112-113): 1x08 2.54 mm header lying
+    # flat (-M89), GS head 8.08 / tail 4.57, insulator 20.32 x 2.54 x 3.56
+    # on the board, 0.64 posts at mid-height (1.78). The tail's jog and foot
+    # are ESTIMATED from the drawing (not dimensioned): straight 0.85, jog
+    # down to the board, foot 1.74 long ending 4.57 from the insulator.
+    # Footprint origin = pad 1, head towards footprint -y.
+    p, ins0, ins1, head, foot0, foot1, b = 2.54, -6.34, -3.80, -14.42, -0.97, 0.77, 0.64
+    zc = 1.78
+    boxes = [box_c(3.5 * p, -(ins0 + ins1) / 2, 0, 8 * p, ins1 - ins0, 3.56, BODY_BLACK)]
+    for i in range(8):
+        x = i * p
+        boxes.append(box_c(x, -(head + ins1 + 0.85) / 2, zc - b / 2, b, ins1 + 0.85 - head, b, TIN))
+        # the jog as a box clear of the board; only the foot touches it
+        boxes.append(box_c(x, -(ins1 + 0.85 + foot0) / 2, b, b, foot0 - ins1 - 0.85, zc - b / 2, TIN))
+        boxes.append(box_c(x, -(foot0 + foot1) / 2, 0, b, foot1 - foot0, b, TIN))
+    # pin-1 mark on top of the insulator above post 1
+    boxes.append(box_c(0, -(ins0 + ins1) / 2, 3.56, 0.8, 0.8, 0.01, MARK))
+    return 'Sullins_GBC08SGSN-M89', boxes, 'Sullins GBC08SGSN-M89 1x08 horizontal SMT header envelope'
 
 
 def nx1255gb():
@@ -191,7 +215,7 @@ def main():
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
         print('wrote %s (%d boxes)' % (path, len(boxes)))
-    for fn in (qfn20_si3402, analog_udc18, nx1255gb, texas_yje, apem_pt65503):
+    for fn in (qfn20_si3402, analog_udc18, sullins_gbc08_m89, nx1255gb, texas_yje, apem_pt65503):
         name, boxes, descr = fn()
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
