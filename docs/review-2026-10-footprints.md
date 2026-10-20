@@ -887,6 +887,52 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `d0e1644`
 - [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` offset (0, -7.25, 6.3), rotate (-90, 0, 0) (JAE vendor STEP, SolidWorks Y-up; placed by the hold-down pegs on the three holes, pin-1 foot over pad 1, lead feet on the board; rendered top/bottom/side, pegs centred in the holes) - `827eeac`
 
+## F9. 3D model placement check (2026-10-20)
+
+All 86 `Jonas.pretty` footprints, measured rather than eyeballed: each
+footprint alone on a scratch board, `kicad-cli pcb export stl` (models
+only, origin at the footprint) for the 79 STEP-model footprints; the 5
+WRL footprints (the STL/STEP exporters can't load VRML) placed with
+KiCad's transform (offset + Rz(-rz) Ry(-ry) Rx(-rx) + scale, 1 WRL unit =
+2.54 mm), checked against KiCad's own VRML export. Compared with the
+footprint: model bottom vs board top, model over every SMD pad, a pin in
+every hole, nothing below the board outside holes, model vs F.Fab and
+courtyard, and the pin-1 mark of every generated model vs pad 1 (all 24
+correct). Scripts were ad hoc (session scratchpad), not committed.
+
+Clean: everything not listed below. Within 0.1 mm and left alone:
+Coilcraft_FA2925 / POE60F (0.10 / 0.05 into the board), the Vishay IHLP
+models (0.03-0.10 into the board, terminal geometry), Mini-PCIe socket
+(0.10 into the board), ublox_LARA-R2 (0.05 above). Würth 7498210003's
+below-board body sits in its own Edge.Cuts cutout, as intended.
+
+- [ ] **F9.1** `Samtec_TFM-105-02-S-D-WT`, `Samtec_TFM-110-02-S-D-WT`:
+      model 0.15 mm into the board (SMD tails at -0.15 over every pad).
+      Fix: z offset 0 -> 0.15. (F8 placements)
+- [ ] **F9.2** `Molex_78171-5006`: model 0.18 mm into the board over every
+      pad. Fix: z offset 1.27 -> 1.45. (F8 placement)
+- [ ] **F9.3** `Samtec_FTSH-105-01-L-DV-007-K`: terminals 0.094 mm above the
+      pads. Fix: z offset 0.5 -> 0.406. (pre-cleanup footprint)
+- [ ] **F9.4** `Molex_34826-8200`: pins sit in all 22 holes (model placed
+      right), but F.Fab/courtyard are ~1.3-1.5 mm off from the model in y
+      (rebuilt from the old silk in `07702d5`); the model overhangs the
+      courtyard by 0.71. Check the outline against Molex's drawing.
+- [ ] **F9.5** `TE_5-104074-8`: pins in all 7 holes, but the model is
+      ~1.5 mm wider per side than F.Fab and overhangs the courtyard by
+      0.99. Check the outline against TE's drawing.
+- [ ] **F9.6** `Coilcraft_POE60F`: vendor model is 22.0 x 17.2, footprint
+      descr/F.Fab say a 25.0 x 15.0 body; model overhangs the courtyard by
+      0.58. Pads all covered. Check the data sheet for which is right.
+      (pre-cleanup footprint)
+- [ ] **F9.7** `Wurth_WE-RJ45LAN_7499511440`: model overhangs the courtyard
+      by 0.43. (pre-cleanup footprint)
+- [ ] **F9.8** `Amphenol_RJE72-188-1401`: the jack hangs 3.5 mm through the
+      board and needs a notch; the footprint doesn't show it. Blixten
+      Gateway's board has it (footprint coords x -8.1..8.1, y 2.09 to the
+      board edge at 14.89), and the model's below-board part fits that
+      notch. Add the notch as Edge.Cuts (like `Wurth_WE-RJ45LAN_7498210003`)
+      or at least a Dwgs.User note.
+
 ## Open questions
 
 1. Prune first? "Only the ones we need" — are there symbols for parts you
