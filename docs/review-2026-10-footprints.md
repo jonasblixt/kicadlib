@@ -70,20 +70,20 @@ commit per action; the hash is on each ticked line.
 
 - [x] **F1.1** `logic/SN74AHC1G00DCKR`: the GND pin is numbered **2**,
       same as input B. GND gets netlisted onto B and pad 3 floats.
-      → renumber GND to 3. — `4912daf`
+      → renumber GND to 3. — `0de354b`
 - [x] **F1.2** `comm/mPCIe_modem`: `PERST#` is pin **21**, which is also a
-      GND pin (mini-PCIe has PERST# on 22). → renumber to 22. — `98e3305`
+      GND pin (mini-PCIe has PERST# on 22). → renumber to 22. — `b38062d`
 - [x] **F1.3** `comm/TJA1042TK_3`: footprint is a 0.5 mm-pitch DFN-8; the
       HVSON8 package (SOT782-1) is 0.65 mm pitch. → stock
       `Package_SON:HVSON-8-1EP_3x3mm_P0.65mm_EP1.6x2.4mm` (made from the
-      TJA1051 datasheet, same package). — `c8e2330`
+      TJA1051 datasheet, same package). — `1c4f85d`
 - [x] **F1.4** `dcdc/LTC4065-4.4`: `uDFN6_EP` is a 0.4 mm-pitch ~1.5 mm
       package; LTC4065EDC is LTC's DC6 (2×2 mm, 0.5 mm). → stock
       `Package_DFN_QFN:DFN-6-1EP_2x2mm_P0.5mm_EP0.61x1.42mm` (KiCad's DC6).
-      — `340f9ee`
+      — `0d02f49`
 - [x] **F1.5** `logic/SN74AHC1G08`: MPN is `…DCK` (SC-70-5), footprint is
       SOT-23-5 (and `ki_fp_filters` already says SC70). → `SOT-353_SC-70-5`.
-      — `ff5e918`
+      — `98bb90e`
 - [x] **F1.6** `logic/SN74AVC4T774`: three different packages — MPN
       `…RGYR` (VQFN 3.5×4, 0.5 mm), `ki_fp_filters` `RSV`, footprint RSA
       (4×4, 0.65 mm). Jonas: the part is RGYR. The symbol was numbered for
@@ -91,30 +91,30 @@ commit per action; the hash is on each ticked line.
       numbering (DIR1 = 1, DIR2 = 2, A1 = 3 … VCCA = 16), so every pin moved
       by +2. Footprint `Texas_RGY_R-PVQFN-N16_EP2.05x2.55mm`, filter
       `Texas*RGY*PVQFN*`. TI only requires the thermal pad to be soldered,
-      so pad 17 gets no pin. — `94fe08f`
+      so pad 17 gets no pin. — `b57bdcd`
 - [x] **F1.7** `connectors/MX34R36HF4T`: 36-pin symbol borrows the 20-pad
-      `34826-8200` footprint (pins 21–36 have no pads). → new footprint. — new footprint `JAE_MX34R36HF4T`, `e941797`
+      `34826-8200` footprint (pins 21–36 have no pads). → new footprint. — new footprint `JAE_MX34R36HF4T`, `f83594f`
 - [x] **F1.8** `connectors/Header_2.54mm_10p` (Würth 61201021621): old
       footprint numbers pads DIP-style (1–5 down one row, 6–10 back up the
       other). Würth and the symbol use odd/even, so the pinout is scrambled
       against an IDC cable. → `Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical`
-      (pad positions identical). — `4b20c3a`
+      (pad positions identical). — `adf04c3`
 - [x] **F1.9** `connectors/430450427`: old `Molex_430450427` numbering is
       rotated 180° relative to the latch pegs; the sibling
       `Molex_430450629` and KiCad stock agree with each other. → stock
       `Molex_Micro-Fit_3.0_43045-0412_2x02_P3.00mm_Vertical` (positions
       within 0.09 mm). Worth checking any board that used this connector.
-      — `80f3675`
+      — `e6d7371`
 - [x] **F1.10** `dcdc/MIC23150-55YMT`, `MIC23150-SYMT`: ~~old footprint
       is stock `Micrel_MLF-8-1EP…` minus the ePad~~. **Corrected:** the
       MIC23150 TDFN-8 (MM) has **no** exposed pad (Micrel datasheet rev
       2.1: pin table p. 2, land pattern p. 17). The old footprint was an
       exact twin of stock `Package_DFN_QFN:DFN-8_2x2mm_P0.5mm` (no EP), so
       this was only a broken link. → that footprint, no symbol change.
-      — `4408e37`
+      — `9427ca7`
 - [x] **F1.11** Exposed pads with no symbol pin (pad gets no net). Checked
       each datasheet; a pin is added only where the pad must be connected.
-      — `2d6eb5a`
+      — `c8db2bb`
   - `power/MAX16058ATA31+` (9): "Connect exposed pad to GND" → pin 9
     added, hidden passive, stacked on GND (pin 2).
   - `power/LTC2941IDCB#TRMPBF` (7): "Exposed Pad (Pin 7): Do not connect"
@@ -131,13 +131,13 @@ commit per action; the hash is on each ticked line.
     pad → no change.
   - `logic/SN74AVC4T774` (17): with F1.6.
 - [x] **F1.12** `connectors/TFM-110-02-S-D-WT`: symbol pins 21/22 have no
-      pads (old footprint numbers its weld tabs `0`). → fix during migration. — holes renumbered 21/22, `8b59022`
-- [x] **F1.13** `power/PT65503`: pin 2 is defined twice, named `2` and `C`. — duplicate C pin deleted, both C pads numbered C, `d0e1644`
+      pads (old footprint numbers its weld tabs `0`). → fix during migration. — holes renumbered 21/22, `0e822ca`
+- [x] **F1.13** `power/PT65503`: pin 2 is defined twice, named `2` and `C`. — duplicate C pin deleted, both C pads numbered C, `a0890fa`
 - [x] **F1.14** `cpu/MIMX8MM6DVTLZAA`, `MIMX8MN5DVTJZAA`: old BGA-486
       footprint has 487 distinct pad numbers. → check against the NXP ball
       map during migration. — E23 was a phantom pad at a depopulated site
       (IMX8MMCEC: contact tables list the other 486 balls, ball map shows
-      E23 empty); removed, `45962e0`. J18 is a real NC ball. The Nano
+      E23 empty); removed, `f946027`. J18 is a real NC ball. The Nano
       (IMX8MNCEC) assigns 420 balls; its symbol matches.
 - [x] **F1.15** `memory/IS46DR16640B`: fp filter says `BGA84`, footprint is
       a 90-site BGA, so pads sit at depopulated sites. → check the ball map.
@@ -145,18 +145,18 @@ commit per action; the hash is on each ticked line.
       site is bot-protected): **B2 = VSSQ had no pin**, added; F7 renamed
       LQDS -> LDQS; filter fixed. A2/E2 NC, R3/R7/R8 RFU; K1, L9, M1, N9,
       P1, R9 are depopulated sites the stock BGA-90 still has (unconnected)
-      pads for. `a456c2c`
+      pads for. `f3da014`
 - [x] **F1.16** (new, found in batch 1) `memory/MX25L12835F`: MPN
       `MX25L12835FZ2I-10G` is the **8-WSON 8×6 mm** package (Macronix
       ordering code `Z2`; `ZN` is 6×5 mm), but the footprint was 6×5 mm.
       Jonas confirmed Z2I. → `Package_SON:WSON-8-1EP_8x6mm_P1.27mm_EP3.4x4.3mm`
       (pad rows at ±3.75 mm match the outline; the 3.4×4.3 EP land is
-      inside the package's 4.7×4.6 pad). — `8cb4f26`
+      inside the package's 4.7×4.6 pad). — `8cc6a31`
 - [x] **F1.17** (new) `connectors/Wurth_7499210123`: footprint pads 7 and
       8 (through-hole) have no symbol pin. Check the Würth datasheet
       whether they are NC; add NC pins or wire them. — Würth's own KiCad
       library (7499210123A) declares them no_connect; added as NC pins,
-      `e7cc7cb`.
+      `49e062f`.
 - [x] **F1.18** (new) `connectors/GBC08SGSN-M89` uses the THT vertical
       `PinHeader_1x08_P2.54mm_Vertical`, but Sullins' catalog says `-M89`
       = SMT, horizontal (pins parallel to the board, tails bent down to
@@ -164,12 +164,12 @@ commit per action; the hash is on each ticked line.
       footprint for it; a new one needs Sullins' drawing for the part
       (Jonas to download). No schematic uses the symbol. — new footprint
       `Jonas:Sullins_GBC08SGSN-M89` from the catalog pp.112-113, foot
-      estimated (Sullins gives no PCB layout), `d6ae08f`.
+      estimated (Sullins gives no PCB layout), `307061c`.
 - [x] **F1.19** (new) `diode_misc/PDS1040-13`, `PDS5100Q-13D`: two `A`
       pins both numbered 2 (the stock PowerDI-5 has two anode pads named
       2). Per the F7.2 rule, keep one pin per pad number (drop the offset
       one at y=2.54). Poetato uses PDS5100Q-13D twice, so this goes in the
-      rename batch (cleanup A5.4). — `ef8e3e4`
+      rename batch (cleanup A5.4). — `79ec4b6`
 
 ## F2. Migration method
 
@@ -316,9 +316,9 @@ out). "Twin" = pads identical within 0.1 mm.
 
 | Symbol | MPN | Now | Proposed | Note |
 |---|---|---|---|---|
-| `connectors/RPi_GPIO` | N/A | `40p_header_2.54` | `Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical` | socket (HAT) or PinHeader_2x20 (Pi side) - **Jonas: HAT, socket** - `8952e3d` |
+| `connectors/RPi_GPIO` | N/A | `40p_header_2.54` | `Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical` | socket (HAT) or PinHeader_2x20 (Pi side) - **Jonas: HAT, socket** - `56ad49d` |
 | `logic/SN74AVC4T774` | SN74AVC4T774RGYR | `Texas_S-PVQFN-N16_EP2.7x2.7mm` | `Package_DFN_QFN:Texas_RGY_R-PVQFN-N16_EP2.05x2.55mm` | MPN RGY / filter RSV / fp RSA |
-| `power/1-1825027-1` | 1-1825027-1 | `Jonas:1-1825027-1` | `Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS` | geometry within 0.04 mm - **Jonas: stock** - `7d14550` |
+| `power/1-1825027-1` | 1-1825027-1 | `Jonas:1-1825027-1` | `Button_Switch_THT:SW_Tactile_SPST_Angled_PTS645Vx31-2LFS` | geometry within 0.04 mm - **Jonas: stock** - `11d1e85` |
 
 #### J - Already in Jonas.pretty - fix the link only (2)
 
@@ -350,7 +350,7 @@ out). "Twin" = pads identical within 0.1 mm.
 | `connectors/fakra_violet_0734035117` | 0734035117 | `fakra_th` | `Jonas:Molex_FAKRA_73403-51xx` |  |
 | `connectors/RJE72-188-1401` | RJE72-188-1401 | `Jonas:RJE72-188-1401` | `Jonas:Amphenol_RJE72-188-1401` | model available |
 | `connectors/TFM-105-02-S-D-WT` | TFM-105-02-S-D-WT | `TFM-105-02-S-D-WT` | `Jonas:Samtec_TFM-105-02-S-D-WT` | model available |
-| `connectors/TFM-110-02-S-D-WT` | TFM-110-02-S-D-WT | `Jonas:TFM-110-02-S-D-WT` | `Jonas:Samtec_TFM-110-02-S-D-WT` | tabs numbered 0 vs pins 21/22 (renumbered 21/22, `8b59022`) |
+| `connectors/TFM-110-02-S-D-WT` | TFM-110-02-S-D-WT | `Jonas:TFM-110-02-S-D-WT` | `Jonas:Samtec_TFM-110-02-S-D-WT` | tabs numbered 0 vs pins 21/22 (renumbered 21/22, `0e822ca`) |
 | `connectors/USB_A_292303-1` | 292303-1 | `USB_A_TH` | `Jonas:TE_292303-1` | stock 292303-7 is SMD; -1 is THT |
 | `cpu/ADAU1467` | ADAU1467WBCPZ300 | `CP-88-10` | `Jonas:ADI_CP-88-10_LFCSP-88` | model available |
 | `cpu/AT91SAM9G25` | AT91SAM9G25 | `217LFBGA` | `Jonas:Microchip_LFBGA-217_15x15mm_P0.8mm` | no model |
@@ -397,26 +397,26 @@ out). "Twin" = pads identical within 0.1 mm.
 **Poetato first (2026-10-13).** Poetato (released for layout) places 14 of
 these footprints (18 parts). Checked against its PCB: T2 `Coilcraft_FA2672`
 was missing from SMD position files and T3 `T_Wurth_WE-RJ45LAN_7499511440`
-was in them; T3's first 3D model path was dead. Fixed in `117ea13` and
-`b04fc79`; poetato picks them up with *Update Footprints from Library* on
+was in them; T3's first 3D model path was dead. Fixed in `c0a56fa` and
+`b6601ee`; poetato picks them up with *Update Footprints from Library* on
 T2 and T3 (a board change, so re-check before re-release). C9's
-`Eaton_KW_13.5x8.8mm` Value fix (`59b754b`) doesn't affect the board (the
+`Eaton_KW_13.5x8.8mm` Value fix (`7be869f`) doesn't affect the board (the
 footprint Value is replaced by the symbol's). The other poetato
 footprints only have the cosmetic issues below.
 
 - [x] **F4.1** `attr` wrong (affects BOM and position files). All fixed,
       one commit each, verified with `kicad-cli pcb export pos --smd-only`
       on a scratch board:
-      SMD-only but marked `through_hole`: `Coilcraft_FA2672` (`117ea13`),
-      `Coilcraft_FA2925-AL` (`5689b1e`), `Coilcraft_POE60F` (`8a8ebfa`),
-      `Texas_YJE` (`85de11d`).
+      SMD-only but marked `through_hole`: `Coilcraft_FA2672` (`c0a56fa`),
+      `Coilcraft_FA2925-AL` (`6d9c33c`), `Coilcraft_POE60F` (`a7a8cd4`),
+      `Texas_YJE` (`9c3c29c`).
       THT pads but marked `smd`: `T_Wurth_WE-RJ45LAN_7499210001A`
-      (`3aea93c`), `T_Wurth_WE-RJ45LAN_7499411122A` (`cf84e0f`),
-      `T_Wurth_WE-RJ45LAN_7499511440` (`b04fc79`).
+      (`8794e9d`), `T_Wurth_WE-RJ45LAN_7499411122A` (`0283b49`),
+      `T_Wurth_WE-RJ45LAN_7499511440` (`b6601ee`).
 - [x] **F4.2** Courtyard. Fixed: `Wurth_7499210123` shield pads 15/16
-      stuck out 0.54 mm → courtyard widened to ±9.30 mm (`18eee39`); 0.1 mm
+      stuck out 0.54 mm → courtyard widened to ±9.30 mm (`bc6276d`); 0.1 mm
       courtyard lines → 0.05 mm on `Wurth_7499210123`, `Texas_YJE`
-      (`3449c63`) and `Coilcraft_POE60F` (`d8e528b`). KiCad DRC on a
+      (`b65537f`) and `Coilcraft_POE60F` (`103ebe8`). KiCad DRC on a
       scratch board: no courtyard violations.
       **Corrected 2026-10-13:** the earlier "fab body outside courtyard" on
       `DLW5B_5050`, `NX3215SA`, `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`,
@@ -427,33 +427,33 @@ footprints only have the cosmetic issues below.
       footprint now has silk, a fab body outline and `${REFERENCE}` on
       F.Fab.
   - Generated footprints, fixed in the generators (which are now
-    repo-relative, A1.8): `8e1fdf3` IHLP (×11: fab reference; silk ticks
+    repo-relative, A1.8): `e96636a` IHLP (×11: fab reference; silk ticks
     moved 0.15 mm off the pads, which also clears 44 DRC "silk clipped by
     solder mask" hits; the hand-calibrated 2525 model offset is now in the
-    script), `aea30fd` NX1255GB/NX2520SA/NX3225SA (fab reference; pin-1
+    script), `656af71` NX1255GB/NX2520SA/NX3225SA (fab reference; pin-1
     L-shaped silk outside the pads, like stock Crystal_SMD_3225-4Pin, which
     also clears 8 DRC hits on NX2520SA; NX3225SA's hand-added 3D model is
     now in the script). Regenerated output equals the committed files
     apart from these changes.
-  - Hand-made, one commit each: silk on `Coilcraft_FA2672` (`21f90aa`),
-    `Coilcraft_FA2925-AL` (`3ccb0c1`), `Eaton_KW_13.5x8.8mm` (`f777e2f`),
-    `Eaton_KW_21.5x9.5mm` (`f92962f`); fab body from the existing silk
-    body outline on `Coilcraft_POE60F` (`6cc50d7`),
-    `Vishay_SOIC254P1016X440-4N` (`0fe7096`, had only a pin-1 dot),
-    `Wurth_7499210123` (`473b7df`); `${REFERENCE}` on F.Fab on those and on
-    `DLW5B_5050` (`569a370`), `FUSC3216X85N` (`d8e3616`), `NX3215SA`
-    (`4d20fd6`), `NX5032GA` (`543d948`), `QFN-20_5x5mm…` (`909a5e3`),
-    `SAMTEC_FTSH…` (`53bec8c`), `SOIC254P680X230-4N` (`0b57e10`).
+  - Hand-made, one commit each: silk on `Coilcraft_FA2672` (`a89bb9f`),
+    `Coilcraft_FA2925-AL` (`4b9adb7`), `Eaton_KW_13.5x8.8mm` (`87aece5`),
+    `Eaton_KW_21.5x9.5mm` (`f9332b9`); fab body from the existing silk
+    body outline on `Coilcraft_POE60F` (`1803be8`),
+    `Vishay_SOIC254P1016X440-4N` (`25ad9c5`, had only a pin-1 dot),
+    `Wurth_7499210123` (`1695042`); `${REFERENCE}` on F.Fab on those and on
+    `DLW5B_5050` (`cb59ffc`), `FUSC3216X85N` (`08b21ca`), `NX3215SA`
+    (`52cc6b3`), `NX5032GA` (`fe927f3`), `QFN-20_5x5mm…` (`28e886f`),
+    `SAMTEC_FTSH…` (`5f78441`), `SOIC254P680X230-4N` (`a5ec76f`).
     KiCad DRC on the 15: no new violations (5 before, 5 after, all F4.10).
 - [x] **F4.4** Fields. `descr`/`tags` added on all 14 that lacked them
-      (same commits as F4.3, plus `163890e` Texas_YJE); Value = footprint
+      (same commits as F4.3, plus `c30628d` Texas_YJE); Value = footprint
       name on `Coilcraft_POE60F`, `DLW5B_5050`, `NX3215SA`, `NX5032GA` (and
-      Eaton, `59b754b`). Descriptions name the parts each footprint serves;
+      Eaton, `7be869f`). Descriptions name the parts each footprint serves;
       no datasheet URLs were added (none were on hand to check). The empty
       `Datasheet` property is left as is: KiCad's stock footprints keep it
       empty too and put the link in `descr`.
 - [x] **F4.5** No 3D model: `NX1255GB`, `QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`,
-      `Texas_YJE`. Done in `1acc16e`: envelope B-Rep models from the new
+      `Texas_YJE`. Done in `5b420ae`: envelope B-Rep models from the new
       `scripting/gen_package_models.py` (data sheet dimensions cited in its
       header), checked in KiCad renders. The first QFN-20 model put 5
       terminals per side; the Si3402 has 4 on the left/right and 6 on the
@@ -461,11 +461,11 @@ footprints only have the cosmetic issues below.
 - [x] **F4.6** Pads: `SAMTEC_FTSH-105-01-L-DV-007-K` numbers pads
       `01`…`10` (its symbol matches, but nothing else in the repo uses
       leading zeros; stock Samtec/pin-header footprints use `1`…`10`).
-      Done in `81de170`: pads and the symbol's pin numbers/names renumbered
+      Done in `e822d41`: pads and the symbol's pin numbers/names renumbered
       together. Poetato J3 must update symbol and footprint together.
 - [x] **F4.7** Unused: `NX5032GA` (NDK 5032 rows use stock
       `Crystal_SMD_5032-*`), `T_Wurth_WE-RJ45LAN_7499210001A` (also A3.4).
-      Both deleted (`c8d3ce9` with `NX5032GA.step`, `aafe5a6`); neither is
+      Both deleted (`049ba29` with `NX5032GA.step`, `3d0fb8b`); neither is
       on poetato's board.
 - [x] **F4.8** (optional) Names are mixed — `T_Wurth_*` vs `Wurth_*`,
       `SAMTEC_*`, `TI_*` vs `Texas_*`, IPC-style (`FUSC3216X85N`,
@@ -473,24 +473,24 @@ footprints only have the cosmetic issues below.
       (`IHLP1212AB`, `NX3225SA`, `DLW5B_5050`), generic
       (`QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm`). Renaming means updating symbols
       and importers (all in this repo); existing boards keep their embedded
-      copies. — Done with the rename batch, `47f4464`: 30 footprints renamed
+      copies. — Done with the rename batch, `3350358`: 30 footprints renamed
       (the commit message says 25; it is 30), generators and importers
       updated, map in `docs/rename-batch-2026-10.md`. `C_Murata_GA3_5.7x2.8`,
       `Eaton_KW_*`, `Coilcraft_FA2672` kept their names.
 - [x] **F4.9** Pin-1 marks on F.Fab replaced by KLC body chamfers at the
       pad-1 corner (min(1 mm, 25 % of the short side), capped where an edge
-      is short): `DLW5B_5050` (`eae9348`), `QFN-20_5x5mm…` (`0764f90`),
-      `SAMTEC_FTSH…` (`06f26bd`, 0.66 mm, outer corner, not the notch at
-      the side ear), `SOIC254P680X230-4N` (`e638ac4`), `Texas_YJE`
-      (`ecf4189`, also centred its fab reference, which sat outside the
-      body), `Vishay_SOIC254P1016X440-4N` (`6387ded`); `NX3215SA`
-      (`8003f1e`) only loses its dot (2-pad crystal, not polarized). The
+      is short): `DLW5B_5050` (`67d2133`), `QFN-20_5x5mm…` (`f69360a`),
+      `SAMTEC_FTSH…` (`89245c3`, 0.66 mm, outer corner, not the notch at
+      the side ear), `SOIC254P680X230-4N` (`4d46c39`), `Texas_YJE`
+      (`875c9d1`, also centred its fab reference, which sat outside the
+      body), `Vishay_SOIC254P1016X440-4N` (`127b80a`); `NX3215SA`
+      (`806dc4f`) only loses its dot (2-pad crystal, not polarized). The
       Coilcraft FA2672/FA2925 vendor drawings keep their pin-1 circle on
       the body. DRC on these: 0 before, 0 after.
 - [x] **F4.10** (from the F4.2 DRC run) 0.5 mm silk references on
       `Wurth_7499210123` and `Coilcraft_POE60F` → 1.0 mm, moved off the
       body to just above it; `Wurth_7499210123` silk re-cut 0.2 mm clear of
-      every pad (`51d8d36`, `619530e`). DRC on the two: 4 before, 0 after.
+      every pad (`aeae5cd`, `1caac5e`). DRC on the two: 4 before, 0 after.
 - Note: `T_Wurth_WE-RJ45LAN_7498210003` has a rounded `Edge.Cuts` cutout —
   looks intentional (sink-mount), but it does cut the board.
 - Note: 15 footprints (`C_Murata_GA3`, 14× ECHU) are still KiCad 7 format —
@@ -505,25 +505,25 @@ footprints only have the cosmetic issues below.
       `USB_Micro-B_Wuerth_614105150721_Vertical` references a model that is
       not shipped by KiCad at all (see F5.4), which is probably why it was
       downloaded. — Not an orphan: poetato's board references it on that
-      stock footprint. Committed as is, `c7f801e`; clean name in the
+      stock footprint. Committed as is, `7b84a88`; clean name in the
       rename batch.
 - [x] **F5.2** Missing / dead: `T_Wurth_WE-RJ45LAN_7499210001A.step`
       (`${WE_3DMODEL_DIR}` isn't defined); ~~`T_Wurth_WE-RJ45LAN_7499511440`
       has a second, dead `${WE_3DMODEL_DIR}` model entry next to the good one~~
-      (removed, `b04fc79`; render confirms the remaining model loads).
-      The 7499210001A footprint itself was deleted (`aafe5a6`).
+      (removed, `b6601ee`; render confirms the remaining model loads).
+      The 7499210001A footprint itself was deleted (`3d0fb8b`).
 - [x] **F5.3** Model names don't follow their footprint (`FA2925-AL.STEP`,
       `Coilcraft_POE60F-XXL.STEP`, `KW-5R5C*.STEP`, `AQY212GS.step`,
       `VO618A-3X017T.step`, `0ZCJ0005FF2E.step`, …) and extensions mix
       `.STEP`/`.step`/`.stp`. Proposal: `<footprint>.step`, shared only where
       the body really is identical (`IHLP1212.step` for the three 1212s).
       Progress 2026-10-19: `Coilcraft_FA2925-AL`, `Coilcraft_POE60F`,
-      `Eaton_KW_21.5x9.5mm`, `Wurth_7499210123` renamed (`27b16c4`). The
+      `Eaton_KW_21.5x9.5mm`, `Wurth_7499210123` renamed (`640b6d8`). The
       six models poetato's board uses (0ZCJ0005FF2E, AQY212GS,
       Coilcraft_FA2672-AL, FTSH-105-01-L-DV-007-K-TR,
       KW-5R5C104_224_334-R, VO618A-3X017T) wait for the rename batch
       (cleanup A5.4), together with F4.8 for the IPC-named footprints.
-      Rest done in `47f4464`: every model in `Jonas.3dshapes` now carries its
+      Rest done in `3350358`: every model in `Jonas.3dshapes` now carries its
       footprint's name (30 renames, incl. the per-board USB model).
 - [x] **F5.4** ~~KiCad install is only half populated~~. **Corrected
       2026-10-13:** the install is complete (re-run of the installer
@@ -558,7 +558,7 @@ footprints only have the cosmetic issues below.
       — Done during F7.4 (models listed per footprint in F8).
 - [x] **F5.6** After F4/F5: render every `Jonas.pretty` footprint once and
       look at the contact sheet — none of the custom models has ever been
-      checked visually. — `scripting/render_footprints.py` (`97333c5`):
+      checked visually. — `scripting/render_footprints.py` (`e280cc3`):
       all 85 render with a body (top + iso views, HTML contact sheet).
       Pin-1 and pad alignment are for Jonas's F8 pass; the sheet is the
       quickest way through it.
@@ -598,7 +598,7 @@ Config and docs:
   written with the skill update.
 - `CLAUDE.md` says no CAD viewer is available in-session — true for the
   Cowork sandbox, but a local Claude Code session on archimedes has KiCad
-  10 and can render. Worth stating both. **Fixed in A5.3 (`2c7a92d`).**
+  10 and can render. Worth stating both. **Fixed in A5.3 (`4b1d1a2`).**
 - `scripting/step_brep_box.py`'s header still refers to
   `footprints/Murata_GA3.3dshapes/` (pre-`Jonas.3dshapes` layout).
   **Fixed 2026-10-19.**
@@ -609,25 +609,25 @@ Config and docs:
 ## F7. Proposed order
 
 - [x] **F7.1** F1 bug fixes (symbols only, plus the FIX remaps). Batch 1
-      done 2026-10-13 (`4912daf`..`248baee`): F1.1–F1.5, F1.8–F1.11 and
+      done 2026-10-13 (`0de354b`..`837a51e`): F1.1–F1.5, F1.8–F1.11 and
       the two J link fixes; broken footprint links 113 → 104. F1.16 and
-      F1.6 followed (`8cb4f26`, `94fe08f`). Left: F1.7 (new footprint),
+      F1.6 followed (`8cc6a31`, `b57bdcd`). Left: F1.7 (new footprint),
       F1.12–F1.15 (during migration), F1.17. All done by 2026-10-19
-      (F1.7 `e941797`, F1.12 `8b59022`, F1.13 `d0e1644`, F1.14 `45962e0`,
-      F1.15 `a456c2c`, F1.17 `e7cc7cb`); new F1.18/F1.19 are open.
+      (F1.7 `f83594f`, F1.12 `0e822ca`, F1.13 `a0890fa`, F1.14 `f946027`,
+      F1.15 `f3da014`, F1.17 `49e062f`); new F1.18/F1.19 are open.
 - [x] **F7.2** Stock remaps: S, then S+sym, then S\* (datasheet check per
       row) — one commit per symbol library.
-  - [x] S (29 symbols), 2026-10-13: `610e64f` LEDs, `a01f7bb` adcdac,
-    `9f9fd69` comm, `ecfa484` connectors, `71f40a7` cpu, `f0b4b4b` dcdc,
-    `8c76f07` diode_misc, `c29f513` memory, `1e05f0f` misc_inductors,
-    `cd1c28f` power. Re-verified before applying: pads within 0.1 mm of
+  - [x] S (29 symbols), 2026-10-13: `66f18fb` LEDs, `7c75790` adcdac,
+    `0be6499` comm, `c56d3d9` connectors, `f9da085` cpu, `aa1d843` dcdc,
+    `ddd5893` diode_misc, `3e2ce02` memory, `a413b13` misc_inductors,
+    `ce12499` power. Re-verified before applying: pads within 0.1 mm of
     the old footprint and no symbol pin without a pad. Three needed a
     closer look: LTC3528 is a twin once the EP is compared as one pad,
     but loses the old footprint's two thermal vias; 78171-0003's tabs are
     `MP` instead of `0` (no pin uses them); LTC4267's DHC16 was compared
     from history. Broken links 104 → 73.
-  - [x] S+sym (4), 2026-10-13 (Jonas OK'd question 6): `f51827a` 43045-0818,
-    `9a63bf3` 105133, `e3507a6` BatClip_54, `64e2808` RJHSE. One pin per
+  - [x] S+sym (4), 2026-10-13 (Jonas OK'd question 6): `0fb4ddf` 43045-0818,
+    `20fc70e` 105133, `6c36e63` BatClip_54, `dd2c2b9` RJHSE. One pin per
     pad number: the first mounting/shield pin is renumbered `MP`/`SH`
     (RJHSE's is also renamed `SH`) and its duplicates are deleted, since
     duplicate pin numbers can leave a pad netless if one copy is unwired.
@@ -636,10 +636,10 @@ Config and docs:
     SD-105133-001 rev E specifies 0.50 mm slots, as stock has.
     BatClip_54: stock numbers all three legs `1` (one metal clip), so the
     symbol keeps pin 1 only.
-  - [x] S\* (29 of 31), 2026-10-13: `ce31f3b` LEDs, `8e5b088` comm,
-    `d5875ae` connectors, `641b48b` cpu, `5fb1db0` dcdc, `9006199`
-    diode_misc, `4bb1083` interface, `0e1d564` logic, `faffbb0` memory,
-    `654efdc` misc_inductors. Each commit message lists the evidence per
+  - [x] S\* (29 of 31), 2026-10-13: `5d54072` LEDs, `526e798` comm,
+    `e33d361` connectors, `d0afd93` cpu, `db1d81c` dcdc, `9457066`
+    diode_misc, `c1ddbb3` interface, `0727939` logic, `0c67b3a` memory,
+    `492b1cf` misc_inductors. Each commit message lists the evidence per
     row. Pin numbering was checked against the datasheet's column for the
     ordered package, or against KiCad's stock symbol of the same part
     (STM32F302K8, STM32L486ZG, SAMD21E15B, LAN8710, TCA9535, 1T45), or
@@ -734,7 +734,7 @@ Config and docs:
   copy is pad-for-pad identical to `modules/` except `USB_Micro-B`
   (JAE DX4R005, Gateway and LED Device), which numbers all four shield
   pads 6 where `modules/` and the symbol have 6/7. The migration keeps
-  6/7 (`24a6d48`). LARA-R2 moves from N to M: `modules/LARA_R2_LGA` exists (the
+  6/7 (`e556c68`). LARA-R2 moves from N to M: `modules/LARA_R2_LGA` exists (the
   symbol linked a wrong name) and is on the Sting2 board.
   Stock candidates from the 2026-10-13 recheck (LMZ10501 → TI SIL0008D,
   MIC23254 → DFN-10 2x2 P0.4, MIC28511 → QFN-24 3x4 P0.4, USB-A → TE
@@ -742,30 +742,30 @@ Config and docs:
   UQFN-12, TORX/TOTX → Toshiba 170 series): where the old footprint is
   on a built board it is the proven land and is migrated instead; the
   rest get a data sheet check first.
-  - [x] dcdc (7 symbols, 6 footprints): `ae9638e`..`4dfdfcd`. Pads verified identical to `modules/`; KiCad DRC shows only the original copper findings (EP via annular/drill, WLCSP pitch), silk findings went 68 -> 0.
-  - [x] cpu (4 symbols, 3 footprints): `55ac534`..`8574f99`. Pads identical to `modules/`; DRC 0.
-  - [x] Audio Amp + power (TAS2770, bq27742-G1): `02b16d4`..`d449ba1`. Pads identical to `modules/`.
-  - [x] interface (4 symbols, 2 footprints): `99f417b`, `32ef941`. Vendor models from modules/packages3d. Pads identical to `modules/`; DRC 0.
-  - [x] comm (10 symbols, 10 footprints): `130c9c1`..`a15f9e3`. Pads identical to `modules/`; per-footprint DRC 0 (old versions had 19 silk-over-pad hits).
-  - [x] connectors (12 symbols, 9 footprints): `1bc0fa2`..`8b59022`. Vendor models (modules/packages3d, Snigel2 WRL). Pads identical to `modules/` except two fixes to match the symbols (DX4R005 shield 6/7, TFM-110 holes 21/22); per-footprint DRC 0 (old versions had 14 silk hits). MX34R36HF4T still linked 34826-8200 and stays in F7.5.
+  - [x] dcdc (7 symbols, 6 footprints): `468744d`..`94c8c5f`. Pads verified identical to `modules/`; KiCad DRC shows only the original copper findings (EP via annular/drill, WLCSP pitch), silk findings went 68 -> 0.
+  - [x] cpu (4 symbols, 3 footprints): `173536f`..`da5fc12`. Pads identical to `modules/`; DRC 0.
+  - [x] Audio Amp + power (TAS2770, bq27742-G1): `64ff5f4`..`fb373d0`. Pads identical to `modules/`.
+  - [x] interface (4 symbols, 2 footprints): `f5aefe3`, `9c0b4f9`. Vendor models from modules/packages3d. Pads identical to `modules/`; DRC 0.
+  - [x] comm (10 symbols, 10 footprints): `141380a`..`7b69f4c`. Pads identical to `modules/`; per-footprint DRC 0 (old versions had 19 silk-over-pad hits).
+  - [x] connectors (12 symbols, 9 footprints): `5305745`..`0e822ca`. Vendor models (modules/packages3d, Snigel2 WRL). Pads identical to `modules/` except two fixes to match the symbols (DX4R005 shield 6/7, TFM-110 holes 21/22); per-footprint DRC 0 (old versions had 14 silk hits). MX34R36HF4T still linked 34826-8200 and stays in F7.5.
 - [x] **F7.5** New footprints (N), one at a time from datasheets.
-  - [x] 1575AT43A0040: `8b81c83` (data sheet land, generated body)
-  - [x] NLSV4T3144-D: `142a965` (data sheet land, generated body)
-  - [x] PT65503: `d0e1644` (catalog land, generated body; also fixes F1.13)
-  - [x] MX34R36HF4T: `e941797` (data sheet land, generated envelope; also fixes F1.7)
-  - [x] LT8640: `a8cc26a` (data sheet rev G from Jonas, UDC20(18) land,
+  - [x] 1575AT43A0040: `cd2ee16` (data sheet land, generated body)
+  - [x] NLSV4T3144-D: `ab3c2bb` (data sheet land, generated body)
+  - [x] PT65503: `a0890fa` (catalog land, generated body; also fixes F1.13)
+  - [x] MX34R36HF4T: `f83594f` (data sheet land, generated envelope; also fixes F1.7)
+  - [x] LT8640: `64f0a5f` (data sheet rev G from Jonas, UDC20(18) land,
     generated body). New footprint `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm`.
   - [x] DuraClick_560020, SF7W008S1AE900, WYSBCVGXA: symbols removed
-    instead (Jonas, 2026-10-20) - `4fa40bb`. Not used by poetato.
+    instead (Jonas, 2026-10-20) - `b649200`. Not used by poetato.
 - [x] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
       `git rm -r modules/` (A2.6) and optionally A6. (`Jonas.pretty/tmp/`
       is already gone, A1.2.) — audit committed as
-      `scripting/audit_refs.py` (`7b0faf2`); it reports only the F7.5
+      `scripting/audit_refs.py` (`6634631`); it reports only the F7.5
       parts and F1.19. Nothing depends on `modules/`, so it was removed
-      (`d8fba33`) ahead of F7.5, which needs nothing from it. A6 not done.
+      (`23f5de7`) ahead of F7.5, which needs nothing from it. A6 not done.
 - [ ] **F7.7** (optional) F6 field hygiene and F4.8 renames. F4.8 done
-      (`47f4464`); F6 field hygiene remains optional.
+      (`3350358`); F6 field hygiene remains optional.
 
 ## F8. Manual review: everything Claude generated (Jonas)
 
@@ -778,122 +778,122 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 
 ### Footprints
 
-- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm` (FAN48623) - migrated, pads unchanged; outline/courtyard/fab rebuilt, body 1.6x1.6 from old silk - `75b538c`
-- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm` (LM536355) - migrated, pads unchanged; body per TI 4226904/A - `ba1b30b`
-- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm` (LMZ10501) - migrated, pads unchanged; body per data sheet - `d5f014d`
-- [ ] `Microchip_MLF-10_2x2mm_P0.4mm` (MIC23254) - migrated, pads unchanged; body per data sheet - `cd2634e`
-- [ ] `Microchip_FTQFN-24_3x4mm` (MIC28511) - migrated, pads unchanged; body 4x3 from old silk - `438756d`
-- [ ] `Torex_XCL226` (XCL226A0K1H2) - migrated, pads unchanged; body from old silk (XCL226 may really be 2.5x2.0, check) - `4dfdfcd`
-- [ ] `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm` (ADAU1467) - migrated, pads unchanged; body 12x12; vendor model re-rotated (-90,0,90) so the dimple is at pad 1 - `ed0d092`
-- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm` (AT91SAM9G25) - migrated, pads unchanged - `9778593`
-- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm` (i.MX 8M Mini/Nano) - migrated, pads unchanged; phantom pad E23 later removed per the NXP ball map (F1.14) - `8574f99`, `45962e0`
-- [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm` (TAS2770) - migrated, pads unchanged; body per TI 4223791/C. Note: original pads 2 and 26 are 0.19 mm apart (KiCad default clearance 0.2) - compare with TI's land pattern - `d1afb13`
-- [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm` (bq27742-G1) - migrated, pads unchanged; body per TI 4219381/A - `d449ba1`
-- [ ] `Everlight_PLR135_PLT133` (PLR135_T10, PLT133_T10W) - migrated, pads unchanged (the two old footprints were identical); body from old silk; vendor model with the old transform, eyeballed top/side - `99f417b`
-- [ ] `Toshiba_TORX1355_TOTX1350` (TORX1355, TOTX1350) - migrated, pads unchanged; body from old silk; vendor model (toslink.step) with the old transform, eyeballed top/side - `32ef941`
-- [ ] `Molex_146200` - migrated, pads unchanged; body from old silk; WRL model, old transform - `1cb696c`
-- [ ] `Johanson_2450AT18B100` - migrated, pads unchanged (= Johanson B100 land); body 3.2x1.6 - `462565d`
-- [ ] `Avago_ALM-GA001` - migrated from uDFN6_EP, pads unchanged; body from old silk - `375d3e6`
-- [ ] `TDK_ANT016008LCD1575MA1` - migrated, pads unchanged; body 1.6x0.8 - `b61a185`
-- [ ] `TDK_DPX162500DT` - migrated from DPX1625, pads unchanged; body 1.6x0.8 - `9e462f4`
-- [ ] `TDK_HHM22106C1` - migrated, pads unchanged; body 2.2x2.0 from old silk (may be larger than the real part, check) - `c0611a7`
-- [ ] `Skyworks_SKY13587-378LF` - migrated from MLPD6, pads unchanged; body from old silk - `40804f5`
-- [ ] `Taoglas_WLA.01` - migrated, pads unchanged (= Gateway/LED Device boards); WRL model, old transform - `9f56273`
-- [ ] `JAE_MM60-52B1_Mini-PCIe` (mPCIe_modem) - migrated, pads unchanged; three WRL models (socket, holder, card), old transforms - `eb7f7ed`
-- [ ] `ublox_LARA-R2` - migrated from LARA_R2_LGA (symbol linked a non-existent name), pads unchanged; WRL model, old transform - `a15f9e3`
-- [ ] `Molex_78171-5006` - migrated, pads unchanged; vendor STEP, old transform, eyeballed - `1bc0fa2`
-- [ ] `Molex_34826-8200` - migrated, pads unchanged (= Molex SD-34826-001 PCB layout); body outline redrawn from that drawing (F9.4) - `07702d5`, `bb97505`
-- [ ] `TE_5-104074-8` - migrated, pads unchanged; body outline redrawn from TE catalog 1307819 p.27, ears in the courtyard (F9.5) - `bb03aa6`, `1be9727`
-- [ ] `JAE_DX4R005JJ2R1800` - migrated from USB_Micro-B, shield pads 6/7 as modules/ (boards had all 6); vendor STEP - `0321d55`, `24a6d48`
-- [ ] `Amphenol_RJE72-188-1401` - migrated, pads unchanged; PCB notch added on Dwgs.User per Amphenol P-RJE72-188-1X0X (F9.8); note -1X01 is specified for a 2.36 mm PCB (Gateway is 1.6) - `4584b70`, `1018250`
-- [ ] `Samtec_TFM-105-02-S-D-WT` - migrated, pads unchanged; vendor STEP - `2f8629d`
-- [ ] `Samtec_TFM-110-02-S-D-WT` - migrated; plated holes renumbered 0 -> 21/22 to match the symbol; vendor STEP - `b31d1fc`, `8b59022`
-- [ ] `TE_292303-1` - migrated from USB_A_TH, pads unchanged; vendor STEP - `2cf4d80`
-- [ ] `Molex_FAKRA_73403-51xx` - migrated from fakra_th, pads unchanged; one footprint for 4 codings, green vendor STEP - `6769a2a`
-- [ ] `Johanson_1575AT43A0040` - **new from data sheet** (1575AT43A0040001E rev 4.0, mounting config 1 land 1.0x1.8 @ +-3.5) - `8b81c83`
-- [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm` (NLSV4T3144-D) - **new from data sheet** (case 523AE mounting footprint); pad 1 to pad 2 gap only 0.13 mm (vendor land, check vs your fab) - `142a965`
-- [ ] `APEM_PT65503` - **new from data sheet** (APEM PT65 catalog G17-G20, straight terminals; two pads numbered C) - `d0e1644`
-- [ ] `JAE_MX34R36HF4T` - **new from data sheet** (JAE MB-0240-1 / SJ110669 PCB layout); CHECK pin numbering (derived from the front-view terminal numbers, assumed to be the mating face) and the hold-down land (2.0x7.0 SMD oval + 3 plated 1.2 holes) - `e941797`
-- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm` (LT8640) - **new from data sheet** (LT8640 rev G p.27 recommended land); CHECK the two SW pad positions (22 at y +0.305, 21 at y +1.075, read from the 2.127/0.356/0.770 and 0.055 BSC dimensions) - `a8cc26a`
-- [ ] `Sullins_GBC08SGSN-M89` - **new from catalog** (Sullins pp.112-113, -M89 lying flat); CHECK the pads: Sullins gives no PCB layout and does not dimension the foot, so the foot (1.74 long, 2.83..4.57 from the insulator) is estimated from the drawing - `d6ae08f`
-- [ ] `Coilcraft_POE60F` - body outline redrawn from Coilcraft 381-1 (17.60x17.20, was 25x15); pads unchanged (= recommended land) - `4856e58`
-- [ ] `Wurth_WE-RJ45LAN_7499511440` - courtyard widened over the panel-ground springs - `76a78d7`
+- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm` (FAN48623) - migrated, pads unchanged; outline/courtyard/fab rebuilt, body 1.6x1.6 from old silk - `7ea0689`
+- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm` (LM536355) - migrated, pads unchanged; body per TI 4226904/A - `4685f65`
+- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm` (LMZ10501) - migrated, pads unchanged; body per data sheet - `d3745bf`
+- [ ] `Microchip_MLF-10_2x2mm_P0.4mm` (MIC23254) - migrated, pads unchanged; body per data sheet - `249493b`
+- [ ] `Microchip_FTQFN-24_3x4mm` (MIC28511) - migrated, pads unchanged; body 4x3 from old silk - `854fbbb`
+- [ ] `Torex_XCL226` (XCL226A0K1H2) - migrated, pads unchanged; body from old silk (XCL226 may really be 2.5x2.0, check) - `94c8c5f`
+- [ ] `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm` (ADAU1467) - migrated, pads unchanged; body 12x12; vendor model re-rotated (-90,0,90) so the dimple is at pad 1 - `44f4f51`
+- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm` (AT91SAM9G25) - migrated, pads unchanged - `dda7330`
+- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm` (i.MX 8M Mini/Nano) - migrated, pads unchanged; phantom pad E23 later removed per the NXP ball map (F1.14) - `da5fc12`, `f946027`
+- [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm` (TAS2770) - migrated, pads unchanged; body per TI 4223791/C. Note: original pads 2 and 26 are 0.19 mm apart (KiCad default clearance 0.2) - compare with TI's land pattern - `2c45248`
+- [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm` (bq27742-G1) - migrated, pads unchanged; body per TI 4219381/A - `fb373d0`
+- [ ] `Everlight_PLR135_PLT133` (PLR135_T10, PLT133_T10W) - migrated, pads unchanged (the two old footprints were identical); body from old silk; vendor model with the old transform, eyeballed top/side - `f5aefe3`
+- [ ] `Toshiba_TORX1355_TOTX1350` (TORX1355, TOTX1350) - migrated, pads unchanged; body from old silk; vendor model (toslink.step) with the old transform, eyeballed top/side - `9c0b4f9`
+- [ ] `Molex_146200` - migrated, pads unchanged; body from old silk; WRL model, old transform - `abf903c`
+- [ ] `Johanson_2450AT18B100` - migrated, pads unchanged (= Johanson B100 land); body 3.2x1.6 - `82ae7d9`
+- [ ] `Avago_ALM-GA001` - migrated from uDFN6_EP, pads unchanged; body from old silk - `c06ce55`
+- [ ] `TDK_ANT016008LCD1575MA1` - migrated, pads unchanged; body 1.6x0.8 - `4ba3dc6`
+- [ ] `TDK_DPX162500DT` - migrated from DPX1625, pads unchanged; body 1.6x0.8 - `66cdf72`
+- [ ] `TDK_HHM22106C1` - migrated, pads unchanged; body 2.2x2.0 from old silk (may be larger than the real part, check) - `9a7a98c`
+- [ ] `Skyworks_SKY13587-378LF` - migrated from MLPD6, pads unchanged; body from old silk - `c243bdc`
+- [ ] `Taoglas_WLA.01` - migrated, pads unchanged (= Gateway/LED Device boards); WRL model, old transform - `521c565`
+- [ ] `JAE_MM60-52B1_Mini-PCIe` (mPCIe_modem) - migrated, pads unchanged; three WRL models (socket, holder, card), old transforms - `c0c6a07`
+- [ ] `ublox_LARA-R2` - migrated from LARA_R2_LGA (symbol linked a non-existent name), pads unchanged; WRL model, old transform - `7b69f4c`
+- [ ] `Molex_78171-5006` - migrated, pads unchanged; vendor STEP, old transform, eyeballed - `5305745`
+- [ ] `Molex_34826-8200` - migrated, pads unchanged (= Molex SD-34826-001 PCB layout); body outline redrawn from that drawing (F9.4) - `9ad5cd7`, `10cdc26`
+- [ ] `TE_5-104074-8` - migrated, pads unchanged; body outline redrawn from TE catalog 1307819 p.27, ears in the courtyard (F9.5) - `db9971d`, `9a0ce89`
+- [ ] `JAE_DX4R005JJ2R1800` - migrated from USB_Micro-B, shield pads 6/7 as modules/ (boards had all 6); vendor STEP - `8a60f1c`, `e556c68`
+- [ ] `Amphenol_RJE72-188-1401` - migrated, pads unchanged; PCB notch added on Dwgs.User per Amphenol P-RJE72-188-1X0X (F9.8); note -1X01 is specified for a 2.36 mm PCB (Gateway is 1.6) - `47d4a05`, `ba79d88`
+- [ ] `Samtec_TFM-105-02-S-D-WT` - migrated, pads unchanged; vendor STEP - `4084ced`
+- [ ] `Samtec_TFM-110-02-S-D-WT` - migrated; plated holes renumbered 0 -> 21/22 to match the symbol; vendor STEP - `3e161e3`, `0e822ca`
+- [ ] `TE_292303-1` - migrated from USB_A_TH, pads unchanged; vendor STEP - `38bdb2d`
+- [ ] `Molex_FAKRA_73403-51xx` - migrated from fakra_th, pads unchanged; one footprint for 4 codings, green vendor STEP - `ad3577f`
+- [ ] `Johanson_1575AT43A0040` - **new from data sheet** (1575AT43A0040001E rev 4.0, mounting config 1 land 1.0x1.8 @ +-3.5) - `cd2ee16`
+- [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm` (NLSV4T3144-D) - **new from data sheet** (case 523AE mounting footprint); pad 1 to pad 2 gap only 0.13 mm (vendor land, check vs your fab) - `ab3c2bb`
+- [ ] `APEM_PT65503` - **new from data sheet** (APEM PT65 catalog G17-G20, straight terminals; two pads numbered C) - `a0890fa`
+- [ ] `JAE_MX34R36HF4T` - **new from data sheet** (JAE MB-0240-1 / SJ110669 PCB layout); CHECK pin numbering (derived from the front-view terminal numbers, assumed to be the mating face) and the hold-down land (2.0x7.0 SMD oval + 3 plated 1.2 holes) - `f83594f`
+- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm` (LT8640) - **new from data sheet** (LT8640 rev G p.27 recommended land); CHECK the two SW pad positions (22 at y +0.305, 21 at y +1.075, read from the 2.127/0.356/0.770 and 0.055 BSC dimensions) - `64f0a5f`
+- [ ] `Sullins_GBC08SGSN-M89` - **new from catalog** (Sullins pp.112-113, -M89 lying flat); CHECK the pads: Sullins gives no PCB layout and does not dimension the foot, so the foot (1.74 long, 2.83..4.57 from the insulator) is estimated from the drawing - `307061c`
+- [ ] `Coilcraft_POE60F` - body outline redrawn from Coilcraft 381-1 (17.60x17.20, was 25x15); pads unchanged (= recommended land) - `a9f0527`
+- [ ] `Wurth_WE-RJ45LAN_7499511440` - courtyard widened over the panel-ground springs - `d30d2ea`
 
 ### 3D models
 
 - [ ] `Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm.step` (Si3402, poetato U4) -
-      `scripting/gen_package_models.py`, `1acc16e`
-- [ ] `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm.step` - `scripting/gen_package_models.py`, `1acc16e`
+      `scripting/gen_package_models.py`, `5b420ae`
+- [ ] `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm.step` - `scripting/gen_package_models.py`, `5b420ae`
 - [ ] `Texas_YJE0006A_PicoStar-6_1.15x2.2mm.step` (CSD83325L) - `scripting/gen_package_models.py`,
-      `1acc16e`
-- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step` - plain body, height 0.6 ASSUMED - `ae9638e`
-- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm.step` - plain body, 0.9 per TI drawing - `ae9638e`
-- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm.step` - plain body, height 1.0 ASSUMED - `ae9638e`
-- [ ] `Microchip_MLF-10_2x2mm_P0.4mm.step` - plain body, 0.55 per data sheet - `ae9638e`
-- [ ] `Microchip_FTQFN-24_3x4mm.step` - plain body, height 0.75 ASSUMED - `ae9638e`
-- [ ] `Torex_XCL226.step` - plain body, height 1.0 ASSUMED - `ae9638e`
-- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm.step` - plain body, height 1.4 ASSUMED - `55ac534`
-- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm.step` - plain body, height 1.2 ASSUMED - `55ac534`
-- [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm.step` - plain body, 1.0 per TI drawing - `02b16d4`
-- [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm.step` - plain body, 0.625 per TI drawing - `02b16d4`
-- [ ] `Johanson_2450AT18B100.step` - plain body, 1.3 per Johanson spec - `130c9c1`
-- [ ] `Avago_ALM-GA001.step` - plain body, height 0.75 ASSUMED - `130c9c1`
-- [ ] `TDK_ANT016008LCD1575MA1.step` - plain body, height 0.5 ASSUMED - `130c9c1`
-- [ ] `TDK_DPX162500DT.step` - plain body, height 0.6 ASSUMED - `130c9c1`
-- [ ] `TDK_HHM22106C1.step` - plain body, height 0.6 ASSUMED - `130c9c1`
-- [ ] `Skyworks_SKY13587-378LF.step` - plain body, height 0.45 ASSUMED - `130c9c1`
-- [ ] `Johanson_1575AT43A0040.step` - plain body 7.0x2.0x0.8 per data sheet; no vendor STEP (Johanson: on request) - `8b81c83`
-- [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` - plain body 1.7x2.0x0.55 per data sheet; no vendor STEP (onsemi blocked) - `142a965`
-- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` - body 3.0x4.0x0.75, terminals and SW pads per data sheet; no vendor STEP (analog.com blocked) - `a8cc26a`
-- [ ] `Sullins_GBC08SGSN-M89.step` - generated envelope (insulator 20.32x2.54x3.56, posts, jog and foot boxes; foot estimated) - `d6ae08f`
-- [ ] `APEM_PT65503.step` - generated: body 10x10x6.5 per catalog, segment wheel box 2.8x9.5x4.4 with ASSUMED orientation; no vendor STEP - `d0e1644`
-- [x] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `e941797`. Replaced 2026-10-20 by JAE's own STEP (SJ110669_MX34R36HF4T_V1, supplied by Jonas); generator removed - `827eeac`.
+      `5b420ae`
+- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step` - plain body, height 0.6 ASSUMED - `468744d`
+- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm.step` - plain body, 0.9 per TI drawing - `468744d`
+- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm.step` - plain body, height 1.0 ASSUMED - `468744d`
+- [ ] `Microchip_MLF-10_2x2mm_P0.4mm.step` - plain body, 0.55 per data sheet - `468744d`
+- [ ] `Microchip_FTQFN-24_3x4mm.step` - plain body, height 0.75 ASSUMED - `468744d`
+- [ ] `Torex_XCL226.step` - plain body, height 1.0 ASSUMED - `468744d`
+- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm.step` - plain body, height 1.4 ASSUMED - `173536f`
+- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm.step` - plain body, height 1.2 ASSUMED - `173536f`
+- [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm.step` - plain body, 1.0 per TI drawing - `64ff5f4`
+- [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm.step` - plain body, 0.625 per TI drawing - `64ff5f4`
+- [ ] `Johanson_2450AT18B100.step` - plain body, 1.3 per Johanson spec - `141380a`
+- [ ] `Avago_ALM-GA001.step` - plain body, height 0.75 ASSUMED - `141380a`
+- [ ] `TDK_ANT016008LCD1575MA1.step` - plain body, height 0.5 ASSUMED - `141380a`
+- [ ] `TDK_DPX162500DT.step` - plain body, height 0.6 ASSUMED - `141380a`
+- [ ] `TDK_HHM22106C1.step` - plain body, height 0.6 ASSUMED - `141380a`
+- [ ] `Skyworks_SKY13587-378LF.step` - plain body, height 0.45 ASSUMED - `141380a`
+- [ ] `Johanson_1575AT43A0040.step` - plain body 7.0x2.0x0.8 per data sheet; no vendor STEP (Johanson: on request) - `cd2ee16`
+- [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` - plain body 1.7x2.0x0.55 per data sheet; no vendor STEP (onsemi blocked) - `ab3c2bb`
+- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` - body 3.0x4.0x0.75, terminals and SW pads per data sheet; no vendor STEP (analog.com blocked) - `64f0a5f`
+- [ ] `Sullins_GBC08SGSN-M89.step` - generated envelope (insulator 20.32x2.54x3.56, posts, jog and foot boxes; foot estimated) - `307061c`
+- [ ] `APEM_PT65503.step` - generated: body 10x10x6.5 per catalog, segment wheel box 2.8x9.5x4.4 with ASSUMED orientation; no vendor STEP - `a0890fa`
+- [x] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `f83594f`. Replaced 2026-10-20 by JAE's own STEP (SJ110669_MX34R36HF4T_V1, supplied by Jonas); generator removed - `bb4be60`.
 
 ### 3D model placements
 
 Every footprint where Claude placed or adjusted a 3D model (model file, offset, rotation, scale), including models copied with their old transform. Check in the KiCad 3D viewer that the body sits on the board, pin 1 and the pins line up with the pads, and connector openings face the right way.
-- [ ] `Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm`: `Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
-- [ ] `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm`: `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
-- [ ] `Texas_YJE0006A_PicoStar-6_1.15x2.2mm`: `Texas_YJE0006A_PicoStar-6_1.15x2.2mm.step` identity transform (generated, built in footprint coordinates) - `1acc16e`
-- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm`: `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `75b538c`
-- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm`: `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `ba1b30b`
-- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm`: `Texas_SIL0008G_MicroSiP-8_3x2.6mm.step` identity transform (generated, built in footprint coordinates) - `d5f014d`
-- [ ] `Microchip_MLF-10_2x2mm_P0.4mm`: `Microchip_MLF-10_2x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `cd2634e`
-- [ ] `Microchip_FTQFN-24_3x4mm`: `Microchip_FTQFN-24_3x4mm.step` identity transform (generated, built in footprint coordinates) - `438756d`
-- [ ] `Torex_XCL226`: `Torex_XCL226.step` identity transform (generated, built in footprint coordinates) - `4dfdfcd`
-- [ ] `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm`: `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm.step` rotate (-90, 0, 90) (vendor STEP from modules/packages3d; rotation worked out by Claude, the old transform was wrong) - `ed0d092`
-- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm`: `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm.step` identity transform (generated, built in footprint coordinates) - `9778593`
-- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm`: `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `8574f99`
-- [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm`: `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm.step` identity transform (generated, built in footprint coordinates) - `d1afb13`
-- [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm`: `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `d449ba1`
-- [ ] `Everlight_PLR135_PLT133`: `Everlight_PLR135_PLT133.step` offset (0, -4.4, 0), rotate (-90, 0, -90) (vendor STEP, old transform) - `99f417b`
-- [ ] `Toshiba_TORX1355_TOTX1350`: `Toshiba_TORX1355_TOTX1350.step` identity transform (vendor STEP, old transform) - `32ef941`
-- [ ] `Molex_146200`: `Molex_146200.wrl` scale 0.3937 (WRL from git history, old transform) - `1cb696c`
-- [ ] `Johanson_2450AT18B100`: `Johanson_2450AT18B100.step` identity transform (generated, built in footprint coordinates) - `462565d`
-- [ ] `Avago_ALM-GA001`: `Avago_ALM-GA001.step` identity transform (generated, built in footprint coordinates) - `375d3e6`
-- [ ] `TDK_ANT016008LCD1575MA1`: `TDK_ANT016008LCD1575MA1.step` identity transform (generated, built in footprint coordinates) - `b61a185`
-- [ ] `TDK_DPX162500DT`: `TDK_DPX162500DT.step` identity transform (generated, built in footprint coordinates) - `9e462f4`
-- [ ] `TDK_HHM22106C1`: `TDK_HHM22106C1.step` identity transform (generated, built in footprint coordinates) - `c0611a7`
-- [ ] `Skyworks_SKY13587-378LF`: `Skyworks_SKY13587-378LF.step` identity transform (generated, built in footprint coordinates) - `40804f5`
-- [ ] `Taoglas_WLA.01`: `Taoglas_WLA.01.wrl` offset (-0.254, 0, 0), scale 0.3937 (WRL from git history, old transform) - `9f56273`
-- [ ] `JAE_MM60-52B1_Mini-PCIe`: `JAE_MM60-52B1_Mini-PCIe.wrl` offset (11.811, 0, 0), rotate (270, 0, 180), scale 0.3937; `JAE_MM60-52B1_Mini-PCIe_Holder.wrl` offset (11.811, 53.34, 0), scale 0.3937; `JAE_MM60-52B1_Mini-PCIe_Card.wrl` offset (11.811, 25.4, 1.27), rotate (90, 180, 180), scale 0.3937 (WRLs from git history, old transforms; three models: socket, holder, card) - `eb7f7ed`
-- [ ] `ublox_LARA-R2`: `ublox_LARA-R2.wrl` offset (0, 0, 1.651), rotate (180, 0, 0), scale 0.3937 (WRL from git history, old transform) - `a15f9e3`
-- [ ] `Molex_78171-5006`: `Molex_78171-5006.step` offset (0, -1.905, 1.45), rotate (-90, 0, 0) (vendor STEP, old transform; z 1.27 -> 1.45 so the tails sit on the pads, F9.2) - `1bc0fa2`, `db6f195`
-- [ ] `Molex_34826-8200`: `Molex_34826-8200.step` offset (17.076, -5.334, 7.366), rotate (90, 0, 0) (vendor STEP, old transform; x +0.058 to centre the pins in the holes, F9.4) - `07702d5`, `bb97505`
-- [ ] `TE_5-104074-8`: `TE_5-104074-8.wrl` offset (0, -10.541, 2.413), rotate (-90, 0, 0), scale 0.3937 (WRL from the Snigel2 project, old transform) - `bb03aa6`
-- [ ] `JAE_DX4R005JJ2R1800`: `JAE_DX4R005JJ2R1800.step` offset (0, 0.381, 1.27), rotate (-90, 0, 0) (vendor STEP, old transform) - `0321d55`
-- [ ] `Amphenol_RJE72-188-1401`: `Amphenol_RJE72-188-1401.step` offset (-3.175, 4.191, 2.286), rotate (0, 90, 180) (vendor STEP, old transform) - `4584b70`
-- [ ] `Samtec_TFM-105-02-S-D-WT`: `Samtec_TFM-105-02-S-D-WT.step` offset (0, 0, 0.15), rotate (-90, 0, 0) (vendor STEP, old transform; z +0.15, F9.1) - `2f8629d`, `db6f195`
-- [ ] `Samtec_TFM-110-02-S-D-WT`: `Samtec_TFM-110-02-S-D-WT.step` offset (0, 0, 0.15), rotate (-90, 0, 0) (vendor STEP; old transform was for a WRL; z +0.15, F9.1) - `b31d1fc`, `db6f195`
-- [ ] `TE_292303-1`: `TE_292303-1.step` offset (0, -13, 3.5), rotate (-90, 0, 0) (vendor STEP, old transform) - `2cf4d80`
-- [ ] `Molex_FAKRA_73403-51xx`: `Molex_FAKRA_73403-51xx.step` offset (0, -18.415, 3.81) (vendor STEP (green variant), old transform) - `6769a2a`
-- [ ] `Johanson_1575AT43A0040`: `Johanson_1575AT43A0040.step` identity transform (generated, built in footprint coordinates) - `8b81c83`
-- [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm`: `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `142a965`
-- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm`: `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `a8cc26a`
-- [ ] `Samtec_FTSH-105-01-L-DV-007-K`: `Samtec_FTSH-105-01-L-DV-007-K.step` offset (0, 0, 0.406), rotate (-90, 0, 0) (z 0.5 -> 0.406 so the terminals sit on the pads, F9.3) - `db6f195`
-- [ ] `Sullins_GBC08SGSN-M89`: `Sullins_GBC08SGSN-M89.step` identity transform (generated, built in footprint coordinates) - `d6ae08f`
-- [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `d0e1644`
-- [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` offset (0, -7.25, 6.3), rotate (-90, 0, 0) (JAE vendor STEP, SolidWorks Y-up; placed by the hold-down pegs on the three holes, pin-1 foot over pad 1, lead feet on the board; rendered top/bottom/side, pegs centred in the holes) - `827eeac`
+- [ ] `Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm`: `Skyworks_QFN-20-1EP_5x5mm_P0.8mm_EP2.7x2.7mm.step` identity transform (generated, built in footprint coordinates) - `5b420ae`
+- [ ] `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm`: `Crystal_SMD_NDK_NX1255GB-4Pin_12.5x5.5mm.step` identity transform (generated, built in footprint coordinates) - `5b420ae`
+- [ ] `Texas_YJE0006A_PicoStar-6_1.15x2.2mm`: `Texas_YJE0006A_PicoStar-6_1.15x2.2mm.step` identity transform (generated, built in footprint coordinates) - `5b420ae`
+- [ ] `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm`: `onsemi_WLCSP-16_1.6x1.6mm_Layout4x4_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `7ea0689`
+- [ ] `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm`: `Texas_RNL0022B_VQFN-HR-22_4x5mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `4685f65`
+- [ ] `Texas_SIL0008G_MicroSiP-8_3x2.6mm`: `Texas_SIL0008G_MicroSiP-8_3x2.6mm.step` identity transform (generated, built in footprint coordinates) - `d3745bf`
+- [ ] `Microchip_MLF-10_2x2mm_P0.4mm`: `Microchip_MLF-10_2x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `249493b`
+- [ ] `Microchip_FTQFN-24_3x4mm`: `Microchip_FTQFN-24_3x4mm.step` identity transform (generated, built in footprint coordinates) - `854fbbb`
+- [ ] `Torex_XCL226`: `Torex_XCL226.step` identity transform (generated, built in footprint coordinates) - `94c8c5f`
+- [ ] `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm`: `Analog_CP-88-10_LFCSP-88-1EP_12x12mm_P0.5mm.step` rotate (-90, 0, 90) (vendor STEP from modules/packages3d; rotation worked out by Claude, the old transform was wrong) - `44f4f51`
+- [ ] `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm`: `Microchip_LFBGA-217_15x15mm_Layout17x17_P0.8mm.step` identity transform (generated, built in footprint coordinates) - `dda7330`
+- [ ] `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm`: `NXP_FCBGA-486_14x14mm_Layout27x27_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `da5fc12`
+- [ ] `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm`: `Texas_RJQ0026A_VQFN-HR-26_4x3.5mm.step` identity transform (generated, built in footprint coordinates) - `2c45248`
+- [ ] `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm`: `Texas_YZF0015_DSBGA-15_1.96x2.78mm_Layout3x5_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `fb373d0`
+- [ ] `Everlight_PLR135_PLT133`: `Everlight_PLR135_PLT133.step` offset (0, -4.4, 0), rotate (-90, 0, -90) (vendor STEP, old transform) - `f5aefe3`
+- [ ] `Toshiba_TORX1355_TOTX1350`: `Toshiba_TORX1355_TOTX1350.step` identity transform (vendor STEP, old transform) - `9c0b4f9`
+- [ ] `Molex_146200`: `Molex_146200.wrl` scale 0.3937 (WRL from git history, old transform) - `abf903c`
+- [ ] `Johanson_2450AT18B100`: `Johanson_2450AT18B100.step` identity transform (generated, built in footprint coordinates) - `82ae7d9`
+- [ ] `Avago_ALM-GA001`: `Avago_ALM-GA001.step` identity transform (generated, built in footprint coordinates) - `c06ce55`
+- [ ] `TDK_ANT016008LCD1575MA1`: `TDK_ANT016008LCD1575MA1.step` identity transform (generated, built in footprint coordinates) - `4ba3dc6`
+- [ ] `TDK_DPX162500DT`: `TDK_DPX162500DT.step` identity transform (generated, built in footprint coordinates) - `66cdf72`
+- [ ] `TDK_HHM22106C1`: `TDK_HHM22106C1.step` identity transform (generated, built in footprint coordinates) - `9a7a98c`
+- [ ] `Skyworks_SKY13587-378LF`: `Skyworks_SKY13587-378LF.step` identity transform (generated, built in footprint coordinates) - `c243bdc`
+- [ ] `Taoglas_WLA.01`: `Taoglas_WLA.01.wrl` offset (-0.254, 0, 0), scale 0.3937 (WRL from git history, old transform) - `521c565`
+- [ ] `JAE_MM60-52B1_Mini-PCIe`: `JAE_MM60-52B1_Mini-PCIe.wrl` offset (11.811, 0, 0), rotate (270, 0, 180), scale 0.3937; `JAE_MM60-52B1_Mini-PCIe_Holder.wrl` offset (11.811, 53.34, 0), scale 0.3937; `JAE_MM60-52B1_Mini-PCIe_Card.wrl` offset (11.811, 25.4, 1.27), rotate (90, 180, 180), scale 0.3937 (WRLs from git history, old transforms; three models: socket, holder, card) - `c0c6a07`
+- [ ] `ublox_LARA-R2`: `ublox_LARA-R2.wrl` offset (0, 0, 1.651), rotate (180, 0, 0), scale 0.3937 (WRL from git history, old transform) - `7b69f4c`
+- [ ] `Molex_78171-5006`: `Molex_78171-5006.step` offset (0, -1.905, 1.45), rotate (-90, 0, 0) (vendor STEP, old transform; z 1.27 -> 1.45 so the tails sit on the pads, F9.2) - `5305745`, `78c09cb`
+- [ ] `Molex_34826-8200`: `Molex_34826-8200.step` offset (17.076, -5.334, 7.366), rotate (90, 0, 0) (vendor STEP, old transform; x +0.058 to centre the pins in the holes, F9.4) - `9ad5cd7`, `10cdc26`
+- [ ] `TE_5-104074-8`: `TE_5-104074-8.wrl` offset (0, -10.541, 2.413), rotate (-90, 0, 0), scale 0.3937 (WRL from the Snigel2 project, old transform) - `db9971d`
+- [ ] `JAE_DX4R005JJ2R1800`: `JAE_DX4R005JJ2R1800.step` offset (0, 0.381, 1.27), rotate (-90, 0, 0) (vendor STEP, old transform) - `8a60f1c`
+- [ ] `Amphenol_RJE72-188-1401`: `Amphenol_RJE72-188-1401.step` offset (-3.175, 4.191, 2.286), rotate (0, 90, 180) (vendor STEP, old transform) - `47d4a05`
+- [ ] `Samtec_TFM-105-02-S-D-WT`: `Samtec_TFM-105-02-S-D-WT.step` offset (0, 0, 0.15), rotate (-90, 0, 0) (vendor STEP, old transform; z +0.15, F9.1) - `4084ced`, `78c09cb`
+- [ ] `Samtec_TFM-110-02-S-D-WT`: `Samtec_TFM-110-02-S-D-WT.step` offset (0, 0, 0.15), rotate (-90, 0, 0) (vendor STEP; old transform was for a WRL; z +0.15, F9.1) - `3e161e3`, `78c09cb`
+- [ ] `TE_292303-1`: `TE_292303-1.step` offset (0, -13, 3.5), rotate (-90, 0, 0) (vendor STEP, old transform) - `38bdb2d`
+- [ ] `Molex_FAKRA_73403-51xx`: `Molex_FAKRA_73403-51xx.step` offset (0, -18.415, 3.81) (vendor STEP (green variant), old transform) - `ad3577f`
+- [ ] `Johanson_1575AT43A0040`: `Johanson_1575AT43A0040.step` identity transform (generated, built in footprint coordinates) - `cd2ee16`
+- [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm`: `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `ab3c2bb`
+- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm`: `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `64f0a5f`
+- [ ] `Samtec_FTSH-105-01-L-DV-007-K`: `Samtec_FTSH-105-01-L-DV-007-K.step` offset (0, 0, 0.406), rotate (-90, 0, 0) (z 0.5 -> 0.406 so the terminals sit on the pads, F9.3) - `78c09cb`
+- [ ] `Sullins_GBC08SGSN-M89`: `Sullins_GBC08SGSN-M89.step` identity transform (generated, built in footprint coordinates) - `307061c`
+- [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `a0890fa`
+- [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` offset (0, -7.25, 6.3), rotate (-90, 0, 0) (JAE vendor STEP, SolidWorks Y-up; placed by the hold-down pegs on the three holes, pin-1 foot over pad 1, lead feet on the board; rendered top/bottom/side, pegs centred in the holes) - `bb4be60`
 
 ## F9. 3D model placement check (2026-10-20)
 
@@ -916,30 +916,30 @@ below-board body sits in its own Edge.Cuts cutout, as intended.
 
 - [x] **F9.1** `Samtec_TFM-105-02-S-D-WT`, `Samtec_TFM-110-02-S-D-WT`:
       model 0.15 mm into the board (SMD tails at -0.15 over every pad).
-      Fix: z offset 0 -> 0.15. (F8 placements) — `db6f195`
+      Fix: z offset 0 -> 0.15. (F8 placements) — `78c09cb`
 - [x] **F9.2** `Molex_78171-5006`: model 0.18 mm into the board over every
-      pad. Fix: z offset 1.27 -> 1.45. (F8 placement) — `db6f195`
+      pad. Fix: z offset 1.27 -> 1.45. (F8 placement) — `78c09cb`
 - [x] **F9.3** `Samtec_FTSH-105-01-L-DV-007-K`: terminals 0.094 mm above the
-      pads. Fix: z offset 0.5 -> 0.406. (pre-cleanup footprint) — `db6f195`
+      pads. Fix: z offset 0.5 -> 0.406. (pre-cleanup footprint) — `78c09cb`
 - [x] **F9.4** `Molex_34826-8200`: pins sit in all 22 holes (model placed
       right), but F.Fab/courtyard are ~1.3-1.5 mm off from the model in y
-      (rebuilt from the old silk in `07702d5`); the model overhangs the
-      courtyard by 0.71. Check the outline against Molex's drawing. — `bb97505` (outline per Molex SD-34826-001; model +0.058 in x)
+      (rebuilt from the old silk in `9ad5cd7`); the model overhangs the
+      courtyard by 0.71. Check the outline against Molex's drawing. — `10cdc26` (outline per Molex SD-34826-001; model +0.058 in x)
 - [x] **F9.5** `TE_5-104074-8`: pins in all 7 holes, but the model is
       ~1.5 mm wider per side than F.Fab and overhangs the courtyard by
-      0.99. Check the outline against TE's drawing. — `1be9727` (outline per TE catalog 1307819 p.27, ears in the courtyard)
+      0.99. Check the outline against TE's drawing. — `9a0ce89` (outline per TE catalog 1307819 p.27, ears in the courtyard)
 - [x] **F9.6** `Coilcraft_POE60F`: vendor model is 22.0 x 17.2, footprint
       descr/F.Fab say a 25.0 x 15.0 body; model overhangs the courtyard by
       0.58. Pads all covered. Check the data sheet for which is right.
-      (pre-cleanup footprint) — `4856e58` (Coilcraft 381-1: body 17.60x17.20; the model was right)
+      (pre-cleanup footprint) — `a9f0527` (Coilcraft 381-1: body 17.60x17.20; the model was right)
 - [x] **F9.7** `Wurth_WE-RJ45LAN_7499511440`: model overhangs the courtyard
-      by 0.43. (pre-cleanup footprint) — `76a78d7` (courtyard x -15.28..5.13; the springs are real, Wurth cutout 17.55)
+      by 0.43. (pre-cleanup footprint) — `d30d2ea` (courtyard x -15.28..5.13; the springs are real, Wurth cutout 17.55)
 - [x] **F9.8** `Amphenol_RJE72-188-1401`: the jack hangs 3.5 mm through the
       board and needs a notch; the footprint doesn't show it. Blixten
       Gateway's board has it (footprint coords x -8.1..8.1, y 2.09 to the
       board edge at 14.89), and the model's below-board part fits that
       notch. Add the notch as Edge.Cuts (like `Wurth_WE-RJ45LAN_7498210003`)
-      or at least a Dwgs.User note. — `1018250` (notch on Dwgs.User per Amphenol P-RJE72-188-1X0X rev D)
+      or at least a Dwgs.User note. — `ba79d88` (notch on Dwgs.User per Amphenol P-RJE72-188-1X0X rev D)
 
 ## Open questions
 
@@ -947,12 +947,12 @@ below-board body sits in its own Edge.Cuts cutout, as intended.
    will never use again (e.g. 2016-era AT91SAM9G25, LARA-R2, FAKRA, mPCIe
    modem)? Deleting them shrinks M and N.
 2. F1.6 — which SN74AVC4T774 package do you actually use?
-   **Answered: RGYR (`94fe08f`).**
+   **Answered: RGYR (`b57bdcd`).**
 3. `connectors/RPi_GPIO` — socket (HAT side) or header (Pi side)?
-   **Answered: Pi HAT, so the socket (`8952e3d`).**
+   **Answered: Pi HAT, so the socket (`56ad49d`).**
 4. `power/1-1825027-1` — stock `SW_Tactile_SPST_Angled_PTS645Vx31-2LFS`
    (pads identical within 0.04 mm, C&K 3D model) or keep a TE-named copy?
-   **Answered: stock (`7d14550`).**
+   **Answered: stock (`11d1e85`).**
 5. Stock twins with another vendor's name (`LP5562` → `Maxim_WLP-12…`,
    `FAN5355UC00` → `Texas_DSBGA-12…`, `2450BM15B0002` →
    `Balun_Johanson_0896BM15A0001`): fine to use as-is, or would you rather
@@ -977,6 +977,6 @@ below-board body sits in its own Edge.Cuts cutout, as intended.
 - A2.1 lists `LTC4267IDHC` (`DHC16`) as "not in modules": it exists in
   `Jonas.pretty/tmp/` (as does `DFN-10-1EP_3x3mm_Pitch0.5mm` for
   `LTC3447`, A3.1), which is also what the stock matches above were made
-  from. (`tmp/` was later removed by A1.2; the files are in `ebab8c3`.)
+  from. (`tmp/` was later removed by A1.2; the files are in `f6cdc48`.)
 - A2.4: under this plan only 11 models from `modules/packages3d` are
   needed (F5.5), not ~34.
