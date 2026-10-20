@@ -35,9 +35,9 @@ fixing them silently.
 
 ## Summary
 
-**Status 2026-10-19:** 233 of 234 symbols resolve (`scripting/audit_refs.py`);
-`modules/` is removed. Open: F7.5 for four parts (data sheets needed),
-F1.18 and Jonas's F8 review. The rename batch (F1.19, F4.8, F5.3 rest;
+**Status 2026-10-20:** all symbols resolve (`scripting/audit_refs.py`: OK);
+`modules/` is removed. F7.5 is done (LT8640 drawn, the other three
+removed). Open: F1.18 and Jonas's F8 review. The rename batch (F1.19, F4.8, F5.3 rest;
 cleanup A5.4) is done: `docs/rename-batch-2026-10.md`.
 
 | | |
@@ -746,14 +746,15 @@ Config and docs:
   - [x] interface (4 symbols, 2 footprints): `99f417b`, `32ef941`. Vendor models from modules/packages3d. Pads identical to `modules/`; DRC 0.
   - [x] comm (10 symbols, 10 footprints): `130c9c1`..`a15f9e3`. Pads identical to `modules/`; per-footprint DRC 0 (old versions had 19 silk-over-pad hits).
   - [x] connectors (12 symbols, 9 footprints): `1bc0fa2`..`8b59022`. Vendor models (modules/packages3d, Snigel2 WRL). Pads identical to `modules/` except two fixes to match the symbols (DX4R005 shield 6/7, TFM-110 holes 21/22); per-footprint DRC 0 (old versions had 14 silk hits). MX34R36HF4T still linked 34826-8200 and stays in F7.5.
-- [ ] **F7.5** New footprints (N), one at a time from datasheets.
+- [x] **F7.5** New footprints (N), one at a time from datasheets.
   - [x] 1575AT43A0040: `8b81c83` (data sheet land, generated body)
   - [x] NLSV4T3144-D: `142a965` (data sheet land, generated body)
   - [x] PT65503: `d0e1644` (catalog land, generated body; also fixes F1.13)
   - [x] MX34R36HF4T: `e941797` (data sheet land, generated envelope; also fixes F1.7)
-  - [ ] LT8640, DuraClick_560020, SF7W008S1AE900, WYSBCVGXA: blocked on
-    data sheets this machine can't download (analog.com, molex.com, JAE
-    login, Taiyo Yuden none online). Jonas to download them.
+  - [x] LT8640: `a8cc26a` (data sheet rev G from Jonas, UDC20(18) land,
+    generated body). New footprint `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm`.
+  - [x] DuraClick_560020, SF7W008S1AE900, WYSBCVGXA: symbols removed
+    instead (Jonas, 2026-10-20) - `4fa40bb`. Not used by poetato.
 - [x] **F7.6** Re-run the audit: zero `footprints:`, bare, or missing
       `Jonas:` references; fix `gen_ndk_footprints.py` (A1.8); then
       `git rm -r modules/` (A2.6) and optionally A6. (`Jonas.pretty/tmp/`
@@ -811,6 +812,7 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm` (NLSV4T3144-D) - **new from data sheet** (case 523AE mounting footprint); pad 1 to pad 2 gap only 0.13 mm (vendor land, check vs your fab) - `142a965`
 - [ ] `APEM_PT65503` - **new from data sheet** (APEM PT65 catalog G17-G20, straight terminals; two pads numbered C) - `d0e1644`
 - [ ] `JAE_MX34R36HF4T` - **new from data sheet** (JAE MB-0240-1 / SJ110669 PCB layout); CHECK pin numbering (derived from the front-view terminal numbers, assumed to be the mating face) and the hold-down land (2.0x7.0 SMD oval + 3 plated 1.2 holes) - `e941797`
+- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm` (LT8640) - **new from data sheet** (LT8640 rev G p.27 recommended land); CHECK the two SW pad positions (22 at y +0.305, 21 at y +1.075, read from the 2.127/0.356/0.770 and 0.055 BSC dimensions) - `a8cc26a`
 
 ### 3D models
 
@@ -837,6 +839,7 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `Skyworks_SKY13587-378LF.step` - plain body, height 0.45 ASSUMED - `130c9c1`
 - [ ] `Johanson_1575AT43A0040.step` - plain body 7.0x2.0x0.8 per data sheet; no vendor STEP (Johanson: on request) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` - plain body 1.7x2.0x0.55 per data sheet; no vendor STEP (onsemi blocked) - `142a965`
+- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` - body 3.0x4.0x0.75, terminals and SW pads per data sheet; no vendor STEP (analog.com blocked) - `a8cc26a`
 - [ ] `APEM_PT65503.step` - generated: body 10x10x6.5 per catalog, segment wheel box 2.8x9.5x4.4 with ASSUMED orientation; no vendor STEP - `d0e1644`
 - [ ] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `e941797`
 
@@ -880,6 +883,7 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `Molex_FAKRA_73403-51xx`: `Molex_FAKRA_73403-51xx.step` offset (0, -18.415, 3.81) (vendor STEP (green variant), old transform) - `6769a2a`
 - [ ] `Johanson_1575AT43A0040`: `Johanson_1575AT43A0040.step` identity transform (generated, built in footprint coordinates) - `8b81c83`
 - [ ] `onsemi_UQFN-12_1.7x2mm_P0.4mm`: `onsemi_UQFN-12_1.7x2mm_P0.4mm.step` identity transform (generated, built in footprint coordinates) - `142a965`
+- [ ] `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm`: `Analog_UDC20-18_QFN-18-2EP_3x4mm_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `a8cc26a`
 - [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `d0e1644`
 - [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` identity transform (generated envelope, built in footprint coordinates) - `e941797`
 

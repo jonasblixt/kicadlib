@@ -28,8 +28,8 @@ session, add it here instead of fixing it silently.
 
 Suggested order: A1 → A2 + A3 → A4 → A5 → (optional) A6.
 
-**Status 2026-10-19:** A1-A5 done, including the rename batch A5.4
-(`docs/rename-batch-2026-10.md`). Open: optional A6 only.
+**Status 2026-10-20:** A1-A5 done, including the rename batch A5.4
+(`docs/rename-batch-2026-10.md`). Open: A7.1 (new, small) and optional A6.
 
 ---
 
@@ -246,7 +246,7 @@ of them on migration.
 - [x] **A2.5** Re-run the audit: zero symbols may reference `footprints:`,
       a bare name, or a missing `Jonas:` footprint. — committed as
       `scripting/audit_refs.py` (`7b0faf2`); the only broken link left is
-      `dcdc/LT8640` (F7.5, data sheet needed).
+      `dcdc/LT8640` (F7.5, data sheet needed). Fixed 2026-10-20 (`a8cc26a`).
 - [x] **A2.6** `git rm -r modules/` (after A1.8). — `d8fba33`
 
 ## A3. Other broken footprint/model links
@@ -271,6 +271,7 @@ of them on migration.
       Status 2026-10-19: all filled except `comm/WYSBCVGXA`,
       `connectors/DuraClick_560020`, `connectors/SF7W008S1AE900` (F7.5,
       waiting for data sheets) and the intentionally generic ones.
+      2026-10-20: those three symbols were removed instead (`4fa40bb`).
 - [x] **A3.4** Unused footprints in `Jonas.pretty`: `NX5032GA`,
       `T_Wurth_WE-RJ45LAN_7499210001A`, `Wurth_7499210123` (the last is
       explained by A3.2). Wire them to a symbol or delete. Done:
@@ -452,6 +453,17 @@ remapped. Do all renames in one batch.
       for good, including the vendor STEPs A1.1 listed as useful for stock
       footprints without a KiCad model (RJHSE, 1-1825027-1, keystone PN54,
       Maxim WLP-12, ...). Copy any you want first.
+
+## A7. Found later
+
+- [ ] **A7.1** (found 2026-10-20) `scripting/check_importers.py` reports
+      `IMPORTER FAILED: UnicodeEncodeError` for ind_rfmw_murata_lqw2uas,
+      res_pulse_panasonic_erj14t, res_sense_koaspeer_sr73 and
+      res_sense_koaspeer_ur73 when run in a plain Windows console (cp1252
+      stdout can't print `Ω`). With `PYTHONUTF8=1` every importer
+      reproduces its library, so the libraries are fine; the check should
+      force UTF-8 output itself (e.g. `sys.stdout.reconfigure` in the
+      check or in the importers it runs).
 
 ---
 
