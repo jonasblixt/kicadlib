@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Migrated from modules/footprints.pretty/RJE72-188-1401 (pads unchanged, used on Blixten Gateway); outline, courtyard and fab rebuilt to KLC in 2026-10. Amphenol RJE72-188-1401 RJ45 jack; vendor STEP (M-RJE72-188-1X01-REVT1)")
+	(descr "Migrated from modules/footprints.pretty/RJE72-188-1401 (pads unchanged, used on Blixten Gateway); outline, courtyard and fab rebuilt to KLC in 2026-10. Amphenol RJE72-188-1401 RJ45 jack; vendor STEP (M-RJE72-188-1X01-REVT1). The jack sinks 3.5 mm through the board: it needs the PCB notch drawn on Dwgs.User, per Amphenol P-RJE72-188-1X0X rev D recommended PCB layout (16.20 wide, R0.50 corners, from 1.20 in front of the pin-1 row to the board edge 7.68 in front of the shield tabs); the same notch as on the Blixten Gateway board. Amphenol specifies -1X01 for a 2.36 mm PCB (-1X02/-1X03 for 1.57)")
 	(tags "RJ45 Ethernet jack Amphenol RJE72")
 	(property "Reference" "REF**"
 		(at 0 -5.85 0)
@@ -187,6 +187,90 @@
 		(at 0 6.25 0)
 		(layer "F.Fab")
 		(uuid "15f60d6a-442e-463e-bd34-63006d91fedf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -8.1 14.88)
+		(end -8.1 2.59)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "ba4f498c-3d1f-42cc-a89d-839418c20e60")
+	)
+	(fp_arc
+		(start -8.1 2.59)
+		(mid -7.9536 2.2364)
+		(end -7.6 2.09)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "34e83098-c5af-486d-991d-b249f21e2652")
+	)
+	(fp_line
+		(start -7.6 2.09)
+		(end 7.6 2.09)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "7a184d95-a04b-4e78-bb98-8ec7cea98170")
+	)
+	(fp_arc
+		(start 7.6 2.09)
+		(mid 7.9536 2.2364)
+		(end 8.1 2.59)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "1f436e8b-8d2b-4044-937e-ee323ca63df0")
+	)
+	(fp_line
+		(start 8.1 2.59)
+		(end 8.1 14.88)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Dwgs.User")
+		(uuid "1e8f26d3-b738-416b-bdbd-2627bc723166")
+	)
+	(fp_line
+		(start -10.1 14.88)
+		(end 10.1 14.88)
+		(stroke
+			(width 0.1)
+			(type dash)
+		)
+		(layer "Dwgs.User")
+		(uuid "14f8c072-6ae3-4d7b-9ba4-e523180469d0")
+	)
+	(fp_text user "PCB notch"
+		(at 0 10 0)
+		(layer "Dwgs.User")
+		(uuid "c15c2379-c9f9-41aa-ad20-c026cb3250ee")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "board edge"
+		(at 0 13.88 0)
+		(layer "Dwgs.User")
+		(uuid "0bd12ed4-f3f6-4a32-aedf-88c20293b17f")
 		(effects
 			(font
 				(size 1 1)
