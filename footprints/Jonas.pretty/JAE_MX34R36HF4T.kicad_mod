@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "New footprint (2026-10), JAE MX34R36HF4T angle SMT pin header 2x18 (MX34 series), from JAE product information MB-0240-1 (Nov 2011, drawing SJ110669) PCB layout (ref.): 36 pads 0.7x4.8 at 1.1 pitch (38.5 span), hold-downs 47.5 apart: 2.0x7.0 land with 3 holes 1.2 (3.7 span), middle hole 9.8 below the pad row. Numbering from the front-view terminal numbers: upper row 1-18 and lower row 19-36, both counted right to left looking into the mating face; mating face towards +Y. Body = housing envelope from SJ110669 (45.5 wide)")
+	(descr "New footprint (2026-10), JAE MX34R36HF4T angle SMT pin header 2x18 (MX34 series), from JAE product information MB-0240-1 (Nov 2011, drawing SJ110669) PCB layout (ref.): 36 pads 0.7x4.8 at 1.1 pitch (38.5 span), hold-downs 47.5 apart: 2.0x7.0 land with 3 holes 1.2 (3.7 span), middle hole 9.8 in front of the pads' front edge (y 12.2). Numbering from the front-view terminal numbers: upper row 1-18 and lower row 19-36, both counted right to left looking into the mating face; mating face towards +Y. 3D model: JAE STEP SJ110669_MX34R36HF4T_V1 (supplied by Jonas 2026-10-20), SolidWorks Y-up; placed by its hold-down pegs on the three holes and the lead feet on the pads")
 	(tags "JAE MX34 MX34R36HF4T automotive connector angle SMT 2.2mm")
 	(property "Reference" "REF**"
 		(at 0 -3.7 0)
@@ -476,13 +476,13 @@
 	)
 	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/JAE_MX34R36HF4T.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz 0 -7.25 6.3)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 0)
+			(xyz -90 0 0)
 		)
 	)
 	(embedded_fonts no)

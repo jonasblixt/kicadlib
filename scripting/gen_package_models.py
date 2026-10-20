@@ -141,21 +141,6 @@ def apem_pt65503():
     return 'APEM_PT65503', boxes, 'APEM PT65503 coded rotary switch, segment wheel, 10x10x6.5 mm body'
 
 
-def jae_mx34r36hf4t():
-    # JAE MX34R36HF4T (product information MB-0240-1, drawing SJ110669):
-    # envelope only. Housing 45.5 wide, from 1.7 behind the pad row to the
-    # mating face 22.4 in front of it (footprint +Y), 10.1 high; hold-down
-    # ears to 50.1 overall between Y 6.9 and 17.4; 36 lead feet on the
-    # 1.1 mm pad row. The housing shape (latch, cavities) is not modelled.
-    boxes = [box_c(0, -(1.7 + 22.4) / 2, 0, 45.5, 22.4 - 1.7, 10.1, BODY_BLACK)]
-    for sx in (-1, 1):
-        boxes.append(box_c(sx * (22.75 + 1.15), -(6.9 + 17.4) / 2, 0, 2.3, 10.5, 8.0, TIN))
-    for i in range(36):
-        boxes.append(box_c(-19.25 + 1.1 * i, -0.85, 0, 0.64, 5.1, 0.3, TIN))
-    boxes.append(box_c(21.5, -3.0, 10.1, 1.0, 1.0, 0.01, MARK))
-    return 'JAE_MX34R36HF4T', boxes, 'JAE MX34R36HF4T angle SMT header envelope 45.5x20.7x10.1 mm'
-
-
 # Plain bodies for migrated IC footprints (F7.4) that had no model anywhere
 # (repo, git history, old projects). Body = the footprint's F.Fab body (in
 # footprint coordinates), pin-1 mark at the chamfered F.Fab corner (flipped
@@ -206,7 +191,7 @@ def main():
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
         print('wrote %s (%d boxes)' % (path, len(boxes)))
-    for fn in (qfn20_si3402, analog_udc18, nx1255gb, texas_yje, apem_pt65503, jae_mx34r36hf4t):
+    for fn in (qfn20_si3402, analog_udc18, nx1255gb, texas_yje, apem_pt65503):
         name, boxes, descr = fn()
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
