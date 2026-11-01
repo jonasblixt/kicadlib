@@ -64,6 +64,13 @@ in both the footprint's `descr` field and the importer or generator
 script's header comment - a future session re-reading either file has no
 other way to recover why a decision was made.
 
+**IC symbols always follow `docs/symbol-style.md`**: a title band with the
+part's function, a centre divider, and labelled pin groups separated by
+lines in each column (reference: `cpu/MCXN247VKLT`). Generate new ones
+with `scripting/gen_ic_symbol.py` from a spec in `scripting/ic_symbols/`,
+let `kicad-cli sym upgrade --force` serialize the library, and render the
+symbol to check it before delivering.
+
 No CAD library (cadquery, FreeCAD, pythonocc) or network access to fetch
 pre-built 3D models is available in a Claude session's sandbox, and PyPI
 is blocked so none can be installed either.
