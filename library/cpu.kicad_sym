@@ -40530,7 +40530,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "U"
-			(at 1.27 214.63 0)
+			(at 1.27 223.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -40616,7 +40616,7 @@
 		)
 		(symbol "STM32F446ZE_0_1"
 			(rectangle
-				(start 0 213.36)
+				(start 0 222.25)
 				(end 25.4 0)
 				(stroke
 					(width 0)
@@ -40624,6 +40624,234 @@
 				)
 				(fill
 					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 215.9) (xy 25.4 215.9)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 176.53) (xy 12.7 176.53)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 132.08) (xy 15.24 132.08)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 88.9) (xy 15.24 88.9)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 0 44.45) (xy 15.24 44.45)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 12.7 215.9) (xy 12.7 0)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 12.7 165.1) (xy 25.4 165.1)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 12.7 140.97) (xy 25.4 140.97)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 15.24 132.08) (xy 25.4 132.08)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 15.24 88.9) (xy 25.4 88.9)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(polyline
+				(pts
+					(xy 15.24 44.45) (xy 25.4 44.45)
+				)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(text "System"
+				(at 5.842 214.122 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Port A"
+				(at 7.62 174.879 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Port B"
+				(at 7.62 130.429 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Port C"
+				(at 7.62 87.249 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Port D"
+				(at 7.62 42.799 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "STM32F446ZE"
+				(at 12.7 219.075 0)
+				(effects
+					(font
+						(size 2.032 2.032)
+					)
+				)
+			)
+			(text "Port H"
+				(at 16.764 139.446 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Ground"
+				(at 17.018 163.322 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Power"
+				(at 17.272 214.122 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Port G"
+				(at 17.272 130.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Port F"
+				(at 20.32 87.249 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "Port E"
+				(at 20.32 42.799 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
 				)
 			)
 		)
