@@ -995,7 +995,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 20.32 11.43 180)
 				(length 5.08)
 				(name "GND"
@@ -1013,7 +1013,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 20.32 8.89 180)
 				(length 5.08)
 				(name "GND"
@@ -1049,7 +1049,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 20.32 6.35 180)
 				(length 5.08)
 				(name "GND"
@@ -1067,7 +1067,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 20.32 3.81 180)
 				(length 5.08)
 				(name "GND"
@@ -1139,7 +1139,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 20.32 1.27 180)
 				(length 5.08)
 				(name "GND"
@@ -1157,7 +1157,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -5.08 3.81 0)
 				(length 5.08)
 				(name "GND"
@@ -1211,7 +1211,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -5.08 1.27 0)
 				(length 5.08)
 				(name "GND_EP"

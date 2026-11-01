@@ -4609,7 +4609,7 @@
 			)
 		)
 		(symbol "LTC3873IDDB-5_1_1"
-			(pin power_out line
+			(pin power_in line
 				(at -5.08 5.08 0)
 				(length 5.08)
 				(name "GND"
@@ -4753,7 +4753,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -5.08 2.54 0)
 				(length 5.08)
 				(name "GND_EP"
