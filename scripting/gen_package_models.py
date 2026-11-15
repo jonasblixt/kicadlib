@@ -34,6 +34,12 @@
 #     SLPS494C, package outline 4221674/C: 1.07-1.15 x 2.12-2.20, 0.22 mm
 #     max height, 6 lands 0.27-0.33 on a 0.65 mm grid (3 rows x 2), pin A1
 #     top-left (footprint pad A1 at x = -0.325, y = -0.65).
+#   Texas_RSM0032A_VQFN-32-1EP_4x4mm_P0.4mm_EP1.4x1.4mm (BQ40Z50-R2):
+#     data sheet SLUSCS4C, drawing 4219107/A: 4.0 x 4.0, 1 mm max (0.9
+#     used), b = 0.2, L = 0.4, e = 0.4, thermal pad 1.4.
+#   Texas_Q3A_SON-8_3.3x3.3mm_P0.65mm (CSD17579Q3A): data sheet SLPS527A
+#     7.1: 3.0 x 3.15, 0.9 max, leads 0.3 at 0.65 standing 0.15 proud,
+#     thermal pad 1.74 x 2.45.
 #
 # Run with no arguments to regenerate all three; --out writes elsewhere.
 #
@@ -148,6 +154,42 @@ def texas_yje():
     return 'Texas_YJE0006A_PicoStar-6_1.15x2.2mm', boxes, 'TI PicoStar YJE0006A 1.11x2.16x0.22 mm, CSD83325L'
 
 
+def texas_rsm0032a():
+    # BQ40Z50-R2 data sheet SLUSCS4C, RSM0032A drawing 4219107/A p.52:
+    # 4.0 x 4.0, 1 mm max (0.9 used), b = 0.2 (0.15-0.25), L = 0.4
+    # (0.3-0.5), e = 0.4, 8 terminals per side, thermal pad 1.4 square.
+    # Pin 1 is the top of the left row (footprint pad 1 at x -1.9, y -1.4).
+    d, a, b, e, l, ep = 4.0, 0.9, 0.2, 0.4, 0.4, 1.4
+    t, out = 0.2, 0.02
+    boxes = [box_c(0, 0, 0, d, d, a, BODY_BLACK)]
+    for sign in (-1, 1):
+        for p in [(-3.5 + i) * e for i in range(8)]:
+            boxes.append(box_c(sign * (d / 2 - l / 2 + out / 2), p, 0, l + out, b, t, TIN))
+            boxes.append(box_c(p, sign * (d / 2 - l / 2 + out / 2), 0, b, l + out, t, TIN))
+    boxes.append(box_c(0, 0, 0, ep, ep, 0.02, TIN))
+    boxes.append(box_c(-1.4, 1.4, a, 0.5, 0.5, 0.01, MARK))
+    return ('Texas_RSM0032A_VQFN-32-1EP_4x4mm_P0.4mm_EP1.4x1.4mm', boxes,
+            'TI RSM0032A VQFN-32 4x4x0.9 mm, BQ40Z50-R2')
+
+
+def texas_q3a():
+    # CSD17579Q3A data sheet SLPS527A, 7.1 Q3A package dimensions: body
+    # 3.0 x 3.15 (2.9-3.1 x 3.05-3.25), 0.9 max; leads 0.3 wide (0.25-0.35)
+    # at 0.65 pitch, 3.3 nominal across the leads (3.1-3.5 TYP), so they
+    # stand 0.15 proud of the body; thermal pad 1.74 wide from 0.565 left
+    # of centre, 2.45 tall. Pins 1-4 on the left, pin 1 at the top
+    # (footprint pad 1 at x -1.55, y -0.975).
+    bx, by, a, b, e = 3.0, 3.15, 0.9, 0.3, 0.65
+    lead_out, lead_in, t = 1.65, 1.25, 0.2
+    boxes = [box_c(0, 0, 0, bx, by, a, BODY_BLACK)]
+    for sign in (-1, 1):
+        for p in [(-1.5 + i) * e for i in range(4)]:
+            boxes.append(box_c(sign * (lead_out + lead_in) / 2, p, 0, lead_out - lead_in, b, t, TIN))
+    boxes.append(box_c(-0.565 + 1.74 / 2, 0, 0, 1.74, 2.45, 0.02, TIN))
+    boxes.append(box_c(-1.0, 1.1, a, 0.5, 0.5, 0.01, MARK))
+    return 'Texas_Q3A_SON-8_3.3x3.3mm_P0.65mm', boxes, 'TI Q3A SON-8 3.0x3.15x0.9 mm NexFET, CSD17579Q3A'
+
+
 def apem_pt65503():
     # APEM PT65 series catalog (pages G17-G20): straight-terminal body
     # 10.00 x 10.00 x 6.50, terminals 0.55 x 0.27 on a 7.62 x 2.54 grid,
@@ -215,7 +257,8 @@ def main():
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
         print('wrote %s (%d boxes)' % (path, len(boxes)))
-    for fn in (qfn20_si3402, analog_udc18, sullins_gbc08_m89, nx1255gb, texas_yje, apem_pt65503):
+    for fn in (qfn20_si3402, analog_udc18, sullins_gbc08_m89, nx1255gb, texas_yje, apem_pt65503,
+               texas_rsm0032a, texas_q3a):
         name, boxes, descr = fn()
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)

@@ -818,6 +818,8 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `Sullins_GBC08SGSN-M89` - **new from catalog** (Sullins pp.112-113, -M89 lying flat); CHECK the pads: Sullins gives no PCB layout and does not dimension the foot, so the foot (1.74 long, 2.83..4.57 from the insulator) is estimated from the drawing - `307061c`
 - [ ] `Coilcraft_POE60F` - body outline redrawn from Coilcraft 381-1 (17.60x17.20, was 25x15); pads unchanged (= recommended land) - `a9f0527`
 - [ ] `Wurth_WE-RJ45LAN_7499511440` - courtyard widened over the panel-ground springs - `d30d2ea`
+- [ ] `Texas_RSM0032A_VQFN-32-1EP_4x4mm_P0.4mm_EP1.4x1.4mm` (BQ40Z50-R2, Snigel2 BMS) - **new from data sheet** (SLUSCS4C, TI land pattern and stencil 4219107/A pp.53-54, `scripting/gen_texas_bms_footprints.py`); the stock `VQFN-32-1EP_4x4mm_P0.4mm_EP2.8x2.8mm` has a 2.8 mm pad, the BQ40Z50 1.4 mm - uncommitted (2026-11-02)
+- [ ] `Texas_Q3A_SON-8_3.3x3.3mm_P0.65mm` (CSD17579Q3A, Snigel2 BMS) - **new from data sheet** (SLPS527A 7.2/7.3 recommended pattern and stencil, `scripting/gen_texas_bms_footprints.py`); CHECK the drain pad polygon (fingers 0.3 x 0.635 to x +1.85) and the four paste windows; the stock NexFET footprint has 0.5 mm pins at x -1.44 - uncommitted (2026-11-02)
 
 ### 3D models
 
@@ -848,6 +850,8 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `Sullins_GBC08SGSN-M89.step` - generated envelope (insulator 20.32x2.54x3.56, posts, jog and foot boxes; foot estimated) - `307061c`
 - [ ] `APEM_PT65503.step` - generated: body 10x10x6.5 per catalog, segment wheel box 2.8x9.5x4.4 with ASSUMED orientation; no vendor STEP - `a0890fa`
 - [x] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `f83594f`. Replaced 2026-10-20 by JAE's own STEP (SJ110669_MX34R36HF4T_V1, supplied by Jonas); generator removed - `bb4be60`.
+- [ ] `Texas_RSM0032A_VQFN-32-1EP_4x4mm_P0.4mm_EP1.4x1.4mm.step` - generated: body 4.0x4.0x0.9 (1.0 max), terminals and 1.4 pad per TI 4219107/A; no vendor STEP - uncommitted (2026-11-02)
+- [ ] `Texas_Q3A_SON-8_3.3x3.3mm_P0.65mm.step` - generated: body 3.0x3.15x0.9, leads 0.3 standing 0.15 proud, thermal pad per SLPS527A 7.1; no vendor STEP - uncommitted (2026-11-02)
 
 ### 3D model placements
 
