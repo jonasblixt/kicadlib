@@ -19,6 +19,14 @@
 #   LEFT, RIGHT  lists of (heading, pins), top to bottom, where pins is a
 #          list of (number, name, electrical type) or None for an empty row
 #   PINCOUNT     optional; asserts pins 1..PINCOUNT appear exactly once
+#   BALLS        optional; asserts the pin numbers are exactly this set
+#                (for BGA ball names)
+#   UNITS        optional, for large parts: a list of (title, LEFT, RIGHT),
+#                one per unit, each drawn in the same style with its own
+#                title band; replaces TITLE/LEFT/RIGHT. The units share
+#                their top edge, so Reference sits above every unit and
+#                Value below the tallest. No unit names: KiCad 10 would
+#                print them as the sub-reference ("U5Channel A").
 # The library file stays the source of truth: later edits are made in
 # KiCad, and the spec records where the pinout came from.
 #
@@ -80,13 +88,19 @@ def pin(num, name, typ, x, y, ang):
             f'\t\t\t\t(number "{num}"\n\t\t\t\t\t{eff}\n\t\t\t\t)\n\t\t\t)\n')
 
 
-def build(spec):
-    name, title = spec["NAME"], spec["TITLE"]
-    cols = (spec["LEFT"], spec["RIGHT"])
+def unit_height(cols):
+    return GRID * (max(sum(2 + len(pins) for _, pins in col) for col in cols) + 2)
+
+
+def draw_unit(title, cols, top=None):
+    """Body graphics and pins of one unit: (graphics, pins, numbers, W, H).
+    The body spans y = 0..H, or ends at y = top when given (multi-unit
+    symbols align their units' top edges)."""
     rows = [sum(2 + len(pins) for _, pins in col) for col in cols]
     R = max(rows)
-    band_y = GRID * R          # the first group's separator row
     H = GRID * (R + 2)
+    y0 = 0 if top is None else top - H
+    band_y = y0 + GRID * R     # the first group's separator row
 
     need = 0.0
     for col in cols:
@@ -99,13 +113,12 @@ def build(spec):
     W = max(2 * col_w, math.ceil((len(title) * TITLE_CHAR_W + 2 * GRID) / (2 * GRID)) * 2 * GRID)
     mid = W / 2
 
-    body = [f"\t\t(symbol \"{name}_0_1\"\n",
-            f"\t\t\t(rectangle\n\t\t\t\t(start 0 {fmt(H)})\n\t\t\t\t(end {fmt(W)} 0)\n"
+    body = [f"\t\t\t(rectangle\n\t\t\t\t(start 0 {fmt(y0 + H)})\n\t\t\t\t(end {fmt(W)} {fmt(y0)})\n"
             f"\t\t\t\t(stroke\n\t\t\t\t\t(width {LINE})\n\t\t\t\t\t(type solid)\n\t\t\t\t)\n"
             f"\t\t\t\t(fill\n\t\t\t\t\t(type none)\n\t\t\t\t)\n\t\t\t)\n",
             line(0, band_y, W, band_y),
-            line(mid, band_y, mid, 0),
-            text(title, mid, (band_y + H) / 2, 2.032)]
+            line(mid, band_y, mid, y0),
+            text(title, mid, (band_y + y0 + H) / 2, 2.032)]
     pins_out, seen = [], []
     for side, col in enumerate(cols):
         x0, x1 = (0, mid) if side == 0 else (mid, W)
@@ -113,22 +126,39 @@ def build(spec):
         k = R
         for gi, (heading, pins) in enumerate(col):
             if gi:
-                body.append(line(x0, GRID * k, x1, GRID * k))
+                body.append(line(x0, y0 + GRID * k, x1, y0 + GRID * k))
             k -= 1
-            body.append(text(heading, (x0 + x1) / 2, GRID * k, 1.27))
+            body.append(text(heading, (x0 + x1) / 2, y0 + GRID * k, 1.27))
             k -= 1
             for p in pins:
                 if p:
                     num, pname, typ = p
                     seen.append(num)
-                    pins_out.append(pin(num, pname, typ, px, GRID * k, ang))
+                    pins_out.append(pin(num, pname, typ, px, y0 + GRID * k, ang))
                 k -= 1
-    body.append("\t\t)\n")
+    return body, pins_out, seen, W, H
+
+
+def build(spec):
+    name = spec["NAME"]
+    # UNITS: list of (title, LEFT, RIGHT), one per unit; otherwise a single
+    # unit from TITLE, LEFT and RIGHT.
+    units = spec.get("UNITS") or [(spec["TITLE"], spec["LEFT"], spec["RIGHT"])]
+    # Several units: align their top edges at the tallest unit's top, so
+    # Reference (top left) fits every unit and Value (bottom left) clears
+    # the tallest one.
+    top = max(unit_height((l, r)) for _, l, r in units) if len(units) > 1 else None
+    drawn = [draw_unit(t, (l, r), top) for t, l, r in units]
+    seen = [n for d in drawn for n in d[2]]
+    H = top or drawn[0][4]
 
     if len(seen) != len(set(seen)):
         sys.exit(f"{name}: duplicate pin numbers")
     if "PINCOUNT" in spec and sorted(seen, key=int) != [str(i) for i in range(1, spec["PINCOUNT"] + 1)]:
         sys.exit(f"{name}: pins are not exactly 1..{spec['PINCOUNT']}")
+    if "BALLS" in spec and set(seen) != set(spec["BALLS"]):
+        sys.exit(f"{name}: pins differ from BALLS: missing {sorted(set(spec['BALLS']) - set(seen))}, "
+                 f"extra {sorted(set(seen) - set(spec['BALLS']))}")
 
     out = [f'\t(symbol "{name}"\n\t\t(pin_names\n\t\t\t(offset 1.016)\n\t\t)\n'
            "\t\t(exclude_from_sim no)\n\t\t(in_bom yes)\n\t\t(on_board yes)\n"
@@ -139,10 +169,19 @@ def build(spec):
     for key, val in spec["PROPS"].items():
         out.append(prop(key, val, 0, y))
         y -= GRID
-    out += body
-    out.append(f'\t\t(symbol "{name}_1_1"\n' + "".join(pins_out) + "\t\t)\n")
+    if len(drawn) == 1:
+        body, pins_out = drawn[0][0], drawn[0][1]
+        out.append(f'\t\t(symbol "{name}_0_1"\n' + "".join(body) + "\t\t)\n")
+        out.append(f'\t\t(symbol "{name}_1_1"\n' + "".join(pins_out) + "\t\t)\n")
+    else:
+        # No (unit_name ...): KiCad 10 would print it as the sub-reference
+        # ("U5LPDDR4 Channel A" instead of "U5A"); the title band names the unit.
+        for u, (body, pins_out, _, _, _) in enumerate(drawn, 1):
+            out.append(f'\t\t(symbol "{name}_{u}_1"\n'
+                       + "".join(body) + "".join(pins_out) + "\t\t)\n")
     out.append("\t\t(embedded_fonts no)\n\t)\n")
-    return "".join(out), len(seen), W, H
+    sizes = ", ".join(f"{fmt(d[3])} x {fmt(d[4])}" for d in drawn)
+    return "".join(out), len(seen), sizes
 
 
 def main():
@@ -153,7 +192,7 @@ def main():
                     help="remove an existing symbol of the same name first")
     a = ap.parse_args()
     spec = runpy.run_path(a.spec)
-    sym, npins, W, H = build(spec)
+    sym, npins, sizes = build(spec)
 
     raw = open(a.library, "rb").read().decode("utf-8")
     nl = "\r\n" if "\r\n" in raw else "\n"
@@ -167,7 +206,7 @@ def main():
     end = txt.rstrip().rindex(")")
     txt = txt[:end] + sym + txt[end:]
     open(a.library, "wb").write(txt.replace("\n", nl).encode("utf-8"))
-    print(f'{spec["NAME"]}: {npins} pins, body {fmt(W)} x {fmt(H)} mm; '
+    print(f'{spec["NAME"]}: {npins} pins, body {sizes} mm; '
           f"now run: kicad-cli sym upgrade --force {a.library}")
 
 
