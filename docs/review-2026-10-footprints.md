@@ -820,9 +820,9 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `Wurth_WE-RJ45LAN_7499511440` - courtyard widened over the panel-ground springs - `d30d2ea`
 - [ ] `Texas_RSM0032A_VQFN-32-1EP_4x4mm_P0.4mm_EP1.4x1.4mm` (BQ40Z50-R2, Snigel2 BMS) - **new from data sheet** (SLUSCS4C, TI land pattern and stencil 4219107/A pp.53-54, `scripting/gen_texas_bms_footprints.py`); the stock `VQFN-32-1EP_4x4mm_P0.4mm_EP2.8x2.8mm` has a 2.8 mm pad, the BQ40Z50 1.4 mm - `63f5ade`
 - [ ] `Texas_Q3A_SON-8_3.3x3.3mm_P0.65mm` (CSD17579Q3A, Snigel2 BMS) - **new from data sheet** (SLPS527A 7.2/7.3 recommended pattern and stencil, `scripting/gen_texas_bms_footprints.py`); CHECK the drain pad polygon (fingers 0.3 x 0.635 to x +1.85) and the four paste windows; the stock NexFET footprint has 0.5 mm pins at x -1.44 - `63f5ade`
-- [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm` (STPMIC25) - **new from data sheet** (DS14278 Rev 7, Figure 22 / Table 109; ST gives no land pattern): IPC-7351B density N lands computed by eda-agent `kicad_create_footprint_from_package` (56 pads 0.75 x 0.2, 6.45 c-c, 4.55 exposed pad, 4x4 paste grid 65 %); no stock 6.5x6.5 mm P0.4 QFN-56 - uncommitted
-- [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm` (MIMX8ML8CVNKZAB, i.MX 8M Plus) - **new from data sheet** (IMX8MPIEC Rev. 2.2 Figure 52, 98ASA01539D; 548 balls per the Table 78 ball map, 293 sites depopulated): IPC-7351B density N, 0.25 mm round lands from eda-agent `kicad_create_footprint_from_package`; NXP gives no land pattern in the data sheet - CHECK against the i.MX 8M Plus HDG / EVK layout (the 8M Mini/Nano FCBGA-486 here uses 0.225 mm) - uncommitted
-- [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm` (PCA9450CHN) - **new from data sheet** (PCA9450 Rev. 2.3 Figures 26/27, 98ASA01369D); generated with eda-agent (IPC-7351B), then set to NXP's pattern in AN12840 Rev. 1.0 Figures 10-12: 56 pads 0.9 x 0.2 at 3.45 from centre, 4.7 exposed pad, mask +0.05, stencil 4 x 1.86 on the EP; stock 7x7 QFN-56 have 3.2/4.0/5.6 mm pads - uncommitted
+- [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm` (STPMIC25) - **new from data sheet** (DS14278 Rev 7, Figure 22 / Table 109; ST gives no land pattern): IPC-7351B density N lands computed by eda-agent `kicad_create_footprint_from_package` (56 pads 0.75 x 0.2, 6.45 c-c, 4.55 exposed pad, 4x4 paste grid 65 %); no stock 6.5x6.5 mm P0.4 QFN-56 - `eaaf62d`
+- [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm` (MIMX8ML8CVNKZAB, i.MX 8M Plus) - **new from data sheet** (IMX8MPIEC Rev. 2.2 Figure 52, 98ASA01539D; 548 balls per the Table 78 ball map, 293 sites depopulated): IPC-7351B density N, 0.25 mm round lands from eda-agent `kicad_create_footprint_from_package`; NXP gives no land pattern in the data sheet - CHECK against the i.MX 8M Plus HDG / EVK layout (the 8M Mini/Nano FCBGA-486 here uses 0.225 mm) - `eaaf62d`
+- [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm` (PCA9450CHN) - **new from data sheet** (PCA9450 Rev. 2.3 Figures 26/27, 98ASA01369D); generated with eda-agent (IPC-7351B), then set to NXP's pattern in AN12840 Rev. 1.0 Figures 10-12: 56 pads 0.9 x 0.2 at 3.45 from centre, 4.7 exposed pad, mask +0.05, stencil 4 x 1.86 on the EP; stock 7x7 QFN-56 have 3.2/4.0/5.6 mm pads - `eaaf62d`
 
 ### 3D models
 
@@ -855,9 +855,9 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [x] `JAE_MX34R36HF4T.step` - generated envelope (housing 45.5x20.7x10.1, ears, lead feet), not the real shape; JAE CAD needs a login - `f83594f`. Replaced 2026-10-20 by JAE's own STEP (SJ110669_MX34R36HF4T_V1, supplied by Jonas); generator removed - `bb4be60`.
 - [ ] `Texas_RSM0032A_VQFN-32-1EP_4x4mm_P0.4mm_EP1.4x1.4mm.step` - generated: body 4.0x4.0x0.9 (1.0 max), terminals and 1.4 pad per TI 4219107/A; no vendor STEP - `63f5ade`
 - [ ] `Texas_Q3A_SON-8_3.3x3.3mm_P0.65mm.step` - generated: body 3.0x3.15x0.9, leads 0.3 standing 0.15 proud, thermal pad per SLPS527A 7.1; no vendor STEP - `63f5ade`
-- [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm.step` - generated: body 6.5x6.5x0.9 (0.9 max), terminals and 4.5 pad per DS14278 Table 109; no vendor STEP - uncommitted
-- [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm.step` - plain body 15x15x1.48 (1.481 max) per IMX8MPIEC Fig. 52; no vendor STEP - uncommitted
-- [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm.step` - generated: body 7x7x1.0 (1.0 max), terminals and 4.7 pad per PCA9450 Fig. 26/27; no vendor STEP - uncommitted
+- [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm.step` - generated: body 6.5x6.5x0.9 (0.9 max), terminals and 4.5 pad per DS14278 Table 109; no vendor STEP - `eaaf62d`
+- [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm.step` - plain body 15x15x1.48 (1.481 max) per IMX8MPIEC Fig. 52; no vendor STEP - `eaaf62d`
+- [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm.step` - generated: body 7x7x1.0 (1.0 max), terminals and 4.7 pad per PCA9450 Fig. 26/27; no vendor STEP - `eaaf62d`
 
 ### 3D model placements
 
@@ -904,9 +904,9 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `Sullins_GBC08SGSN-M89`: `Sullins_GBC08SGSN-M89.step` identity transform (generated, built in footprint coordinates) - `307061c`
 - [ ] `APEM_PT65503`: `APEM_PT65503.step` identity transform (generated, built in footprint coordinates; wheel orientation assumed) - `a0890fa`
 - [ ] `JAE_MX34R36HF4T`: `JAE_MX34R36HF4T.step` offset (0, -7.25, 6.3), rotate (-90, 0, 0) (JAE vendor STEP, SolidWorks Y-up; placed by the hold-down pegs on the three holes, pin-1 foot over pad 1, lead feet on the board; rendered top/bottom/side, pegs centred in the holes) - `bb4be60`
-- [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm`: `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm.step` identity transform (generated, built in footprint coordinates) - uncommitted
-- [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm`: `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm.step` identity transform (generated, built in footprint coordinates) - uncommitted
-- [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm`: `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm.step` identity transform (generated, built in footprint coordinates) - uncommitted
+- [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm`: `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm.step` identity transform (generated, built in footprint coordinates) - `eaaf62d`
+- [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm`: `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `eaaf62d`
+- [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm`: `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm.step` identity transform (generated, built in footprint coordinates) - `eaaf62d`
 
 ## F9. 3D model placement check (2026-10-20)
 
