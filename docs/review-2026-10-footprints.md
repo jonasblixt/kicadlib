@@ -823,6 +823,8 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm` (STPMIC25) - **new from data sheet** (DS14278 Rev 7, Figure 22 / Table 109; ST gives no land pattern): IPC-7351B density N lands computed by eda-agent `kicad_create_footprint_from_package` (56 pads 0.75 x 0.2, 6.45 c-c, 4.55 exposed pad, 4x4 paste grid 65 %); no stock 6.5x6.5 mm P0.4 QFN-56 - `eaaf62d`
 - [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm` (MIMX8ML8CVNKZAB, i.MX 8M Plus) - **new from data sheet** (IMX8MPIEC Rev. 2.2 Figure 52, 98ASA01539D; 548 balls per the Table 78 ball map, 293 sites depopulated): IPC-7351B density N, 0.25 mm round lands from eda-agent `kicad_create_footprint_from_package`; NXP gives no land pattern in the data sheet - CHECK against the i.MX 8M Plus HDG / EVK layout (the 8M Mini/Nano FCBGA-486 here uses 0.225 mm) - `eaaf62d`
 - [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm` (PCA9450CHN) - **new from data sheet** (PCA9450 Rev. 2.3 Figures 26/27, 98ASA01369D); generated with eda-agent (IPC-7351B), then set to NXP's pattern in AN12840 Rev. 1.0 Figures 10-12: 56 pads 0.9 x 0.2 at 3.45 from centre, 4.7 exposed pad, mask +0.05, stencil 4 x 1.86 on the EP; stock 7x7 QFN-56 have 3.2/4.0/5.6 mm pads - `eaaf62d`
+- [ ] `Wurth_632723130112` (USB Type-C receptacle, mid-mount) - drawn 2026-11-19 from the Wurth data sheet rev 002.000 p.1. Check: the PCB edge is drawn but not dimensioned there (placed 0.25 mm beyond the front stake pads, mating face 2.51 mm beyond the edge); rear stake pad/slot widths assumed equal to the front ones; signal through-holes are 0.4 mm in 0.65 mm pads on a 0.8 mm pitch (ring 0.125, hole to hole 0.4), tighter than JLCPCB's stated pad-hole limits; the non-plated locating slot is 0.10 mm from pad B1; the board cut-out (9.5 x 4.7, relieved corners) is only drawn on Dwgs.User - `74c3c6c`
+- [ ] `LED_Wurth_155124M173200_3.2x1.5mm_Horizontal` (WL-SFSW side-view RGB) - drawn 2026-11-19 from the Wurth data sheet land pattern. Check pad 1 (anode) against a real part: the numbering is taken from the land pattern as a top view - `74c3c6c`
 
 ### 3D models
 
@@ -858,6 +860,8 @@ of the 2026-10-19 renames (F4.8/F5.3; `docs/rename-batch-2026-10.md`).
 - [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm.step` - generated: body 6.5x6.5x0.9 (0.9 max), terminals and 4.5 pad per DS14278 Table 109; no vendor STEP - `eaaf62d`
 - [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm.step` - plain body 15x15x1.48 (1.481 max) per IMX8MPIEC Fig. 52; no vendor STEP - `eaaf62d`
 - [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm.step` - generated: body 7x7x1.0 (1.0 max), terminals and 4.7 pad per PCA9450 Fig. 26/27; no vendor STEP - `eaaf62d`
+- [ ] `Wurth_632723130112.step` - Wurth's own STEP (Download_STEP_632723130112 rev1, 2018-04-25, supplied by Jonas 2026-11-19) - `74c3c6c`
+- [ ] `LED_Wurth_155124M173200_3.2x1.5mm_Horizontal.step` - generated: base 3.2x0.5x1.0 and the lens as a 2.2x1.0x1.0 box, anode mark at pad 1 - `74c3c6c`
 
 ### 3D model placements
 
@@ -907,6 +911,8 @@ Every footprint where Claude placed or adjusted a 3D model (model file, offset, 
 - [ ] `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm`: `ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm.step` identity transform (generated, built in footprint coordinates) - `eaaf62d`
 - [ ] `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm`: `NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm.step` identity transform (generated, built in footprint coordinates) - `eaaf62d`
 - [ ] `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm`: `NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm.step` identity transform (generated, built in footprint coordinates) - `eaaf62d`
+- [ ] `Wurth_632723130112`: `Wurth_632723130112.step` offset (0, 1.905, 0.29), rotate (90, 0, 180) (vendor STEP: X width, +Y into the board, +Z mating direction, origin on the shell's centre line; placed with the mating face 2.51 mm beyond the PCB edge and the stake tips 1.6 mm below the board's top face, which puts the shell 2.00 above and 1.42 below it. Rendered top, bottom, end and side: tails on the pads, pins through the holes, stakes in the slots. A1 side follows from the rotation and was not checked separately) - `74c3c6c`
+- [ ] `LED_Wurth_155124M173200_3.2x1.5mm_Horizontal`: `LED_Wurth_155124M173200_3.2x1.5mm_Horizontal.step` identity transform (generated, built in footprint coordinates) - `74c3c6c`
 
 ## F9. 3D model placement check (2026-10-20)
 
