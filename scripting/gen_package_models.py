@@ -50,8 +50,11 @@
 #     A = 0.8-1.0 (1.0 used), b = 0.15-0.25, L = 0.35-0.55, e = 0.4, 14
 #     terminals per side, exposed pad 4.6-4.8 (4.7 used). Pin 1 is the top
 #     of the left row (footprint pad 1 at x -3.4, y -2.6).
+#   LED_Wurth_155124M173200_3.2x1.5mm_Horizontal (WL-SFSW side-view RGB):
+#     Wurth data sheet 155124M173200, p.1: base 3.2 x 0.5 x 1.0, lens
+#     2.2 wide reaching 1.0 out of the base. The lens is drawn as a box.
 #
-# Run with no arguments to regenerate all three; --out writes elsewhere.
+# Run with no arguments to regenerate all of them; --out writes elsewhere.
 #
 # Footprint names changed 2026-10-19 (footprints review F4.8, KiCad-stock /
 # Vendor_Part naming): QFN-20_5x5mm_EP2.7x2.7mm_P0.8mm ->
@@ -247,6 +250,15 @@ def apem_pt65503():
     return 'APEM_PT65503', boxes, 'APEM PT65503 coded rotary switch, segment wheel, 10x10x6.5 mm body'
 
 
+def led_wurth_155124m173200():
+    # Footprint frame: origin at the middle of the base, +Y = emission.
+    boxes = [box_c(0, 0, 0, 3.2, 0.5, 1.0, (0.92, 0.92, 0.88)),
+             box_c(0, -0.75, 0, 2.2, 1.0, 1.0, (0.95, 0.95, 0.98)),
+             box_c(-1.45, 0, 1.0, 0.2, 0.3, 0.01, (0.1, 0.5, 0.1))]   # anode (pad 1) end
+    return ('LED_Wurth_155124M173200_3.2x1.5mm_Horizontal', boxes,
+            'Wurth WL-SFSW 155124M173200 side-view RGB LED 3.2x1.5x1.0 mm')
+
+
 # Plain bodies for migrated IC footprints (F7.4) that had no model anywhere
 # (repo, git history, old projects). Body = the footprint's F.Fab body (in
 # footprint coordinates), pin-1 mark at the chamfered F.Fab corner (flipped
@@ -299,7 +311,8 @@ def main():
         write_step_boxes(path, name, boxes, descr)
         print('wrote %s (%d boxes)' % (path, len(boxes)))
     for fn in (qfn20_si3402, analog_udc18, sullins_gbc08_m89, nx1255gb, texas_yje, apem_pt65503,
-               texas_rsm0032a, texas_q3a, st_vqfn56, nxp_sot949_6):
+               texas_rsm0032a, texas_q3a, st_vqfn56, nxp_sot949_6,
+               led_wurth_155124m173200):
         name, boxes, descr = fn()
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)

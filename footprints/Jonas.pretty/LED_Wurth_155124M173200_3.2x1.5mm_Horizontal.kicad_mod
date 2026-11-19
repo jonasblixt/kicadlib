@@ -1,0 +1,212 @@
+(footprint "LED_Wurth_155124M173200_3.2x1.5mm_Horizontal"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Wurth WL-SFSW side-view (right-angle) full-colour RGB LED, 1204: base 3.2 x 0.5 mm, 1.0 mm high, with a 2.2 mm wide lens reaching 1.0 mm out of the base (1.5 mm overall). Land pattern from the Wurth data sheet 155124M173200, Recommended Land Pattern, page 1: end pads 0.6 x 0.9 on a 2.8 mm pitch, rear pads 0.6 x 0.55 on a 0.9 mm pitch, their rear edge 0.6 mm behind the base centre line. Origin is the middle of the base, +Y the direction of emission. Pad 1 common anode, 2 blue, 3 green, 4 red cathode.")
+	(tags "LED RGB side view right angle Wurth WL-SFSW 1204 155124M173200")
+	(property "Reference" "REF**"
+		(at 0 -1.9 0)
+		(layer "F.SilkS")
+		(uuid "8320bb3a-1762-4193-b24a-027d9b244bbb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "LED_Wurth_155124M173200_3.2x1.5mm_Horizontal"
+		(at 0 2.4 0)
+		(layer "F.Fab")
+		(uuid "c565c315-d825-462c-8497-f4296091e12b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "02a33231-5087-494a-b406-7fa0ff57d87e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1b469068-d621-4888-917e-81bd9c09aeef")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -2 -0.9)
+		(end -2 0.3)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7f04d01a-269a-44b5-94ca-7a2fdc773cab")
+	)
+	(fp_line
+		(start -2 -0.9)
+		(end 1 -0.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "db7b0bfd-152f-402f-a226-44675385e54b")
+	)
+	(fp_line
+		(start -2.2 -1.1)
+		(end 2.2 -1.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b75c26cd-4cbc-4838-bf40-42bbf365a9c4")
+	)
+	(fp_line
+		(start -2.2 1.5)
+		(end -2.2 -1.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7171e53b-9172-44e2-85f4-edbfcd622052")
+	)
+	(fp_line
+		(start 2.2 -1.1)
+		(end 2.2 1.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "083e9a88-3f0a-4f01-9ae0-4c9947fe6162")
+	)
+	(fp_line
+		(start 2.2 1.5)
+		(end -2.2 1.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "27a9830c-aeaf-48fa-bfcc-b09241a9980f")
+	)
+	(fp_line
+		(start -1.6 -0.25)
+		(end 1.6 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "85b3c30b-a8dc-48ee-80ed-3c1494d6d7b5")
+	)
+	(fp_line
+		(start -1.6 0.25)
+		(end -1.6 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b55c276f-cf27-41cc-8f5c-4a040b9077b9")
+	)
+	(fp_line
+		(start 1.6 -0.25)
+		(end 1.6 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e6ab310d-fdc4-421f-b7da-393ebb520c31")
+	)
+	(fp_line
+		(start 1.6 0.25)
+		(end -1.6 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6d37dfa5-b858-4911-9cb5-f17bc80263bd")
+	)
+	(fp_arc
+		(start 1.1 0.25)
+		(mid 0 1.25)
+		(end -1.1 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "06cadf96-c215-45c0-a5f5-e473808cdefe")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 3.4 0)
+		(layer "F.Fab")
+		(uuid "bab8b52b-8645-489f-a39e-c9ec86e3e400")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.4 0)
+		(size 0.6 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e40e34ee-d8b3-4226-ba14-3df31fd12a81")
+	)
+	(pad "2" smd rect
+		(at -0.45 -0.325)
+		(size 0.6 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bb17451c-563c-4e1a-b01c-ee4c6d3f9a15")
+	)
+	(pad "3" smd rect
+		(at 0.45 -0.325)
+		(size 0.6 0.55)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3fb1c573-44ce-49af-afd4-ebabae20842d")
+	)
+	(pad "4" smd rect
+		(at 1.4 0)
+		(size 0.6 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "81cfc550-933b-4989-b3f3-a182f95f6f70")
+	)
+	(embedded_fonts no)
+	(model "${JONAS_KICADLIB}/footprints/Jonas.3dshapes/LED_Wurth_155124M173200_3.2x1.5mm_Horizontal.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
