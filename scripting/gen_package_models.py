@@ -40,6 +40,16 @@
 #   Texas_Q3A_SON-8_3.3x3.3mm_P0.65mm (CSD17579Q3A): data sheet SLPS527A
 #     7.1: 3.0 x 3.15, 0.9 max, leads 0.3 at 0.65 standing 0.15 proud,
 #     thermal pad 1.74 x 2.45.
+#   ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm (STPMIC25): data sheet
+#     DS14278 Rev 7, Figure 22 / Table 109: D = E = 6.5, A = 0.80-0.90
+#     (0.9 used), b = 0.2 (0.17-0.23), L = 0.4 (0.35-0.45), e = 0.4, 14
+#     terminals per side, exposed pad D2 = E2 = 4.5. Pin 1 is the top of
+#     the left row (footprint pad 1 at x -3.225, y -2.6).
+#   NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm (PCA9450): data
+#     sheet Rev. 2.3, Figures 26/27 (98ASA01369D rev A): D = E = 7.0,
+#     A = 0.8-1.0 (1.0 used), b = 0.15-0.25, L = 0.35-0.55, e = 0.4, 14
+#     terminals per side, exposed pad 4.6-4.8 (4.7 used). Pin 1 is the top
+#     of the left row (footprint pad 1 at x -3.4, y -2.6).
 #
 # Run with no arguments to regenerate all three; --out writes elsewhere.
 #
@@ -172,6 +182,36 @@ def texas_rsm0032a():
             'TI RSM0032A VQFN-32 4x4x0.9 mm, BQ40Z50-R2')
 
 
+def st_vqfn56():
+    # STPMIC25 data sheet DS14278 Rev 7, Table 109 (see header).
+    d, a, b, e, l, ep = 6.5, 0.9, 0.2, 0.4, 0.4, 4.5
+    t, out = 0.2, 0.02
+    boxes = [box_c(0, 0, 0, d, d, a, BODY_BLACK)]
+    for sign in (-1, 1):
+        for p in [(-6.5 + i) * e for i in range(14)]:
+            boxes.append(box_c(sign * (d / 2 - l / 2 + out / 2), p, 0, l + out, b, t, TIN))
+            boxes.append(box_c(p, sign * (d / 2 - l / 2 + out / 2), 0, b, l + out, t, TIN))
+    boxes.append(box_c(0, 0, 0, ep, ep, 0.02, TIN))
+    boxes.append(box_c(-2.6, 2.6, a, 0.6, 0.6, 0.01, MARK))
+    return ('ST_VQFN-56-1EP_6.5x6.5mm_P0.4mm_EP4.5x4.5mm', boxes,
+            'ST VQFN 56L 6.5x6.5x0.9 mm, STPMIC25')
+
+
+def nxp_sot949_6():
+    # PCA9450 data sheet Rev. 2.3, Figures 26/27 (see header).
+    d, a, b, e, l, ep = 7.0, 1.0, 0.2, 0.4, 0.45, 4.7
+    t, out = 0.2, 0.02
+    boxes = [box_c(0, 0, 0, d, d, a, BODY_BLACK)]
+    for sign in (-1, 1):
+        for p in [(-6.5 + i) * e for i in range(14)]:
+            boxes.append(box_c(sign * (d / 2 - l / 2 + out / 2), p, 0, l + out, b, t, TIN))
+            boxes.append(box_c(p, sign * (d / 2 - l / 2 + out / 2), 0, b, l + out, t, TIN))
+    boxes.append(box_c(0, 0, 0, ep, ep, 0.02, TIN))
+    boxes.append(box_c(-2.8, 2.8, a, 0.6, 0.6, 0.01, MARK))
+    return ('NXP_SOT949-6_HVQFN-56-1EP_7x7mm_P0.4mm_EP4.7x4.7mm', boxes,
+            'NXP HVQFN56 SOT949-6 7x7x1.0 mm, PCA9450')
+
+
 def texas_q3a():
     # CSD17579Q3A data sheet SLPS527A, 7.1 Q3A package dimensions: body
     # 3.0 x 3.15 (2.9-3.1 x 3.05-3.25), 0.9 max; leads 0.3 wide (0.25-0.35)
@@ -232,6 +272,7 @@ PLAIN_BODIES = {
     'Skyworks_SKY13587-378LF': (-0.8, -0.6, 0.8, 0.6, 0.45, (-0.8, -0.6), 'assumed (MLPD)'),
     'Johanson_1575AT43A0040': (-3.5, -1.0, 3.5, 1.0, 0.8, (-3.5, -1.0), 'Johanson 1575AT43A0040001E rev 4.0, T 0.80'),
     'onsemi_UQFN-12_1.7x2mm_P0.4mm': (-0.85, -1.0, 0.85, 1.0, 0.55, (-0.85, -1.0), 'onsemi case 523AE, A 0.55 max'),
+    'NXP_FCBGA-548_15x15mm_Layout29x29_P0.5mm': (-7.5, -7.5, 7.5, 7.5, 1.48, (-7.5, -7.5), 'IMX8MPIEC Rev. 2.2 Fig. 52 (98ASA01539D), 1.181-1.481, max used'),
 }
 
 
@@ -258,7 +299,7 @@ def main():
         write_step_boxes(path, name, boxes, descr)
         print('wrote %s (%d boxes)' % (path, len(boxes)))
     for fn in (qfn20_si3402, analog_udc18, sullins_gbc08_m89, nx1255gb, texas_yje, apem_pt65503,
-               texas_rsm0032a, texas_q3a):
+               texas_rsm0032a, texas_q3a, st_vqfn56, nxp_sot949_6):
         name, boxes, descr = fn()
         path = os.path.join(out, name + '.step')
         write_step_boxes(path, name, boxes, descr)
